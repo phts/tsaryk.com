@@ -14,7 +14,12 @@ function getRandomCssColor() {
               ${getRandomColorComponent()})`
 }
 
-const interests = [
+interface Item {
+  name: string;
+  id?: string;
+}
+
+const interests: Array<Item> = [
   {name: '8-bit'},
   {name: 'Anathema'},
   {name: 'Android'},
