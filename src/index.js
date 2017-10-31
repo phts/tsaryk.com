@@ -70,14 +70,17 @@ const interests = [
 ]
 
 const interestEls = interests.map(it => {
-  const el = document.createElement('li')
+  const li = document.createElement('li')
   const button = document.createElement('button')
   if (it.id) {
     button.id = it.id
   }
+  const leftMargin = `${getRandomInt(50, 300)}px`
+  const rightMargin = `${getRandomInt(50, 300)}px`
+  li.style.margin = `0 ${rightMargin} 0 ${leftMargin}`
   button.innerHTML = it.name
-  el.appendChild(button)
-  return el
+  li.appendChild(button)
+  return li
 })
 
 const interestElsFragment = document.createDocumentFragment()
