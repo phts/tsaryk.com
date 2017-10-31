@@ -75,9 +75,7 @@ const interestEls = interests.map(it => {
   if (it.id) {
     button.id = it.id
   }
-  const leftMargin = `${getRandomInt(50, 300)}px`
-  const rightMargin = `${getRandomInt(50, 300)}px`
-  li.style.margin = `0 ${rightMargin} 0 ${leftMargin}`
+  li.style.flexBasis = `${getRandomInt(60, 500)}px`
   button.innerHTML = it.name
   li.appendChild(button)
   return li
