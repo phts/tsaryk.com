@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
@@ -11,6 +12,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: dist,
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js'],
@@ -34,5 +36,9 @@ module.exports = {
       template: 'index.html',
     }),
     new ExtractTextWebpackPlugin('style.css'),
+    new webpack.HotModuleReplacementPlugin(),
   ],
+  devServer: {
+    hot: true,
+  },
 }
