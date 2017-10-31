@@ -1,25 +1,19 @@
-import './style.css'
+import {h, Component} from 'preact'
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min
-}
+import {getRandomInt} from 'app/utils'
+import {BtnListItem} from '../BtnListItem'
+import {ColorsBtnListItem} from '../ColorsBtnListItem'
 
-function getRandomColorComponent() {
-  return getRandomInt(0, 256)
-}
-
-function getRandomCssColor() {
-  return `rgb(${getRandomColorComponent()}, \
-              ${getRandomColorComponent()}, \
-              ${getRandomColorComponent()})`
+interface ClassType<Cls> {
+  new (): Cls
 }
 
 interface Item {
   name: string;
-  id?: string;
+  component?: ClassType<BtnListItem>;
 }
 
-const interests: Array<Item> = [
+const list: Array<Item> = [
   {name: '8-bit'},
   {name: 'Anathema'},
   {name: 'Android'},
@@ -29,7 +23,7 @@ const interests: Array<Item> = [
   {name: 'Board games'},
   {name: 'Cats'},
   {name: 'Chrome'},
-  {name: 'Colors', id: 'btnColors'},
+  {name: 'Colors', component: ColorsBtnListItem},
   {name: 'Curriculum vitae'},
   {name: 'Debian'},
   {name: 'Deep Purple'},
@@ -93,25 +87,14 @@ const interests: Array<Item> = [
   {name: 'ZX Spectrum'},
 ]
 
-const interestEls = interests.map(it => {
-  const li = document.createElement('li')
-  const button = document.createElement('button')
-  if (it.id) {
-    button.id = it.id
+export class BtnList extends Component<{}, {}> {
+  render() {
+    const els = list.map((it, i) => {
+      const LiComponent: ClassType<BtnListItem> = it.component || BtnListItem
+      return <LiComponent key={i} text={it.name} width={getRandomInt(60, 500)}/>
+    })
+    return <ul>
+      {els}
+    </ul>
   }
-  li.style.flexBasis = `${getRandomInt(60, 500)}px`
-  button.innerHTML = it.name
-  li.appendChild(button)
-  return li
-})
-
-const interestElsFragment = document.createDocumentFragment()
-interestEls.forEach(el => {
-  interestElsFragment.appendChild(el)
-})
-document.getElementById('list').appendChild(interestElsFragment)
-
-document.getElementById('btnColors').addEventListener('click', function (ev) {
-  document.body.style.backgroundColor = getRandomCssColor()
-  document.body.style.color = getRandomCssColor()
-})
+}

@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
 const src = path.resolve(__dirname, 'src')
+const app = path.resolve(src, 'app')
 const dist = path.resolve(__dirname, 'dist')
 
 module.exports = {
@@ -15,12 +16,15 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
-    extensions: ['.js', '.ts'],
+    alias: {
+      app
+    },
+    extensions: ['.js', '.ts', '.tsx'],
   },
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
         loader: 'ts-loader',
         exclude: /node_modules/,
       },
