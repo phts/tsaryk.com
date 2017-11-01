@@ -1,8 +1,7 @@
 import * as React from 'react'
 import {render} from 'react-dom'
 
-import './style.css'
-
+import './global.css'
 import {App} from 'app';
 
 render(

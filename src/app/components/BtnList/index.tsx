@@ -1,9 +1,19 @@
 import * as React from 'react'
+import styled from 'styled-components'
 
 import {ClassType} from 'app/metatypes'
 import {getRandomInt} from 'app/utils'
 import {items} from './items'
 import {GenericBtn} from '../buttons'
+
+const Ul = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+`
 
 export class BtnList extends React.Component<{}, {}> {
   render() {
@@ -11,8 +21,8 @@ export class BtnList extends React.Component<{}, {}> {
       const LiComponent: ClassType<GenericBtn> = it.component || GenericBtn
       return <LiComponent key={i} text={it.name} width={getRandomInt(60, 500)}/>
     })
-    return <ul>
+    return <Ul>
       {els}
-    </ul>
+    </Ul>
   }
 }
