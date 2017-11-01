@@ -1,11 +1,11 @@
-import {h, Component} from 'preact'
+import * as React from 'react'
 
 import {ClassType} from 'app/metatypes'
 import {getRandomInt} from 'app/utils'
 import {items} from './items'
 import {GenericBtn} from '../buttons'
 
-export class BtnList extends Component<{}, {}> {
+export class BtnList extends React.Component<{}, {}> {
   render() {
     const els = items.map((it, i) => {
       const LiComponent: ClassType<GenericBtn> = it.component || GenericBtn

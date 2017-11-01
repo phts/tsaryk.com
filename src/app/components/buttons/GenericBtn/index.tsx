@@ -1,11 +1,11 @@
-import {h, Component} from 'preact'
+import * as React from 'react'
 
 interface Props {
   text: string;
   width: number;
 }
 
-export class GenericBtn extends Component<Props, {}> {
+export class GenericBtn extends React.Component<Props, {}> {
   constructor() {
     super()
     this.onClick = this.onClick.bind(this)

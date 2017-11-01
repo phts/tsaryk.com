@@ -1,5 +1,3 @@
-import {h, Component} from 'preact'
-
 import {getRandomCssColor} from 'app/utils'
 import {GenericBtn} from '../GenericBtn'
 
