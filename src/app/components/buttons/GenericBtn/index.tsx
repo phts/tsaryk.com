@@ -5,7 +5,7 @@ interface Props {
   width: number;
 }
 
-export class BtnListItem extends Component<Props, {}> {
+export class GenericBtn extends Component<Props, {}> {
   constructor() {
     super()
     this.onClick = this.onClick.bind(this)

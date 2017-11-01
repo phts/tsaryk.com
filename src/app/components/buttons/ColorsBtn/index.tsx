@@ -1,9 +1,9 @@
 import {h, Component} from 'preact'
 
 import {getRandomCssColor} from 'app/utils'
-import {BtnListItem} from '../BtnListItem'
+import {GenericBtn} from '../GenericBtn'
 
-export class ColorsBtnListItem extends BtnListItem {
+export class ColorsBtn extends GenericBtn {
   onClick() {
     document.body.style.backgroundColor = getRandomCssColor()
     document.body.style.color = getRandomCssColor()
