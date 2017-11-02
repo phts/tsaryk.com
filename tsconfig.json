@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "alwaysStrict": true,
+    "baseUrl": ".",
     "experimentalDecorators": true,
     "jsx": "react",
     "module": "commonjs",
@@ -10,6 +11,9 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "paths": {
+      "app/*": ["src/app/*"]
+    },
     "sourceMap": true,
     "target": "es5"
   },
