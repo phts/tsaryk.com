@@ -51,10 +51,10 @@ export class BtnList extends React.Component<{}, State> {
   render() {
     const els = R.compose(
       sortFunc[this.state.mode],
-      R.addIndex(R.map)((it: Item, i) => {
+      R.map((it: Item) => {
         const LiComponent: ClassType<GenericBtn> = it.component || GenericBtn
         return <LiComponent
-          key={i}
+          key={it.name}
           onModeChange={this.setMode}
           text={it.name}
           size={it.size}
