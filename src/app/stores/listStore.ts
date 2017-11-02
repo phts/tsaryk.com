@@ -2,13 +2,14 @@ import {observable, action} from 'mobx';
 import * as R from 'rambdax'
 
 import {
-  ItemSize,
   Item,
+  ItemCategory,
+  ItemSize,
   Items,
   items,
 } from '../data/items'
 
-export {ItemSize, Item}
+export {ItemCategory, ItemSize, Item}
 
 export enum Mode {
   Asc,

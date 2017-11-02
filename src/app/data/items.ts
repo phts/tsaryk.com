@@ -1,10 +1,15 @@
 export interface Item {
   name: string
+  category?: ItemCategory
   component?: string
   size?: ItemSize
 }
 
 export type Items = Array<Item>
+
+export enum ItemCategory {
+  Meta,
+}
 
 export enum ItemSize {
   M,
@@ -18,7 +23,7 @@ export const items: Items = [
   {name: 'Anathema'},
   {name: 'Android'},
   {name: 'Angular', size: ItemSize.L},
-  {name: 'Ascending', component: 'AscendingBtn'},
+  {name: 'Ascending', component: 'AscendingBtn', category: ItemCategory.Meta},
   {name: 'bash.org'},
   {name: 'Belarus'},
   {name: 'Bicycle'},
@@ -27,14 +32,14 @@ export const items: Items = [
   {name: 'Board games'},
   {name: 'Cats'},
   {name: 'Chrome'},
-  {name: 'Colors', component: 'ColorsBtn'},
+  {name: 'Colors', component: 'ColorsBtn', category: ItemCategory.Meta},
   {name: 'Curriculum vitae', size: ItemSize.L},
   {name: 'Debian'},
   {name: 'Deep Purple'},
   {name: 'Design'},
   {name: 'Drums', size: ItemSize.XL},
   {name: 'Email'},
-  {name: 'EN'},
+  {name: 'EN', category: ItemCategory.Meta},
   {name: 'Epam', size: ItemSize.L},
   {name: 'Facebook'},
   {name: 'Family', size: ItemSize.L},
@@ -74,11 +79,11 @@ export const items: Items = [
   {name: 'Playing cards'},
   {name: 'Poland'},
   {name: 'PSU'},
-  {name: 'Random', component: 'RandomBtn'},
+  {name: 'Random', component: 'RandomBtn', category: ItemCategory.Meta},
   {name: 'React', size: ItemSize.L},
   {name: 'Ritchie Blackmore'},
   {name: 'Riverside'},
-  {name: 'RU'},
+  {name: 'RU', category: ItemCategory.Meta},
   {name: 'Ruby'},
   {name: 'SaM Solutions'},
   {name: 'S\u030Ckoda'},

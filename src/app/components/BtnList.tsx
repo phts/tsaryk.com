@@ -42,6 +42,7 @@ export class BtnList extends React.Component<Props, {}> {
       const LiComponent: typeof GenericBtn = buttonsMap[it.component] || GenericBtn
       return <LiComponent
         key={it.name}
+        category={it.category}
         text={it.name}
         size={it.size}
         width={R.random(60, 500)}

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
-import {ItemSize, ListStore} from 'app/stores/listStore'
+import {ItemCategory, ItemSize, ListStore} from 'app/stores/listStore'
 
 
 const fontSizeMap = {
@@ -11,14 +11,20 @@ const fontSizeMap = {
   [ItemSize.XXL]: '16pt',
 }
 
+const borderMap = {
+  [ItemCategory.Meta]: '2px dotted'
+}
+
 interface Props {
   text: string
+  category?: ItemCategory
   listStore?: ListStore
   size?: ItemSize
   width?: number
 }
 
 interface ButtonProps {
+  borderStyle: string
   fontSize: string
 }
 
@@ -31,7 +37,7 @@ const button: StyledFunction<ButtonElProps> = styled.button
 const Button = button`
   background: none;
   border: 0 none;
-  border-bottom: 1px dashed;
+  border-bottom: ${(props: ButtonElProps) => props.borderStyle || '1px dashed'};
   color: inherit;
   cursor: pointer;
   font-size: ${(props: ButtonElProps) => props.fontSize};
@@ -61,7 +67,12 @@ export class GenericBtn extends React.Component<Props, {}> {
   render() {
     const fontSize = fontSizeMap[this.props.size || ItemSize.M]
     return <Li width={this.props.width}>
-      <Button onClick={this.onClick} fontSize={fontSize}>{this.props.text}</Button>
+      <Button
+          onClick={this.onClick}
+          fontSize={fontSize}
+          borderStyle={borderMap[this.props.category]}>
+        {this.props.text}
+      </Button>
     </Li>
   }
 }
