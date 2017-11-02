@@ -1,4 +1,3 @@
-import {ClassType} from 'app/metatypes'
 import {
   AscendingBtn,
   BtnSize,
@@ -9,7 +8,7 @@ import {
 
 export interface Item {
   name: string
-  component?: ClassType<GenericBtn>
+  component?: typeof GenericBtn
   size?: BtnSize
 }
 

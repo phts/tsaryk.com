@@ -2,7 +2,6 @@ import * as React from 'react'
 import styled from 'styled-components'
 import * as R from 'rambdax'
 
-import {ClassType} from 'app/metatypes'
 import {
   Item,
   items,
@@ -52,7 +51,7 @@ export class BtnList extends React.Component<{}, State> {
     const els = R.compose(
       sortFunc[this.state.mode],
       R.map((it: Item) => {
-        const LiComponent: ClassType<GenericBtn> = it.component || GenericBtn
+        const LiComponent: typeof GenericBtn = it.component || GenericBtn
         return <LiComponent
           key={it.name}
           onModeChange={this.setMode}
