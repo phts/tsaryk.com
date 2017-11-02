@@ -17,7 +17,7 @@ export enum Mode {
 }
 
 const sortFunc: {[index: number]: (x: Items) => Items} = {
-  [Mode.Asc]: R.sortBy(R.prop('name')),
+  [Mode.Asc]: R.sortBy(R.compose(R.toLower, R.prop('name'))),
   [Mode.Random]: R.shuffle,
 }
 
