@@ -1,5 +1,5 @@
 import {getRandomCssColor} from 'app/utils'
-import {GenericBtn} from '../GenericBtn'
+import {GenericBtn} from './GenericBtn'
 
 export class ColorsBtn extends GenericBtn {
   onClick() {
