@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
-import {Mode} from '../BtnList'
+import {ListStore} from 'app/stores/listStore'
 
 export enum BtnSize {
   M = '10pt',
@@ -12,7 +12,7 @@ export enum BtnSize {
 
 interface Props {
   text: string
-  onModeChange?: (mode: Mode) => void
+  listStore?: ListStore
   size?: BtnSize
   width?: number
 }

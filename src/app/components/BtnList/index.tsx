@@ -1,20 +1,20 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import * as R from 'rambdax'
+import {observer, inject} from 'mobx-react'
 
+import {
+  ListStore,
+  Mode,
+} from 'app/stores/listStore'
 import {
   Item,
   items,
 } from './items'
 import {GenericBtn} from '../buttons'
 
-export enum Mode {
-  Asc,
-  Random,
-}
-
-interface State {
-  mode: Mode
+interface Props {
+  listStore?: ListStore
 }
 
 const Ul = styled.ul`
@@ -31,30 +31,16 @@ const sortFunc = {
   [Mode.Random]: R.shuffle,
 }
 
-export class BtnList extends React.Component<{}, State> {
-  constructor() {
-    super()
-    this.setMode = this.setMode.bind(this)
-    this.state = {
-      mode: Mode.Asc
-    }
-  }
-
-  setMode(mode: Mode) {
-    if (mode === Mode.Asc && this.state.mode === Mode.Asc) {
-      return
-    }
-    this.setState({mode})
-  }
-
+@inject('listStore')
+@observer
+export class BtnList extends React.Component<Props, {}> {
   render() {
     const els = R.compose(
-      sortFunc[this.state.mode],
+      sortFunc[this.props.listStore.mode],
       R.map((it: Item) => {
         const LiComponent: typeof GenericBtn = it.component || GenericBtn
         return <LiComponent
           key={it.name}
-          onModeChange={this.setMode}
           text={it.name}
           size={it.size}
           width={R.random(60, 500)}

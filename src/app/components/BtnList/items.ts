@@ -12,7 +12,9 @@ export interface Item {
   size?: BtnSize
 }
 
-export const items: Array<Item> = [
+export type Items = Array<Item>
+
+export const items: Items = [
   {name: '8-bit'},
   {name: 'Anathema'},
   {name: 'Android'},
