@@ -1,11 +1,13 @@
 import {ClassType} from 'app/metatypes'
 import {
+  AscendingBtn,
   BtnSize,
   ColorsBtn,
   GenericBtn,
+  RandomBtn,
 } from '../buttons'
 
-interface Item {
+export interface Item {
   name: string
   component?: ClassType<GenericBtn>
   size?: BtnSize
@@ -16,6 +18,7 @@ export const items: Array<Item> = [
   {name: 'Anathema'},
   {name: 'Android'},
   {name: 'Angular', size: BtnSize.L},
+  {name: 'Ascending', component: AscendingBtn},
   {name: 'bash.org'},
   {name: 'Belarus'},
   {name: 'Bicycle'},
@@ -71,6 +74,7 @@ export const items: Array<Item> = [
   {name: 'Playing cards'},
   {name: 'Poland'},
   {name: 'PSU'},
+  {name: 'Random', component: RandomBtn},
   {name: 'React', size: BtnSize.L},
   {name: 'Ritchie Blackmore'},
   {name: 'Riverside'},
