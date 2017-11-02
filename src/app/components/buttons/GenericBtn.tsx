@@ -1,19 +1,20 @@
 import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
-import {ListStore} from 'app/stores/listStore'
+import {ItemSize, ListStore} from 'app/stores/listStore'
 
-export enum BtnSize {
-  M = '10pt',
-  L = '12pt',
-  XL = '14pt',
-  XXL = '16pt',
+
+const fontSizeMap = {
+  [ItemSize.M]: '10pt',
+  [ItemSize.L]: '12pt',
+  [ItemSize.XL]: '14pt',
+  [ItemSize.XXL]: '16pt',
 }
 
 interface Props {
   text: string
   listStore?: ListStore
-  size?: BtnSize
+  size?: ItemSize
   width?: number
 }
 
@@ -58,7 +59,7 @@ export class GenericBtn extends React.Component<Props, {}> {
   }
 
   render() {
-    const fontSize = this.props.size || BtnSize.M
+    const fontSize = fontSizeMap[this.props.size || ItemSize.M]
     return <Li width={this.props.width}>
       <Button onClick={this.onClick} fontSize={fontSize}>{this.props.text}</Button>
     </Li>

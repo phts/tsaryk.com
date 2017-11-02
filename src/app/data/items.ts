@@ -1,25 +1,24 @@
-import {
-  AscendingBtn,
-  BtnSize,
-  ColorsBtn,
-  GenericBtn,
-  RandomBtn,
-} from '../buttons'
-
 export interface Item {
   name: string
-  component?: typeof GenericBtn
-  size?: BtnSize
+  component?: string
+  size?: ItemSize
 }
 
 export type Items = Array<Item>
+
+export enum ItemSize {
+  M,
+  L,
+  XL,
+  XXL,
+}
 
 export const items: Items = [
   {name: '8-bit'},
   {name: 'Anathema'},
   {name: 'Android'},
-  {name: 'Angular', size: BtnSize.L},
-  {name: 'Ascending', component: AscendingBtn},
+  {name: 'Angular', size: ItemSize.L},
+  {name: 'Ascending', component: 'AscendingBtn'},
   {name: 'bash.org'},
   {name: 'Belarus'},
   {name: 'Bicycle'},
@@ -28,21 +27,21 @@ export const items: Items = [
   {name: 'Board games'},
   {name: 'Cats'},
   {name: 'Chrome'},
-  {name: 'Colors', component: ColorsBtn},
-  {name: 'Curriculum vitae', size: BtnSize.L},
+  {name: 'Colors', component: 'ColorsBtn'},
+  {name: 'Curriculum vitae', size: ItemSize.L},
   {name: 'Debian'},
   {name: 'Deep Purple'},
   {name: 'Design'},
-  {name: 'Drums', size: BtnSize.XL},
+  {name: 'Drums', size: ItemSize.XL},
   {name: 'Email'},
   {name: 'EN'},
-  {name: 'Epam', size: BtnSize.L},
+  {name: 'Epam', size: ItemSize.L},
   {name: 'Facebook'},
-  {name: 'Family', size: BtnSize.L},
+  {name: 'Family', size: ItemSize.L},
   {name: 'Family Guy'},
   {name: 'Firefox'},
   {name: 'foobar2000'},
-  {name: 'GitHub', size: BtnSize.L},
+  {name: 'GitHub', size: ItemSize.L},
   {name: 'God Is An Astronaut'},
   {name: 'Google'},
   {name: 'Grodno'},
@@ -52,14 +51,14 @@ export const items: Items = [
   {name: 'Hive'},
   {name: 'iOS'},
   {name: 'Java'},
-  {name: 'JavaScript', size: BtnSize.XL},
+  {name: 'JavaScript', size: ItemSize.XL},
   {name: 'Joy in Time'},
   {name: 'Krako\u0301w'},
   {name: 'Langaroo'},
   {name: 'Last.fm'},
   {name: 'Lego'},
   {name: 'LinkedIn'},
-  {name: 'Lunatic Soul', size: BtnSize.L},
+  {name: 'Lunatic Soul', size: ItemSize.L},
   {name: 'Minsk'},
   {name: 'Music'},
   {name: 'NES'},
@@ -67,16 +66,16 @@ export const items: Items = [
   {name: 'Novopolotsk'},
   {name: 'Opeth'},
   {name: 'Paiste'},
-  {name: 'Phil Tsarik', size: BtnSize.XXL},
+  {name: 'Phil Tsarik', size: ItemSize.XXL},
   {name: 'phts'},
   {name: 'Pilip Tsaryk'},
-  {name: 'Pink Floyd', size: BtnSize.L},
+  {name: 'Pink Floyd', size: ItemSize.L},
   {name: 'Pixel Dungeon'},
   {name: 'Playing cards'},
   {name: 'Poland'},
   {name: 'PSU'},
-  {name: 'Random', component: RandomBtn},
-  {name: 'React', size: BtnSize.L},
+  {name: 'Random', component: 'RandomBtn'},
+  {name: 'React', size: ItemSize.L},
   {name: 'Ritchie Blackmore'},
   {name: 'Riverside'},
   {name: 'RU'},
@@ -85,7 +84,7 @@ export const items: Items = [
   {name: 'S\u030Ckoda'},
   {name: 'Skype'},
   {name: 'Sleep'},
-  {name: 'Software Developer', size: BtnSize.XL},
+  {name: 'Software Developer', size: ItemSize.XL},
   {name: 'Sound'},
   {name: 'Space Resonance'},
   {name: 'Space'},

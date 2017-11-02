@@ -4,14 +4,15 @@ import * as R from 'rambdax'
 import {observer, inject} from 'mobx-react'
 
 import {
+  Item,
   ListStore,
-  Mode,
 } from 'app/stores/listStore'
 import {
-  Item,
-  items,
-} from './items'
-import {GenericBtn} from '../buttons'
+  AscendingBtn,
+  ColorsBtn,
+  GenericBtn,
+  RandomBtn,
+} from 'app/components/buttons'
 
 interface Props {
   listStore?: ListStore
@@ -26,27 +27,26 @@ const Ul = styled.ul`
   padding: 0;
 `
 
-const sortFunc = {
-  [Mode.Asc]: R.sortBy(R.prop('name')),
-  [Mode.Random]: R.shuffle,
+const buttonsMap: {[index: string]: typeof GenericBtn} = {
+  AscendingBtn,
+  ColorsBtn,
+  GenericBtn,
+  RandomBtn,
 }
 
 @inject('listStore')
 @observer
 export class BtnList extends React.Component<Props, {}> {
   render() {
-    const els = R.compose(
-      sortFunc[this.props.listStore.mode],
-      R.map((it: Item) => {
-        const LiComponent: typeof GenericBtn = it.component || GenericBtn
-        return <LiComponent
-          key={it.name}
-          text={it.name}
-          size={it.size}
-          width={R.random(60, 500)}
-         />
-      })
-    )(items)
+    const els =  R.map((it: Item) => {
+      const LiComponent: typeof GenericBtn = buttonsMap[it.component] || GenericBtn
+      return <LiComponent
+        key={it.name}
+        text={it.name}
+        size={it.size}
+        width={R.random(60, 500)}
+       />
+    })(this.props.listStore.items)
     return <Ul>
       {els}
     </Ul>
