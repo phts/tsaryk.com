@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import * as R from 'rambdax'
 
 import {ClassType} from 'app/metatypes'
-import {getRandomInt} from 'app/utils'
 import {items} from './items'
 import {GenericBtn} from '../buttons'
 
@@ -19,7 +19,12 @@ export class BtnList extends React.Component<{}, {}> {
   render() {
     const els = items.map((it, i) => {
       const LiComponent: ClassType<GenericBtn> = it.component || GenericBtn
-      return <LiComponent key={i} text={it.name} size={it.size} width={getRandomInt(60, 500)}/>
+      return <LiComponent
+        key={i}
+        text={it.name}
+        size={it.size}
+        width={R.random(60, 500)}
+       />
     })
     return <Ul>
       {els}

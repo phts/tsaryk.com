@@ -1,9 +1,7 @@
-export function getRandomInt(min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min)) + min
-}
+import {random} from 'rambdax'
 
 export function getRandomColorComponent(): number {
-  return getRandomInt(0, 256)
+  return random(0, 255)
 }
 
 export function getRandomCssColor(): string {
