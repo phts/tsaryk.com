@@ -19,7 +19,7 @@ export class BtnList extends React.Component<{}, {}> {
   render() {
     const els = items.map((it, i) => {
       const LiComponent: ClassType<GenericBtn> = it.component || GenericBtn
-      return <LiComponent key={i} text={it.name} width={getRandomInt(60, 500)}/>
+      return <LiComponent key={i} text={it.name} size={it.size} width={getRandomInt(60, 500)}/>
     })
     return <Ul>
       {els}

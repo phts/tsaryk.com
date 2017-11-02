@@ -1,26 +1,42 @@
 import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
+export enum BtnSize {
+  M = '10pt',
+  L = '12pt',
+  XL = '14pt',
+  XXL = '16pt',
+}
+
 interface Props {
-  text: string;
-  width: number;
+  text: string
+  size?: BtnSize
+  width?: number
+}
+
+interface ButtonProps {
+  fontSize: string
 }
 
 interface LiProps {
-  width: number;
+  width: number
 }
 
-const Button = styled.button`
+type ButtonElProps = ButtonProps & React.HTMLProps<HTMLButtonElement>
+const button: StyledFunction<ButtonElProps> = styled.button
+const Button = button`
   background: none;
   border: 0 none;
   border-bottom: 1px dashed;
   color: inherit;
   cursor: pointer;
+  font-size: ${(props: ButtonElProps) => props.fontSize};
   margin: 0;
   padding: 0;
 `
 
-const li: StyledFunction<LiProps & React.HTMLProps<HTMLLIElement>> = styled.li
+type LiElProps = LiProps & React.HTMLProps<HTMLLIElement>
+const li: StyledFunction<LiElProps> = styled.li
 const Li = li`
   flex-basis: ${props => props.width}px;
   margin: 0 1em;
@@ -39,6 +55,9 @@ export class GenericBtn extends React.Component<Props, {}> {
   }
 
   render() {
-    return <Li width={this.props.width}><Button onClick={this.onClick}>{this.props.text}</Button></Li>
+    const fontSize = this.props.size || BtnSize.M
+    return <Li width={this.props.width}>
+      <Button onClick={this.onClick} fontSize={fontSize}>{this.props.text}</Button>
+    </Li>
   }
 }
