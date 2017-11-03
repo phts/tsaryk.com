@@ -1,7 +1,12 @@
 import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
-import {ItemCategory, ItemSize, ListStore} from 'app/stores/listStore'
+import {
+  ItemCategory,
+  ItemSize,
+  ListStore,
+} from 'app/stores/listStore'
+import {AgeStore} from 'app/stores/ageStore'
 
 const fontSizeMap = {
   [ItemSize.M]: '10pt',
@@ -16,6 +21,7 @@ const borderMap = {
 
 interface Props {
   text: string
+  ageStore?: AgeStore
   category?: ItemCategory
   listStore?: ListStore
   size?: ItemSize
@@ -67,12 +73,16 @@ export class GenericBtn extends React.Component<Props, {}> {
           onClick={this.onClick}
           fontSize={fontSize}
           borderStyle={borderMap[this.props.category]}>
-        {this.props.text}
+        {this.text}
       </Button>
     </Li>
   }
 
   protected onClick() {
     // empty
+  }
+
+  protected get text() {
+    return this.props.text
   }
 }

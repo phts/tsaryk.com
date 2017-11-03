@@ -19,6 +19,7 @@ export enum ItemSize {
 }
 
 export const items: Items = [
+  {name: '30', component: 'AgeBtn'},
   {name: '8-bit'},
   {name: 'Anathema'},
   {name: 'Android'},
