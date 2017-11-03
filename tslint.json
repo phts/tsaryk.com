@@ -1,0 +1,35 @@
+{
+  "defaultSeverity": "error",
+  "extends": "tslint:recommended",
+  "rules": {
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "interface-name": false,
+    "interface-over-type-literal": false,
+    "no-any": true,
+    "no-console": [
+      true,
+      "log"
+    ],
+    "no-inferrable-types": true,
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "ordered-imports": false,
+    "quotemark": {
+      "options": [
+        "avoid-escape",
+        "jsx-double",
+        "single"
+      ]
+    },
+    "semicolon": {
+      "options": [
+        "never"
+      ]
+    }
+  }
+}
