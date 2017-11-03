@@ -3,7 +3,6 @@ import styled, {StyledFunction} from 'styled-components'
 
 import {ItemCategory, ItemSize, ListStore} from 'app/stores/listStore'
 
-
 const fontSizeMap = {
   [ItemSize.M]: '10pt',
   [ItemSize.L]: '12pt',
@@ -12,7 +11,7 @@ const fontSizeMap = {
 }
 
 const borderMap = {
-  [ItemCategory.Meta]: '2px dotted'
+  [ItemCategory.Meta]: '2px dotted',
 }
 
 interface Props {
@@ -61,9 +60,6 @@ export class GenericBtn extends React.Component<Props, {}> {
     this.onClick = this.onClick.bind(this)
   }
 
-  onClick() {
-  }
-
   render() {
     const fontSize = fontSizeMap[this.props.size || ItemSize.M]
     return <Li width={this.props.width}>
@@ -74,5 +70,9 @@ export class GenericBtn extends React.Component<Props, {}> {
         {this.props.text}
       </Button>
     </Li>
+  }
+
+  protected onClick() {
+    // empty
   }
 }

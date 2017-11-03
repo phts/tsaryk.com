@@ -5,7 +5,7 @@ export interface Item {
   size?: ItemSize
 }
 
-export type Items = Array<Item>
+export type Items = Item[]
 
 export enum ItemCategory {
   Meta,
