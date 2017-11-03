@@ -7,12 +7,7 @@ import {
   Item,
   ListStore,
 } from 'app/stores/listStore'
-import {
-  AscendingBtn,
-  ColorsBtn,
-  GenericBtn,
-  RandomBtn,
-} from 'app/components/buttons'
+import {buttons} from 'app/components/buttons'
 
 interface Props {
   listStore?: ListStore
@@ -27,23 +22,16 @@ const Ul = styled.ul`
   padding: 0;
 `
 
-const buttonsMap: {[index: string]: typeof GenericBtn} = {
-  AscendingBtn,
-  ColorsBtn,
-  GenericBtn,
-  RandomBtn,
-}
-
 @inject('listStore')
 @observer
 export class BtnList extends React.Component<Props, {}> {
   render() {
     const els =  R.map((it: Item) => {
-      const ItemBtn = buttonsMap[it.component]
+      const ItemBtn = buttons[it.component]
       if (it.component && !ItemBtn) {
         console.warn(`Component ${it.component} was not found`)
       }
-      const LiComponent: typeof GenericBtn = ItemBtn || GenericBtn
+      const LiComponent: typeof buttons.GenericBtn = ItemBtn || buttons.GenericBtn
       return <LiComponent
         key={it.name}
         category={it.category}
