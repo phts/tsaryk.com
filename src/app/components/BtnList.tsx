@@ -39,7 +39,11 @@ const buttonsMap: {[index: string]: typeof GenericBtn} = {
 export class BtnList extends React.Component<Props, {}> {
   render() {
     const els =  R.map((it: Item) => {
-      const LiComponent: typeof GenericBtn = buttonsMap[it.component] || GenericBtn
+      const ItemBtn = buttonsMap[it.component]
+      if (it.component && !ItemBtn) {
+        console.warn(`Component ${it.component} was not found`)
+      }
+      const LiComponent: typeof GenericBtn = ItemBtn || GenericBtn
       return <LiComponent
         key={it.name}
         category={it.category}
