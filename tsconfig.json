@@ -12,6 +12,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
+      "app": ["src/app"],
       "app/*": ["src/app/*"]
     },
     "sourceMap": true,
