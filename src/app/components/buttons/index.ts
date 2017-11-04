@@ -1,5 +1,7 @@
 export * from './AgeBtn'
 export * from './AscendingBtn'
+export * from './BaseBtnComponent'
 export * from './ColorsBtn'
 export * from './GenericBtn'
 export * from './RandomBtn'
+export * from './TextBtn'

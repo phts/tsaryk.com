@@ -3,15 +3,10 @@ import * as R from 'rambdax'
 
 import {
   headItems,
-  Item,
-  ItemCategory,
   Items,
   items,
-  ItemSize,
   tailItems,
 } from '../data/items'
-
-export {ItemCategory, ItemSize, Item}
 
 export enum Mode {
   Asc,

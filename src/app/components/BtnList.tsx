@@ -3,16 +3,15 @@ import styled from 'styled-components'
 import * as R from 'rambdax'
 import {observer, inject} from 'mobx-react'
 
-import {
-  Item,
-  ListStore,
-} from 'app/stores/listStore'
+import {ListStore} from 'app/stores/listStore'
+import {Item} from 'app/data/items'
 import {
   AgeBtn,
   AscendingBtn,
+  BaseBtnComponent,
   ColorsBtn,
-  GenericBtn,
   RandomBtn,
+  TextBtn,
 } from 'app/components/buttons'
 
 interface Props {
@@ -28,19 +27,19 @@ const Ul = styled.ul`
   padding: 0;
 `
 
-const knownBtns: {[index: string]: typeof GenericBtn} = {
-  30: AgeBtn,
-  Ascending: AscendingBtn,
-  Colors: ColorsBtn,
-  Random: RandomBtn,
+const knownBtns: {[index: string]: typeof BaseBtnComponent} = {
+  30: AgeBtn as typeof BaseBtnComponent,
+  Ascending: AscendingBtn as typeof BaseBtnComponent,
+  Colors: ColorsBtn as typeof BaseBtnComponent,
+  Random: RandomBtn as typeof BaseBtnComponent,
 }
 
 @inject('listStore')
 @observer
-export class BtnList extends React.Component<Props, {}> {
+export class BtnList extends React.Component<Props> {
   render() {
     const els =  R.map((it: Item) => {
-      const LiComponent: typeof GenericBtn = knownBtns[it.name] || GenericBtn
+      const LiComponent: typeof BaseBtnComponent = knownBtns[it.name] || TextBtn as typeof BaseBtnComponent
       return <LiComponent
         key={it.name}
         category={it.category}

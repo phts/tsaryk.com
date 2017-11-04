@@ -4,9 +4,8 @@ import styled, {StyledFunction} from 'styled-components'
 import {
   ItemCategory,
   ItemSize,
-  ListStore,
-} from 'app/stores/listStore'
-import {AgeStore} from 'app/stores/ageStore'
+} from 'app/data/items'
+import {BaseProps} from './BaseBtnComponent'
 
 const fontSizeMap = {
   [ItemSize.M]: '10pt',
@@ -19,13 +18,8 @@ const borderMap = {
   [ItemCategory.Meta]: '2px dotted',
 }
 
-interface Props {
-  text: string
-  ageStore?: AgeStore
-  category?: ItemCategory
-  listStore?: ListStore
-  size?: ItemSize
-  width?: number
+interface Props extends BaseProps {
+  onClick?: (ev?: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 interface ButtonProps {
@@ -61,28 +55,15 @@ const Li = li`
 `
 
 export class GenericBtn extends React.Component<Props, {}> {
-  constructor() {
-    super()
-    this.onClick = this.onClick.bind(this)
-  }
-
   render() {
     const fontSize = fontSizeMap[this.props.size || ItemSize.M]
     return <Li width={this.props.width}>
       <Button
-          onClick={this.onClick}
+          onClick={this.props.onClick}
           fontSize={fontSize}
           borderStyle={borderMap[this.props.category]}>
-        {this.text}
+        {this.props.text}
       </Button>
     </Li>
-  }
-
-  protected onClick() {
-    // empty
-  }
-
-  protected get text() {
-    return this.props.text
   }
 }

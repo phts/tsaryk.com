@@ -1,16 +1,11 @@
 import * as React from 'react'
-import {inject} from 'mobx-react'
 
 import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
 import {GenericBtn} from './GenericBtn'
-import {Mode, ListStore} from 'app/stores/listStore'
 
-interface Props extends BaseProps {
-  listStore?: ListStore
-}
+type Props = BaseProps
 
-@inject('listStore')
-export class AscendingBtn extends BaseBtnComponent<Props> {
+export class TextBtn extends BaseBtnComponent<Props> {
   render() {
     return <GenericBtn
       category={this.props.category}
@@ -22,6 +17,6 @@ export class AscendingBtn extends BaseBtnComponent<Props> {
   }
 
   private onClick = () => {
-    this.props.listStore.setMode(Mode.Asc)
+    // empty
   }
 }
