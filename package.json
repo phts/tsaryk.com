@@ -2,13 +2,22 @@
   "name": "phts.com",
   "private": true,
   "scripts": {
-    "build": "npm run webpack",
+    "build": "npm run webpack -- --config ./config/webpack.prod.js",
+    "build:dev": "npm run webpack",
+    "clean": "rimraf ./dist",
     "fix": "npm run tslint -- --fix",
     "lint": "npm run tslint",
+    "prebuild": "npm run clean",
+    "prebuild:dev": "npm run clean",
+    "serve:prod": "ws --directory ./dist --spa ./index.html --port 8080",
     "start": "npm run webpack-dev-server",
+    "start:prod": "npm run build && npm run serve:prod",
     "tslint": "tslint -p ./tsconfig.json",
     "webpack": "webpack",
     "webpack-dev-server": "webpack-dev-server"
+  },
+  "engines": {
+    "node": ">= 7.6"
   },
   "dependencies": {
     "date-fns": "^1.29.0",
@@ -26,10 +35,14 @@
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
+    "local-web-server": "^2.3.0",
+    "rmrf": "^1.0.2",
     "style-loader": "^0.19.0",
     "tslint": "^5.8.0",
     "typescript": "^2.5.3",
+    "uglifyjs-webpack-plugin": "^1.0.1",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.3"
+    "webpack-dev-server": "^2.9.3",
+    "webpack-merge": "^4.1.1"
   }
 }
