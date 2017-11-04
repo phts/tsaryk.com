@@ -15,31 +15,24 @@ import {
 
 const DATE_OF_BIRTH: Date = new Date(1987, 11, 3, 10, 30, 0)
 
-enum DatePart {
-  Days,
-  Hours,
-  Minutes,
-  Months,
-  Seconds,
-  Years,
+type DatePart = keyof Age
+
+const addMethods: {[index: string]: (date: Date, num: number) => Date} = {
+  days: addDays,
+  hours: addHours,
+  minutes: addMinutes,
+  months: addMonths,
+  seconds: (date: Date) => date,
+  years: addYears,
 }
 
-const addMethods = {
-  [DatePart.Days]: addDays,
-  [DatePart.Hours]: addHours,
-  [DatePart.Minutes]: addMinutes,
-  [DatePart.Months]: addMonths,
-  [DatePart.Seconds]: (date: Date) => date,
-  [DatePart.Years]: addYears,
-}
-
-const diffMethods = {
-  [DatePart.Days]: differenceInDays,
-  [DatePart.Hours]: differenceInHours,
-  [DatePart.Minutes]: differenceInMinutes,
-  [DatePart.Months]: differenceInMonths,
-  [DatePart.Seconds]: differenceInSeconds,
-  [DatePart.Years]: differenceInYears,
+const diffMethods: {[index: string]: (l: Date, r: Date) => number} = {
+  days: differenceInDays,
+  hours: differenceInHours,
+  minutes: differenceInMinutes,
+  months: differenceInMonths,
+  seconds: differenceInSeconds,
+  years: differenceInYears,
 }
 
 interface Age {
@@ -52,7 +45,7 @@ interface Age {
 }
 
 type DatePartsStore = {
-  [index: number]: number,
+  [index: string]: number,
 }
 
 export class AgeStore {
@@ -63,10 +56,10 @@ export class AgeStore {
 
   constructor() {
     const [reducedParts, reducedDate] = this.reduceDate(DATE_OF_BIRTH, [
-      DatePart.Years,
-      DatePart.Months,
-      DatePart.Days,
-      DatePart.Hours,
+      'years',
+      'months',
+      'days',
+      'hours',
     ])
     this.cached = reducedParts
     this.minsAndSeconds = reducedDate
@@ -75,18 +68,18 @@ export class AgeStore {
   @computed
   get age(): Age {
     const [reducedParts] = this.reduceDate(this.minsAndSeconds, [
-      DatePart.Minutes,
-      DatePart.Seconds,
+      'minutes',
+      'seconds',
     ])
-    const minutes = reducedParts[DatePart.Minutes]
-    const seconds = reducedParts[DatePart.Seconds]
+    const minutes = reducedParts.minutes
+    const seconds = reducedParts.seconds
     const obj: Age = {
-      days: this.cached[DatePart.Days],
-      hours: this.cached[DatePart.Hours],
+      days: this.cached.days,
+      hours: this.cached.hours,
       minutes,
-      months: this.cached[DatePart.Months],
+      months: this.cached.months,
       seconds,
-      years: this.cached[DatePart.Years],
+      years: this.cached.years,
     }
     return obj
   }
