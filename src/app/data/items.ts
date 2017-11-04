@@ -1,7 +1,6 @@
 export interface Item {
   name: string
   category?: ItemCategory
-  component?: string
   size?: ItemSize
 }
 
@@ -29,12 +28,12 @@ export const tailItems: Items = [
 ]
 
 export const items: Items = [
-  {name: '30', component: 'AgeBtn'},
+  {name: '30'},
   {name: '8-bit'},
   {name: 'Anathema'},
   {name: 'Android'},
   {name: 'Angular', size: ItemSize.L},
-  {name: 'Ascending', component: 'AscendingBtn', category: ItemCategory.Meta},
+  {name: 'Ascending', category: ItemCategory.Meta},
   {name: 'bash.org'},
   {name: 'Belarus'},
   {name: 'Bicycle'},
@@ -42,7 +41,7 @@ export const items: Items = [
   {name: 'BitBucket'},
   {name: 'Board games'},
   {name: 'Cats'},
-  {name: 'Colors', component: 'ColorsBtn', category: ItemCategory.Meta},
+  {name: 'Colors', category: ItemCategory.Meta},
   {name: 'Curriculum vitae', size: ItemSize.L},
   {name: 'Debian'},
   {name: 'Deep Purple'},
@@ -80,7 +79,7 @@ export const items: Items = [
   {name: 'Playing cards'},
   {name: 'Poland'},
   {name: 'PSU'},
-  {name: 'Random', component: 'RandomBtn', category: ItemCategory.Meta},
+  {name: 'Random', category: ItemCategory.Meta},
   {name: 'React', size: ItemSize.L},
   {name: 'Ritchie Blackmore'},
   {name: 'Riverside'},
