@@ -18,6 +18,16 @@ export enum ItemSize {
   XXL,
 }
 
+export const headItems: Items = [
+  {name: 'EN', category: ItemCategory.Meta},
+  {name: 'RU', category: ItemCategory.Meta},
+  {name: 'phts.com', category: ItemCategory.Meta, size: ItemSize.XXL},
+]
+
+export const tailItems: Items = [
+  {name: '© Phil Tsarik, 2017'},
+]
+
 export const items: Items = [
   {name: '30', component: 'AgeBtn'},
   {name: '8-bit'},
@@ -39,7 +49,6 @@ export const items: Items = [
   {name: 'Design'},
   {name: 'Drums', size: ItemSize.XL},
   {name: 'Email'},
-  {name: 'EN', category: ItemCategory.Meta},
   {name: 'Epam', size: ItemSize.L},
   {name: 'Facebook'},
   {name: 'Family', size: ItemSize.L},
@@ -75,7 +84,6 @@ export const items: Items = [
   {name: 'React', size: ItemSize.L},
   {name: 'Ritchie Blackmore'},
   {name: 'Riverside'},
-  {name: 'RU', category: ItemCategory.Meta},
   {name: 'Ruby'},
   {name: 'SaM Solutions'},
   {name: 'S\u030Ckoda'},
@@ -98,5 +106,4 @@ export const items: Items = [
   {name: 'Vk'},
   {name: 'Waterfox'},
   {name: 'ZX Spectrum'},
-  {name: '© Phil Tsarik, 2017'},
 ]

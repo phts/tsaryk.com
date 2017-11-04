@@ -2,11 +2,13 @@ import {observable, action} from 'mobx'
 import * as R from 'rambdax'
 
 import {
+  headItems,
   Item,
   ItemCategory,
-  ItemSize,
   Items,
   items,
+  ItemSize,
+  tailItems,
 } from '../data/items'
 
 export {ItemCategory, ItemSize, Item}
@@ -21,11 +23,9 @@ const sortFunc: {[index: number]: (x: Items) => Items} = {
   [Mode.Random]: R.shuffle,
 }
 
-const DEFAULT_ITEMS: Items = items
-
 export class ListStore {
   @observable mode: Mode = Mode.Asc
-  @observable items: Items = DEFAULT_ITEMS
+  @observable items: Items
 
   constructor() {
     this.refresh()
@@ -43,7 +43,13 @@ export class ListStore {
   }
 
   private refresh() {
-    this.items = sortFunc[this.mode](this.items)
+    this.items = R.concat(
+      R.compose(
+        R.concat(headItems),
+        sortFunc[this.mode],
+      )(items),
+      tailItems,
+    )
   }
 }
 
