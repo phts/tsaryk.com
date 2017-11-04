@@ -2,7 +2,8 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const common = require('./webpack.common')
 
-module.exports = merge(common, {
+const commonConfig = common()
+module.exports = merge(commonConfig, {
   devtool: 'cheap-module-source-map',
   devServer: {
     hot: true,

@@ -8,7 +8,7 @@ const src = path.resolve(project, 'src')
 const app = path.resolve(src, 'app')
 const dist = path.resolve(project, 'dist')
 
-module.exports = {
+module.exports = ({isProd = false} = {}) => ({
   context: src,
   entry: './index',
   output: {
@@ -26,6 +26,15 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        enforce: 'pre',
+        loader: 'tslint-loader',
+        options: {
+          emitErrors: isProd,
+          failOnHint: isProd,
+        },
+      },
       {
         test: /\.tsx?$/,
         loader: 'awesome-typescript-loader',
@@ -49,4 +58,4 @@ module.exports = {
     }),
     new ExtractTextWebpackPlugin('style.css'),
   ],
-}
+})
