@@ -1,8 +1,11 @@
 import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
+import {BtnDescription} from './BtnDescription'
+
 interface Props {
   borderStyle: string
+  description?: string | null
   flexBasis: string
   fontSize: string
   onClick?: (ev?: React.MouseEvent<HTMLButtonElement>) => void
@@ -43,6 +46,9 @@ const Li = li`
 
 export class GenericBtn extends React.Component<Props, {}> {
   render() {
+    const descrEl = this.props.description ?
+      <BtnDescription>{this.props.description}</BtnDescription> :
+      ''
     return <Li flexBasis={this.props.flexBasis}>
       <Button
           onClick={this.props.onClick}
@@ -50,6 +56,7 @@ export class GenericBtn extends React.Component<Props, {}> {
           borderStyle={this.props.borderStyle}>
         {this.props.text}
       </Button>
+      {descrEl}
     </Li>
   }
 }

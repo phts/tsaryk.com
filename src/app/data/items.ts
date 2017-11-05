@@ -1,6 +1,9 @@
+export type ItemId = string
+
 export interface Item {
-  name: string
   category?: ItemCategory
+  description?: string
+  name: ItemId
   size?: ItemSize
 }
 
