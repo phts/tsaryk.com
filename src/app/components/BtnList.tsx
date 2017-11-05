@@ -39,12 +39,10 @@ const knownBtns: {[index: string]: typeof BaseBtnComponent} = {
 export class BtnList extends React.Component<Props> {
   render() {
     const els =  R.map((it: Item) => {
-      const LiComponent: typeof BaseBtnComponent = knownBtns[it.name] || TextBtn as typeof BaseBtnComponent
-      return <LiComponent
+      const BtnComponent: typeof BaseBtnComponent = knownBtns[it.name] || TextBtn as typeof BaseBtnComponent
+      return <BtnComponent
         key={it.name}
-        category={it.category}
-        text={it.name}
-        size={it.size}
+        item={it}
         width={R.random(60, 500)}
        />
     })(this.props.listStore.items)

@@ -14,11 +14,11 @@ interface Props extends BaseProps {
 export class ColorsBtn extends BaseBtnComponent<Props> {
   render() {
     return <GenericBtn
-      category={this.props.category}
-      size={this.props.size}
-      text={this.props.text}
-      width={this.props.width}
+      borderStyle={this.borderStyle}
+      flexBasis={this.flexBasis}
+      fontSize={this.fontSize}
       onClick={this.onClick}
+      text={this.text}
     />
   }
 

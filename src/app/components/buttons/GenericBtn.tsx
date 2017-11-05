@@ -1,25 +1,12 @@
 import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
-import {
-  ItemCategory,
-  ItemSize,
-} from 'app/data/items'
-import {BaseProps} from './BaseBtnComponent'
-
-const fontSizeMap = {
-  [ItemSize.M]: '10pt',
-  [ItemSize.L]: '12pt',
-  [ItemSize.XL]: '14pt',
-  [ItemSize.XXL]: '16pt',
-}
-
-const borderMap = {
-  [ItemCategory.Meta]: '2px dotted',
-}
-
-interface Props extends BaseProps {
+interface Props {
+  borderStyle: string
+  flexBasis: string
+  fontSize: string
   onClick?: (ev?: React.MouseEvent<HTMLButtonElement>) => void
+  text: string
 }
 
 interface ButtonProps {
@@ -28,7 +15,7 @@ interface ButtonProps {
 }
 
 interface LiProps {
-  width: number
+  flexBasis: string
 }
 
 type ButtonElProps = ButtonProps & React.HTMLProps<HTMLButtonElement>
@@ -36,10 +23,10 @@ const button: StyledFunction<ButtonElProps> = styled.button
 const Button = button`
   background: none;
   border: 0 none;
-  border-bottom: ${(props: ButtonElProps) => props.borderStyle || '1px dashed'};
+  border-bottom: ${props => props.borderStyle};
   color: inherit;
   cursor: pointer;
-  font-size: ${(props: ButtonElProps) => props.fontSize};
+  font-size: ${props => props.fontSize};
   margin: 0;
   padding: 0;
 `
@@ -47,7 +34,7 @@ const Button = button`
 type LiElProps = LiProps & React.HTMLProps<HTMLLIElement>
 const li: StyledFunction<LiElProps> = styled.li
 const Li = li`
-  flex-basis: ${props => props.width}px;
+  flex-basis: ${props => props.flexBasis};
   margin: 0 1em;
   list-style: none;
   text-align: center;
@@ -56,12 +43,11 @@ const Li = li`
 
 export class GenericBtn extends React.Component<Props, {}> {
   render() {
-    const fontSize = fontSizeMap[this.props.size || ItemSize.M]
-    return <Li width={this.props.width}>
+    return <Li flexBasis={this.props.flexBasis}>
       <Button
           onClick={this.props.onClick}
-          fontSize={fontSize}
-          borderStyle={borderMap[this.props.category]}>
+          fontSize={this.props.fontSize}
+          borderStyle={this.props.borderStyle}>
         {this.props.text}
       </Button>
     </Li>
