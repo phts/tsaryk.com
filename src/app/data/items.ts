@@ -6,6 +6,7 @@ interface RawItem {
   category?: ItemCategory
   description?: string
   name: ItemId
+  position?: ItemPosition
   size?: ItemSize
 }
 type RawItems = RawItem[]
@@ -14,6 +15,7 @@ export interface Item {
   category: ItemCategory
   description?: string
   name: ItemId
+  position: ItemPosition
   size: ItemSize
 }
 export type Items = Item[]
@@ -21,6 +23,12 @@ export type Items = Item[]
 export enum ItemCategory {
   Common,
   Meta,
+}
+
+export enum ItemPosition {
+  Head,
+  Middle,
+  Tail,
 }
 
 export enum ItemSize {
@@ -32,6 +40,7 @@ export enum ItemSize {
 
 const DEFAULT_PROPS = {
   category: ItemCategory.Common,
+  position: ItemPosition.Middle,
   size: ItemSize.M,
 }
 
@@ -39,29 +48,27 @@ function toItem(it: RawItem): Item {
   return Object.assign({}, DEFAULT_PROPS, it)
 }
 
-const rawHeadItems: RawItems = [
+const rawItems: RawItems = [
   {
     category: ItemCategory.Meta,
     name: 'EN',
+    position: ItemPosition.Head,
   },
   {
     category: ItemCategory.Meta,
     name: 'RU',
+    position: ItemPosition.Head,
   },
   {
     category: ItemCategory.Meta,
     name: 'phts.com',
+    position: ItemPosition.Head,
     size: ItemSize.XXL,
   },
-]
-export const headItems = R.map(toItem, rawHeadItems)
-
-const rawTailItems: RawItems = [
-  {name: '© Phil Tsarik, 2017'},
-]
-export const tailItems = R.map(toItem, rawTailItems)
-
-const rawItems: RawItems = [
+  {
+    name: '© Phil Tsarik, 2017',
+    position: ItemPosition.Tail,
+  },
   {name: '30'},
   {name: '8-bit'},
   {name: 'Anathema'},

@@ -2,10 +2,9 @@ import {observable, action} from 'mobx'
 import * as R from 'rambdax'
 
 import {
-  headItems,
+  ItemPosition,
   Items,
   items,
-  tailItems,
 } from '../data/items'
 
 export enum Mode {
@@ -38,13 +37,15 @@ export class ListStore {
   }
 
   private refresh() {
-    this.items = R.concat(
-      R.compose(
-        R.concat(headItems),
-        sortFunc[this.mode],
-      )(items),
-      tailItems,
-    )
+    const headItems = R.filter(R.propEq('position', ItemPosition.Head), items)
+    const middleItems = R.filter(R.propEq('position', ItemPosition.Middle), items)
+    const tailItems = R.filter(R.propEq('position', ItemPosition.Tail), items)
+
+    this.items = [
+      ...headItems,
+      ...sortFunc[this.mode](middleItems),
+      ...tailItems,
+    ]
   }
 }
 
