@@ -26,19 +26,25 @@ const Ul = styled.ul`
   padding: 0;
 `
 
-const knownBtns: {[index: string]: typeof BaseBtnComponent} = {
-  30: AgeBtn as typeof BaseBtnComponent,
-  Ascending: ModeBtn(Mode.Asc) as typeof BaseBtnComponent,
-  Colors: ColorsBtn as typeof BaseBtnComponent,
-  Random: ModeBtn(Mode.Random) as typeof BaseBtnComponent,
+type BaseBtnComponentClass = typeof BaseBtnComponent
+
+interface KnownBtnMap {
+  [index: string]: BaseBtnComponentClass
 }
+
+const knownBtns: KnownBtnMap = {
+  30: AgeBtn,
+  Ascending: ModeBtn(Mode.Asc),
+  Colors: ColorsBtn,
+  Random: ModeBtn(Mode.Random),
+} as KnownBtnMap
 
 @inject('listStore')
 @observer
 export class BtnList extends React.Component<Props> {
   render() {
     const els =  R.map((it: Item) => {
-      const BtnComponent: typeof BaseBtnComponent = knownBtns[it.name] || TextBtn as typeof BaseBtnComponent
+      const BtnComponent: BaseBtnComponentClass = knownBtns[it.name] || TextBtn as BaseBtnComponentClass
       return <BtnComponent
         key={it.name}
         item={it}
