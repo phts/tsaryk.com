@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import * as R from 'rambdax'
+import * as R from 'ramda'
+import {random} from 'rambdax'
 import {observer, inject} from 'mobx-react'
 
 import {ListStore, Mode} from 'app/stores/listStore'
@@ -48,7 +49,7 @@ export class BtnList extends React.Component<Props> {
       return <BtnComponent
         key={it.name}
         item={it}
-        width={R.random(60, 500)}
+        width={random(60, 500)}
        />
     })(this.props.listStore.items)
     return <Ul>

@@ -1,4 +1,4 @@
-import * as R from 'rambdax'
+import * as R from 'ramda'
 
 export type ItemId = string
 

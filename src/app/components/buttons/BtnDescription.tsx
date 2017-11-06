@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as R from 'rambdax'
+import * as R from 'ramda'
 import styled from 'styled-components'
 
 interface Props {

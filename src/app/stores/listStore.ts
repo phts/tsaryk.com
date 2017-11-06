@@ -1,5 +1,6 @@
 import {observable, action} from 'mobx'
-import * as R from 'rambdax'
+import * as R from 'ramda'
+import {shuffle} from 'rambdax'
 
 import {
   ItemPosition,
@@ -14,7 +15,7 @@ export enum Mode {
 
 const sortFunc: {[index: number]: (x: Items) => Items} = {
   [Mode.Asc]: R.sortBy(R.compose(R.toLower, R.prop('name'))),
-  [Mode.Random]: R.shuffle,
+  [Mode.Random]: shuffle,
 }
 
 export class ListStore {
