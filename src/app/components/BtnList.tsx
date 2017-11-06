@@ -3,14 +3,13 @@ import styled from 'styled-components'
 import * as R from 'rambdax'
 import {observer, inject} from 'mobx-react'
 
-import {ListStore} from 'app/stores/listStore'
+import {ListStore, Mode} from 'app/stores/listStore'
 import {Item} from 'app/data/items'
 import {
   AgeBtn,
-  AscendingBtn,
   BaseBtnComponent,
   ColorsBtn,
-  RandomBtn,
+  ModeBtn,
   TextBtn,
 } from 'app/components/buttons'
 
@@ -29,9 +28,9 @@ const Ul = styled.ul`
 
 const knownBtns: {[index: string]: typeof BaseBtnComponent} = {
   30: AgeBtn as typeof BaseBtnComponent,
-  Ascending: AscendingBtn as typeof BaseBtnComponent,
+  Ascending: ModeBtn(Mode.Asc) as typeof BaseBtnComponent,
   Colors: ColorsBtn as typeof BaseBtnComponent,
-  Random: RandomBtn as typeof BaseBtnComponent,
+  Random: ModeBtn(Mode.Random) as typeof BaseBtnComponent,
 }
 
 @inject('listStore')
