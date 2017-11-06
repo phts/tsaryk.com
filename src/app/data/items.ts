@@ -1,15 +1,25 @@
+import * as R from 'rambdax'
+
 export type ItemId = string
 
-export interface Item {
+interface RawItem {
   category?: ItemCategory
   description?: string
   name: ItemId
   size?: ItemSize
 }
+type RawItems = RawItem[]
 
+export interface Item {
+  category: ItemCategory
+  description?: string
+  name: ItemId
+  size: ItemSize
+}
 export type Items = Item[]
 
 export enum ItemCategory {
+  Common,
   Meta,
 }
 
@@ -20,7 +30,16 @@ export enum ItemSize {
   XXL,
 }
 
-export const headItems: Items = [
+const DEFAULT_PROPS = {
+  category: ItemCategory.Common,
+  size: ItemSize.M,
+}
+
+function toItem(it: RawItem): Item {
+  return Object.assign({}, DEFAULT_PROPS, it)
+}
+
+const rawHeadItems: RawItems = [
   {
     category: ItemCategory.Meta,
     name: 'EN',
@@ -35,12 +54,14 @@ export const headItems: Items = [
     size: ItemSize.XXL,
   },
 ]
+export const headItems = R.map(toItem, rawHeadItems)
 
-export const tailItems: Items = [
+const rawTailItems: RawItems = [
   {name: '© Phil Tsarik, 2017'},
 ]
+export const tailItems = R.map(toItem, rawTailItems)
 
-export const items: Items = [
+const rawItems: RawItems = [
   {name: '30'},
   {name: '8-bit'},
   {name: 'Anathema'},
@@ -164,3 +185,4 @@ export const items: Items = [
   {name: 'Waterfox'},
   {name: 'ZX Spectrum'},
 ]
+export const items = R.map(toItem, rawItems)

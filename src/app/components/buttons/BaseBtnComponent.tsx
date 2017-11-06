@@ -19,6 +19,7 @@ const fontSizeMap: {[index: number]: string} = {
 }
 
 const borderMap: {[index: number]: string} = {
+  [ItemCategory.Common]: '1px dashed',
   [ItemCategory.Meta]: '2px dotted',
 }
 
@@ -26,7 +27,7 @@ export class BaseBtnComponent<P extends BaseProps = BaseProps, S = {}>
              extends React.Component<P, S> {
 
   protected get borderStyle() {
-    return borderMap[this.props.item.category] || '1px dashed'
+    return borderMap[this.props.item.category]
   }
 
   protected get fontSize(): string {
