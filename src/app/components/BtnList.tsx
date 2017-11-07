@@ -5,11 +5,12 @@ import {random} from 'rambdax'
 import {observer, inject} from 'mobx-react'
 
 import {ListStore, Mode} from 'app/stores/listStore'
-import {Item} from 'app/data/items'
+import {Item, Lang} from 'app/data/items'
 import {
   AgeBtn,
   BaseBtnComponent,
   ColorsBtn,
+  LangBtn,
   ModeBtn,
   TextBtn,
 } from 'app/components/buttons'
@@ -37,7 +38,9 @@ const knownBtns: KnownBtnMap = {
   30: AgeBtn,
   Ascending: ModeBtn(Mode.Asc),
   Colors: ColorsBtn,
+  EN: LangBtn(Lang.EN) ,
   Random: ModeBtn(Mode.Random),
+  RU: LangBtn(Lang.RU),
 } as KnownBtnMap
 
 @inject('listStore')
@@ -45,9 +48,9 @@ const knownBtns: KnownBtnMap = {
 export class BtnList extends React.Component<Props> {
   render() {
     const els =  R.map((it: Item) => {
-      const BtnComponent: BaseBtnComponentClass = knownBtns[it.name] || TextBtn as BaseBtnComponentClass
+      const BtnComponent: BaseBtnComponentClass = knownBtns[it.id] || TextBtn as BaseBtnComponentClass
       return <BtnComponent
-        key={it.name}
+        key={it.id}
         item={it}
         width={random(60, 500)}
        />

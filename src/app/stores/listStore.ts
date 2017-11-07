@@ -3,10 +3,11 @@ import * as R from 'ramda'
 import {shuffle} from 'rambdax'
 
 import {
+  getTranslatedItems,
   ItemPosition,
   Items,
-  items,
-} from '../data/items'
+  Lang,
+} from 'app/data/items'
 
 export enum Mode {
   Asc,
@@ -20,6 +21,7 @@ const sortFunc: {[index: number]: (x: Items) => Items} = {
 
 export class ListStore {
   @observable mode: Mode = Mode.Asc
+  @observable lang: Lang = Lang.EN
   @observable items: Items
 
   constructor() {
@@ -37,10 +39,21 @@ export class ListStore {
     }
   }
 
+  @action
+  setLang(lang: Lang): void {
+    if (this.lang === lang) {
+      return
+    }
+
+    this.lang = lang
+    this.refresh()
+  }
+
   private refresh() {
-    const headItems = R.filter(R.propEq('position', ItemPosition.Head), items)
-    const middleItems = R.filter(R.propEq('position', ItemPosition.Middle), items)
-    const tailItems = R.filter(R.propEq('position', ItemPosition.Tail), items)
+    const translatedItems = getTranslatedItems(this.lang)
+    const headItems = R.filter(R.propEq('position', ItemPosition.Head), translatedItems)
+    const middleItems = R.filter(R.propEq('position', ItemPosition.Middle), translatedItems)
+    const tailItems = R.filter(R.propEq('position', ItemPosition.Tail), translatedItems)
 
     this.items = [
       ...headItems,
