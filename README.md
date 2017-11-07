@@ -1,4 +1,4 @@
-# phts.com
+# tsarik.me
 
 My home page. And a chance to learn some new stuff.
 

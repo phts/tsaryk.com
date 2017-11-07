@@ -3,7 +3,7 @@ export default {
   },
   RU: {
   },
-  'phts.com': {
+  'tsarik.me': {
   },
   '© Phil Tsarik, 2017': {
   },

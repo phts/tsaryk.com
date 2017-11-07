@@ -1,5 +1,5 @@
 {
-  "name": "phts.com",
+  "name": "tsarik.me",
   "private": true,
   "scripts": {
     "build": "npm run webpack -- --config ./config/webpack.prod.js",
