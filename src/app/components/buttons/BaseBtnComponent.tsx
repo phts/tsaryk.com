@@ -8,7 +8,7 @@ import {
 
 export interface BaseProps {
   item: Item,
-  width: number
+  width: number,
 }
 
 const fontSizeMap: {[index: number]: string} = {

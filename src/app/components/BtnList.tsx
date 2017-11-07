@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import * as R from 'ramda'
-import {random} from 'rambdax'
 import {observer, inject} from 'mobx-react'
 
+import {WidthsStore} from 'app/stores/widthsStore'
 import {ListStore, Mode} from 'app/stores/listStore'
 import {Item, Lang} from 'app/data/items'
 import {
@@ -17,6 +17,7 @@ import {
 
 interface Props {
   listStore?: ListStore
+  widthsStore?: WidthsStore
 }
 
 const Ul = styled.ul`
@@ -43,17 +44,21 @@ const knownBtns: KnownBtnMap = {
   RU: LangBtn(Lang.RU),
 } as KnownBtnMap
 
-@inject('listStore')
+@inject('listStore', 'widthsStore')
 @observer
 export class BtnList extends React.Component<Props> {
+  componentWillMount() {
+    this.props.widthsStore.randomize(this.props.listStore.items)
+  }
+
   render() {
     const els =  R.map((it: Item) => {
       const BtnComponent: BaseBtnComponentClass = knownBtns[it.id] || TextBtn as BaseBtnComponentClass
       return <BtnComponent
         key={it.id}
         item={it}
-        width={random(60, 500)}
-       />
+        width={this.props.widthsStore.getWidth(it.id)}
+      />
     })(this.props.listStore.items)
     return <Ul>
       {els}
