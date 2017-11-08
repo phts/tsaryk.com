@@ -16,10 +16,8 @@ export enum ItemSize {
   XXL,
 }
 
-interface RawMetaPropSet {
-  category?: ItemCategory
-  position?: ItemPosition
-  size?: ItemSize
+type RawMetaPropSet = {
+  [P in keyof MetaPropsSet]?: MetaPropsSet[P]
 }
 
 type RawMetaProps = {[index: string]: RawMetaPropSet}

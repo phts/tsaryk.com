@@ -17,7 +17,7 @@ const DATE_OF_BIRTH: Date = new Date(1987, 11, 3, 10, 30, 0)
 
 type DatePart = keyof Age
 
-const addMethods: {[index: string]: (date: Date, num: number) => Date} = {
+const addMethods: {[index in DatePart]: (date: Date, num: number) => Date} = {
   days: addDays,
   hours: addHours,
   minutes: addMinutes,
@@ -26,7 +26,7 @@ const addMethods: {[index: string]: (date: Date, num: number) => Date} = {
   years: addYears,
 }
 
-const diffMethods: {[index: string]: (l: Date, r: Date) => number} = {
+const diffMethods: {[index in DatePart]: (l: Date, r: Date) => number} = {
   days: differenceInDays,
   hours: differenceInHours,
   minutes: differenceInMinutes,
