@@ -59,7 +59,7 @@ function toItems(itemNamesMap: ItemNamesMap, strings: TranslatedStrings): Items 
 export class ItemsStore {
   @observable lang: Lang = Lang.EN
 
-  private cache: {[index: number]: Items} = {}
+  private cache: {[index in Lang]?: Items} = {}
 
   @computed
   get items(): Items {

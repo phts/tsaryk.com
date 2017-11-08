@@ -1,21 +1,21 @@
 import {KnownName} from './names'
 
 export enum ItemCategory {
-  Common,
-  Meta,
+  Common = 'Common',
+  Meta = 'Meta',
 }
 
 export enum ItemPosition {
-  Head,
-  Middle,
-  Tail,
+  Head = 'Head',
+  Middle = 'Middle',
+  Tail = 'Tail',
 }
 
 export enum ItemSize {
-  M,
-  L,
-  XL,
-  XXL,
+  M = 'M',
+  L = 'L',
+  XL = 'XL',
+  XXL = 'XXL',
 }
 
 type RawMetaPropSet = {

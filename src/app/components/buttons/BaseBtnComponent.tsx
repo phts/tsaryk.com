@@ -11,16 +11,16 @@ export interface BaseProps {
   width: number,
 }
 
-const fontSizeMap: {[index: number]: string} = {
-  [ItemSize.M]: '10pt',
-  [ItemSize.L]: '12pt',
-  [ItemSize.XL]: '14pt',
-  [ItemSize.XXL]: '16pt',
+const fontSizeMap: {[index in ItemSize]: string} = {
+  M: '10pt',
+  L: '12pt',
+  XL: '14pt',
+  XXL: '16pt',
 }
 
-const borderMap: {[index: number]: string} = {
-  [ItemCategory.Common]: '1px dashed',
-  [ItemCategory.Meta]: '2px dotted',
+const borderMap: {[index in ItemCategory]: string} = {
+  Common: '1px dashed',
+  Meta: '2px dotted',
 }
 
 export class BaseBtnComponent<P extends BaseProps = BaseProps, S = {}>

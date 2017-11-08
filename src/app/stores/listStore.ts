@@ -24,16 +24,16 @@ export {
   Lang,
 }
 export enum Mode {
-  Asc,
-  Random,
+  Asc = 'Asc',
+  Random = 'Random',
 }
 
 export type ListItem = Item
 export type List = Items
 
-const sortFunc: {[index: number]: (x: Items) => Items} = {
-  [Mode.Asc]: R.sortBy(R.compose(R.toLower, R.prop('name'))),
-  [Mode.Random]: shuffle,
+const sortFunc: {[index in Mode]: (x: Items) => Items} = {
+  Asc: R.sortBy(R.compose(R.toLower, R.prop('name'))),
+  Random: shuffle,
 }
 
 export class ListStore {

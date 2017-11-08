@@ -3,8 +3,8 @@ import ru from './ru'
 import {KnownName} from '../names'
 
 export enum Lang {
-  EN,
-  RU,
+  EN = 'EN',
+  RU = 'RU',
 }
 
 export interface Translatable {
@@ -14,7 +14,7 @@ export interface Translatable {
 
 export type TranslatedStrings = {[index in KnownName]?: Translatable}
 
-export const translations: {[index: number]: TranslatedStrings} = {
-  [Lang.EN]: en,
-  [Lang.RU]: ru,
+export const translations: {[index in Lang]: TranslatedStrings} = {
+  EN: en,
+  RU: ru,
 }
