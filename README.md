@@ -4,10 +4,11 @@ My home page. And a chance to learn some new stuff.
 
 ## Technologies
 
+* [Jest](https://facebook.github.io/jest/)
 * [MobX](https://mobx.js.org/)
-* [Preact](https://preactjs.com/)
 * [preact-compat](https://github.com/developit/preact-compat)
-* [Ramda](http://ramdajs.com/)
+* [Preact](https://preactjs.com/)
 * [rambdax](https://selfrefactor.github.io/rambdax/#/) (only for `random` and `shuffle` methods)
+* [Ramda](http://ramdajs.com/)
 * [styled-components](https://www.styled-components.com/)
 * [Typescript](https://www.typescriptlang.org/)
