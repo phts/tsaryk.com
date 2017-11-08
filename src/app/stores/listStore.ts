@@ -50,16 +50,17 @@ export class ListStore {
   }
 
   private refresh() {
-    const translatedItems = getTranslatedItems(this.lang)
-    const headItems = R.filter(R.propEq('position', ItemPosition.Head), translatedItems)
-    const middleItems = R.filter(R.propEq('position', ItemPosition.Middle), translatedItems)
-    const tailItems = R.filter(R.propEq('position', ItemPosition.Tail), translatedItems)
-
-    this.items = [
-      ...headItems,
-      ...sortFunc[this.mode](middleItems),
-      ...tailItems,
-    ]
+    this.items = R.pipe(
+      getTranslatedItems,
+      x => [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map(p => {
+        return R.filter(R.propEq('position', p), x)
+      }),
+      x => [
+        ...x[0],
+        ...sortFunc[this.mode](x[1]),
+        ...x[2],
+      ],
+    )(this.lang)
   }
 }
 
