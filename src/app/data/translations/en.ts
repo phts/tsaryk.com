@@ -7,9 +7,9 @@ export default {
   },
   '© Phil Tsarik, 2017': {
   },
-  30: {
-  },
   '8-bit': {
+  },
+  Age: {
   },
   Anathema: {
   },

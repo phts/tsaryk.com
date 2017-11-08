@@ -1,13 +1,13 @@
 import * as React from 'react'
 
 import {
-  Item,
+  ListItem,
   ItemCategory,
   ItemSize,
-} from 'app/data/items'
+} from 'app/stores/listStore'
 
 export interface BaseProps {
-  item: Item,
+  item: ListItem,
   width: number,
 }
 

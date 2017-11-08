@@ -4,8 +4,13 @@ import * as R from 'ramda'
 import {observer, inject} from 'mobx-react'
 
 import {WidthsStore} from 'app/stores/widthsStore'
-import {ListStore, Mode} from 'app/stores/listStore'
-import {Item, Lang} from 'app/data/items'
+import {
+  ItemId,
+  Lang,
+  ListItem,
+  ListStore,
+  Mode,
+} from 'app/stores/listStore'
 import {
   AgeBtn,
   BaseBtnComponent,
@@ -31,35 +36,35 @@ const Ul = styled.ul`
 
 type BaseBtnComponentClass = typeof BaseBtnComponent
 
-interface KnownBtnMap {
-  [index: string]: BaseBtnComponentClass
+type KnownBtnMap = {
+  [index in ItemId]?: BaseBtnComponentClass
 }
 
 const knownBtns: KnownBtnMap = {
-  30: AgeBtn,
-  Ascending: ModeBtn(Mode.Asc),
-  Colors: ColorsBtn,
-  EN: LangBtn(Lang.EN) ,
-  Random: ModeBtn(Mode.Random),
-  RU: LangBtn(Lang.RU),
-} as KnownBtnMap
+  Age: AgeBtn as BaseBtnComponentClass,
+  Ascending: ModeBtn(Mode.Asc) as BaseBtnComponentClass,
+  Colors: ColorsBtn as BaseBtnComponentClass,
+  EN: LangBtn(Lang.EN) as BaseBtnComponentClass,
+  Random: ModeBtn(Mode.Random) as BaseBtnComponentClass,
+  RU: LangBtn(Lang.RU) as BaseBtnComponentClass,
+}
 
 @inject('listStore', 'widthsStore')
 @observer
 export class BtnList extends React.Component<Props> {
   componentWillMount() {
-    this.props.widthsStore.randomize(this.props.listStore.items)
+    this.props.widthsStore.randomize(this.props.listStore.list)
   }
 
   render() {
-    const els =  R.map((it: Item) => {
+    const els =  R.map((it: ListItem) => {
       const BtnComponent: BaseBtnComponentClass = knownBtns[it.id] || TextBtn as BaseBtnComponentClass
       return <BtnComponent
         key={it.id}
         item={it}
         width={this.props.widthsStore.getWidth(it.id)}
       />
-    })(this.props.listStore.items)
+    })(this.props.listStore.list)
     return <Ul>
       {els}
     </Ul>

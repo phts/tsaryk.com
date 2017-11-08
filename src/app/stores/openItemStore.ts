@@ -1,6 +1,6 @@
 import {observable, action} from 'mobx'
 
-import {ItemId} from '../data/items'
+import {ItemId} from './itemsStore'
 
 export class OpenItemStore {
   @observable openItemId: ItemId = null

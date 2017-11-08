@@ -2,7 +2,7 @@ import {observable, action} from 'mobx'
 import * as R from 'ramda'
 import {random} from 'rambdax'
 
-import {ItemId, Items} from '../data/items'
+import {ItemId, Items} from './itemsStore'
 
 type Width = number
 type Widths = {[index: string]: Width}

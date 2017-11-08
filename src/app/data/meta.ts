@@ -1,3 +1,5 @@
+import {KnownName} from './names'
+
 export enum ItemCategory {
   Common,
   Meta,
@@ -20,7 +22,7 @@ type RawMetaPropSet = {
   [P in keyof MetaPropsSet]?: MetaPropsSet[P]
 }
 
-type RawMetaProps = {[index: string]: RawMetaPropSet}
+type RawMetaProps = {[index in KnownName]?: RawMetaPropSet}
 
 interface MetaPropsSet {
   category: ItemCategory

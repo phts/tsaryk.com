@@ -26,7 +26,7 @@ export function ModeBtn(mode: Mode) {
 
     private onClick = () => {
       if (mode !== this.props.listStore.mode) {
-        this.props.widthsStore.randomize(this.props.listStore.items)
+        this.props.widthsStore.randomize(this.props.listStore.list)
       }
       this.props.listStore.setMode(mode)
     }

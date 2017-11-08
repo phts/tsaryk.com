@@ -24,11 +24,11 @@ export class TextBtn extends BaseBtnComponent<Props> {
   }
 
   private onClick = () => {
-    this.props.openItemStore.toggle(this.props.item.name)
+    this.props.openItemStore.toggle(this.props.item.id)
   }
 
   private isOpen() {
-    return this.props.openItemStore.isOpen(this.props.item.name)
+    return this.props.openItemStore.isOpen(this.props.item.id)
   }
 
   private get description() {

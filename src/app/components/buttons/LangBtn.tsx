@@ -3,8 +3,7 @@ import {inject} from 'mobx-react'
 
 import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
 import {GenericBtn} from './GenericBtn'
-import {Lang} from 'app/data/items'
-import {ListStore} from 'app/stores/listStore'
+import {ListStore, Lang} from 'app/stores/listStore'
 
 interface Props extends BaseProps {
   listStore?: ListStore

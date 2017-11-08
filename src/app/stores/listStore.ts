@@ -3,16 +3,33 @@ import * as R from 'ramda'
 import {shuffle} from 'rambdax'
 
 import {
-  getTranslatedItems,
   ItemPosition,
+  ItemCategory,
+  ItemSize,
+} from 'app/data/meta'
+import {Lang} from 'app/data/translations'
+import {
+  Item,
+  ItemId,
   Items,
-  Lang,
-} from 'app/data/items'
+  itemsStore,
+  ItemsStore,
+} from './itemsStore'
 
+export {
+  ItemCategory,
+  ItemId,
+  ItemPosition,
+  ItemSize,
+  Lang,
+}
 export enum Mode {
   Asc,
   Random,
 }
+
+export type ListItem = Item
+export type List = Items
 
 const sortFunc: {[index: number]: (x: Items) => Items} = {
   [Mode.Asc]: R.sortBy(R.compose(R.toLower, R.prop('name'))),
@@ -21,10 +38,9 @@ const sortFunc: {[index: number]: (x: Items) => Items} = {
 
 export class ListStore {
   @observable mode: Mode = Mode.Asc
-  @observable lang: Lang = Lang.EN
-  @observable items: Items
+  @observable list: List = []
 
-  constructor() {
+  constructor(private items: ItemsStore) {
     this.refresh()
   }
 
@@ -41,27 +57,26 @@ export class ListStore {
 
   @action
   setLang(lang: Lang): void {
-    if (this.lang === lang) {
+    if (lang === this.items.lang) {
       return
     }
 
-    this.lang = lang
+    this.items.setLang(lang)
     this.refresh()
   }
 
   private refresh() {
-    this.items = R.pipe(
-      getTranslatedItems,
+    this.list = R.pipe(
       x => [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map(p => {
-        return R.filter(R.propEq('position', p), x)
+        return R.filter(R.propEq('position', p), x) as Items
       }),
       x => [
         ...x[0],
         ...sortFunc[this.mode](x[1]),
         ...x[2],
       ],
-    )(this.lang)
+    )(this.items.items)
   }
 }
 
-export const listStore = new ListStore()
+export const listStore = new ListStore(itemsStore)
