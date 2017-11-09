@@ -1,4 +1,6 @@
-export default {
+import {TranslatedStrings} from './index'
+
+export const ru: TranslatedStrings = {
   EN: {
     name: 'АНГ',
   },
