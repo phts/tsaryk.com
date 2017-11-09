@@ -5,12 +5,6 @@ export const en: TranslatedStrings = {
   },
   RU: {
   },
-  'tsarik.me': {
-  },
-  '© Phil Tsarik, 2017': {
-  },
-  '8-bit': {
-  },
   Age: {
   },
   Anathema: {
@@ -24,8 +18,6 @@ export const en: TranslatedStrings = {
   'bash.org': {
   },
   Belarus: {
-  },
-  Bicycle: {
   },
   Billiard: {
   },
@@ -42,8 +34,6 @@ export const en: TranslatedStrings = {
   Debian: {
   },
   'Deep Purple': {
-  },
-  Design: {
   },
   Drums: {
   },
@@ -67,29 +57,19 @@ export const en: TranslatedStrings = {
   },
   'Heroes of Might and Magic 3': {
   },
-  Java: {
-  },
   JavaScript: {
   },
   'Joy in Time': {
   },
   Kraków: {
   },
-  Langaroo: {
-  },
   'Last.fm': {
-  },
-  Lego: {
   },
   LinkedIn: {
   },
   'Lunatic Soul': {
   },
-  Minsk: {
-  },
   Music: {
-  },
-  NES: {
   },
   Novopolotsk: {
   },
@@ -130,11 +110,7 @@ export const en: TranslatedStrings = {
   },
   'Software Developer': {
   },
-  Sound: {
-  },
   'Space Resonance': {
-  },
-  Space: {
   },
   'Stack Overflow': {
   },
@@ -146,15 +122,9 @@ export const en: TranslatedStrings = {
   },
   'The Netherlands': {
   },
-  Travel: {
-  },
   Typescript: {
   },
-  Uber: {
-  },
   Ultramarined: {
-  },
-  'Vater 5A Los Angeles': {
   },
   'Video games': {
   },
