@@ -1,4 +1,4 @@
-import {observable, action, computed} from 'mobx'
+import {observable} from 'mobx'
 import {
   addDays,
   addHours,
@@ -45,48 +45,28 @@ interface Age {
 }
 
 type DatePartsStore = {
-  [index: string]: number,
+  [index in DatePart]?: number
 }
 
 export class AgeStore {
   @observable currentTime: Date = new Date()
 
-  private cached: DatePartsStore
-  private minsAndSeconds: Date
+  @observable age: DatePartsStore
 
   constructor() {
-    const [reducedParts, reducedDate] = this.reduceDate(DATE_OF_BIRTH, [
+    const [age] = this.reduceDate(DATE_OF_BIRTH, [
       'years',
       'months',
       'days',
       'hours',
-    ])
-    this.cached = reducedParts
-    this.minsAndSeconds = reducedDate
-  }
-
-  @computed
-  get age(): Age {
-    const [reducedParts] = this.reduceDate(this.minsAndSeconds, [
       'minutes',
       'seconds',
     ])
-    const minutes = reducedParts.minutes
-    const seconds = reducedParts.seconds
-    const obj: Age = {
-      days: this.cached.days,
-      hours: this.cached.hours,
-      minutes,
-      months: this.cached.months,
-      seconds,
-      years: this.cached.years,
-    }
-    return obj
-  }
+    this.age = age
 
-  @action
-  setCurrentTime(currentTime: Date): void {
-    this.currentTime = currentTime
+    setInterval(() => {
+      this.inc()
+    }, 1000)
   }
 
   private reduceDate(date: Date, parts: DatePart[]): [DatePartsStore, Date] {
@@ -97,6 +77,22 @@ export class AgeStore {
       return addMethods[value](acc, diffVal)
     }, date)
     return [reducedParts, reducedDate]
+  }
+
+  private inc() {
+    const {days, months, years} = this.age
+    let {seconds, minutes, hours} = this.age
+
+    seconds++
+    if (seconds >= 60) {
+      seconds = 0
+      minutes++
+    }
+    if (minutes >= 60) {
+      minutes = 0
+      hours++
+    }
+    this.age = {seconds, minutes, hours, days, months, years}
   }
 }
 

@@ -16,14 +16,6 @@ interface Props extends BaseProps {
 @inject('ageStore')
 @observer
 export class AgeBtn extends BaseBtnComponent<Props> {
-  constructor() {
-    super()
-
-    setInterval(() => {
-      this.props.ageStore.setCurrentTime(new Date())
-    }, 1000)
-  }
-
   render() {
     return <GenericBtn
       borderStyle={this.borderStyle}
@@ -35,12 +27,12 @@ export class AgeBtn extends BaseBtnComponent<Props> {
   }
 
   protected get text() {
-    const age = this.props.ageStore.age
-    return `${age.years} years \
-      ${age.months} months \
-      ${age.days} days \
-      ${age.hours} hours \
-      ${padWithZero(age.minutes)} min \
-      ${padWithZero(age.seconds)} sec`
+    const {years, months, days, hours, minutes, seconds} = this.props.ageStore.age
+    return `${years} years \
+      ${months} months \
+      ${days} days \
+      ${hours} hours \
+      ${padWithZero(minutes)} min \
+      ${padWithZero(seconds)} sec`
   }
 }
