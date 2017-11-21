@@ -80,8 +80,8 @@ export class AgeStore {
   }
 
   private inc() {
-    const {days, months, years} = this.age
-    let {seconds, minutes, hours} = this.age
+    const {months, years} = this.age
+    let {seconds, minutes, hours, days} = this.age
 
     seconds++
     if (seconds >= 60) {
@@ -91,6 +91,10 @@ export class AgeStore {
     if (minutes >= 60) {
       minutes = 0
       hours++
+    }
+    if (hours >= 24) {
+      hours = 0
+      days++
     }
     this.age = {seconds, minutes, hours, days, months, years}
   }
