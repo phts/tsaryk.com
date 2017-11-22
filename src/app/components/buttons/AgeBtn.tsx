@@ -4,6 +4,7 @@ import {observer, inject} from 'mobx-react'
 import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
 import {GenericBtn} from './generic'
 import {AgeStore} from 'app/stores/ageStore'
+import {LangStore, Lang} from 'app/stores/langStore'
 
 function padWithZero(value: number): string {
   return ('0' + value).slice(-2)
@@ -11,9 +12,29 @@ function padWithZero(value: number): string {
 
 interface Props extends BaseProps {
   ageStore?: AgeStore
+  langStore?: LangStore
 }
 
-@inject('ageStore')
+const labels = {
+  [Lang.EN]: {
+    years: 'years',
+    months: 'months',
+    days: 'days',
+    hours: 'hours',
+    min: 'min',
+    sec: 'sec',
+  },
+  [Lang.RU]: {
+    years: 'лет',
+    months: 'месяцев',
+    days: 'дней',
+    hours: 'часов',
+    min: 'минут',
+    sec: 'секунд',
+  },
+}
+
+@inject('ageStore', 'langStore')
 @observer
 export class AgeBtn extends BaseBtnComponent<Props> {
   render() {
@@ -28,11 +49,13 @@ export class AgeBtn extends BaseBtnComponent<Props> {
 
   protected get text() {
     const {years, months, days, hours, minutes, seconds} = this.props.ageStore.age
-    return `${years} years \
-      ${months} months \
-      ${days} days \
-      ${hours} hours \
-      ${padWithZero(minutes)} min \
-      ${padWithZero(seconds)} sec`
+    const lang = this.props.langStore.lang
+    const currentLabels = labels[lang]
+    return `${years} ${currentLabels.years} \
+      ${months} ${currentLabels.months} \
+      ${days} ${currentLabels.days} \
+      ${hours} ${currentLabels.hours} \
+      ${padWithZero(minutes)} ${currentLabels.min} \
+      ${padWithZero(seconds)} ${currentLabels.sec}`
   }
 }
