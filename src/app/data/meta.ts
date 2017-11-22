@@ -45,7 +45,7 @@ export const metaProps: RawMetaProps = {
     category: ItemCategory.Meta,
     position: ItemPosition.Head,
   },
-  'tsarik.me': {
+  Title: {
     category: ItemCategory.Meta,
     position: ItemPosition.Head,
     size: ItemSize.XXL,

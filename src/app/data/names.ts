@@ -3,7 +3,7 @@ export type KnownName = keyof typeof Names
 export enum Names {
   EN,
   RU,
-  'tsarik.me',
+  Title,
   '© Phil Tsarik, 2017',
   Age,
   Anathema,

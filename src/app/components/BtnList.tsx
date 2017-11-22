@@ -18,6 +18,7 @@ import {
   LangBtn,
   ModeBtn,
   TextBtn,
+  TitleBtn,
 } from 'app/components/buttons'
 
 interface Props {
@@ -46,6 +47,7 @@ const knownBtns: KnownBtnMap = {
   Colors: ColorsBtn as BaseBtnComponentClass,
   EN: LangBtn(Lang.EN) as BaseBtnComponentClass,
   Random: ModeBtn(Mode.Random) as BaseBtnComponentClass,
+  Title: TitleBtn as BaseBtnComponentClass,
   RU: LangBtn(Lang.RU) as BaseBtnComponentClass,
 }
 
