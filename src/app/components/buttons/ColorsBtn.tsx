@@ -1,17 +1,10 @@
 import * as React from 'react'
-import {inject} from 'mobx-react'
 
-import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
+import {BaseBtnComponent} from './BaseBtnComponent'
 import {GenericBtn} from './generic'
-import {ListStore} from 'app/stores/listStore'
 import {getRandomCssColor} from 'app/utils'
 
-interface Props extends BaseProps {
-  listStore?: ListStore
-}
-
-@inject('listStore')
-export class ColorsBtn extends BaseBtnComponent<Props> {
+export class ColorsBtn extends BaseBtnComponent {
   render() {
     return <GenericBtn
       borderStyle={this.borderStyle}
