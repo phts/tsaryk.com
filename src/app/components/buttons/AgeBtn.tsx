@@ -2,7 +2,7 @@ import * as React from 'react'
 import {observer, inject} from 'mobx-react'
 
 import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
-import {GenericBtn} from './GenericBtn'
+import {GenericBtn} from './generic'
 import {AgeStore} from 'app/stores/ageStore'
 
 function padWithZero(value: number): string {
