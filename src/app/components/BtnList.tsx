@@ -6,11 +6,11 @@ import {observer, inject} from 'mobx-react'
 import {WidthsStore} from 'app/stores/widthsStore'
 import {
   ItemId,
-  Lang,
   ListItem,
   ListStore,
   Mode,
 } from 'app/stores/listStore'
+import {Lang} from 'app/stores/langStore'
 import {
   AgeBtn,
   BaseBtnComponent,

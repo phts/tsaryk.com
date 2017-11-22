@@ -1,4 +1,4 @@
-import {observable, action} from 'mobx'
+import {observable, action, autorun} from 'mobx'
 import * as R from 'ramda'
 import {shuffle} from 'rambdax'
 
@@ -7,7 +7,6 @@ import {
   ItemCategory,
   ItemSize,
 } from 'app/data/meta'
-import {Lang} from 'app/data/translations'
 import {
   Item,
   ItemId,
@@ -21,7 +20,6 @@ export {
   ItemId,
   ItemPosition,
   ItemSize,
-  Lang,
 }
 export enum Mode {
   Asc = 'Asc',
@@ -41,28 +39,19 @@ export class ListStore {
   @observable list: List = []
 
   constructor(private items: ItemsStore) {
-    this.refresh()
+    autorun(() => {
+      this.refresh()
+    })
   }
 
   @action
   setMode(mode: Mode): void {
-    const changed = this.mode !== mode
-    const needRefresh = changed || mode === Mode.Random
+    const forceRefresh = mode === Mode.Random && this.mode === mode
+    if (forceRefresh) {
+      this.mode = null
+    }
 
     this.mode = mode
-    if (needRefresh) {
-      this.refresh()
-    }
-  }
-
-  @action
-  setLang(lang: Lang): void {
-    if (lang === this.items.lang) {
-      return
-    }
-
-    this.items.setLang(lang)
-    this.refresh()
   }
 
   private refresh() {

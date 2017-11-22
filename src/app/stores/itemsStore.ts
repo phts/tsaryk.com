@@ -1,4 +1,4 @@
-import {observable, action, computed} from 'mobx'
+import {computed} from 'mobx'
 import * as R from 'ramda'
 
 import {enumToArray} from 'app/utils'
@@ -16,6 +16,7 @@ import {
   translations,
 } from 'app/data/translations'
 import {Names, KnownName} from 'app/data/names'
+import {LangStore, langStore} from './langStore'
 
 
 export type ItemId = KnownName
@@ -57,9 +58,10 @@ function toItems(itemNamesMap: ItemNamesMap, strings: TranslatedStrings): Items 
 }
 
 export class ItemsStore {
-  @observable lang: Lang = Lang.EN
-
   private cache: {[index in Lang]?: Items} = {}
+
+  constructor(private languageStore: LangStore) {
+  }
 
   @computed
   get items(): Items {
@@ -73,9 +75,9 @@ export class ItemsStore {
     return items
   }
 
-  @action
-  setLang(lang: Lang): void {
-    this.lang = lang
+  @computed
+  private get lang(): Lang {
+    return this.languageStore.lang
   }
 
   @computed
@@ -84,4 +86,4 @@ export class ItemsStore {
   }
 }
 
-export const itemsStore = new ItemsStore()
+export const itemsStore = new ItemsStore(langStore)

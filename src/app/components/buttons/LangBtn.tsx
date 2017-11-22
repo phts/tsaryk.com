@@ -3,14 +3,14 @@ import {inject} from 'mobx-react'
 
 import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
 import {GenericBtn} from './generic'
-import {ListStore, Lang} from 'app/stores/listStore'
+import {LangStore, Lang} from 'app/stores/langStore'
 
 interface Props extends BaseProps {
-  listStore?: ListStore
+  langStore?: LangStore
 }
 
 export function LangBtn(lang: Lang) {
-  @inject('listStore')
+  @inject('langStore')
   class AnyLangBtn extends BaseBtnComponent<Props> {
     render() {
       return <GenericBtn
@@ -23,7 +23,7 @@ export function LangBtn(lang: Lang) {
     }
 
     private onClick = () => {
-      this.props.listStore.setLang(lang)
+      this.props.langStore.setLang(lang)
     }
   }
 
