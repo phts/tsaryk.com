@@ -15,7 +15,7 @@ import {
 
 const DATE_OF_BIRTH: Date = new Date(1987, 11, 3, 10, 30, 0)
 
-interface Age {
+export interface Age {
   days?: number
   hours?: number
   minutes?: number
@@ -24,7 +24,7 @@ interface Age {
   years?: number
 }
 
-type AgePart = keyof Age
+export type AgePart = keyof Age
 
 const addMethods: {[index in AgePart]: (date: Date, num: number) => Date} = {
   days: addDays,
