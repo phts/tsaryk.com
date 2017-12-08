@@ -15,9 +15,18 @@ import {
 
 const DATE_OF_BIRTH: Date = new Date(1987, 11, 3, 10, 30, 0)
 
-type DatePart = keyof Age
+interface Age {
+  days?: number
+  hours?: number
+  minutes?: number
+  months?: number
+  seconds?: number
+  years?: number
+}
 
-const addMethods: {[index in DatePart]: (date: Date, num: number) => Date} = {
+type AgePart = keyof Age
+
+const addMethods: {[index in AgePart]: (date: Date, num: number) => Date} = {
   days: addDays,
   hours: addHours,
   minutes: addMinutes,
@@ -26,7 +35,7 @@ const addMethods: {[index in DatePart]: (date: Date, num: number) => Date} = {
   years: addYears,
 }
 
-const diffMethods: {[index in DatePart]: (l: Date, r: Date) => number} = {
+const diffMethods: {[index in AgePart]: (l: Date, r: Date) => number} = {
   days: differenceInDays,
   hours: differenceInHours,
   minutes: differenceInMinutes,
@@ -35,23 +44,10 @@ const diffMethods: {[index in DatePart]: (l: Date, r: Date) => number} = {
   years: differenceInYears,
 }
 
-interface Age {
-  days: number
-  hours: number
-  minutes: number
-  months: number
-  seconds: number
-  years: number
-}
-
-type DatePartsStore = {
-  [index in DatePart]?: number
-}
-
 export class AgeStore {
   @observable currentTime: Date = new Date()
 
-  @observable age: DatePartsStore
+  @observable age: Age
 
   constructor() {
     const [age] = this.reduceDate(DATE_OF_BIRTH, [
@@ -69,8 +65,8 @@ export class AgeStore {
     }, 1000)
   }
 
-  private reduceDate(date: Date, parts: DatePart[]): [DatePartsStore, Date] {
-    const reducedParts: DatePartsStore = {}
+  private reduceDate(date: Date, parts: AgePart[]): [Age, Date] {
+    const reducedParts: Age = {}
     const reducedDate: Date = parts.reduce((acc, value) => {
       const diffVal = diffMethods[value](this.currentTime, acc)
       reducedParts[value] = diffVal
