@@ -1,3 +1,4 @@
+import * as MockDate from 'mockdate'
 import {AgeStore, AgePart, Age} from 'app/stores/ageStore'
 
 function expectAgeToEqual(age: Age, values: number[]) {
@@ -87,26 +88,30 @@ describe('AgeStore', () => {
 
     describe(`when age is about to be ${m} month`, () => {
       beforeEach(() => {
-        ageStore = new AgeStore(new Date(1988, dateMonth, 3, 10, 29, 59))
+        const initialDate = new Date(1988, dateMonth, 3, 10, 29, 59)
+        MockDate.set(initialDate)
+        ageStore = new AgeStore(initialDate)
       })
 
-      it('does not increase months after one interval tick', () => {
+      it('increases months after one interval tick', () => {
         expectAgeToEqual(ageStore.age, [0, dateMonth, daysInPrevMonth - 1, 23, 59, 59])
         jest.runOnlyPendingTimers()
-        expectAgeToEqual(ageStore.age, [0, dateMonth, daysInPrevMonth, 0, 0, 0])
+        expectAgeToEqual(ageStore.age, [0, dateMonth + 1, 0, 0, 0, 0])
       })
     })
   }
 
   describe('when age is about to be 1 year', () => {
     beforeEach(() => {
-      ageStore = new AgeStore(new Date(1988, 11, 3, 10, 29, 59))
+      const initialDate = new Date(1988, 11, 3, 10, 29, 59)
+      MockDate.set(initialDate)
+      ageStore = new AgeStore(initialDate)
     })
 
-    it('does not increase years after one interval tick', () => {
+    it('increases years after one interval tick', () => {
       expectAgeToEqual(ageStore.age, [0, 11, 29, 23, 59, 59])
       jest.runOnlyPendingTimers()
-      expectAgeToEqual(ageStore.age, [0, 11, 30, 0, 0, 0])
+      expectAgeToEqual(ageStore.age, [1, 0, 0, 0, 0, 0])
     })
   })
 })

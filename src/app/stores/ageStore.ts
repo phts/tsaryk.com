@@ -12,6 +12,7 @@ import {
   differenceInSeconds,
   differenceInYears,
 } from 'date-fns'
+import {daysInMonth} from 'app/utils'
 
 const DATE_OF_BIRTH: Date = new Date(1987, 11, 3, 10, 30, 0)
 
@@ -42,6 +43,19 @@ const diffMethods: {[index in AgePart]: (l: Date, r: Date) => number} = {
   months: differenceInMonths,
   seconds: differenceInSeconds,
   years: differenceInYears,
+}
+
+const agePartsMaxValues: {[index in AgePart]: () => number} = {
+  seconds: () => 60,
+  minutes: () => 60,
+  hours: () => 24,
+  days: () => {
+    const currentDate = new Date()
+    const prevMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getMonth()
+    return daysInMonth(currentDate.getFullYear(), prevMonth)
+  },
+  months: () => 12,
+  years: () => 999,
 }
 
 export class AgeStore {
@@ -78,23 +92,30 @@ export class AgeStore {
   }
 
   private inc() {
-    const {months, years} = this.age
-    let {seconds, minutes, hours, days} = this.age
+    const {minutes, hours, days, months, years} = this.age
 
-    seconds++
-    if (seconds >= 60) {
-      seconds = 0
-      minutes++
-    }
-    if (minutes >= 60) {
-      minutes = 0
-      hours++
-    }
-    if (hours >= 24) {
-      hours = 0
-      days++
-    }
-    this.age = {seconds, minutes, hours, days, months, years}
+    this.age = this.conformAge({
+      seconds: this.age.seconds + 1,
+      minutes,
+      hours,
+      days,
+      months,
+      years,
+    })
+  }
+
+  private conformAge(rawNewAge: Age) {
+    const parts: AgePart[] = ['seconds', 'minutes', 'hours', 'days', 'months', 'years']
+    parts.forEach((part: AgePart, i) => {
+      if (rawNewAge[part] < agePartsMaxValues[part]()) {
+        return false
+      }
+      rawNewAge[part] = 0
+      rawNewAge[parts[i + 1]]++
+      return true
+    })
+
+    return rawNewAge
   }
 }
 

@@ -19,3 +19,7 @@ export function enumToArray<T>(en: EnumClass): Array<keyof T> {
     R.values,
   )(en) as Array<keyof T>
 }
+
+export function daysInMonth(year: number, month: number) {
+  return new Date(year, month + 1, 0).getDate()
+}
