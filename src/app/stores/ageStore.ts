@@ -45,11 +45,13 @@ const diffMethods: {[index in AgePart]: (l: Date, r: Date) => number} = {
 }
 
 export class AgeStore {
-  @observable currentTime: Date = new Date()
-
   @observable age: Age
 
-  constructor() {
+  private initialTime: Date
+
+  constructor(initialTime?: Date) {
+    this.initialTime = initialTime || new Date()
+
     const [age] = this.reduceDate(DATE_OF_BIRTH, [
       'years',
       'months',
@@ -68,7 +70,7 @@ export class AgeStore {
   private reduceDate(date: Date, parts: AgePart[]): [Age, Date] {
     const reducedParts: Age = {}
     const reducedDate: Date = parts.reduce((acc, value) => {
-      const diffVal = diffMethods[value](this.currentTime, acc)
+      const diffVal = diffMethods[value](this.initialTime, acc)
       reducedParts[value] = diffVal
       return addMethods[value](acc, diffVal)
     }, date)
