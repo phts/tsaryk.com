@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
 const project = path.resolve(__dirname, '..')
 const src = path.resolve(project, 'src')
@@ -40,15 +39,6 @@ module.exports = ({isProd = false} = {}) => ({
         loader: 'awesome-typescript-loader',
         exclude: /node_modules/,
       },
-      {
-        test: /\.css$/,
-        use: ExtractTextWebpackPlugin.extract({
-          fallback: 'style-loader',
-          use: {
-            loader: 'css-loader',
-          },
-        }),
-      },
     ],
   },
   plugins: [
@@ -56,6 +46,5 @@ module.exports = ({isProd = false} = {}) => ({
       filename: './index.html',
       template: 'index.html',
     }),
-    new ExtractTextWebpackPlugin('style.css'),
   ],
 })
