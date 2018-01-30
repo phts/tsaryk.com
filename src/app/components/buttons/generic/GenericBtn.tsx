@@ -1,6 +1,6 @@
 import * as React from 'react'
-import styled, {StyledFunction} from 'styled-components'
 
+import {Button} from 'app/components'
 import {GenericLi, GenericLiProps} from './GenericLi'
 
 type Props = GenericLiProps & {
@@ -9,24 +9,6 @@ type Props = GenericLiProps & {
   onClick?: (ev?: React.MouseEvent<HTMLButtonElement>) => void,
   text: string,
 }
-
-interface ButtonProps {
-  borderStyle: string
-  fontSize: string
-}
-
-type ButtonElProps = ButtonProps & React.HTMLProps<HTMLButtonElement>
-const button: StyledFunction<ButtonElProps> = styled.button
-const Button = button`
-  background: none;
-  border: 0 none;
-  border-bottom: ${props => props.borderStyle};
-  color: inherit;
-  cursor: pointer;
-  font-size: ${props => props.fontSize};
-  margin: 0;
-  padding: 0;
-`
 
 export class GenericBtn extends React.Component<Props, {}> {
   render() {
