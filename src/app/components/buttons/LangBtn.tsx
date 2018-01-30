@@ -14,7 +14,7 @@ export function LangBtn(lang: Lang) {
   class AnyLangBtn extends BaseBtnComponent<Props> {
     render() {
       return <GenericBtn
-        borderStyle={this.borderStyle}
+        buttonType={this.buttonType}
         flexBasis={this.flexBasis}
         fontSize={this.fontSize}
         onClick={this.onClick}

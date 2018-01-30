@@ -5,6 +5,7 @@ import {
   ItemCategory,
   ItemSize,
 } from 'app/stores/listStore'
+import {DEFAULT_FONT_SIZE, BUTTON_TYPE} from 'app/components/Button'
 
 export interface BaseProps {
   item: ListItem,
@@ -12,22 +13,22 @@ export interface BaseProps {
 }
 
 const fontSizeMap: {[index in ItemSize]: string} = {
-  M: '10pt',
+  M: DEFAULT_FONT_SIZE,
   L: '12pt',
   XL: '14pt',
   XXL: '16pt',
 }
 
-const borderMap: {[index in ItemCategory]: string} = {
-  Common: '1px dashed',
-  Meta: '2px dotted',
+const buttonTypeMap: {[index in ItemCategory]: BUTTON_TYPE} = {
+  Common: BUTTON_TYPE.Default,
+  Meta: BUTTON_TYPE.Action,
 }
 
 export class BaseBtnComponent<P extends BaseProps = BaseProps, S = {}>
              extends React.Component<P, S> {
 
-  protected get borderStyle() {
-    return borderMap[this.props.item.category]
+  protected get buttonType() {
+    return buttonTypeMap[this.props.item.category]
   }
 
   protected get fontSize(): string {

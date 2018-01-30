@@ -1,10 +1,10 @@
 import * as React from 'react'
 
-import {Button} from 'app/components'
+import {Button, BUTTON_TYPE} from 'app/components'
 import {GenericLi, GenericLiProps} from './GenericLi'
 
 type Props = GenericLiProps & {
-  borderStyle: string,
+  buttonType: BUTTON_TYPE,
   fontSize: string,
   onClick?: (ev?: React.MouseEvent<HTMLButtonElement>) => void,
   text: string,
@@ -16,7 +16,7 @@ export class GenericBtn extends React.Component<Props, {}> {
               flexBasis={this.props.flexBasis}
               description={this.props.description}>
       <Button
-          borderStyle={this.props.borderStyle}
+          type={this.props.buttonType}
           fontSize={this.props.fontSize}
           onClick={this.props.onClick}>
         {this.props.text}

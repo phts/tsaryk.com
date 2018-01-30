@@ -7,7 +7,7 @@ import {getRandomCssColor} from 'app/utils'
 export class ColorsBtn extends BaseBtnComponent {
   render() {
     return <GenericBtn
-      borderStyle={this.borderStyle}
+      buttonType={this.buttonType}
       flexBasis={this.flexBasis}
       fontSize={this.fontSize}
       onClick={this.onClick}
