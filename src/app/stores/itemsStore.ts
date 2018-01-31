@@ -75,6 +75,10 @@ export class ItemsStore {
     return items
   }
 
+  findById(id: ItemId): Item {
+    return R.find(x => x.id === id, this.items)
+  }
+
   @computed
   private get lang(): Lang {
     return this.languageStore.lang

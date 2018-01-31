@@ -12,9 +12,7 @@ type Props = GenericLiProps & {
 
 export class GenericBtn extends React.Component<Props, {}> {
   render() {
-    return <GenericLi
-              flexBasis={this.props.flexBasis}
-              description={this.props.description}>
+    return <GenericLi flexBasis={this.props.flexBasis}>
       <Button
           type={this.props.buttonType}
           fontSize={this.props.fontSize}

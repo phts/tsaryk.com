@@ -7,6 +7,7 @@ import {
 } from './langStore'
 
 enum KnownLabels {
+  close,
   days,
   hours,
   min,
@@ -20,6 +21,7 @@ type LabelsMap = {[lng in Lang]: TranslatedLabelsMap}
 
 const labelsMap: LabelsMap = {
   EN: {
+    close: 'Сlose',
     days: 'days',
     hours: 'hours',
     min: 'min',
@@ -28,6 +30,7 @@ const labelsMap: LabelsMap = {
     years: 'years',
   },
   RU: {
+    close: 'Закрыть',
     days: 'дней',
     hours: 'часов',
     min: 'минут',
