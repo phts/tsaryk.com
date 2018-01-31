@@ -16,7 +16,11 @@
       "app/*": ["src/app/*"]
     },
     "sourceMap": true,
-    "target": "es6"
+    "target": "es6",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ]
   },
   "include": [
     "src/**/*.ts",

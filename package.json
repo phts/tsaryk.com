@@ -21,6 +21,7 @@
     "node": ">= 7.6"
   },
   "dependencies": {
+    "browser-locale": "^1.0.3",
     "date-fns": "^1.29.0",
     "mobx": "^3.3.1",
     "mobx-react": "^4.3.4",
