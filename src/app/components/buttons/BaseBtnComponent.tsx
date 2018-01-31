@@ -14,9 +14,9 @@ export interface BaseProps {
 
 const fontSizeMap: {[index in ItemSize]: string} = {
   M: DEFAULT_FONT_SIZE,
-  L: '12pt',
-  XL: '14pt',
-  XXL: '16pt',
+  L: '1.5rem',
+  XL: '2rem',
+  XXL: '2.5rem',
 }
 
 const buttonTypeMap: {[index in ItemCategory]: BUTTON_TYPE} = {

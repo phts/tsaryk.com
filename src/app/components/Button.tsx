@@ -9,7 +9,7 @@ interface ButtonProps {
 type ButtonElProps = ButtonProps & React.HTMLProps<HTMLButtonElement>
 const button: StyledFunction<ButtonElProps> = styled.button
 
-export const DEFAULT_FONT_SIZE = '10pt'
+export const DEFAULT_FONT_SIZE = '1rem'
 
 export enum BUTTON_TYPE {
   Action = 'Action',
