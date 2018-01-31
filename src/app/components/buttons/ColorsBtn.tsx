@@ -1,10 +1,17 @@
 import * as React from 'react'
+import {inject} from 'mobx-react'
 
-import {BaseBtnComponent} from './BaseBtnComponent'
+import {BaseBtnComponent, BaseProps} from './BaseBtnComponent'
 import {GenericBtn} from './generic'
 import {getRandomCssColor} from 'app/utils'
+import {UiStore} from 'app/stores/uiStore'
 
-export class ColorsBtn extends BaseBtnComponent {
+interface Props extends BaseProps {
+  uiStore?: UiStore
+}
+
+@inject('uiStore')
+export class ColorsBtn extends BaseBtnComponent<Props> {
   render() {
     return <GenericBtn
       buttonType={this.buttonType}
@@ -16,7 +23,7 @@ export class ColorsBtn extends BaseBtnComponent {
   }
 
   private onClick = () => {
-    document.body.style.backgroundColor = getRandomCssColor()
-    document.body.style.color = getRandomCssColor()
+    this.props.uiStore.backgroundColor = getRandomCssColor()
+    this.props.uiStore.fontColor = getRandomCssColor()
   }
 }
