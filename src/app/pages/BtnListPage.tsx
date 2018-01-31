@@ -53,7 +53,7 @@ const knownBtns: KnownBtnMap = {
 
 @inject('listStore', 'widthsStore')
 @observer
-export class BtnList extends React.Component<Props> {
+export class BtnListPage extends React.Component<Props> {
   componentWillMount() {
     this.props.widthsStore.randomize(this.props.listStore.list)
   }
