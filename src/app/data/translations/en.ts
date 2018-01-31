@@ -108,7 +108,7 @@ export const en: TranslatedStrings = {
   },
   Skype: {
   },
-  'Software Developer': {
+  'Software Engineer': {
   },
   'Space Resonance': {
   },

@@ -95,7 +95,7 @@ export const metaProps: RawMetaProps = {
   React: {
     size: ItemSize.L,
   },
-  'Software Developer': {
+  'Software Engineer': {
     size: ItemSize.XL,
   },
 }

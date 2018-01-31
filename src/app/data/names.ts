@@ -56,7 +56,7 @@ export enum Names {
   'SaM Solutions',
   Škoda,
   Skype,
-  'Software Developer',
+  'Software Engineer',
   'Space Resonance',
   'Stack Overflow',
   'Sublime Text',

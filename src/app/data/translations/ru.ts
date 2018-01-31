@@ -163,8 +163,8 @@ export const ru: TranslatedStrings = {
   Skype: {
     name: 'Скайп',
   },
-  'Software Developer': {
-    name: 'Сам Солюшнс',
+  'Software Engineer': {
+    name: 'Инженер-программист',
   },
   'Space Resonance': {
     name: 'Спасе Резонасе',
