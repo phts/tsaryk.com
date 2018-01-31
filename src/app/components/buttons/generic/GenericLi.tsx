@@ -17,10 +17,8 @@ const Li = li`
   white-space: nowrap;
 `
 
-export class GenericLi extends React.Component<GenericLiProps, {}> {
-  render() {
-    return <Li flexBasis={this.props.flexBasis}>
-      {this.props.children}
-    </Li>
-  }
-}
+export const GenericLi: React.StatelessComponent<GenericLiProps> = props => (
+  <Li flexBasis={props.flexBasis}>
+    {props.children}
+  </Li>
+)

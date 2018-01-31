@@ -25,7 +25,7 @@ const buttonTypeMap: {[index in ItemCategory]: BUTTON_TYPE} = {
 }
 
 export class BaseBtnComponent<P extends BaseProps = BaseProps, S = {}>
-             extends React.Component<P, S> {
+             extends React.PureComponent<P, S> {
 
   protected get buttonType() {
     return buttonTypeMap[this.props.item.category]

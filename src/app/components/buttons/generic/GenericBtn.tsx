@@ -10,15 +10,13 @@ type Props = GenericLiProps & {
   text: string,
 }
 
-export class GenericBtn extends React.Component<Props, {}> {
-  render() {
-    return <GenericLi flexBasis={this.props.flexBasis}>
-      <Button
-          type={this.props.buttonType}
-          fontSize={this.props.fontSize}
-          onClick={this.props.onClick}>
-        {this.props.text}
-      </Button>
-    </GenericLi>
-  }
-}
+export const GenericBtn: React.StatelessComponent<Props> = props => (
+  <GenericLi flexBasis={props.flexBasis}>
+    <Button
+        type={props.buttonType}
+        fontSize={props.fontSize}
+        onClick={props.onClick}>
+      {props.text}
+    </Button>
+  </GenericLi>
+)

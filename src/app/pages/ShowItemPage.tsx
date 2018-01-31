@@ -16,7 +16,7 @@ interface Props {
 
 @inject('itemsStore', 'i18nStore', 'openItemStore')
 @observer
-export class ShowItemPage extends React.Component<Props> {
+export class ShowItemPage extends React.PureComponent<Props> {
   render() {
     const item = this.props.itemsStore.findById(this.props.itemId)
     return <Div>
