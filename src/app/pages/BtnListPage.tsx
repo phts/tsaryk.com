@@ -29,7 +29,6 @@ interface Props {
 const Ul = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
   justify-content: space-around;
   margin: 0;
   padding: 0;
