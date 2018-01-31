@@ -67,6 +67,5 @@ export enum Names {
   Ultramarined,
   'Video games',
   Vk,
-  Waterfox,
   'ZX Spectrum',
 }

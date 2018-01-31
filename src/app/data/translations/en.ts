@@ -130,8 +130,6 @@ export const en: TranslatedStrings = {
   },
   Vk: {
   },
-  Waterfox: {
-  },
   'ZX Spectrum': {
   },
 }

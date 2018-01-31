@@ -196,9 +196,6 @@ export const ru: TranslatedStrings = {
   Vk: {
     name: 'Вк',
   },
-  Waterfox: {
-    name: 'Вотерфокс',
-  },
   'ZX Spectrum': {
     name: 'Зэд Икс Спектрум',
   },
