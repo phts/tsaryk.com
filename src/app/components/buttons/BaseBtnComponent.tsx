@@ -36,7 +36,7 @@ export class BaseBtnComponent<P extends BaseProps = BaseProps, S = {}>
   }
 
   protected get flexBasis() {
-    return `${this.props.width}px`
+    return this.props.width
   }
 
   protected get text() {
