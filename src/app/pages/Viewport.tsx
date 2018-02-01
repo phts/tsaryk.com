@@ -33,5 +33,5 @@ const Div = div`
   background-color: ${({backgroundColor}) => backgroundColor};
   color: ${({fontColor}) => fontColor};
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 `
