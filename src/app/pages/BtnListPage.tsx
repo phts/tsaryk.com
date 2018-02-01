@@ -32,6 +32,7 @@ const Ul = styled.ul`
   justify-content: space-around;
   margin: 0;
   padding: 0;
+  min-width: 100%;
 `
 
 type BaseBtnComponentClass = typeof BaseBtnComponent
