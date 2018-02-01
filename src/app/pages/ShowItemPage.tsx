@@ -19,7 +19,7 @@ interface Props {
 export class ShowItemPage extends React.PureComponent<Props> {
   render() {
     const item = this.props.itemsStore.findById(this.props.itemId)
-    return <Div>
+    return <FlexWrapper><Div>
       <h1>
         {item.name}
       </h1>
@@ -34,7 +34,7 @@ export class ShowItemPage extends React.PureComponent<Props> {
           {this.props.i18nStore.labels.close}
         </Button>
       </div>
-    </Div>
+    </Div></FlexWrapper>
   }
 
   private onBack = () => {
@@ -43,5 +43,14 @@ export class ShowItemPage extends React.PureComponent<Props> {
 }
 
 const Div = styled.div`
-  padding: 5em 10em;
+  height: 70%;
+  width: 70%;
+`
+
+const FlexWrapper = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+  min-width: 100%;
 `
