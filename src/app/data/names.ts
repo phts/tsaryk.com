@@ -4,7 +4,7 @@ export enum Names {
   EN,
   RU,
   Title,
-  '© Phil Tsarik, 2017',
+  '© Phil Tsarik, 2018',
   Age,
   Anathema,
   Android,

@@ -7,8 +7,8 @@ export const ru: TranslatedStrings = {
   RU: {
     name: 'РУС',
   },
-  '© Phil Tsarik, 2017': {
-    name: '© Филипп Царик, 2017',
+  '© Phil Tsarik, 2018': {
+    name: '© Филипп Царик, 2018',
   },
   Age: {
     name: 'Возраст',

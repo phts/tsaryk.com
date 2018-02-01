@@ -50,7 +50,7 @@ export const metaProps: RawMetaProps = {
     position: ItemPosition.Head,
     size: ItemSize.XXL,
   },
-  '© Phil Tsarik, 2017': {
+  '© Phil Tsarik, 2018': {
     position: ItemPosition.Tail,
   },
   Angular: {
