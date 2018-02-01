@@ -23,7 +23,6 @@ export class AgeBtn extends BaseBtnComponent<Props> {
       buttonType={this.buttonType}
       flexBasis={this.flexBasis}
       fontSize={this.fontSize}
-      onClick={() => ({})}
       text={this.text}
     />
   }
