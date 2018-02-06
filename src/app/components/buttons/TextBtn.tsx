@@ -1,18 +1,14 @@
 import * as React from 'react'
-import {observer, inject} from 'mobx-react'
+import {withRouter, RouteComponentProps} from 'react-router-dom'
 
 import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
 import {GenericBtn} from './generic'
-import {OpenItemStore} from 'app/stores/openItemStore'
 import {BUTTON_TYPE} from 'app/components'
+import {openItem} from 'app/helpers/routes'
 
-interface Props extends BaseProps {
-  openItemStore?: OpenItemStore
-}
+type Props = BaseProps & RouteComponentProps<{}>
 
-@inject('openItemStore')
-@observer
-export class TextBtn extends BaseBtnComponent<Props> {
+class TextBtnRaw extends BaseBtnComponent<Props> {
   render() {
     return <GenericBtn
       buttonType={this.textBtnButtonType}
@@ -24,7 +20,7 @@ export class TextBtn extends BaseBtnComponent<Props> {
   }
 
   private onClick = () => {
-    this.props.openItemStore.toggle(this.props.item.id)
+    openItem(this.props.history, this.props.item.id)
   }
 
   private get textBtnButtonType() {
@@ -36,3 +32,5 @@ export class TextBtn extends BaseBtnComponent<Props> {
     return this.buttonType
   }
 }
+
+export const TextBtn = withRouter<Props>(TextBtnRaw)

@@ -60,7 +60,8 @@ export class BtnListPage extends React.PureComponent<Props> {
 
   render() {
     const els =  R.map((it: ListItem) => {
-      const BtnComponent: BaseBtnComponentClass = knownBtns[it.id] || TextBtn as BaseBtnComponentClass
+      // tslint:disable-next-line no-any
+      const BtnComponent: BaseBtnComponentClass = knownBtns[it.id] || TextBtn as any as BaseBtnComponentClass
       return <BtnComponent
         key={it.id}
         item={it}
