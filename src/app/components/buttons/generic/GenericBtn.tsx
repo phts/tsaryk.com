@@ -1,7 +1,8 @@
 import * as React from 'react'
 
-import {Button, BUTTON_TYPE} from 'app/components'
+import {Button} from 'app/components'
 import {GenericLi, GenericLiProps} from './GenericLi'
+import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
 
 type Props = GenericLiProps & {
   buttonType: BUTTON_TYPE,
@@ -13,7 +14,7 @@ type Props = GenericLiProps & {
 export const GenericBtn: React.StatelessComponent<Props> = props => (
   <GenericLi flexBasis={props.flexBasis}>
     <Button
-        type={props.buttonType}
+        border={getBorder(props.buttonType)}
         fontSize={props.fontSize}
         onClick={props.onClick}>
       {props.text}

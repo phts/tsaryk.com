@@ -5,7 +5,7 @@ import {
   ItemCategory,
   ItemSize,
 } from 'app/stores/listStore'
-import {DEFAULT_FONT_SIZE, BUTTON_TYPE} from 'app/components/Button'
+import {DEFAULT_FONT_SIZE, BUTTON_TYPE} from 'app/helpers/buttons'
 
 export interface BaseProps {
   item: ListItem,

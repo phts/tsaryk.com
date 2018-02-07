@@ -5,7 +5,8 @@ import {observer, inject} from 'mobx-react'
 
 import {ItemId, ItemsStore} from 'app/stores/itemsStore'
 import {I18nStore} from 'app/stores/i18nStore'
-import {Button, BUTTON_TYPE, DEFAULT_FONT_SIZE} from 'app/components'
+import {Button} from 'app/components'
+import {BUTTON_TYPE, DEFAULT_FONT_SIZE, getBorder} from 'app/helpers/buttons'
 import {openIndex} from 'app/helpers/routes'
 
 interface MatchProps {
@@ -32,7 +33,7 @@ class ShowItemPageRaw extends React.PureComponent<Props> {
       </div>
       <div>
         <Button
-          type={BUTTON_TYPE.Action}
+          border={getBorder(BUTTON_TYPE.Action)}
           fontSize={DEFAULT_FONT_SIZE}
           onClick={this.onBack}>
           {this.props.i18nStore.labels.close}

@@ -1,37 +1,18 @@
 import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
-interface ButtonProps {
-  fontSize?: string
-  type?: BUTTON_TYPE
+type ButtonProps = React.HTMLProps<HTMLButtonElement> & {
+  fontSize?: string,
+  border?: string,
 }
 
-type ButtonElProps = ButtonProps & React.HTMLProps<HTMLButtonElement>
-const button: StyledFunction<ButtonElProps> = styled.button
-
-export const DEFAULT_FONT_SIZE = '1rem'
-
-export enum BUTTON_TYPE {
-  Action = 'Action',
-  Default = 'Default',
-  Simple = 'Simple',
-}
-
-const DEFAULT_BUTTON_TYPE = BUTTON_TYPE.Default
-
-const TYPE_TO_BORDER: {[index in keyof typeof BUTTON_TYPE]: string} = {
-  Action: '2px dotted',
-  Default: '1px dashed',
-  Simple: '0 none',
-}
-
-export const Button = button`
+export const Button = (styled.button as StyledFunction<ButtonProps>)`
   background: none;
   border: 0 none;
-  border-bottom: ${props => TYPE_TO_BORDER[props.type as keyof typeof BUTTON_TYPE] || DEFAULT_BUTTON_TYPE};
+  border-bottom: ${({border}) => border};
   color: inherit;
   cursor: pointer;
-  font-size: ${props => props.fontSize || DEFAULT_FONT_SIZE};
+  font-size: ${({fontSize}) => fontSize};
   margin: 0;
   padding: 0;
 `

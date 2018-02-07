@@ -3,7 +3,7 @@ import {withRouter, RouteComponentProps} from 'react-router-dom'
 
 import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
 import {GenericBtn} from './generic'
-import {BUTTON_TYPE} from 'app/components'
+import {BUTTON_TYPE} from 'app/helpers/buttons'
 import {openItem} from 'app/helpers/routes'
 
 type Props = BaseProps & RouteComponentProps<{}>
