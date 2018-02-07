@@ -31,11 +31,11 @@ const labelsMap: LabelsMap = {
   },
   RU: {
     close: 'Закрыть',
-    days: 'дней',
-    hours: 'часов',
-    min: 'минут',
-    months: 'месяцев',
-    sec: 'секунд',
+    days: 'дн.',
+    hours: 'ч.',
+    min: 'мин.',
+    months: 'мес.',
+    sec: 'сек.',
     years: 'лет',
   },
 }
