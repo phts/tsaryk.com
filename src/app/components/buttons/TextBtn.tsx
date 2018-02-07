@@ -1,26 +1,18 @@
 import * as React from 'react'
-import {withRouter, RouteComponentProps} from 'react-router-dom'
 
-import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
-import {GenericBtn} from './generic'
+import {BaseBtnComponent} from './BaseBtnComponent'
+import {GenericLink} from './generic'
 import {BUTTON_TYPE} from 'app/helpers/buttons'
-import {openItem} from 'app/helpers/routes'
 
-type Props = BaseProps & RouteComponentProps<{}>
-
-class TextBtnRaw extends BaseBtnComponent<Props> {
+export class TextBtn extends BaseBtnComponent {
   render() {
-    return <GenericBtn
+    return <GenericLink
       buttonType={this.textBtnButtonType}
       flexBasis={this.flexBasis}
       fontSize={this.fontSize}
-      onClick={this.onClick}
       text={this.text}
+      to={this.props.item.id}
     />
-  }
-
-  private onClick = () => {
-    openItem(this.props.history, this.props.item.id)
   }
 
   private get textBtnButtonType() {
@@ -32,5 +24,3 @@ class TextBtnRaw extends BaseBtnComponent<Props> {
     return this.buttonType
   }
 }
-
-export const TextBtn = withRouter<Props>(TextBtnRaw)
