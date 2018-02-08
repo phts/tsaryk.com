@@ -1,4 +1,5 @@
 import {TranslatedStrings} from './index'
+import {p} from 'app/helpers/html'
 
 export const ru: TranslatedStrings = {
   EN: {
@@ -51,6 +52,17 @@ export const ru: TranslatedStrings = {
   },
   Drums: {
     name: 'Барабаны',
+    description: `
+      <h3>Мой сет</h3>
+      <ul>
+        <li>Paiste Signature Dry Ride 20&Prime;</li>
+        <li>Paiste 2002 Medium Crash 18&Prime;</li>
+        <li>Paiste Signature Precision Crash 17&Prime;</li>
+        <li>Paiste 2002 Sound Edge Hi-Hat 14&Prime;</li>
+        <li>Sonor Force 3007 Maple Snare Drum 14&Prime;</li>
+        <li>Палочки Vater Los Angeles 5A</li>
+      </ul>
+    `,
   },
   Email: {
     name: 'Имейл',
@@ -75,9 +87,17 @@ export const ru: TranslatedStrings = {
   },
   Habr: {
     name: 'Хабр',
+    description: `
+      <p><a href="https://habrahabr.ru/users/phil_tsarik/">На Хабре</a> давным давно опубликовал
+         <a href="https://habrahabr.ru/post/128327/">статью &laquo;Стеганография в GIF&raquo;</a> для получения инвайта.
+         Инвайт получил.</p>
+      <p>На Тостере засветился <a href="https://toster.ru/answer?answer_id=158170#answers_list_answer">ответом</a> на
+         &laquo;Как оформить программный код в Microsoft Word&raquo;.</p>
+    `,
   },
   'Heroes of Might and Magic 3': {
     name: 'Герои меча и магии 3',
+    description: p('До сих пор играю, если появляется свободное время.'),
   },
   JavaScript: {
     name: 'Джаваскрипт',
@@ -96,6 +116,25 @@ export const ru: TranslatedStrings = {
   },
   Music: {
     name: 'Музыка',
+    description: `
+      <p>Важнейшая часть моей жизни.</p>
+      <h3>Слушаю</h3>
+      <p>Топ-3 от <a href="#/Last.fm">Ластфм</a> на данный момент:<p>
+      <ul>
+        <li><a href="#/Pink Floyd">Pink Floyd</a></li>
+        <li>Lunatic Soul</li>
+        <li>Riverside</li>
+      </ul>
+      <h3>Играю</h3>
+      <p>На <a href="#/Drums">барабанах</a> и немного на джамбе.<p>
+      <p>Участвовал в группах:<p>
+      <ul>
+        <li><a href="#/Space Resonance">Space Resonance</a></li>
+        <li><a href="#/Joy in Time">Радость во времени</a></li>
+        <li><a href="#/Ultramarined">Ultramarined</a></li>
+      </ul>
+      <p>Сейчас с ребятами пытаемся играть и сочинять что-то своё.<p>
+    `,
   },
   Novopolotsk: {
     name: 'Новополоцк',
