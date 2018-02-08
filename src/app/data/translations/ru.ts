@@ -196,6 +196,8 @@ export const ru: TranslatedStrings = {
   'Tel number': {
     name: 'Номер телефона',
   },
+  Title: {
+  },
   'The Netherlands': {
     name: 'Нидерланды',
   },

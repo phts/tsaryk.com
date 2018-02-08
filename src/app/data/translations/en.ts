@@ -5,6 +5,8 @@ export const en: TranslatedStrings = {
   },
   RU: {
   },
+  '© Phil Tsarik, 2018': {
+  },
   Age: {
   },
   Android: {
@@ -106,6 +108,8 @@ export const en: TranslatedStrings = {
   'Sublime Text': {
   },
   'Tel number': {
+  },
+  Title: {
   },
   'The Netherlands': {
   },

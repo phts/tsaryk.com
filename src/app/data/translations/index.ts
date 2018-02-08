@@ -12,7 +12,7 @@ export interface Translatable {
   name?: string
 }
 
-export type TranslatedStrings = {[index in KnownName]?: Translatable}
+export type TranslatedStrings = {[index in KnownName]: Translatable}
 
 export const translations: {[index in Lang]: TranslatedStrings} = {
   EN: en,
