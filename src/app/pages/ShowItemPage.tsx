@@ -25,20 +25,20 @@ class ShowItemPageRaw extends React.PureComponent<Props> {
   render() {
     const item = this.props.itemsStore.findById(this.props.match.params.id)
     return <FlexWrapper><Div>
-      <h1>
-        {item.name}
-      </h1>
-      <div>
-        {item.description}
-      </div>
-      <div>
+      <header>
+        <h1>
+          {item.name}
+        </h1>
+      </header>
+      <div dangerouslySetInnerHTML={{__html: item.description}}/>
+      <footer>
         <Button
           border={getBorder(BUTTON_TYPE.Action)}
           fontSize={DEFAULT_FONT_SIZE}
           onClick={this.onBack}>
           {this.props.i18nStore.labels.close}
         </Button>
-      </div>
+      </footer>
     </Div></FlexWrapper>
   }
 

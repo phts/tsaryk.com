@@ -70,7 +70,10 @@ export const en: TranslatedStrings = {
   'Phil Tsarik': {
   },
   'Pilip Tsaryk': {
-    description: 'This is my legal name.\nThis is how it is written in my passport.',
+    description: `
+      <p>This is my legal name.</p>
+      <p>This is how it is written in my passport.</p>
+    `,
   },
   'Pink Floyd': {
   },
