@@ -7,8 +7,6 @@ export const en: TranslatedStrings = {
   },
   Age: {
   },
-  Anathema: {
-  },
   Android: {
   },
   Angular: {
@@ -33,8 +31,6 @@ export const en: TranslatedStrings = {
   },
   Debian: {
   },
-  'Deep Purple': {
-  },
   Drums: {
   },
   Email: {
@@ -48,8 +44,6 @@ export const en: TranslatedStrings = {
   foobar2000: {
   },
   GitHub: {
-  },
-  'God Is An Astronaut': {
   },
   Grodno: {
   },
@@ -67,19 +61,13 @@ export const en: TranslatedStrings = {
   },
   LinkedIn: {
   },
-  'Lunatic Soul': {
-  },
   Music: {
   },
   Novopolotsk: {
   },
-  Opeth: {
-  },
   Paiste: {
   },
   'Phil Tsarik': {
-  },
-  phts: {
   },
   'Pilip Tsaryk': {
     description: 'This is my legal name.\nThis is how it is written in my passport.',
@@ -98,8 +86,6 @@ export const en: TranslatedStrings = {
   },
   'Ritchie Blackmore': {
   },
-  Riverside: {
-  },
   Ruby: {
   },
   'SaM Solutions': {
@@ -117,8 +103,6 @@ export const en: TranslatedStrings = {
   'Sublime Text': {
   },
   'Tel number': {
-  },
-  'The Gathering': {
   },
   'The Netherlands': {
   },

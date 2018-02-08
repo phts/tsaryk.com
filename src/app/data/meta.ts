@@ -80,9 +80,6 @@ export const metaProps: RawMetaProps = {
   JavaScript: {
     size: ItemSize.XL,
   },
-  'Lunatic Soul': {
-    size: ItemSize.L,
-  },
   'Phil Tsarik': {
     size: ItemSize.XXL,
   },

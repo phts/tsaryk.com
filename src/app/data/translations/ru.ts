@@ -13,9 +13,6 @@ export const ru: TranslatedStrings = {
   Age: {
     name: 'Возраст',
   },
-  Anathema: {
-    name: 'Анатема',
-  },
   Android: {
     name: 'Андройд',
   },
@@ -52,9 +49,6 @@ export const ru: TranslatedStrings = {
   Debian: {
     name: 'Дебиан',
   },
-  'Deep Purple': {
-    name: 'Дип Пёрпл',
-  },
   Drums: {
     name: 'Барабаны',
   },
@@ -75,9 +69,6 @@ export const ru: TranslatedStrings = {
   },
   GitHub: {
     name: 'ГитХаб',
-  },
-  'God Is An Astronaut': {
-    name: 'Гад из эн Астронаут',
   },
   Grodno: {
     name: 'Гродно',
@@ -103,26 +94,17 @@ export const ru: TranslatedStrings = {
   LinkedIn: {
     name: 'ЛинкедИн',
   },
-  'Lunatic Soul': {
-    name: 'Лунатик Соул',
-  },
   Music: {
-    name: 'Минск',
+    name: 'Музыка',
   },
   Novopolotsk: {
     name: 'Новополоцк',
-  },
-  Opeth: {
-    name: 'Опет',
   },
   Paiste: {
     name: 'Пайсти',
   },
   'Phil Tsarik': {
     name: 'Филипп Царик',
-  },
-  phts: {
-    name: 'ФЦ',
   },
   'Pilip Tsaryk': {
     name: 'Пiлiп Царык',
@@ -147,9 +129,6 @@ export const ru: TranslatedStrings = {
   },
   'Ritchie Blackmore': {
     name: 'Ричи Блэкмор',
-  },
-  Riverside: {
-    name: 'Риверсайд',
   },
   Ruby: {
     name: 'Руби',
@@ -177,9 +156,6 @@ export const ru: TranslatedStrings = {
   },
   'Tel number': {
     name: 'Номер телефона',
-  },
-  'The Gathering': {
-    name: 'Зе Гэзеринг',
   },
   'The Netherlands': {
     name: 'Нидерланды',
