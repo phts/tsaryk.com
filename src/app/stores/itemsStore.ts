@@ -35,7 +35,7 @@ type ItemNamesMap = {[T in KnownName]: T}
 const ITEM_NAMES: KnownName[] = enumToArray<typeof Names>(Names)
 const ITEM_NAMES_MAP: ItemNamesMap = R.indexBy(x => x, ITEM_NAMES)
 
-const FALLBACK_LANG = Lang.EN
+const FALLBACK_LANG = Lang.RU
 const FALLBACK = translations[FALLBACK_LANG]
 
 function toDefaultItem(id: ItemId): Item {
