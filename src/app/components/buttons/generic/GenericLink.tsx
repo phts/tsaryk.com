@@ -31,6 +31,7 @@ type StyledLinkProps = LinkProps & {
 
 const StyledLink = (styled(Link) as StyledFunction<StyledLinkProps>)`
   border-bottom: ${props => getBorder(props.buttonType)};
+  color: inherit;
   font-size: ${props => props.fontSize};
   text-decoration: none;
 `
