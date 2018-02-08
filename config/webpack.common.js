@@ -30,6 +30,7 @@ module.exports = ({isProd = false} = {}) => ({
         enforce: 'pre',
         loader: 'tslint-loader',
         options: {
+          emitWarnings: !isProd,
           emitErrors: isProd,
           failOnHint: isProd,
         },
@@ -38,6 +39,9 @@ module.exports = ({isProd = false} = {}) => ({
         test: /\.tsx?$/,
         loader: 'awesome-typescript-loader',
         exclude: /node_modules/,
+        options: {
+          errorsAsWarnings: !isProd,
+        },
       },
     ],
   },
