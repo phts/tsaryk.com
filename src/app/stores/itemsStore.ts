@@ -11,7 +11,6 @@ import {
 } from 'app/data/meta'
 import {
   Lang,
-  Translatable,
   TranslatedStrings,
   translations,
 } from 'app/data/translations'
@@ -39,20 +38,26 @@ const ITEM_NAMES_MAP: ItemNamesMap = R.indexBy(x => x, ITEM_NAMES)
 const FALLBACK_LANG = Lang.EN
 const FALLBACK = translations[FALLBACK_LANG]
 
-function toItem(raw: Translatable, id: ItemId): Item {
+function toDefaultItem(id: ItemId): Item {
   return Object.assign({},
     DEFAULT_META_PROPS_SET,
-    metaProps[id] || {},
     {id, name: id},
-    raw,
+  )
+}
+
+function toItem(strings: TranslatedStrings, fallback: TranslatedStrings): (defaultItem: Item, id: ItemId) => Item {
+  return (defaultItem: Item, id: ItemId) => Object.assign({},
+    defaultItem,
+    metaProps[id] || {},
+    R.pick(['description'], fallback[id]),
+    R.pick(['name', 'description'], strings[id]),
   )
 }
 
 function toItems(itemNamesMap: ItemNamesMap, strings: TranslatedStrings): Items {
   return R.pipe(
-    R.ifElse(() => R.identical(strings, FALLBACK), R.identity, R.mergeDeepLeft(FALLBACK)),
-    R.mergeDeepLeft(strings),
-    R.mapObjIndexed(toItem),
+    R.mapObjIndexed(toDefaultItem),
+    R.mapObjIndexed(toItem(strings, FALLBACK)),
     R.values,
   )(itemNamesMap)
 }
