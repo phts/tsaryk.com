@@ -12,7 +12,10 @@ export type GenericLiProps = LiProps
 type LiElProps = LiProps & React.HTMLProps<HTMLLIElement>
 const li: StyledFunction<LiElProps> = styled.li
 const Li = li`
+  align-items: center;
+  display: flex;
   flex-basis: ${props => props.flexBasis}px;
+  justify-content: center;
   margin: 0 1em;
   list-style: none;
   text-align: center;
