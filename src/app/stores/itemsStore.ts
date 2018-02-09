@@ -1,7 +1,7 @@
 import {computed} from 'mobx'
 import * as R from 'ramda'
 
-import {enumToArray} from 'app/utils'
+import {enumToArray} from 'app/utils/core'
 import {
   DEFAULT_META_PROPS_SET,
   ItemCategory,

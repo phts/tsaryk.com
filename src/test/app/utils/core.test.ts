@@ -1,4 +1,4 @@
-import * as utils from 'app/utils'
+import {enumToArray} from 'app/utils/core'
 
 describe('enumToArray', () => {
   enum EnumToTest {
@@ -7,6 +7,6 @@ describe('enumToArray', () => {
   }
 
   it('converts enum to array of string values', () => {
-    expect(utils.enumToArray<typeof EnumToTest>(EnumToTest)).toEqual(['AAA', 'BBB'])
+    expect(enumToArray<typeof EnumToTest>(EnumToTest)).toEqual(['AAA', 'BBB'])
   })
 })

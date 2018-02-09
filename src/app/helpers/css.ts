@@ -1,3 +1,4 @@
+import {random} from 'rambdax'
 import {css, SimpleInterpolation} from 'styled-components'
 
 const breakpoints = {
@@ -18,3 +19,13 @@ export const media = Object.keys(breakpoints).reduce((acc: Medias, val: Breakpoi
   `
   return acc
 }, {}) as Medias
+
+export function getRandomColorComponent(): number {
+  return random(0, 255)
+}
+
+export function getRandomCssColor(): string {
+  return `rgb(${getRandomColorComponent()}, \
+              ${getRandomColorComponent()}, \
+              ${getRandomColorComponent()})`
+}

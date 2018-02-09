@@ -3,7 +3,7 @@ import {inject} from 'mobx-react'
 
 import {BaseBtnComponent, BaseProps} from './BaseBtnComponent'
 import {GenericBtn} from './generic'
-import {getRandomCssColor} from 'app/utils'
+import {getRandomCssColor} from 'app/helpers/css'
 import {UiStore} from 'app/stores/uiStore'
 
 interface Props extends BaseProps {
