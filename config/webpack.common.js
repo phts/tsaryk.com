@@ -51,4 +51,7 @@ module.exports = ({isProd = false} = {}) => ({
       template: 'index.html',
     }),
   ],
+  stats: {
+    warningsFilter: /\/mobx-react\//,
+  },
 })
