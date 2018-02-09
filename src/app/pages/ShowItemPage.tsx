@@ -8,12 +8,9 @@ import {I18nStore} from 'app/stores/i18nStore'
 import {Button} from 'app/components'
 import {BUTTON_TYPE, DEFAULT_FONT_SIZE, getBorder} from 'app/helpers/buttons'
 import {openIndex} from 'app/helpers/routes'
+import {ShowItemPageMatch} from 'app/routes'
 
-interface MatchProps {
-  id: ItemId
-}
-
-interface Props extends RouteComponentProps<MatchProps> {
+interface Props extends RouteComponentProps<ShowItemPageMatch> {
   itemId: ItemId
   itemsStore?: ItemsStore
   i18nStore?: I18nStore
