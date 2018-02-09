@@ -25,6 +25,7 @@ export const ru: TranslatedStrings = {
   },
   'bash.org': {
     name: 'Башорг',
+    description: p('Когда-то давно случайно <a href="http://bash.im/quote/393345">попал</a> на bash.org.'),
   },
   Belarus: {
     name: 'Беларусь',
@@ -34,6 +35,8 @@ export const ru: TranslatedStrings = {
   },
   BitBucket: {
     name: 'БитБакет',
+    description: p('Использую только для приватных проектов.\
+      Все публичные проекты находится на <a href="#/GitHub">гитхабе</a>.'),
   },
   'Board games': {
     name: 'Настолки',
@@ -46,6 +49,9 @@ export const ru: TranslatedStrings = {
   },
   'Curriculum vitae': {
     name: 'Резюме',
+    description: `
+      <p>Доступно на <a href="https://github.com/phts/my-cv">моём гитхабе</a>.</p>
+    `,
   },
   Debian: {
     name: 'Дебиан',
@@ -66,12 +72,14 @@ export const ru: TranslatedStrings = {
   },
   Email: {
     name: 'Имейл',
+    description: p('Мой имейл: <a href="mailto:phil.tsarik@gmail.com">phil.tsarik@gmail.com</a>.'),
   },
   Epam: {
     name: 'Епам',
   },
   Facebook: {
     name: 'Фейсбук',
+    description: p('<a href="https://www.facebook.com/phil.tsarik">Моя страничка</a> в фэйсбуке.'),
   },
   Family: {
     name: 'Семья',
@@ -81,6 +89,8 @@ export const ru: TranslatedStrings = {
   },
   GitHub: {
     name: 'ГитХаб',
+    description: p('<a href="https://github.com/phts">Тут</a> находятся полезные и\
+      бесполезные проекты, которые доступны для всех.'),
   },
   Grodno: {
     name: 'Гродно',
@@ -133,7 +143,7 @@ export const ru: TranslatedStrings = {
         <li><a href="#/Joy in Time">Радость во времени</a></li>
         <li><a href="#/Ultramarined">Ultramarined</a></li>
       </ul>
-      <p>Сейчас с ребятами пытаемся играть и сочинять что-то своё.<p>
+      <p>Сейчас с ребятами в <a href="#/Krako\u0301w">Кракове</a> пытаемся играть и сочинять что-то своё.<p>
     `,
   },
   Novopolotsk: {
@@ -180,6 +190,7 @@ export const ru: TranslatedStrings = {
   },
   Skype: {
     name: 'Скайп',
+    description: p('Я в скайпе: <a href="callto:phil.tsarik">phil.tsarik</a>.'),
   },
   'Software Engineer': {
     name: 'Инженер-программист',
@@ -195,6 +206,7 @@ export const ru: TranslatedStrings = {
   },
   'Tel number': {
     name: 'Номер телефона',
+    description: p('Мой номер телефона: <a href="tel:+48534898187">+48 534 898 187</a>.'),
   },
   Title: {
   },
@@ -206,6 +218,18 @@ export const ru: TranslatedStrings = {
   },
   Ultramarined: {
     name: 'Ультрамаринд',
+    description: `
+      <p>
+        Прошло немало месяцев/лет после того, как <a href="#/Joy in Time">Радость во времени</a> внезапно распалась
+        и смогла эволюционироваться в Ultramarined с новыми идеями и вдохновением.
+      </p>
+      <p>
+        Мы успешно репетировали, сочиняли песни, выступали, и всё складывалось хорошо. До того момента,
+        как я не уехал в <a href="#/Krako\u0301w">Краков</a>.
+      </p>
+      <p>Больше информации о группе доступно на
+        <a href="http://phts.github.io/ultramarined.by/">зеркале официального сайта</a>.</p>
+    `,
   },
   'Video games': {
     name: 'Компьютерные игры',
