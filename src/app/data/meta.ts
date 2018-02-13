@@ -59,6 +59,9 @@ export const metaProps: RawMetaProps = {
   Ascending: {
     category: ItemCategory.Meta,
   },
+  Cats: {
+    size: ItemSize.XL,
+  },
   Colors: {
     category: ItemCategory.Meta,
   },
@@ -67,12 +70,6 @@ export const metaProps: RawMetaProps = {
   },
   Drums: {
     size: ItemSize.XL,
-  },
-  Epam: {
-    size: ItemSize.L,
-  },
-  Family: {
-    size: ItemSize.L,
   },
   GitHub: {
     size: ItemSize.L,

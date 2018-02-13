@@ -18,6 +18,7 @@
       "log"
     ],
     "no-inferrable-types": true,
+    "no-var-requires": false,
     "member-access": [
       true,
       "no-public"

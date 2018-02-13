@@ -1,3 +1,5 @@
+const skodaImg = require('static/img/skoda.jpg')
+
 import {TranslatedStrings} from './index'
 import {p} from 'app/helpers/html'
 
@@ -10,6 +12,12 @@ export const ru: TranslatedStrings = {
   },
   '© Phil Tsarik, 2018': {
     name: '© Филипп Царик, 2018',
+  },
+  '+375292181503': {
+    description: p('Мой белорусский номер телефона: <a href="tel:+375292181503">+375 29 218-15-03</a>.'),
+  },
+  '+48534898187': {
+    description: p('Мой польский номер телефона: <a href="tel:+48534898187">+48 534 898 187</a>.'),
   },
   Age: {
     name: 'Возраст',
@@ -36,7 +44,7 @@ export const ru: TranslatedStrings = {
   BitBucket: {
     name: 'БитБакет',
     description: p('Использую только для приватных проектов.\
-      Все публичные проекты находится на <a href="#/GitHub">гитхабе</a>.'),
+      Все публичные проекты находится на <a href="#/GitHub">моём Гитхабе</a>.'),
   },
   'Board games': {
     name: 'Настолки',
@@ -81,9 +89,6 @@ export const ru: TranslatedStrings = {
     name: 'Фейсбук',
     description: p('<a href="https://www.facebook.com/phil.tsarik">Моя страничка</a> в фэйсбуке.'),
   },
-  Family: {
-    name: 'Семья',
-  },
   foobar2000: {
     name: 'фубар2000',
   },
@@ -91,9 +96,6 @@ export const ru: TranslatedStrings = {
     name: 'ГитХаб',
     description: p('<a href="https://github.com/phts">Тут</a> находятся полезные и\
       бесполезные проекты, которые доступны для всех.'),
-  },
-  Grodno: {
-    name: 'Гродно',
   },
   Habr: {
     name: 'Хабр',
@@ -129,18 +131,26 @@ export const ru: TranslatedStrings = {
     description: `
       <p>Важнейшая часть моей жизни.</p>
       <h3>Слушаю</h3>
-      <p>Топ-3 от <a href="#/Last.fm">Ластфм</a> на данный момент:<p>
+      <p>Мой топ на данный момент:<p>
       <ul>
         <li><a href="#/Pink Floyd">Pink Floyd</a></li>
         <li>Lunatic Soul</li>
         <li>Riverside</li>
+        <li>Deep Purple</li>
+        <li>Opeth</li>
+        <li>The Gathering</li>
+        <li>Led Zeppelin</li>
+        <li>God Is An Astronaut</li>
+        <li>Anathema</li>
       </ul>
+      <p>Также я есть на <a href="#/Last.fm">Ластфм</a>.</p>
       <h3>Играю</h3>
-      <p>На <a href="#/Drums">барабанах</a> и немного на джамбе.<p>
+      <p>На <a href="#/Drums">барабанах</a>.<p>
       <p>Участвовал в группах:<p>
       <ul>
         <li><a href="#/Space Resonance">Space Resonance</a></li>
         <li><a href="#/Joy in Time">Радость во времени</a></li>
+        <li>Mission: Jupiter</li>
         <li><a href="#/Ultramarined">Ultramarined</a></li>
       </ul>
       <p>Сейчас с ребятами в <a href="#/Krako\u0301w">Кракове</a> пытаемся играть и сочинять что-то своё.<p>
@@ -148,9 +158,6 @@ export const ru: TranslatedStrings = {
   },
   Novopolotsk: {
     name: 'Новополоцк',
-  },
-  Paiste: {
-    name: 'Пайсти',
   },
   'Phil Tsarik': {
     name: 'Филипп Царик',
@@ -166,6 +173,7 @@ export const ru: TranslatedStrings = {
   },
   Poland: {
     name: 'Польша',
+    description: p('В данный момент проживаю в Польше в городе <a href="#/Krako\u0301w">Кракове</a>.'),
   },
   PSU: {
     name: 'ПГУ',
@@ -187,6 +195,15 @@ export const ru: TranslatedStrings = {
   },
   S\u030Ckoda: {
     name: 'Шкода',
+    description: `
+      <p>А точнее, S\u030Ckoda Felicia II 1.6 (1999 г. в.).</p>
+      <p>
+        Моя первая машина, купленная в <a href="#/Krako\u0301w">Кракове</a> за какие-то 2300 злотых
+        (около $600 по тогдашнему курсу).
+      </p>
+      <p>Очень надежный автомобиль. Прошёл боевое крещение по украинским дорогам в Буковель.</p>
+      <p><img src="${skodaImg}" alt="My S\u030Ckoda"></p>
+    `,
   },
   Skype: {
     name: 'Скайп',
@@ -203,10 +220,6 @@ export const ru: TranslatedStrings = {
   },
   'Sublime Text': {
     name: 'Саблайм Текст',
-  },
-  'Tel number': {
-    name: 'Номер телефона',
-    description: p('Мой номер телефона: <a href="tel:+48534898187">+48 534 898 187</a>.'),
   },
   Title: {
   },
@@ -227,15 +240,18 @@ export const ru: TranslatedStrings = {
         Мы успешно репетировали, сочиняли песни, выступали, и всё складывалось хорошо. До того момента,
         как я не уехал в <a href="#/Krako\u0301w">Краков</a>.
       </p>
-      <p>Больше информации о группе доступно на
-        <a href="http://phts.github.io/ultramarined.by/">зеркале официального сайта</a>.</p>
+      <p>
+        Больше информации о группе доступно на
+        <a href="http://phts.github.io/ultramarined.by/">зеркале официального сайта</a>.
+      </p>
     `,
   },
   'Video games': {
     name: 'Компьютерные игры',
   },
-  Vk: {
-    name: 'Вк',
+  VK: {
+    name: 'ВК',
+    description: p('<a href="https://vk.com/phil.tsarik">Моя страница</a> в ВК.'),
   },
   'ZX Spectrum': {
     name: 'Зэд Икс Спектрум',

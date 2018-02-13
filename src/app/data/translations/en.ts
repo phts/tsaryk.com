@@ -7,6 +7,10 @@ export const en: TranslatedStrings = {
   },
   '© Phil Tsarik, 2018': {
   },
+  '+375292181503': {
+  },
+  '+48534898187': {
+  },
   Age: {
   },
   Android: {
@@ -41,13 +45,9 @@ export const en: TranslatedStrings = {
   },
   Facebook: {
   },
-  Family: {
-  },
   foobar2000: {
   },
   GitHub: {
-  },
-  Grodno: {
   },
   Habr: {
   },
@@ -66,8 +66,6 @@ export const en: TranslatedStrings = {
   Music: {
   },
   Novopolotsk: {
-  },
-  Paiste: {
   },
   'Phil Tsarik': {
   },
@@ -107,8 +105,6 @@ export const en: TranslatedStrings = {
   },
   'Sublime Text': {
   },
-  'Tel number': {
-  },
   Title: {
   },
   'The Netherlands': {
@@ -119,7 +115,7 @@ export const en: TranslatedStrings = {
   },
   'Video games': {
   },
-  Vk: {
+  VK: {
   },
   'ZX Spectrum': {
   },

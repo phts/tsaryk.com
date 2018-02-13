@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const project = path.resolve(__dirname, '..')
 const src = path.resolve(project, 'src')
 const app = path.resolve(src, 'app')
+const static = path.resolve(src, 'static')
 const dist = path.resolve(project, 'dist')
 
 module.exports = ({isProd = false} = {}) => ({
@@ -18,6 +19,7 @@ module.exports = ({isProd = false} = {}) => ({
   resolve: {
     alias: {
       app,
+      static,
       'react': 'preact-compat',
       'react-dom': 'preact-compat',
     },
@@ -41,6 +43,13 @@ module.exports = ({isProd = false} = {}) => ({
         exclude: /node_modules/,
         options: {
           errorsAsWarnings: !isProd,
+        },
+      },
+      {
+        test: /\.jpg$/,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'static/img/',
         },
       },
     ],
