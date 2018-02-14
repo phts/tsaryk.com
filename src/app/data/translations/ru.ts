@@ -84,6 +84,19 @@ export const ru: TranslatedStrings = {
   },
   Epam: {
     name: 'Епам',
+    description: `
+      <p>Релоцировался в <a href="#/Krako\u0301w">Краков</a> и проработал в Епаме чуть больше двух лет.</p>
+      <p>
+        Изучил тут <a href="#/Angular">Ангуляр</a> и <a href="#/React">Реакт</a>,
+        ходил на тренинги, проводил воркшопы, собеседовал новых кандидатов.
+      </p>
+      <p>С проектом &mdash; как повезёт. Но в большинстве случаев много неинтересного и легаси.</p>
+      <p>После Епама перешёл в <a href="#/Grand Parade">Гранд Парэйд</a>.</p>
+      <p>
+        Больше подробностей в <a href="#/Curriculum vitae">моём резюме</a> и
+        на <a href="#/LinkedIn">линкедине</a>
+      </p>
+    `,
   },
   Facebook: {
     name: 'Фейсбук',
@@ -91,11 +104,21 @@ export const ru: TranslatedStrings = {
   },
   foobar2000: {
     name: 'фубар2000',
+    description: `
+      <p>Отличный плеер музыки. Пользуюсь им на компе и телефоне.</p>
+      <p>
+        Однажды даже написал простой, но полезный плагин
+        <a href="https://hydrogenaud.io/index.php/topic,110908.0.html">Party Shuffle</a>.
+      </p>
+    `,
   },
   GitHub: {
     name: 'ГитХаб',
     description: p('<a href="https://github.com/phts">Тут</a> находятся полезные и\
       бесполезные проекты, которые доступны для всех.'),
+  },
+  'Grand Parade': {
+    name: 'Гранд Парэйд',
   },
   Habr: {
     name: 'Хабр',
@@ -125,6 +148,7 @@ export const ru: TranslatedStrings = {
   },
   LinkedIn: {
     name: 'ЛинкедИн',
+    description: p('<a href="https://www.linkedin.com/in/tsarik/">Мой профиль</a> на ЛинкедИне.'),
   },
   Music: {
     name: 'Музыка',
@@ -217,9 +241,23 @@ export const ru: TranslatedStrings = {
   },
   'Stack Overflow': {
     name: 'Стак Оверфлоу',
+    description: `
+      <p>
+        Иногда <a href="https://stackoverflow.com/users/2462524/phts">отвечаю и задаю</a>
+        вопросы на Стак Оверфлоу.
+      </p>
+    `,
   },
   'Sublime Text': {
     name: 'Саблайм Текст',
+    description: `
+      <p>Отличный редактор кода. Пользуюсь им каждый день.</p>
+      <p>
+        Периодически
+        <a href="https://github.com/phts?utf8=%E2%9C%93&tab=repositories&q=sublime&type=&language=">пишу плагины</a>
+        для него.
+      </p>
+    `,
   },
   Title: {
   },
@@ -248,6 +286,26 @@ export const ru: TranslatedStrings = {
   },
   'Video games': {
     name: 'Компьютерные игры',
+    description: `
+      <p>
+        Люблю качественные и интересные компьютерные игры, в большинстве случаев квесты и стратегии.
+      </p>
+      <p>Произведшие на меня огромное впечатление, и производят до сих пор:</p>
+      <ul>
+        <li>Warcraft 2 / 3</li>
+        <li>Starcraft</li>
+        <li>Stronghold</li>
+        <li><a href="#/Heroes of Might and Magic 3">Heroes of Might and Magic 3</a> / 4</li>
+        <li>Half Life</li>
+        <li>Syberia</li>
+        <li>Majesty</li>
+        <li>Portal</li>
+        <li>Anno 1701/1404</li>
+        <li>Космические рэйнджеры</li>
+        <li>The Talos Principle</li>
+      </ul>
+      <p>А также некоторые игры на <a href="#/ZX Spectrum">ZX Spectrum</a>.</p>
+    `,
   },
   VK: {
     name: 'ВК',

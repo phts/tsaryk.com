@@ -49,6 +49,8 @@ export const en: TranslatedStrings = {
   },
   GitHub: {
   },
+  'Grand Parade': {
+  },
   Habr: {
   },
   'Heroes of Might and Magic 3': {

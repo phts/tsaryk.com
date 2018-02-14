@@ -26,6 +26,7 @@ export enum Names {
   Facebook,
   foobar2000,
   GitHub,
+  'Grand Parade',
   Habr,
   'Heroes of Might and Magic 3',
   JavaScript,
