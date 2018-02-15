@@ -1,7 +1,7 @@
 const skodaImg = require('static/img/skoda.jpg')
 
 import {TranslatedStrings} from './index'
-import {p} from 'app/helpers/html'
+import {a, callto, link, mailto, p, tel} from 'app/helpers/html'
 
 export const ru: TranslatedStrings = {
   EN: {
@@ -23,10 +23,10 @@ export const ru: TranslatedStrings = {
     `,
   },
   '+375292181503': {
-    description: p('Мой белорусский номер телефона: <a href="tel:+375292181503">+375 29 218-15-03</a>.'),
+    description: p(`Мой белорусский номер телефона: ${tel('+375292181503', '+375 29 218-15-03')}.`),
   },
   '+48534898187': {
-    description: p('Мой польский номер телефона: <a href="tel:+48534898187">+48 534 898 187</a>.'),
+    description: p(`Мой польский номер телефона: ${tel('+48534898187', '+48 534 898 187')}.`),
   },
   Age: {
     name: 'Возраст',
@@ -45,7 +45,7 @@ export const ru: TranslatedStrings = {
   },
   'bash.org': {
     name: 'Башорг',
-    description: p('Когда-то давно случайно <a href="http://bash.im/quote/393345">попал</a> на bash.org.'),
+    description: p(`Когда-то давно случайно ${a('http://bash.im/quote/393345', 'попал')} на bash.org.`),
   },
   Belarus: {
     name: 'Беларусь',
@@ -55,8 +55,8 @@ export const ru: TranslatedStrings = {
   },
   BitBucket: {
     name: 'БитБакет',
-    description: p('Использую только для приватных проектов.\
-      Все публичные проекты находится на <a href="#/GitHub">моём Гитхабе</a>.'),
+    description: p(`Использую только для приватных проектов.\
+      Все публичные проекты находится на ${link('GitHub', 'моём Гитхабе')}.`),
   },
   'Board games': {
     name: 'Настольные игры',
@@ -81,7 +81,7 @@ export const ru: TranslatedStrings = {
   'Curriculum vitae': {
     name: 'Резюме',
     description: `
-      <p>Доступно на <a href="https://github.com/phts/my-cv">моём гитхабе</a>.</p>
+      <p>Доступно на ${a('https://github.com/phts/my-cv', 'моём гитхабе')}.</p>
     `,
   },
   Debian: {
@@ -103,35 +103,35 @@ export const ru: TranslatedStrings = {
   },
   Email: {
     name: 'Имейл',
-    description: p('Мой имейл: <a href="mailto:phil.tsarik@gmail.com">phil.tsarik@gmail.com</a>.'),
+    description: p(`Мой имейл: ${mailto('phil.tsarik@gmail.com')}.`),
   },
   Epam: {
     name: 'Епам',
     description: `
-      <p>Релоцировался в <a href="#/Krako\u0301w">Краков</a> и проработал в Епаме чуть больше двух лет.</p>
+      <p>Релоцировался в ${link('Krako\u0301w', 'Краков')} и проработал в Епаме чуть больше двух лет.</p>
       <p>
-        Изучил тут <a href="#/Angular">Ангуляр</a> и <a href="#/React">Реакт</a>,
+        Изучил тут ${link('Angular', 'Ангуляр')} и ${link('React', 'Реакт')},
         ходил на тренинги, проводил воркшопы, собеседовал новых кандидатов.
       </p>
       <p>С проектом &mdash; как повезёт. Но в большинстве случаев много неинтересного и легаси.</p>
-      <p>После Епама перешёл в <a href="#/Grand Parade">Гранд Парэйд</a>.</p>
+      <p>После Епама перешёл в ${link('Grand Parade', 'Гранд Парэйд')}.</p>
       <p>
-        Больше подробностей в <a href="#/Curriculum vitae">моём резюме</a> и
-        на <a href="#/LinkedIn">линкедине</a>
+        Больше подробностей в ${link('Curriculum vitae', 'моём резюме')} и
+        на ${link('LinkedIn', 'линкедине')}
       </p>
     `,
   },
   Facebook: {
     name: 'Фейсбук',
-    description: p('<a href="https://www.facebook.com/phil.tsarik">Моя страничка</a> в фэйсбуке.'),
+    description: p(`${a('https://www.facebook.com/phil.tsarik', 'Моя страничка')} в фэйсбуке.`),
   },
   Firefox: {
     name: 'Файерфокс',
     description: `
       <p>Пользуюсь только файерфоксом. Не взлюбил хром с самого начала из-за невозможности его настроить под себя.</p>
       <p>
-        <a href="https://github.com/phts?utf8=%E2%9C%93&tab=repositories&q=firefox&type=&language=">Иногда пишу</a>
-        простенькие <a href="https://addons.mozilla.org/ru/firefox/addon/uft8-special-characters/">аддоны</a> для фф.
+        ${a('https://github.com/phts?utf8=%e2%9C%93&tab=repositories&q=firefox&type=&language=', 'Иногда пишу')}
+        простенькие ${a('https://addons.mozilla.org/ru/firefox/addon/uft8-special-characters/', 'аддоны')} для фф.
       </p>
     `,
   },
@@ -141,14 +141,14 @@ export const ru: TranslatedStrings = {
       <p>Отличный плеер музыки. Пользуюсь им на компе и телефоне.</p>
       <p>
         Однажды даже написал простой, но полезный плагин
-        <a href="https://hydrogenaud.io/index.php/topic,110908.0.html">Party Shuffle</a>.
+        ${a('https://hydrogenaud.io/index.php/topic,110908.0.html', 'Party Shuffle')}.
       </p>
     `,
   },
   GitHub: {
     name: 'ГитХаб',
-    description: p('<a href="https://github.com/phts">Тут</a> находятся полезные и\
-      бесполезные проекты, которые доступны для всех.'),
+    description: p(`${a('https://github.com/phts', 'Тут')} находятся полезные и\
+      бесполезные проекты, которые доступны для всех.`),
   },
   'Grand Parade': {
     name: 'Гранд Парэйд',
@@ -156,10 +156,10 @@ export const ru: TranslatedStrings = {
   Habr: {
     name: 'Хабр',
     description: `
-      <p><a href="https://habrahabr.ru/users/phil_tsarik/">На Хабре</a> давным давно опубликовал
-         <a href="https://habrahabr.ru/post/128327/">статью &laquo;Стеганография в GIF&raquo;</a> для получения инвайта.
+      <p>${a('https://habrahabr.ru/users/phil_tsarik/', 'На Хабре')} давным давно опубликовал
+         ${a('https://habrahabr.ru/post/128327/', 'статью &laquo;Стеганография в GIF&Raquo;')} для получения инвайта.
          Инвайт получил.</p>
-      <p>На Тостере засветился <a href="https://toster.ru/answer?answer_id=158170#answers_list_answer">ответом</a> на
+      <p>На Тостере засветился ${a('https://toster.ru/answer?answer_id=158170#answers_list_answer', 'ответом')} на
          &laquo;Как оформить программный код в Microsoft Word&raquo;.</p>
     `,
   },
@@ -184,11 +184,11 @@ export const ru: TranslatedStrings = {
   },
   'Last.fm': {
     name: 'Ласт.фм',
-    description: p('<a href="www.last.fm/user/phil_tsarik">Мой профиль</a> на Ласт.фм'),
+    description: p(`${a('www.last.fm/user/phil_tsarik', 'Мой профиль')} на Ласт.фм`),
   },
   LinkedIn: {
     name: 'ЛинкедИн',
-    description: p('<a href="https://www.linkedin.com/in/tsarik/">Мой профиль</a> на ЛинкедИне.'),
+    description: p(`${a('https://www.linkedin.com/in/tsarik/', 'Мой профиль')} на ЛинкедИне.`),
   },
   Music: {
     name: 'Музыка',
@@ -197,7 +197,7 @@ export const ru: TranslatedStrings = {
       <h3>Слушаю</h3>
       <p>Мой топ на данный момент:<p>
       <ul>
-        <li><a href="#/Pink Floyd">Pink Floyd</a></li>
+        <li>${link('Pink Floyd')}</li>
         <li>Lunatic Soul</li>
         <li>Riverside</li>
         <li>Deep Purple</li>
@@ -207,17 +207,17 @@ export const ru: TranslatedStrings = {
         <li>God Is An Astronaut</li>
         <li>Anathema</li>
       </ul>
-      <p>Также я есть на <a href="#/Last.fm">Ластфм</a>.</p>
+      <p>Также я есть на ${link('Last.fm', 'Ластфм')}.</p>
       <h3>Играю</h3>
-      <p>На <a href="#/Drums">барабанах</a>.<p>
+      <p>На ${link('Drums', 'барабанах')}.<p>
       <p>Участвовал в группах:<p>
       <ul>
-        <li><a href="#/Space Resonance">Space Resonance</a></li>
-        <li><a href="#/Joy in Time">Радость во времени</a></li>
+        <li>${link('Space Resonance')}</li>
+        <li>${link('Joy in Time', 'Радость во времени')}</li>
         <li>Mission: Jupiter</li>
-        <li><a href="#/Ultramarined">Ultramarined</a></li>
+        <li>${link('Ultramarined')}</li>
       </ul>
-      <p>Сейчас с ребятами в <a href="#/Krako\u0301w">Кракове</a> пытаемся играть и сочинять что-то своё.<p>
+      <p>Сейчас с ребятами в ${link('Krako\u0301w', 'Кракове')} пытаемся играть и сочинять что-то своё.<p>
     `,
   },
   Novopolotsk: {
@@ -244,7 +244,7 @@ export const ru: TranslatedStrings = {
   },
   Poland: {
     name: 'Польша',
-    description: p('В данный момент проживаю в Польше в городе <a href="#/Krako\u0301w">Кракове</a>.'),
+    description: p(`В данный момент проживаю в Польше в городе ${link('Krako\u0301w', 'Кракове')}.`),
   },
   PSU: {
     name: 'ПГУ',
@@ -265,7 +265,7 @@ export const ru: TranslatedStrings = {
     name: 'Сам Солюшнс',
     description: `
       <p>
-        Работал тут во время и после <a href="#/PSU">универа</a>. Точнее, не сразу после универа, т.к
+        Работал тут во время и после ${link('PSU', 'универа')}. Точнее, не сразу после универа, т.к
         пришлось пару месяцев отсидеться на тракторном заводе по распределению из-за дыр в белорусских законах.
       </p>
       <p>
@@ -273,8 +273,8 @@ export const ru: TranslatedStrings = {
         Впрочем, как и в любой аутсорсинговой компании.
       </p>
       <p>
-        <a href="#/Curriculum vitae">После 4 лет работы</a> тут меня захантил <a href="#/Epam">Епам</a>,
-        и я переехал в <a href="#/Krako\u0301w">Краков</a>.
+        ${link('Curriculum vitae', 'После 4 лет работы')} тут меня захантил ${link('Epam', 'Епам')},
+        и я переехал в ${link('Krako\u0301w', 'Краков')}.
       </p>
     `,
   },
@@ -283,7 +283,7 @@ export const ru: TranslatedStrings = {
     description: `
       <p>А точнее, S\u030Ckoda Felicia II 1.6 (1999 г. в.).</p>
       <p>
-        Моя первая машина, купленная в <a href="#/Krako\u0301w">Кракове</a> за какие-то 2300 злотых
+        Моя первая машина, купленная в ${link('Krako\u0301w', 'Кракове')} за какие-то 2300 злотых
         (около $600 по тогдашнему курсу).
       </p>
       <p>Очень надежный автомобиль. Прошёл боевое крещение по украинским дорогам в Буковель.</p>
@@ -293,7 +293,7 @@ export const ru: TranslatedStrings = {
   },
   Skype: {
     name: 'Скайп',
-    description: p('Я в скайпе: <a href="callto:phil.tsarik">phil.tsarik</a>.'),
+    description: p(`Я в скайпе: ${callto('phil.tsarik')}.`),
   },
   'Software Engineer': {
     name: 'Инженер-программист',
@@ -305,7 +305,7 @@ export const ru: TranslatedStrings = {
     name: 'Стак Оверфлоу',
     description: `
       <p>
-        Иногда <a href="https://stackoverflow.com/users/2462524/phts">отвечаю и задаю</a>
+        Иногда ${a('https://stackoverflow.com/users/2462524/phts', 'отвечаю и задаю')}
         вопросы на Стак Оверфлоу.
       </p>
     `,
@@ -316,7 +316,7 @@ export const ru: TranslatedStrings = {
       <p>Отличный редактор кода. Пользуюсь им каждый день.</p>
       <p>
         Периодически
-        <a href="https://github.com/phts?utf8=%E2%9C%93&tab=repositories&q=sublime&type=&language=">пишу плагины</a>
+        ${a('https://github.com/phts?utf8=%e2%9C%93&tab=repositories&q=sublime&type=&language=', 'пишу плагины')}
         для него.
       </p>
     `,
@@ -333,16 +333,16 @@ export const ru: TranslatedStrings = {
     name: 'Ультрамаринд',
     description: `
       <p>
-        Прошло немало месяцев/лет после того, как <a href="#/Joy in Time">Радость во времени</a> внезапно распалась
+        Прошло немало месяцев/лет после того, как ${link('Joy in Time', 'Радость во времени')} внезапно распалась
         и смогла эволюционироваться в Ultramarined с новыми идеями и вдохновением.
       </p>
       <p>
         Мы успешно репетировали, сочиняли песни, выступали, и всё складывалось хорошо. До того момента,
-        как я не уехал в <a href="#/Krako\u0301w">Краков</a>.
+        как я не уехал в ${link('Krako\u0301w', 'Краков')}.
       </p>
       <p>
         Больше информации о группе доступно на
-        <a href="http://phts.github.io/ultramarined.by/">зеркале официального сайта</a>.
+        ${a('http://phts.github.io/ultramarined.by/', 'зеркале официального сайта')}.
       </p>
     `,
   },
@@ -357,7 +357,7 @@ export const ru: TranslatedStrings = {
         <li>Warcraft 2 / 3</li>
         <li>Starcraft</li>
         <li>Stronghold</li>
-        <li><a href="#/Heroes of Might and Magic 3">Heroes of Might and Magic 3</a> / 4</li>
+        <li>${link('Heroes of Might and Magic 3')} / 4</li>
         <li>Half Life</li>
         <li>Syberia</li>
         <li>Majesty</li>
@@ -366,12 +366,12 @@ export const ru: TranslatedStrings = {
         <li>Космические рэйнджеры</li>
         <li>The Talos Principle</li>
       </ul>
-      <p>А также некоторые игры на <a href="#/ZX Spectrum">ZX Spectrum</a>.</p>
+      <p>А также некоторые игры на ${link('ZX Spectrum')}.</p>
     `,
   },
   VK: {
     name: 'ВК',
-    description: p('<a href="https://vk.com/phil.tsarik">Моя страница</a> в ВК.'),
+    description: p(`${a('https://vk.com/phil.tsarik', 'Моя страница')} в ВК.`),
   },
   'ZX Spectrum': {
     name: 'Зэд Икс Спектрум',
