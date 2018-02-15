@@ -45,6 +45,8 @@ export const en: TranslatedStrings = {
   },
   Facebook: {
   },
+  Firefox: {
+  },
   foobar2000: {
   },
   GitHub: {

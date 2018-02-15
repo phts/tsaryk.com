@@ -12,6 +12,15 @@ export const ru: TranslatedStrings = {
   },
   '© Phil Tsarik, 2018': {
     name: '© Филипп Царик, 2018',
+    description: `
+      <p>Этот сайт создавался и поддерживается мной в свободное время.</p>
+      <p>Основные используемые технологии:</p>
+      <ul>
+        <li>Preact</li>
+        <li>MobX</li>
+        <li>TypeScript</li>
+      </ul>
+    `,
   },
   '+375292181503': {
     description: p('Мой белорусский номер телефона: <a href="tel:+375292181503">+375 29 218-15-03</a>.'),
@@ -24,6 +33,9 @@ export const ru: TranslatedStrings = {
   },
   Android: {
     name: 'Андройд',
+    description: `
+      <p>Только андройд. Не люблю iOS.</p>
+    `,
   },
   Angular: {
     name: 'Ангулар',
@@ -47,7 +59,18 @@ export const ru: TranslatedStrings = {
       Все публичные проекты находится на <a href="#/GitHub">моём Гитхабе</a>.'),
   },
   'Board games': {
-    name: 'Настолки',
+    name: 'Настольные игры',
+    description: `
+      <p>Люблю играть в настолки, особенно в стратегические.</p>
+      <p>Из того, что есть у нас, можно выделить:</p>
+      <ul>
+        <li>Эволюция</li>
+        <li>Улей</li>
+        <li>7 чудес</li>
+        <li>Космические дальнобойщики</li>
+        <li>Роскошь</li>
+      </ul>
+    `,
   },
   Cats: {
     name: 'Коты',
@@ -102,6 +125,16 @@ export const ru: TranslatedStrings = {
     name: 'Фейсбук',
     description: p('<a href="https://www.facebook.com/phil.tsarik">Моя страничка</a> в фэйсбуке.'),
   },
+  Firefox: {
+    name: 'Файерфокс',
+    description: `
+      <p>Пользуюсь только файерфоксом. Не взлюбил хром с самого начала из-за невозможности его настроить под себя.</p>
+      <p>
+        <a href="https://github.com/phts?utf8=%E2%9C%93&tab=repositories&q=firefox&type=&language=">Иногда пишу</a>
+        простенькие <a href="https://addons.mozilla.org/ru/firefox/addon/uft8-special-characters/">аддоны</a> для фф.
+      </p>
+    `,
+  },
   foobar2000: {
     name: 'фубар2000',
     description: `
@@ -132,7 +165,13 @@ export const ru: TranslatedStrings = {
   },
   'Heroes of Might and Magic 3': {
     name: 'Герои меча и магии 3',
-    description: p('До сих пор играю, если появляется свободное время.'),
+    description: `
+      <p>До сих пор играю, если появляется свободное время.</p>
+      <p>
+        Радует, что несмотря на то, что игра старая, у неё огромное комьюнити, проходят турниры,
+        выпускаются аддоны и патчи.
+      </p>
+    `,
   },
   JavaScript: {
     name: 'Джаваскрипт',
@@ -145,6 +184,7 @@ export const ru: TranslatedStrings = {
   },
   'Last.fm': {
     name: 'Ласт.фм',
+    description: p('<a href="www.last.fm/user/phil_tsarik">Мой профиль</a> на Ласт.фм'),
   },
   LinkedIn: {
     name: 'ЛинкедИн',
@@ -194,6 +234,13 @@ export const ru: TranslatedStrings = {
   },
   'Playing cards': {
     name: 'Игральные карты',
+    description: `
+      <p>Коллекционирую с детства.</p>
+      <p>
+        Не ставлю себе задачу собрать очень много и всё подряд, поэтому коллекция не очень большая и
+        насчитывает на данный момент около 65 колод. Собираю именно те, что понравились.
+      </p>
+    `,
   },
   Poland: {
     name: 'Польша',
@@ -216,6 +263,20 @@ export const ru: TranslatedStrings = {
   },
   'SaM Solutions': {
     name: 'Сам Солюшнс',
+    description: `
+      <p>
+        Работал тут во время и после <a href="#/PSU">универа</a>. Точнее, не сразу после универа, т.к
+        пришлось пару месяцев отсидеться на тракторном заводе по распределению из-за дыр в белорусских законах.
+      </p>
+      <p>
+        Компания оставила только приятные впечатления. Но проекты разной степени качества, может и не повезти.
+        Впрочем, как и в любой аутсорсинговой компании.
+      </p>
+      <p>
+        <a href="#/Curriculum vitae">После 4 лет работы</a> тут меня захантил <a href="#/Epam">Епам</a>,
+        и я переехал в <a href="#/Krako\u0301w">Краков</a>.
+      </p>
+    `,
   },
   S\u030Ckoda: {
     name: 'Шкода',
@@ -227,6 +288,7 @@ export const ru: TranslatedStrings = {
       </p>
       <p>Очень надежный автомобиль. Прошёл боевое крещение по украинским дорогам в Буковель.</p>
       <p><img src="${skodaImg}" alt="My S\u030Ckoda"></p>
+      <p>Хотя от старости уже начинает капризничать.</p>
     `,
   },
   Skype: {
