@@ -54,10 +54,6 @@ const knownBtns: KnownBtnMap = {
 @inject('listStore', 'widthsStore')
 @observer
 export class BtnListPage extends React.PureComponent<Props> {
-  componentWillMount() {
-    this.props.widthsStore.randomize(this.props.listStore.list)
-  }
-
   render() {
     const els =  R.map((it: ListItem) => {
       // tslint:disable-next-line no-any
