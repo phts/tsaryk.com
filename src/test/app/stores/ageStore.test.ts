@@ -1,6 +1,12 @@
 import * as MockDate from 'mockdate'
 import {AgeStore, AgePart, Age} from 'app/stores/ageStore'
 
+jest.mock('app/config', () => {
+  return {
+    DATE_OF_BIRTH: new Date(1987, 11, 3, 10, 30, 0),
+  }
+})
+
 function expectAgeToEqual(age: Age, values: number[]) {
   ['years', 'months', 'days', 'hours', 'minutes', 'seconds']
     .forEach((m: AgePart, i) => {
