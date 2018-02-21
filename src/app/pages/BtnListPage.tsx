@@ -31,8 +31,8 @@ const Ul = styled.ul`
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0;
-  padding: 0;
   min-width: 100%;
+  padding: 0.5em 0;
 `
 
 type BaseBtnComponentClass = typeof BaseBtnComponent

@@ -9,6 +9,7 @@ import {Button} from 'app/components'
 import {BUTTON_TYPE, DEFAULT_FONT_SIZE, getBorder} from 'app/helpers/buttons'
 import {openIndex} from 'app/helpers/routes'
 import {ShowItemPageMatch} from 'app/routes'
+import {media} from 'app/helpers/css'
 
 interface Props extends RouteComponentProps<ShowItemPageMatch> {
   itemId: ItemId
@@ -21,11 +22,11 @@ interface Props extends RouteComponentProps<ShowItemPageMatch> {
 class ShowItemPageRaw extends React.PureComponent<Props> {
   render() {
     const item = this.props.itemsStore.findById(this.props.match.params.id)
-    return <FlexWrapper><Div>
+    return <FlexWrapper><div>
       <header>
-        <h1>
+        <ShowItemPageTitle>
           {item.name}
-        </h1>
+        </ShowItemPageTitle>
       </header>
       <div dangerouslySetInnerHTML={{__html: item.description}}/>
       <footer>
@@ -36,7 +37,7 @@ class ShowItemPageRaw extends React.PureComponent<Props> {
           {this.props.i18nStore.labels.close}
         </Button>
       </footer>
-    </Div></FlexWrapper>
+    </div></FlexWrapper>
   }
 
   private onBack = () => {
@@ -44,17 +45,25 @@ class ShowItemPageRaw extends React.PureComponent<Props> {
   }
 }
 
-const Div = styled.div`
-  height: 70%;
-  width: 70%;
-`
-
 const FlexWrapper = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  box-sizing: border-box;
   min-height: 100%;
   min-width: 100%;
+  padding: 7em 10em;
+
+  ${media.tablet`
+    padding: 5em 7em;
+  `}
+  ${media.smartphone`
+    padding: 2em;
+  `}
+  ${media.mobile`
+    padding: 1em;
+  `}
+`
+
+const ShowItemPageTitle = styled.h1`
+  margin: 0 0 1em;
 `
 
 export const ShowItemPage = withRouter<Props>(ShowItemPageRaw)
