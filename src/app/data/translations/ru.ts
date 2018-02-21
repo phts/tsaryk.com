@@ -81,6 +81,7 @@ export const ru: TranslatedStrings = {
   'Curriculum vitae': {
     name: 'Резюме',
     description: `
+      <p>Всегда актуальное.</p>
       <p>Доступно на ${a('https://github.com/phts/my-cv', 'моём гитхабе')}.</p>
     `,
   },
@@ -117,7 +118,7 @@ export const ru: TranslatedStrings = {
       <p>После Епама перешёл в ${link('Grand Parade', 'Гранд Парэйд')}.</p>
       <p>
         Больше подробностей в ${link('Curriculum vitae', 'моём резюме')} и
-        на ${link('LinkedIn', 'линкедине')}
+        на ${link('LinkedIn', 'линкедине')}.
       </p>
     `,
   },
@@ -131,7 +132,7 @@ export const ru: TranslatedStrings = {
       <p>Пользуюсь только файерфоксом. Не взлюбил хром с самого начала из-за невозможности его настроить под себя.</p>
       <p>
         ${a('https://github.com/phts?utf8=%e2%9C%93&tab=repositories&q=firefox&type=&language=', 'Иногда пишу')}
-        простенькие ${a('https://addons.mozilla.org/ru/firefox/addon/uft8-special-characters/', 'аддоны')} для фф.
+        ${a('https://addons.mozilla.org/ru/firefox/addon/uft8-special-characters/', 'простые')} аддоны для фф.
       </p>
     `,
   },
