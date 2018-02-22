@@ -7,8 +7,7 @@ import PageTitle from './parts/PageTitle'
 import PageHtmlContent from './parts/PageHtmlContent'
 import asItemPage, {ItemPageProps} from './asItemPage'
 import {I18nStore} from 'app/stores/i18nStore'
-import {Button} from 'app/components'
-import {BUTTON_TYPE, DEFAULT_FONT_SIZE, getBorder} from 'app/helpers/buttons'
+import {ActionButton} from 'app/components'
 
 interface Props extends ItemPageProps {
   i18nStore?: I18nStore
@@ -21,12 +20,10 @@ const SimpleItemPage: React.StatelessComponent<Props> = ({item, onClose, i18nSto
     </header>
     <PageHtmlContent html={item.description}/>
     <footer>
-      <Button
-        border={getBorder(BUTTON_TYPE.Action)}
-        fontSize={DEFAULT_FONT_SIZE}
+      <ActionButton
         onClick={onClose}>
         {i18nStore.labels.close}
-      </Button>
+      </ActionButton>
     </footer>
   </PagePadding>
 )
