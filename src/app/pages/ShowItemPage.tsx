@@ -7,6 +7,7 @@ import {openIndex} from 'app/helpers/routes'
 import {ShowItemPageMatch} from 'app/routes'
 import {ItemPageComponentClass} from 'app/components/item-pages/asItemPage'
 import SimpleItemPage from 'app/components/item-pages/SimpleItemPage'
+import ZxSpectrumItemPage from 'app/components/item-pages/ZxSpectrumItemPage'
 
 interface Props extends RouteComponentProps<ShowItemPageMatch> {
   itemId: ItemId
@@ -18,6 +19,7 @@ type KnownItemPagesMap = {
 }
 
 const knownItemPages: KnownItemPagesMap = {
+  'ZX Spectrum': ZxSpectrumItemPage,
 }
 
 @inject('itemsStore')
