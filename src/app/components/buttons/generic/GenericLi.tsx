@@ -21,13 +21,13 @@ const Li = li`
   text-align: center;
   white-space: nowrap;
 
-  ${media.mobile`
+  ${media.max.mobile`
     flex-basis: ${props => props.flexBasis / 20}px;
   `}
-  ${media.smartphone`
+  ${media.max.smartphone`
     flex-basis: ${props => props.flexBasis / 10}px;
   `}
-  ${media.tablet`
+  ${media.max.tablet`
     flex-basis: ${props => props.flexBasis / 5}px;
   `}
 `

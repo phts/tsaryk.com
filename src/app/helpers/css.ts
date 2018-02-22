@@ -9,10 +9,21 @@ const breakpoints = {
 }
 
 type BreakpointsLabel = keyof typeof breakpoints
-type Medias = {[index in keyof typeof breakpoints]?: typeof css}
+type MediaSet = {[index in keyof typeof breakpoints]?: typeof css}
+type Medias = {
+  min: MediaSet,
+  max: MediaSet,
+}
 
 export const media = Object.keys(breakpoints).reduce((acc: Medias, val: BreakpointsLabel) => {
-  acc[val] = (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]) => css`
+  acc.min = acc.min || {}
+  acc.min[val] = (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]) => css`
+    @media (min-width: ${breakpoints[val] / 16}em) {
+      ${css(strings, ...interpolations)};
+    }
+  `
+  acc.max = acc.max || {}
+  acc.max[val] = (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]) => css`
     @media (max-width: ${breakpoints[val] / 16}em) {
       ${css(strings, ...interpolations)};
     }

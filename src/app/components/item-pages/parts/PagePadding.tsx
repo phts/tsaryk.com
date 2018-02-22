@@ -7,13 +7,13 @@ export default styled.div`
   min-width: 100%;
   padding: 7em 10em;
 
-  ${media.tablet`
+  ${media.max.tablet`
     padding: 5em 7em;
   `}
-  ${media.smartphone`
+  ${media.max.smartphone`
     padding: 2em;
   `}
-  ${media.mobile`
+  ${media.max.mobile`
     padding: 1em;
   `}
 `
