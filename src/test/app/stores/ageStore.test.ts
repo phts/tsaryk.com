@@ -87,7 +87,7 @@ describe('AgeStore', () => {
     })
   })
 
-  for (let m of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) {
+  for (const m of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) {
     const dateMonth = m - 1
     const prevMonth = dateMonth - 1 < 0 ? 11 : dateMonth - 1
     const daysInPrevMonth = daysInMonthsOf1988[prevMonth]
