@@ -77,6 +77,12 @@ export const metaProps: RawMetaProps = {
   JavaScript: {
     size: ItemSize.XL,
   },
+  Kraków: {
+    size: ItemSize.L,
+  },
+  Music: {
+    size: ItemSize.XL,
+  },
   'Phil Tsarik': {
     size: ItemSize.XXL,
   },
