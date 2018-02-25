@@ -5,10 +5,7 @@ import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
 import {GenericBtn} from './generic'
 import {AgeStore} from 'app/stores/ageStore'
 import {I18nStore} from 'app/stores/i18nStore'
-
-function padWithZero(value: number): string {
-  return ('0' + value).slice(-2)
-}
+import {padWithZero} from 'app/utils/core'
 
 interface Props extends BaseProps {
   ageStore?: AgeStore

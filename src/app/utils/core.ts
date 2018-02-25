@@ -8,3 +8,7 @@ export function enumToArray<T>(en: EnumClass): Array<keyof T> {
     R.values,
   )(en) as Array<keyof T>
 }
+
+export function padWithZero(value: number): string {
+  return ('0' + value).slice(-2)
+}
