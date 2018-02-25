@@ -9,7 +9,7 @@ export interface ItemPageProps {
 
 export type ItemPageComponentClass = React.ComponentClass<ItemPageProps>
 
-type WrappedComponentType = React.ComponentClass | React.StatelessComponent
+type WrappedComponentType = React.ComponentClass<ItemPageProps> | React.StatelessComponent<ItemPageProps>
 
 type AsItemPageHoc = (WrappedComponent: WrappedComponentType) => ItemPageComponentClass
 
