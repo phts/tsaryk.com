@@ -1,30 +1,30 @@
 import * as React from 'react'
 import {observer, inject} from 'mobx-react'
 
-import BaseBtnComponent, {BaseProps} from './BaseBtnComponent'
+import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import {AgeStore} from 'app/stores/ageStore'
 import {I18nStore} from 'app/stores/i18nStore'
 import {padWithZero} from 'app/utils/core'
 
-interface Props extends BaseProps {
+interface Props extends BtnProps {
   ageStore?: AgeStore
   i18nStore?: I18nStore
 }
 
 @inject('ageStore', 'i18nStore')
 @observer
-class AgeBtn extends BaseBtnComponent<Props> {
+class AgeBtn extends React.PureComponent<Props> {
   render() {
     return <GenericBtn
-      buttonType={this.buttonType}
-      flexBasis={this.flexBasis}
-      fontSize={this.fontSize}
+      buttonType={this.props.buttonType}
+      flexBasis={this.props.flexBasis}
+      fontSize={this.props.fontSize}
       text={this.text}
     />
   }
 
-  protected get text() {
+  private get text() {
     const {years, months, days, hours, minutes, seconds} = this.props.ageStore.age
     const labels = this.props.i18nStore.labels
     return `${years} ${labels.years} \
@@ -36,4 +36,4 @@ class AgeBtn extends BaseBtnComponent<Props> {
   }
 }
 
-export default AgeBtn
+export default asBtn(AgeBtn)

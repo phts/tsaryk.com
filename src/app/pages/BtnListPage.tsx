@@ -12,7 +12,7 @@ import {
 } from 'app/stores/listStore'
 import {Lang} from 'app/stores/langStore'
 import AgeBtn from 'app/components/buttons/AgeBtn'
-import BaseBtnComponent from 'app/components/buttons/BaseBtnComponent'
+import {BtnClass} from 'app/components/buttons/asBtn'
 import ColorsBtn from 'app/components/buttons/ColorsBtn'
 import LangBtn from 'app/components/buttons/LangBtn'
 import ModeBtn from 'app/components/buttons/ModeBtn'
@@ -33,20 +33,18 @@ const Ul = styled.ul`
   padding: 0.5em 0;
 `
 
-type BaseBtnComponentClass = typeof BaseBtnComponent
-
 type KnownBtnMap = {
-  [index in ItemId]?: BaseBtnComponentClass
+  [index in ItemId]?: BtnClass
 }
 
 const knownBtns: KnownBtnMap = {
-  Age: AgeBtn as BaseBtnComponentClass,
-  Ascending: ModeBtn(Mode.Asc) as BaseBtnComponentClass,
-  Colors: ColorsBtn as BaseBtnComponentClass,
-  EN: LangBtn(Lang.EN) as BaseBtnComponentClass,
-  Random: ModeBtn(Mode.Random) as BaseBtnComponentClass,
-  Title: TitleBtn as BaseBtnComponentClass,
-  RU: LangBtn(Lang.RU) as BaseBtnComponentClass,
+  Age: AgeBtn,
+  Ascending: ModeBtn(Mode.Asc),
+  Colors: ColorsBtn,
+  EN: LangBtn(Lang.EN),
+  Random: ModeBtn(Mode.Random),
+  Title: TitleBtn,
+  RU: LangBtn(Lang.RU),
 }
 
 @inject('listStore', 'widthsStore')
@@ -54,8 +52,7 @@ const knownBtns: KnownBtnMap = {
 export class BtnListPage extends React.PureComponent<Props> {
   render() {
     const els =  R.map((it: ListItem) => {
-      // tslint:disable-next-line no-any
-      const BtnComponent: BaseBtnComponentClass = knownBtns[it.id] || TextBtn as any as BaseBtnComponentClass
+      const BtnComponent: BtnClass = knownBtns[it.id] || TextBtn
       return <BtnComponent
         key={it.id}
         item={it}

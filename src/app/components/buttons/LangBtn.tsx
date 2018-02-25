@@ -1,24 +1,24 @@
 import * as React from 'react'
 import {inject} from 'mobx-react'
 
-import BaseBtnComponent, {BaseProps} from './BaseBtnComponent'
+import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import {LangStore, Lang} from 'app/stores/langStore'
 
-interface Props extends BaseProps {
+interface Props extends BtnProps {
   langStore?: LangStore
 }
 
 export default function LangBtn(lang: Lang) {
   @inject('langStore')
-  class AnyLangBtn extends BaseBtnComponent<Props> {
+  class AnyLangBtn extends React.PureComponent<Props> {
     render() {
       return <GenericBtn
-        buttonType={this.buttonType}
-        flexBasis={this.flexBasis}
-        fontSize={this.fontSize}
+        buttonType={this.props.buttonType}
+        flexBasis={this.props.flexBasis}
+        fontSize={this.props.fontSize}
         onClick={this.onClick}
-        text={this.text}
+        text={this.props.text}
       />
     }
 
@@ -27,5 +27,5 @@ export default function LangBtn(lang: Lang) {
     }
   }
 
-  return AnyLangBtn
+  return asBtn(AnyLangBtn)
 }

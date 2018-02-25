@@ -1,28 +1,28 @@
 import * as React from 'react'
 
-import BaseBtnComponent from './BaseBtnComponent'
+import asBtn, {BtnProps} from './asBtn'
 import GenericLink from './generic/GenericLink'
 import {BUTTON_TYPE} from 'app/helpers/buttons'
 
-class TextBtn extends BaseBtnComponent {
+class TextBtn extends React.PureComponent<BtnProps> {
   render() {
     return <GenericLink
       buttonType={this.textBtnButtonType}
-      flexBasis={this.flexBasis}
-      fontSize={this.fontSize}
-      text={this.text}
-      to={this.props.item.id}
+      flexBasis={this.props.flexBasis}
+      fontSize={this.props.fontSize}
+      text={this.props.text}
+      to={this.props.itemId}
     />
   }
 
   private get textBtnButtonType() {
-    if (!this.props.item.description) {
+    if (!this.props.description) {
       // DEBUG: To improve visibility of missing description.
       // To be removed.
       return BUTTON_TYPE.Simple
     }
-    return this.buttonType
+    return this.props.buttonType
   }
 }
 
-export default TextBtn
+export default asBtn(TextBtn)
