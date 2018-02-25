@@ -77,6 +77,9 @@ export const metaProps: RawMetaProps = {
   JavaScript: {
     size: ItemSize.XL,
   },
+  Feedback: {
+    category: ItemCategory.Meta,
+  },
   Kraków: {
     size: ItemSize.L,
   },

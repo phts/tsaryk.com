@@ -14,6 +14,7 @@ import {Lang} from 'app/stores/langStore'
 import AgeBtn from 'app/components/buttons/AgeBtn'
 import {BtnClass} from 'app/components/buttons/asBtn'
 import ColorsBtn from 'app/components/buttons/ColorsBtn'
+import FeedbackBtn from 'app/components/buttons/FeedbackBtn'
 import LangBtn from 'app/components/buttons/LangBtn'
 import ModeBtn from 'app/components/buttons/ModeBtn'
 import TextBtn from 'app/components/buttons/TextBtn'
@@ -42,6 +43,7 @@ const knownBtns: KnownBtnMap = {
   Ascending: ModeBtn(Mode.Asc),
   Colors: ColorsBtn,
   EN: LangBtn(Lang.EN),
+  Feedback: FeedbackBtn,
   Random: ModeBtn(Mode.Random),
   Title: TitleBtn,
   RU: LangBtn(Lang.RU),
