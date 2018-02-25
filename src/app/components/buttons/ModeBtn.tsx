@@ -1,8 +1,8 @@
 import * as React from 'react'
 import {inject} from 'mobx-react'
 
-import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
-import {GenericBtn} from './generic'
+import BaseBtnComponent, {BaseProps} from './BaseBtnComponent'
+import GenericBtn from './generic/GenericBtn'
 import {Mode, ListStore} from 'app/stores/listStore'
 import {WidthsStore} from 'app/stores/widthsStore'
 
@@ -11,7 +11,7 @@ interface Props extends BaseProps {
   widthsStore?: WidthsStore
 }
 
-export function ModeBtn(mode: Mode) {
+export default function ModeBtn(mode: Mode) {
   @inject('listStore', 'widthsStore')
   class AnyModeBtn extends BaseBtnComponent<Props> {
     render() {

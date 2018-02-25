@@ -1,10 +1,10 @@
 import * as React from 'react'
 
-import {BaseBtnComponent} from './BaseBtnComponent'
-import {GenericLink} from './generic'
+import BaseBtnComponent from './BaseBtnComponent'
+import GenericLink from './generic/GenericLink'
 import {BUTTON_TYPE} from 'app/helpers/buttons'
 
-export class TextBtn extends BaseBtnComponent {
+class TextBtn extends BaseBtnComponent {
   render() {
     return <GenericLink
       buttonType={this.textBtnButtonType}
@@ -24,3 +24,5 @@ export class TextBtn extends BaseBtnComponent {
     return this.buttonType
   }
 }
+
+export default TextBtn

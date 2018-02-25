@@ -1,15 +1,15 @@
 import * as React from 'react'
 import {inject} from 'mobx-react'
 
-import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
-import {GenericBtn} from './generic'
+import BaseBtnComponent, {BaseProps} from './BaseBtnComponent'
+import GenericBtn from './generic/GenericBtn'
 import {LangStore, Lang} from 'app/stores/langStore'
 
 interface Props extends BaseProps {
   langStore?: LangStore
 }
 
-export function LangBtn(lang: Lang) {
+export default function LangBtn(lang: Lang) {
   @inject('langStore')
   class AnyLangBtn extends BaseBtnComponent<Props> {
     render() {

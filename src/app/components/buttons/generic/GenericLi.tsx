@@ -32,8 +32,10 @@ const Li = li`
   `}
 `
 
-export const GenericLi: React.StatelessComponent<GenericLiProps> = props => (
+const GenericLi: React.StatelessComponent<GenericLiProps> = props => (
   <Li flexBasis={props.flexBasis}>
     {props.children}
   </Li>
 )
+
+export default GenericLi

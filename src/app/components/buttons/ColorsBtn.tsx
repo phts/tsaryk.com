@@ -1,8 +1,8 @@
 import * as React from 'react'
 import {inject} from 'mobx-react'
 
-import {BaseBtnComponent, BaseProps} from './BaseBtnComponent'
-import {GenericBtn} from './generic'
+import BaseBtnComponent, {BaseProps} from './BaseBtnComponent'
+import GenericBtn from './generic/GenericBtn'
 import {getRandomCssColor} from 'app/helpers/css'
 import {UiStore} from 'app/stores/uiStore'
 
@@ -11,7 +11,7 @@ interface Props extends BaseProps {
 }
 
 @inject('uiStore')
-export class ColorsBtn extends BaseBtnComponent<Props> {
+class ColorsBtn extends BaseBtnComponent<Props> {
   render() {
     return <GenericBtn
       buttonType={this.buttonType}
@@ -27,3 +27,5 @@ export class ColorsBtn extends BaseBtnComponent<Props> {
     this.props.uiStore.fontColor = getRandomCssColor()
   }
 }
+
+export default ColorsBtn

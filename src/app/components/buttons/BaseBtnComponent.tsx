@@ -24,7 +24,7 @@ const buttonTypeMap: {[index in ItemCategory]: BUTTON_TYPE} = {
   Meta: BUTTON_TYPE.Action,
 }
 
-export class BaseBtnComponent<P extends BaseProps = BaseProps, S = {}>
+class BaseBtnComponent<P extends BaseProps = BaseProps, S = {}>
              extends React.PureComponent<P, S> {
 
   protected get buttonType() {
@@ -43,3 +43,5 @@ export class BaseBtnComponent<P extends BaseProps = BaseProps, S = {}>
     return this.props.item.name
   }
 }
+
+export default BaseBtnComponent

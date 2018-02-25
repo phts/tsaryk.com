@@ -1,8 +1,8 @@
 import * as React from 'react'
 import {observer, inject} from 'mobx-react'
 
-import {BaseProps, BaseBtnComponent} from './BaseBtnComponent'
-import {GenericBtn} from './generic'
+import BaseBtnComponent, {BaseProps} from './BaseBtnComponent'
+import GenericBtn from './generic/GenericBtn'
 import {AgeStore} from 'app/stores/ageStore'
 import {I18nStore} from 'app/stores/i18nStore'
 import {padWithZero} from 'app/utils/core'
@@ -14,7 +14,7 @@ interface Props extends BaseProps {
 
 @inject('ageStore', 'i18nStore')
 @observer
-export class AgeBtn extends BaseBtnComponent<Props> {
+class AgeBtn extends BaseBtnComponent<Props> {
   render() {
     return <GenericBtn
       buttonType={this.buttonType}
@@ -35,3 +35,5 @@ export class AgeBtn extends BaseBtnComponent<Props> {
       ${padWithZero(seconds)} ${labels.sec}`
   }
 }
+
+export default AgeBtn

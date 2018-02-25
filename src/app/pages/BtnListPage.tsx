@@ -11,15 +11,13 @@ import {
   Mode,
 } from 'app/stores/listStore'
 import {Lang} from 'app/stores/langStore'
-import {
-  AgeBtn,
-  BaseBtnComponent,
-  ColorsBtn,
-  LangBtn,
-  ModeBtn,
-  TextBtn,
-  TitleBtn,
-} from 'app/components/buttons'
+import AgeBtn from 'app/components/buttons/AgeBtn'
+import BaseBtnComponent from 'app/components/buttons/BaseBtnComponent'
+import ColorsBtn from 'app/components/buttons/ColorsBtn'
+import LangBtn from 'app/components/buttons/LangBtn'
+import ModeBtn from 'app/components/buttons/ModeBtn'
+import TextBtn from 'app/components/buttons/TextBtn'
+import TitleBtn from 'app/components/buttons/TitleBtn'
 
 interface Props {
   listStore?: ListStore

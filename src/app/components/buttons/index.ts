@@ -1,7 +1,0 @@
-export * from './AgeBtn'
-export * from './BaseBtnComponent'
-export * from './ColorsBtn'
-export * from './LangBtn'
-export * from './ModeBtn'
-export * from './TextBtn'
-export * from './TitleBtn'
