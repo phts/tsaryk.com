@@ -1,10 +1,10 @@
 import * as React from 'react'
 
 import {
-  ListItem,
-  ItemCategory,
-  ItemSize,
   ItemId,
+  ItemSize,
+  ItemType,
+  ListItem,
 } from 'app/stores/listStore'
 import {DEFAULT_FONT_SIZE, BUTTON_TYPE} from 'app/helpers/buttons'
 
@@ -29,8 +29,8 @@ const fontSizeMap: {[index in ItemSize]: string} = {
   XXL: '2.5rem',
 }
 
-const buttonTypeMap: {[index in ItemCategory]: BUTTON_TYPE} = {
-  Common: BUTTON_TYPE.Default,
+const buttonTypeMap: {[index in ItemType]: BUTTON_TYPE} = {
+  Item: BUTTON_TYPE.Default,
   Meta: BUTTON_TYPE.Action,
 }
 
@@ -43,7 +43,7 @@ type AsBtnHoc = (WrappedComponent: WrappedComponentType) => BtnClass
 const asBtn: AsBtnHoc = WrappedComponent =>
   ({item, width}) =>
     <WrappedComponent
-      buttonType={buttonTypeMap[item.category]}
+      buttonType={buttonTypeMap[item.type]}
       description={item.description}
       flexBasis={width}
       fontSize={fontSizeMap[item.size]}

@@ -4,8 +4,8 @@ import {shuffle} from 'rambdax'
 
 import {
   ItemPosition,
-  ItemCategory,
   ItemSize,
+  ItemType,
 } from 'app/data/meta'
 import {
   Item,
@@ -15,10 +15,10 @@ import {
 } from './itemsStore'
 
 export {
-  ItemCategory,
   ItemId,
   ItemPosition,
   ItemSize,
+  ItemType,
 }
 export enum Mode {
   Asc = 'Asc',

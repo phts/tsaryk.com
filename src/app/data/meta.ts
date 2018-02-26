@@ -1,7 +1,7 @@
 import {KnownName} from './names'
 
-export enum ItemCategory {
-  Common = 'Common',
+export enum ItemType {
+  Item = 'Item',
   Meta = 'Meta',
 }
 
@@ -25,45 +25,53 @@ type RawMetaPropSet = {
 type RawMetaProps = {[index in KnownName]?: RawMetaPropSet}
 
 interface MetaPropsSet {
-  category: ItemCategory
+  type: ItemType
   position: ItemPosition
   size: ItemSize
 }
 
 export const DEFAULT_META_PROPS_SET: MetaPropsSet = {
-  category: ItemCategory.Common,
   position: ItemPosition.Middle,
   size: ItemSize.M,
+  type: ItemType.Item,
 }
 
 export const metaProps: RawMetaProps = {
   EN: {
-    category: ItemCategory.Meta,
     position: ItemPosition.Head,
+    type: ItemType.Meta,
   },
   RU: {
-    category: ItemCategory.Meta,
     position: ItemPosition.Head,
+    type: ItemType.Meta,
   },
   Title: {
-    category: ItemCategory.Meta,
     position: ItemPosition.Head,
     size: ItemSize.XXL,
+    type: ItemType.Meta,
   },
   '© Phil Tsarik, 2018': {
     position: ItemPosition.Tail,
   },
+
+  Ascending: {
+    type: ItemType.Meta,
+  },
+  Colors: {
+    type: ItemType.Meta,
+  },
+  Feedback: {
+    type: ItemType.Meta,
+  },
+  Random: {
+    type: ItemType.Meta,
+  },
+
   Angular: {
     size: ItemSize.L,
   },
-  Ascending: {
-    category: ItemCategory.Meta,
-  },
   Cats: {
     size: ItemSize.XL,
-  },
-  Colors: {
-    category: ItemCategory.Meta,
   },
   'Curriculum vitae': {
     size: ItemSize.L,
@@ -77,9 +85,6 @@ export const metaProps: RawMetaProps = {
   JavaScript: {
     size: ItemSize.XL,
   },
-  Feedback: {
-    category: ItemCategory.Meta,
-  },
   Kraków: {
     size: ItemSize.L,
   },
@@ -91,9 +96,6 @@ export const metaProps: RawMetaProps = {
   },
   'Pink Floyd': {
     size: ItemSize.L,
-  },
-  Random: {
-    category: ItemCategory.Meta,
   },
   React: {
     size: ItemSize.L,

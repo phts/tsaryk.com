@@ -4,9 +4,9 @@ import * as R from 'ramda'
 import {enumToArray} from 'app/utils/core'
 import {
   DEFAULT_META_PROPS_SET,
-  ItemCategory,
   ItemPosition,
   ItemSize,
+  ItemType,
   metaProps,
 } from 'app/data/meta'
 import {
@@ -21,12 +21,12 @@ import {LangStore, langStore} from './langStore'
 export type ItemId = KnownName
 
 export interface Item {
-  category: ItemCategory
   description?: string
   id: ItemId
   name: string
   position: ItemPosition
   size: ItemSize
+  type: ItemType
 }
 
 export type Items = {[index in ItemId]: Item}
