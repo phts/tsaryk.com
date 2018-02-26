@@ -25,7 +25,7 @@ const knownItemPages: KnownItemPagesMap = {
 @inject('itemsStore')
 class ShowItemPageRaw extends React.PureComponent<Props> {
   render() {
-    const item = this.props.itemsStore.findById(this.props.match.params.id)
+    const item = this.props.itemsStore.items[this.props.match.params.id]
     const ItemPageComponent: ItemPageComponentClass = knownItemPages[item.id] || SimpleItemPage
     return <ItemPageComponent
       item={item}

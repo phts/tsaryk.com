@@ -2,7 +2,7 @@ import {observable, action} from 'mobx'
 import * as R from 'ramda'
 import {random} from 'rambdax'
 
-import {ItemId, Items} from './itemsStore'
+import {ItemId, Item} from './itemsStore'
 
 type Width = number
 type Widths = {[index: string]: Width}
@@ -11,7 +11,7 @@ export class WidthsStore {
   @observable widths: Widths = {}
 
   @action
-  randomize(list: Items): void {
+  randomize(list: Item[]): void {
     this.widths = R.pipe(
       R.indexBy(R.prop('id')),
       R.mapObjIndexed(() => random(60, 500)),

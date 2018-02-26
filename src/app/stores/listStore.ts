@@ -10,7 +10,6 @@ import {
 import {
   Item,
   ItemId,
-  Items,
   itemsStore,
   ItemsStore,
 } from './itemsStore'
@@ -27,9 +26,9 @@ export enum Mode {
 }
 
 export type ListItem = Item
-export type List = Items
+export type List = ListItem[]
 
-const sortFunc: {[index in Mode]: (x: Items) => Items} = {
+const sortFunc: {[index in Mode]: (x: Item[]) => Item[]} = {
   Asc: R.sortBy(R.compose(R.toLower, R.prop('name'))),
   Random: shuffle,
 }
@@ -56,8 +55,9 @@ export class ListStore {
 
   private refresh() {
     this.list = R.pipe(
+      R.values,
       x => [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map(p => {
-        return R.filter(R.propEq('position', p), x) as Items
+        return R.filter(R.propEq('position', p), x) as ListItem[]
       }),
       x => [
         ...x[0],

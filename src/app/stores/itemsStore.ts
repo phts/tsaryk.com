@@ -29,7 +29,7 @@ export interface Item {
   size: ItemSize
 }
 
-export type Items = Item[]
+export type Items = {[index in ItemId]: Item}
 
 type ItemNamesMap = {[T in KnownName]: T}
 const ITEM_NAMES: KnownName[] = enumToArray<typeof Names>(Names)
@@ -58,8 +58,7 @@ function toItems(itemNamesMap: ItemNamesMap, strings: TranslatedStrings): Items 
   return R.pipe(
     R.mapObjIndexed(toDefaultItem),
     R.mapObjIndexed(toItem(strings, FALLBACK)),
-    R.values,
-  )(itemNamesMap)
+  )(itemNamesMap) as Items
 }
 
 export class ItemsStore {
@@ -78,10 +77,6 @@ export class ItemsStore {
     const items = toItems(ITEM_NAMES_MAP, this.currentTranslatedStrings)
     this.cache[this.lang] = items
     return items
-  }
-
-  findById(id: ItemId): Item {
-    return R.find(x => x.id === id, this.items)
   }
 
   @computed
