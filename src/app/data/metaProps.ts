@@ -18,25 +18,25 @@ export enum ItemSize {
   XXL = 'XXL',
 }
 
-type RawMetaPropSet = {
-  [P in keyof MetaPropsSet]?: MetaPropsSet[P]
-}
-
-type RawMetaProps = {[index in KnownName]?: RawMetaPropSet}
-
-interface MetaPropsSet {
+interface MetaProps {
   type: ItemType
   position: ItemPosition
   size: ItemSize
 }
 
-export const DEFAULT_META_PROPS_SET: MetaPropsSet = {
+export const DEFAULT_META_PROPS: MetaProps = {
   position: ItemPosition.Middle,
   size: ItemSize.M,
   type: ItemType.Item,
 }
 
-export const metaProps: RawMetaProps = {
+type PartialMetaProps = {
+  [P in keyof MetaProps]?: MetaProps[P]
+}
+
+type MetaPropsMap = {[index in KnownName]?: PartialMetaProps}
+
+export const metaPropsMap: MetaPropsMap = {
   EN: {
     position: ItemPosition.Head,
     type: ItemType.Meta,

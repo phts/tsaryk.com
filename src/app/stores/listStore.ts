@@ -6,7 +6,7 @@ import {
   ItemPosition,
   ItemSize,
   ItemType,
-} from 'app/data/meta'
+} from 'app/data/metaProps'
 import {
   Item,
   ItemId,

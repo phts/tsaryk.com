@@ -3,12 +3,12 @@ import * as R from 'ramda'
 
 import {enumToArray} from 'app/utils/core'
 import {
-  DEFAULT_META_PROPS_SET,
+  DEFAULT_META_PROPS,
   ItemPosition,
   ItemSize,
   ItemType,
-  metaProps,
-} from 'app/data/meta'
+  metaPropsMap,
+} from 'app/data/metaProps'
 import {
   Lang,
   TranslatedStrings,
@@ -40,7 +40,7 @@ const FALLBACK = translations[FALLBACK_LANG]
 
 function toDefaultItem(id: ItemId): Item {
   return Object.assign({},
-    DEFAULT_META_PROPS_SET,
+    DEFAULT_META_PROPS,
     {id, name: id},
   )
 }
@@ -48,7 +48,7 @@ function toDefaultItem(id: ItemId): Item {
 function toItem(strings: TranslatedStrings, fallback: TranslatedStrings): (defaultItem: Item, id: ItemId) => Item {
   return (defaultItem: Item, id: ItemId) => Object.assign({},
     defaultItem,
-    metaProps[id] || {},
+    metaPropsMap[id] || {},
     R.pick(['description'], fallback[id]),
     R.pick(['name', 'description'], strings[id]),
   )
