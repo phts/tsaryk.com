@@ -29,7 +29,7 @@ const fontSizeMap: {[index in ItemSize]: string} = {
   XXL: '2.5rem',
 }
 
-const buttonTypeMap: {[index in ItemType]: BUTTON_TYPE} = {
+const buttonTypeMap: {[index in ItemType]?: BUTTON_TYPE} = {
   Item: BUTTON_TYPE.Default,
   Meta: BUTTON_TYPE.Action,
 }

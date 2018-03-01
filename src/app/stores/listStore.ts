@@ -22,16 +22,25 @@ export {
 }
 export enum Mode {
   Asc = 'Asc',
+  Categories = 'Categories',
   Random = 'Random',
 }
 
 export type ListItem = Item
 export type List = ListItem[]
 
-const sortFunc: {[index in Mode]: (x: Item[]) => Item[]} = {
+const sortFunc: {[index in Mode]: (x: List) => List} = {
   Asc: R.sortBy(R.compose(R.toLower, R.prop('name'))),
+  Categories: R.sortBy(R.prop('id')),
   Random: shuffle,
 }
+
+const CATEGORIES: ItemId[] = [
+  'Contacts',
+  'Work',
+  'Hobby',
+  'Meta',
+]
 
 export class ListStore {
   @observable mode: Mode = Mode.Asc
@@ -54,8 +63,17 @@ export class ListStore {
   }
 
   private refresh() {
+    if (this.mode === Mode.Categories) {
+      this.refreshCategorizedList()
+    } else {
+      this.refreshList()
+    }
+  }
+
+  private refreshList() {
     this.list = R.pipe(
       R.values,
+      R.reject(R.propEq('type', ItemType.Category)),
       x => [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map(p => {
         return R.filter(R.propEq('position', p), x) as ListItem[]
       }),
@@ -65,6 +83,21 @@ export class ListStore {
         ...x[2],
       ],
     )(this.items.items)
+  }
+
+  private refreshCategorizedList() {
+    this.list = R.pipe(
+      R.values,
+      R.reject(R.propEq('type', ItemType.Category)),
+      sortFunc[this.mode],
+      x => CATEGORIES.map(cat => {
+        return R.concat(
+          [this.items.items[cat]],
+          R.filter(R.propEq('category', cat), x),
+        )
+      }),
+      R.flatten,
+    )(this.items.items) as List
   }
 }
 

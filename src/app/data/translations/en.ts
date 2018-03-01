@@ -7,6 +7,14 @@ export const en: TranslatedStrings = {
   },
   '© Phil Tsarik, 2018': {
   },
+  Contacts: {
+  },
+  Hobby: {
+  },
+  Meta: {
+  },
+  Work: {
+  },
   '+375292181503': {
   },
   '+48534898187': {
@@ -28,6 +36,8 @@ export const en: TranslatedStrings = {
   BitBucket: {
   },
   'Board games': {
+  },
+  Categorize: {
   },
   Cats: {
   },

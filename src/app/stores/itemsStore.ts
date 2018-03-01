@@ -10,6 +10,11 @@ import {
   metaPropsMap,
 } from 'app/data/metaProps'
 import {
+  DEFAULT_CATEGORY_PROPS,
+  ItemCategory,
+  categoryPropsMap,
+} from 'app/data/categoryProps'
+import {
   Lang,
   TranslatedStrings,
   translations,
@@ -21,6 +26,7 @@ import {LangStore, langStore} from './langStore'
 export type ItemId = KnownName
 
 export interface Item {
+  category: ItemCategory
   description?: string
   id: ItemId
   name: string
@@ -41,6 +47,7 @@ const FALLBACK = translations[FALLBACK_LANG]
 function toDefaultItem(id: ItemId): Item {
   return Object.assign({},
     DEFAULT_META_PROPS,
+    DEFAULT_CATEGORY_PROPS,
     {id, name: id},
   )
 }
@@ -49,6 +56,7 @@ function toItem(strings: TranslatedStrings, fallback: TranslatedStrings): (defau
   return (defaultItem: Item, id: ItemId) => Object.assign({},
     defaultItem,
     metaPropsMap[id] || {},
+    categoryPropsMap[id] || {},
     R.pick(['description'], fallback[id]),
     R.pick(['name', 'description'], strings[id]),
   )

@@ -22,6 +22,18 @@ export const ru: TranslatedStrings = {
       </ul>
     `,
   },
+  Contacts: {
+    name: 'Контакты',
+  },
+  Hobby: {
+    name: 'Хобби',
+  },
+  Meta: {
+    name: 'Мета',
+  },
+  Work: {
+    name: 'Работа',
+  },
   '+375292181503': {
     description: p(`Мой белорусский номер телефона: ${tel('+375292181503', '+375 29 218-15-03')}.`),
   },
@@ -71,6 +83,9 @@ export const ru: TranslatedStrings = {
         <li>Роскошь</li>
       </ul>
     `,
+  },
+  Categorize: {
+    name: 'По категориям',
   },
   Cats: {
     name: 'Коты',

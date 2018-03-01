@@ -1,6 +1,7 @@
 import {KnownName} from './names'
 
 export enum ItemType {
+  Category = 'Category',
   Item = 'Item',
   Meta = 'Meta',
 }
@@ -54,7 +55,23 @@ export const metaPropsMap: MetaPropsMap = {
     position: ItemPosition.Tail,
   },
 
+  Contacts: {
+    type: ItemType.Category,
+  },
+  Hobby: {
+    type: ItemType.Category,
+  },
+  Meta: {
+    type: ItemType.Category,
+  },
+  Work: {
+    type: ItemType.Category,
+  },
+
   Ascending: {
+    type: ItemType.Meta,
+  },
+  Categorize: {
     type: ItemType.Meta,
   },
   Colors: {

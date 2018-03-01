@@ -13,6 +13,7 @@ import {
 import {Lang} from 'app/stores/langStore'
 import AgeBtn from 'app/components/buttons/AgeBtn'
 import {BtnClass} from 'app/components/buttons/asBtn'
+import CategoryBtn from 'app/components/buttons/CategoryBtn'
 import ColorsBtn from 'app/components/buttons/ColorsBtn'
 import FeedbackBtn from 'app/components/buttons/FeedbackBtn'
 import LangBtn from 'app/components/buttons/LangBtn'
@@ -39,8 +40,14 @@ type KnownBtnMap = {
 }
 
 const knownBtns: KnownBtnMap = {
+  Contacts: CategoryBtn,
+  Hobby: CategoryBtn,
+  Meta: CategoryBtn,
+  Work: CategoryBtn,
+
   Age: AgeBtn,
   Ascending: ModeBtn(Mode.Asc),
+  Categorize: ModeBtn(Mode.Categories),
   Colors: ColorsBtn,
   EN: LangBtn(Lang.EN),
   Feedback: FeedbackBtn,
