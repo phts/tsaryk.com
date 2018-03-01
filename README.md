@@ -13,3 +13,11 @@ My home page. And a chance to learn some new stuff.
 * [React Router](https://github.com/ReactTraining/react-router/)
 * [styled-components](https://www.styled-components.com/)
 * [Typescript](https://www.typescriptlang.org/)
+
+## npm scripts
+
+### Run build with [Webpack Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer):
+
+```
+npm run build[:anything] -- --env.analyzer
+```

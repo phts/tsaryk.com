@@ -8,59 +8,68 @@ const app = path.resolve(src, 'app')
 const static = path.resolve(src, 'static')
 const dist = path.resolve(project, 'dist')
 
-module.exports = ({prod = false} = {}) => ({
-  context: src,
-  entry: './index',
-  output: {
-    filename: 'bundle.js',
-    path: dist,
-    publicPath: '/',
-  },
-  resolve: {
-    alias: {
-      app,
-      static,
-      'react': 'preact-compat',
-      'react-dom': 'preact-compat',
+const plugins = [
+  new HtmlWebpackPlugin({
+    filename: './index.html',
+    template: 'index.html',
+  }),
+]
+
+module.exports = ({prod = false, analyzer} = {}) => {
+  if (analyzer) {
+    const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+    plugins.push(new BundleAnalyzerPlugin())
+  }
+
+  return {
+    context: src,
+    entry: './index',
+    output: {
+      filename: 'bundle.js',
+      path: dist,
+      publicPath: '/',
     },
-    extensions: ['.js', '.ts', '.tsx'],
-  },
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        enforce: 'pre',
-        loader: 'tslint-loader',
-        options: {
-          emitWarnings: !prod,
-          emitErrors: prod,
-          failOnHint: prod,
-        },
+    resolve: {
+      alias: {
+        app,
+        static,
+        'react': 'preact-compat',
+        'react-dom': 'preact-compat',
       },
-      {
-        test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-        exclude: /node_modules/,
-        options: {
-          errorsAsWarnings: !prod,
+      extensions: ['.js', '.ts', '.tsx'],
+    },
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          enforce: 'pre',
+          loader: 'tslint-loader',
+          options: {
+            emitWarnings: !prod,
+            emitErrors: prod,
+            failOnHint: prod,
+          },
         },
-      },
-      {
-        test: /\.jpg$/,
-        loader: 'file-loader',
-        options: {
-          outputPath: 'static/img/',
+        {
+          test: /\.tsx?$/,
+          loader: 'awesome-typescript-loader',
+          exclude: /node_modules/,
+          options: {
+            errorsAsWarnings: !prod,
+          },
         },
-      },
-    ],
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: './index.html',
-      template: 'index.html',
-    }),
-  ],
-  stats: {
-    warningsFilter: /\/mobx-react\//,
-  },
-})
+        {
+          test: /\.jpg$/,
+          loader: 'file-loader',
+          options: {
+            outputPath: 'static/img/',
+          },
+        },
+      ],
+    },
+    plugins,
+    stats: {
+      warningsFilter: /\/mobx-react\//,
+    },
+  }
+}
