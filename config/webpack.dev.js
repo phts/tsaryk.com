@@ -2,8 +2,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const common = require('./webpack.common')
 
-const commonConfig = common()
-module.exports = merge(commonConfig, {
+module.exports = (env = {}) => merge(common(env), {
   devtool: 'cheap-module-source-map',
   devServer: {
     hot: true,
@@ -14,4 +13,4 @@ module.exports = merge(commonConfig, {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
   ]
-});
+})

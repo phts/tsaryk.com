@@ -3,9 +3,9 @@
   "private": true,
   "scripts": {
     "build": "npm run build:prod",
-    "build:dev": "npm run webpack",
-    "build:prod": "npm run webpack -- --config ./config/webpack.prod.js",
-    "build:prod:bb": "npm run webpack -- --config ./config/webpack.prod.bb.js",
+    "build:dev": "npm run webpack --",
+    "build:prod": "npm run webpack -- --env.prod",
+    "build:prod:bb": "npm run webpack -- --env.prod --env.bb",
     "clean": "rimraf ./dist",
     "fix": "npm run tslint -- --fix",
     "lint": "npm run tslint",

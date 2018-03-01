@@ -8,7 +8,7 @@ const app = path.resolve(src, 'app')
 const static = path.resolve(src, 'static')
 const dist = path.resolve(project, 'dist')
 
-module.exports = ({isProd = false} = {}) => ({
+module.exports = ({prod = false} = {}) => ({
   context: src,
   entry: './index',
   output: {
@@ -32,9 +32,9 @@ module.exports = ({isProd = false} = {}) => ({
         enforce: 'pre',
         loader: 'tslint-loader',
         options: {
-          emitWarnings: !isProd,
-          emitErrors: isProd,
-          failOnHint: isProd,
+          emitWarnings: !prod,
+          emitErrors: prod,
+          failOnHint: prod,
         },
       },
       {
@@ -42,7 +42,7 @@ module.exports = ({isProd = false} = {}) => ({
         loader: 'awesome-typescript-loader',
         exclude: /node_modules/,
         options: {
-          errorsAsWarnings: !isProd,
+          errorsAsWarnings: !prod,
         },
       },
       {
