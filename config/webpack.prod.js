@@ -4,7 +4,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = (env = {}) => {
   const output = {
-    filename: 'bundle.min.js',
+    filename: 'bundle.[hash:4].js',
   }
 
   if (env.bb) {
