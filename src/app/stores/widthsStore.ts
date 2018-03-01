@@ -1,6 +1,6 @@
 import {observable, action} from 'mobx'
 import * as R from 'ramda'
-import {random} from 'rambdax'
+import random from 'rambdax/modules/random'
 
 import {ItemId, Item} from './itemsStore'
 
