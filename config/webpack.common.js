@@ -36,7 +36,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
         'react': 'preact-compat',
         'react-dom': 'preact-compat',
       },
-      extensions: ['.js', '.ts', '.tsx'],
+      extensions: ['.tsx', '.ts', '.js'],
     },
     module: {
       rules: [
@@ -52,10 +52,12 @@ module.exports = ({prod = false, analyzer} = {}) => {
         },
         {
           test: /\.tsx?$/,
-          loader: 'awesome-typescript-loader',
           exclude: /node_modules/,
+          loader: 'awesome-typescript-loader',
           options: {
+            babelCore: 'babel-core',
             errorsAsWarnings: !prod,
+            useBabel: true,
           },
         },
         {
