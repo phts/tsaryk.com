@@ -1,15 +1,17 @@
 import {observable} from 'mobx'
-import addDays from 'date-fns/add_days'
-import addHours from 'date-fns/add_hours'
-import addMinutes from 'date-fns/add_minutes'
-import addMonths from 'date-fns/add_months'
-import addYears from 'date-fns/add_years'
-import differenceInDays from 'date-fns/difference_in_days'
-import differenceInHours from 'date-fns/difference_in_hours'
-import differenceInMinutes from 'date-fns/difference_in_minutes'
-import differenceInMonths from 'date-fns/difference_in_months'
-import differenceInSeconds from 'date-fns/difference_in_seconds'
-import differenceInYears from 'date-fns/difference_in_years'
+import {
+  addDays,
+  addHours,
+  addMinutes,
+  addMonths,
+  addYears,
+  differenceInDays,
+  differenceInHours,
+  differenceInMinutes,
+  differenceInMonths,
+  differenceInSeconds,
+  differenceInYears,
+} from 'date-fns'
 
 import {daysInMonth} from 'app/utils/date'
 import {DATE_OF_BIRTH} from 'app/config'
