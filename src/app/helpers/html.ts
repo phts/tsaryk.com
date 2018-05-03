@@ -1,15 +1,20 @@
 import {KnownName} from 'app/data/names'
 
+function aTag(href: string, text: string, attrs = '') {
+  const attributes = ` href="${href}" ${attrs}`
+  return `<a${attributes}>${text}</a>`
+}
+
 export function p(str: string) {
   return `<p>${str}</p>`
 }
 
 export function a(href: string, text: string) {
-  return `<a href="${href}">${text}</a>`
+  return aTag(href, text, 'target="_blank"')
 }
 
 export function link(name: KnownName, text = name as string) {
-  return a(`#/${name}`, text)
+  return aTag(`#/${name}`, text)
 }
 
 export function callto(href: string, text = href) {
