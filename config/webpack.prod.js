@@ -11,6 +11,7 @@ module.exports = (env = {}) => {
   }
 
   return merge(common({...env, prod: true}), {
+    mode: 'production',
     devtool: 'source-map',
     output,
   })
