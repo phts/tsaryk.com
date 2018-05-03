@@ -1,12 +1,12 @@
 import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
-type ButtonProps = React.HTMLProps<HTMLButtonElement> & {
-  fontSize?: string,
+type Props = React.HTMLProps<HTMLButtonElement> & {
   border?: string,
+  fontSize?: string,
 }
 
-export const Button = (styled.button as StyledFunction<ButtonProps>)`
+export default (styled.button as StyledFunction<Props>)`
   background: none;
   border: 0 none;
   border-bottom: ${({border}) => border};

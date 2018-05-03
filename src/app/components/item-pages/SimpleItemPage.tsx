@@ -7,7 +7,7 @@ import PageTitle from './parts/PageTitle'
 import PageHtmlContent from './parts/PageHtmlContent'
 import asItemPage, {ItemPageProps} from './asItemPage'
 import {I18nStore} from 'app/stores/i18nStore'
-import {ActionButton} from 'app/components'
+import ActionButton from 'app/components/ActionButton'
 
 interface Props extends ItemPageProps {
   i18nStore?: I18nStore

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import {Button} from 'app/components'
+import Button from 'app/components/Button'
 import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
 
 interface Props {
