@@ -3,6 +3,7 @@ import {inject} from 'mobx-react'
 
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
+import GenericLi from './generic/GenericLi'
 import {getRandomCssColor} from 'app/helpers/css'
 import {UiStore} from 'app/stores/uiStore'
 
@@ -13,13 +14,16 @@ interface Props extends BtnProps {
 @inject('uiStore')
 class ColorsBtn extends React.PureComponent<Props> {
   render() {
-    return <GenericBtn
-      buttonType={this.props.buttonType}
-      flexBasis={this.props.flexBasis}
-      fontSize={this.props.fontSize}
-      onClick={this.onClick}
-      text={this.props.text}
-    />
+    return (
+      <GenericLi flexBasis={this.props.flexBasis}>
+        <GenericBtn
+          buttonType={this.props.buttonType}
+          fontSize={this.props.fontSize}
+          onClick={this.onClick}
+          text={this.props.text}
+        />
+      </GenericLi>
+    )
   }
 
   private onClick = () => {

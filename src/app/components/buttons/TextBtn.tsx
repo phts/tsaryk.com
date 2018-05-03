@@ -1,18 +1,22 @@
 import * as React from 'react'
 
 import asBtn, {BtnProps} from './asBtn'
+import GenericLi from './generic/GenericLi'
 import GenericLink from './generic/GenericLink'
 import {BUTTON_TYPE} from 'app/helpers/buttons'
 
 class TextBtn extends React.PureComponent<BtnProps> {
   render() {
-    return <GenericLink
-      buttonType={this.textBtnButtonType}
-      flexBasis={this.props.flexBasis}
-      fontSize={this.props.fontSize}
-      text={this.props.text}
-      to={this.props.itemId}
-    />
+    return (
+      <GenericLi flexBasis={this.props.flexBasis}>
+        <GenericLink
+          buttonType={this.textBtnButtonType}
+          fontSize={this.props.fontSize}
+          text={this.props.text}
+          to={this.props.itemId}
+        />
+      </GenericLi>
+    )
   }
 
   private get textBtnButtonType() {

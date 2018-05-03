@@ -3,6 +3,7 @@ import {observer, inject} from 'mobx-react'
 
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
+import GenericLi from './generic/GenericLi'
 import {AgeStore} from 'app/stores/ageStore'
 import {I18nStore} from 'app/stores/i18nStore'
 import {padWithZero} from 'app/utils/core'
@@ -16,12 +17,15 @@ interface Props extends BtnProps {
 @observer
 class AgeBtn extends React.PureComponent<Props> {
   render() {
-    return <GenericBtn
-      buttonType={this.props.buttonType}
-      flexBasis={this.props.flexBasis}
-      fontSize={this.props.fontSize}
-      text={this.text}
-    />
+    return (
+      <GenericLi flexBasis={this.props.flexBasis}>
+        <GenericBtn
+          buttonType={this.props.buttonType}
+          fontSize={this.props.fontSize}
+          text={this.text}
+        />
+      </GenericLi>
+    )
   }
 
   private get text() {

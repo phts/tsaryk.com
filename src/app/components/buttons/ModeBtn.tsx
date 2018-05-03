@@ -3,6 +3,7 @@ import {inject} from 'mobx-react'
 
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
+import GenericLi from './generic/GenericLi'
 import {Mode, ListStore} from 'app/stores/listStore'
 import {WidthsStore} from 'app/stores/widthsStore'
 
@@ -15,13 +16,16 @@ export default function ModeBtn(mode: Mode) {
   @inject('listStore', 'widthsStore')
   class AnyModeBtn extends React.PureComponent<Props> {
     render() {
-      return <GenericBtn
-        buttonType={this.props.buttonType}
-        flexBasis={this.props.flexBasis}
-        fontSize={this.props.fontSize}
-        onClick={this.onClick}
-        text={this.props.text}
-      />
+      return (
+        <GenericLi flexBasis={this.props.flexBasis}>
+          <GenericBtn
+            buttonType={this.props.buttonType}
+            fontSize={this.props.fontSize}
+            onClick={this.onClick}
+            text={this.props.text}
+          />
+        </GenericLi>
+      )
     }
 
     private onClick = () => {

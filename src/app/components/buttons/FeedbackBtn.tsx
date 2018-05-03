@@ -2,16 +2,20 @@ import * as React from 'react'
 
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
+import GenericLi from './generic/GenericLi'
 
 class FeedbackBtn extends React.PureComponent<BtnProps> {
   render() {
-    return <GenericBtn
-      buttonType={this.props.buttonType}
-      flexBasis={this.props.flexBasis}
-      fontSize={this.props.fontSize}
-      onClick={this.onClick}
-      text={this.props.text}
-    />
+    return (
+      <GenericLi flexBasis={this.props.flexBasis}>
+        <GenericBtn
+          buttonType={this.props.buttonType}
+          fontSize={this.props.fontSize}
+          onClick={this.onClick}
+          text={this.props.text}
+        />
+      </GenericLi>
+    )
   }
 
   private onClick = () => {

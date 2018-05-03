@@ -3,25 +3,22 @@ import {Link, LinkProps} from 'react-router-dom'
 import styled, {StyledFunction} from 'styled-components'
 
 import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
-import GenericLi, {GenericLiProps} from './GenericLi'
 
-type Props = GenericLiProps & {
-  buttonType: BUTTON_TYPE,
-  fontSize: string,
-  text: string,
-  to: string,
+interface Props {
+  buttonType: BUTTON_TYPE
+  fontSize: string
+  text: string
+  to: string
 }
 
 const GenericLink: React.StatelessComponent<Props> = props => (
-  <GenericLi flexBasis={props.flexBasis}>
-    <StyledLink
-      to={props.to}
-      buttonType={props.buttonType}
-      fontSize={props.fontSize}
-    >
-      {props.text}
-    </StyledLink>
-  </GenericLi>
+  <StyledLink
+    to={props.to}
+    buttonType={props.buttonType}
+    fontSize={props.fontSize}
+  >
+    {props.text}
+  </StyledLink>
 )
 
 type StyledLinkProps = LinkProps & {
