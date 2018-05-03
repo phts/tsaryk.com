@@ -3,6 +3,7 @@ import * as React from 'react'
 import {Item} from 'app/stores/itemsStore'
 
 export interface ItemPageProps {
+  className: string
   item: Item
   onClose: () => void
 }

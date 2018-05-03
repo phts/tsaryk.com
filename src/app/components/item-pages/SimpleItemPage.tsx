@@ -13,12 +13,12 @@ interface Props extends ItemPageProps {
   i18nStore?: I18nStore
 }
 
-const SimpleItemPage: React.StatelessComponent<Props> = ({item, onClose, i18nStore}) => (
+const SimpleItemPage: React.StatelessComponent<Props> = ({className, item, onClose, i18nStore}) => (
   <PagePadding>
     <header>
       <PageTitle>{item.name}</PageTitle>
     </header>
-    <PageHtmlContent html={item.description}/>
+    <PageHtmlContent className={className} html={item.description}/>
     <footer>
       <ActionButton
         onClick={onClose}>
