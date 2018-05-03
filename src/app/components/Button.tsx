@@ -14,5 +14,5 @@ export const Button = (styled.button as StyledFunction<ButtonProps>)`
   cursor: pointer;
   font-size: ${({fontSize}) => fontSize};
   margin: 0;
-  padding: 0;
+  padding: 0 2px;
 `
