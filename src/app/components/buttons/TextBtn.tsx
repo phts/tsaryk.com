@@ -4,9 +4,20 @@ import asBtn, {BtnProps} from './asBtn'
 import GenericLi from './generic/GenericLi'
 import GenericLink from './generic/GenericLink'
 import {BUTTON_TYPE} from 'app/helpers/buttons'
+import Text from 'app/components/Text'
 
 class TextBtn extends React.PureComponent<BtnProps> {
   render() {
+    if (!this.props.description) {
+      return (
+        <GenericLi flexBasis={this.props.flexBasis}>
+          <Text fontSize={this.props.fontSize}>
+            {this.props.text}
+          </Text>
+        </GenericLi>
+      )
+    }
+
     return (
       <GenericLi flexBasis={this.props.flexBasis}>
         <GenericLink
@@ -21,8 +32,6 @@ class TextBtn extends React.PureComponent<BtnProps> {
 
   private get textBtnButtonType() {
     if (!this.props.description) {
-      // DEBUG: To improve visibility of missing description.
-      // To be removed.
       return BUTTON_TYPE.Simple
     }
     return this.props.buttonType
