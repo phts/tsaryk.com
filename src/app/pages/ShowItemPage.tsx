@@ -71,4 +71,11 @@ export default compose(
     border-bottom: ${getBorder(BUTTON_TYPE.Default)};
     text-decoration: none;
   }
+
+  code {
+    background-color: #333;
+    color: white;
+    padding: 0 3px;
+    text-weight: bold;
+  }
 `)

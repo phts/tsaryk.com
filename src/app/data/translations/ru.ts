@@ -20,6 +20,7 @@ export const ru: TranslatedStrings = {
         <li>MobX</li>
         <li>TypeScript</li>
       </ul>
+      <p>${a('https://github.com/phts/tsarik.me', 'Исходный код сайта выложен')} на Гитхаб.</p>
     `,
   },
   Contacts: {
@@ -61,6 +62,7 @@ export const ru: TranslatedStrings = {
   },
   Belarus: {
     name: 'Беларусь',
+    description: p('Родом из Беларуси.'),
   },
   Billiard: {
     name: 'Бильярд',
@@ -96,12 +98,20 @@ export const ru: TranslatedStrings = {
   'Curriculum vitae': {
     name: 'Резюме',
     description: `
-      <p>Всегда актуальное.</p>
-      <p>Доступно на ${a('https://github.com/phts/my-cv', 'моём гитхабе')}.</p>
+      <p>
+        Если коротко &mdash; я фронтэнд разработчик с более, чем 6 годами стажа.
+        Обладаю глубокими знаниями современных веб-технологий и фреймворков.
+      </p>
+      <p>
+        Если подробнее &mdash; всегда актуальное резюме доступно на
+        ${a('https://github.com/phts/my-cv', 'Гитхабе')}, а также на
+        ${a('https://www.linkedin.com/in/tsarik/', 'Линкедине')}.
+      </p>
     `,
   },
   Debian: {
     name: 'Дебиан',
+    description: p('Работаю на Debian.'),
   },
   Drums: {
     name: 'Барабаны',
@@ -124,22 +134,21 @@ export const ru: TranslatedStrings = {
   Epam: {
     name: 'Епам',
     description: `
-      <p>Релоцировался в ${link('Krako\u0301w', 'Краков')} и проработал в Епаме чуть больше двух лет.</p>
+      <p>
+        Релоцировался в ${link('Krako\u0301w', 'Краков')} и проработал в Епаме
+        ${link('Curriculum vitae', 'чуть больше двух лет')}.
+      </p>
       <p>
         Изучил тут ${link('Angular', 'Ангуляр')} и ${link('React', 'Реакт')},
         ходил на тренинги, проводил воркшопы, собеседовал новых кандидатов.
       </p>
       <p>С проектом &mdash; как повезёт. Но в большинстве случаев много неинтересного и легаси.</p>
       <p>После Епама перешёл в ${link('Grand Parade', 'Гранд Парэйд')}.</p>
-      <p>
-        Больше подробностей в ${link('Curriculum vitae', 'моём резюме')} и
-        на ${link('LinkedIn', 'линкедине')}.
-      </p>
     `,
   },
   Facebook: {
     name: 'Фейсбук',
-    description: p(`${a('https://www.facebook.com/phil.tsarik', 'Моя страничка')} в фэйсбуке.`),
+    description: p(`${a('https://www.facebook.com/phil.tsarik', 'Моя страничка')} на фэйсбуке.`),
   },
   Feedback: {
     name: 'Фидбек',
@@ -166,11 +175,15 @@ export const ru: TranslatedStrings = {
   },
   GitHub: {
     name: 'ГитХаб',
-    description: p(`${a('https://github.com/phts', 'Тут')} находятся полезные и\
+    description: p(`${a('https://github.com/phts', 'На моём гитхабе')} находятся полезные и\
       бесполезные проекты, которые доступны для всех.`),
   },
   'Grand Parade': {
     name: 'Гранд Парэйд',
+    description: `
+      <p>Моё ${link('Curriculum vitae', 'текущее')} место работы.</p>
+      <p>Отличная продуктовая компания, отличные проекты, отличные люди.</p>
+    `,
   },
   Habr: {
     name: 'Хабр',
@@ -197,13 +210,20 @@ export const ru: TranslatedStrings = {
   },
   'Joy in Time': {
     name: 'Радость во времени',
+    description: `
+      <p>
+        Является в некоторой степени противоположностью ${link('Space Resonance')} по стилю
+        и настроению. Несмотря на это, я с огромным удовольствием играл в этой группе.
+      </p>
+      <p>Осталась страничка в контакте: ${a('https://vk.com/joyintimes', 'joyintimes')}</p>
+    `,
   },
   Krako\u0301w: {
     name: 'Краков',
   },
   'Last.fm': {
     name: 'Ласт.фм',
-    description: p(`${a('www.last.fm/user/phil_tsarik', 'Мой профиль')} на Ласт.фм`),
+    description: p(`${a('https://www.last.fm/user/phil_tsarik', 'Мой профиль')} на Ласт.фм`),
   },
   LinkedIn: {
     name: 'ЛинкедИн',
@@ -279,6 +299,7 @@ export const ru: TranslatedStrings = {
   },
   'Ritchie Blackmore': {
     name: 'Ричи Блэкмор',
+    description: p('Лучший гитарист, по моему мнению.'),
   },
   Ruby: {
     name: 'Руби',
@@ -419,5 +440,15 @@ export const ru: TranslatedStrings = {
   },
   'ZX Spectrum': {
     name: 'Зэд Икс Спектрум',
+    description: `
+      <p>
+        Мой первый компьютер. Первая строчка кода, написанная на нём,
+        была, скорее всего, <code>LOAD "" &crarr;</code> &mdash; для загрузки игры с кассеты.
+      </p>
+      <p>
+        Любимые игрушки: Highway Encounter, Battle Ships, Exolon, Tujad, Boulder Dash,
+        Spy Hunter и многие другие.
+      </p>
+    `,
   },
 }

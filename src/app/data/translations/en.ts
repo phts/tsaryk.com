@@ -87,7 +87,7 @@ export const en: TranslatedStrings = {
   },
   'Pilip Tsaryk': {
     description: `
-      <p>This is my legal name.</p>
+      <p>My legal name.</p>
       <p>This is how it is written in my passport.</p>
     `,
   },
