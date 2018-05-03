@@ -58,7 +58,7 @@ const knownBtns: KnownBtnMap = {
 
 @inject('listStore', 'widthsStore')
 @observer
-export class BtnListPage extends React.PureComponent<Props> {
+export default class BtnListPage extends React.PureComponent<Props> {
   render() {
     const els =  R.map((it: ListItem) => {
       const BtnComponent: BtnClass = knownBtns[it.id] || TextBtn

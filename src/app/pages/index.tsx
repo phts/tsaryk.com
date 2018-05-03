@@ -5,8 +5,8 @@ import {
   Switch,
 } from 'react-router-dom'
 
-import {BtnListPage} from './BtnListPage'
-import {ShowItemPage} from './ShowItemPage'
+import BtnListPage from './BtnListPage'
+import ShowItemPage from './ShowItemPage'
 import {Viewport} from './Viewport'
 import {InitialRandomizeProvider} from './InitialRandomizeProvider'
 import {routes} from 'app/routes'

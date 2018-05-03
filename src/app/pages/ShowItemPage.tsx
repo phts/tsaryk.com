@@ -23,7 +23,7 @@ const knownItemPages: KnownItemPagesMap = {
 }
 
 @inject('itemsStore')
-class ShowItemPageRaw extends React.PureComponent<Props> {
+class ShowItemPage extends React.PureComponent<Props> {
   render() {
     const item = this.props.itemsStore.items[this.props.match.params.id]
     const ItemPageComponent: ItemPageComponentClass = knownItemPages[item.id] || SimpleItemPage
@@ -38,4 +38,4 @@ class ShowItemPageRaw extends React.PureComponent<Props> {
   }
 }
 
-export const ShowItemPage = withRouter<Props>(ShowItemPageRaw)
+export default withRouter<Props>(ShowItemPage)
