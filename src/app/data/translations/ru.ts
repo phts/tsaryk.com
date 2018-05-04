@@ -175,7 +175,7 @@ export const ru: TranslatedStrings = {
   },
   GitHub: {
     name: 'ГитХаб',
-    description: p(`${a('https://github.com/phts', 'На моём гитхабе')} находятся полезные и\
+    description: p(`${a('https://github.com/phts', 'Здесь')} находятся полезные и\
       бесполезные проекты, которые доступны для всех.`),
   },
   'Grand Parade': {
