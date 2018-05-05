@@ -14,6 +14,10 @@ My home page. And a chance to learn some new stuff.
 * [styled-components](https://www.styled-components.com/)
 * [Typescript](https://www.typescriptlang.org/)
 
+## Services
+
+* [emailjs.com](http://www.emailjs.com/) - Sending emails via JavaScript
+
 ## npm scripts
 
 ### Run build with [Webpack Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer):
