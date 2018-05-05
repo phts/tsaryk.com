@@ -1,3 +1,4 @@
+
 import {computed} from 'mobx'
 
 import {
@@ -10,6 +11,7 @@ enum KnownLabels {
   close,
   days,
   hours,
+  sayHello,
   min,
   months,
   sec,
@@ -24,6 +26,7 @@ const labelsMap: LabelsMap = {
     close: 'Сlose',
     days: 'days',
     hours: 'hours',
+    sayHello: 'Say hello...',
     min: 'min',
     months: 'months',
     sec: 'sec',
@@ -33,6 +36,7 @@ const labelsMap: LabelsMap = {
     close: 'Закрыть',
     days: 'дн.',
     hours: 'ч.',
+    sayHello: 'Скажите «привет»...',
     min: 'мин.',
     months: 'мес.',
     sec: 'сек.',

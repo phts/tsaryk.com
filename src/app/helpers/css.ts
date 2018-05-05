@@ -40,3 +40,12 @@ export function getRandomCssColor(): string {
               ${getRandomColorComponent()}, \
               ${getRandomColorComponent()})`
 }
+
+export const blinkAnimation = css`
+  animation: blink 1s linear infinite;
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+`
