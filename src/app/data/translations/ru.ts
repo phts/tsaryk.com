@@ -151,7 +151,7 @@ export const ru: TranslatedStrings = {
     description: p(`${a('https://www.facebook.com/phil.tsarik', 'Моя страничка')} на фэйсбуке.`),
   },
   Feedback: {
-    name: 'Фидбек',
+    name: 'Обратная связь',
   },
   Firefox: {
     name: 'Файерфокс',
