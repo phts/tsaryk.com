@@ -12,4 +12,8 @@ export default styled(AutosizedTextInput)`
     background-color: transparent;
     cursor: not-allowed;
   }
+
+  &::-ms-clear {
+    display: none;
+  }
 `
