@@ -42,6 +42,7 @@ export default class FeedbackForm extends React.PureComponent<Props, State> {
     return (
       <ActionForm onSubmit={this.onSubmit} disabled={processing}>
         <FeedbackFormInput
+          autoComplete="off"
           disabled={processing}
           inputRef={input => this.input = input}
           name="text"
