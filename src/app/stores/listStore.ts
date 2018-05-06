@@ -1,6 +1,6 @@
 import {observable, action, autorun} from 'mobx'
 import * as R from 'ramda'
-import {shuffle} from 'rambdax'
+import shuffle from 'rambdax/modules/shuffle'
 
 import {
   ItemPosition,
