@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
-type Props = React.HTMLProps<HTMLButtonElement> & {
+type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {
   border?: string,
   fontSize?: string,
 }

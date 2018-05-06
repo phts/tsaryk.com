@@ -3,7 +3,7 @@ import * as React from 'react'
 import Button from './Button'
 import {BUTTON_TYPE, DEFAULT_FONT_SIZE, getBorder} from 'app/helpers/buttons'
 
-type Props = React.HTMLProps<HTMLButtonElement>
+type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
 export default (
   ({children, onClick}) => (

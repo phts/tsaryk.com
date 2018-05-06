@@ -9,7 +9,7 @@ interface LiProps {
 
 export type GenericLiProps = LiProps
 
-type LiElProps = LiProps & React.HTMLProps<HTMLLIElement>
+type LiElProps = LiProps & React.DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>
 const li: StyledFunction<LiElProps> = styled.li
 const Li = li`
   align-items: center;

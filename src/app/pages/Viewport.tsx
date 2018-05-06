@@ -26,7 +26,7 @@ interface DivProps {
   fontColor?: string
 }
 
-type DivElProps = DivProps & React.HTMLProps<HTMLDivElement>
+type DivElProps = DivProps & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 const div: StyledFunction<DivElProps> = styled.div
 
 const Div = div`

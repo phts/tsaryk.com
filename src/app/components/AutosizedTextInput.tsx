@@ -2,7 +2,7 @@ import * as React from 'react'
 
 const INPUT_MIN_WIDTH = 20
 
-interface Props extends React.HTMLProps<HTMLInputElement> {
+interface Props extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
   minLength?: number
   inputRef?: (input: HTMLInputElement) => void
 }

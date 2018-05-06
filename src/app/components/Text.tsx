@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
-type Props = React.HTMLProps<HTMLSpanElement> & {
+type Props = React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> & {
   fontSize?: string,
 }
 
