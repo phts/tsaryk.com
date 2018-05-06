@@ -6,7 +6,7 @@ import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
 interface Props {
   buttonType: BUTTON_TYPE
   fontSize: string
-  onClick?: (ev?: React.MouseEvent<HTMLButtonElement>) => void
+  onClick?: React.MouseEventHandler<HTMLButtonElement>
   text: string
 }
 

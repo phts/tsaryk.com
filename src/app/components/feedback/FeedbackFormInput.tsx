@@ -7,13 +7,8 @@ import AutosizedTextInput from 'app/components/AutosizedTextInput'
 interface Props {
   disabled: boolean
   name: string
-  onKeyDown: (event: KeyDownEvent) => void
+  onKeyDown: React.KeyboardEventHandler<HTMLInputElement>
   placeholder: string
-}
-
-export interface KeyDownEvent {
-  keyCode: number
-  preventDefault: () => void
 }
 
 export default class FeedbackFormInput extends React.Component<Props> {

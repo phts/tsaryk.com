@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import emailService from 'app/services/email'
 import ActionForm from './ActionForm'
-import FeedbackFormInput, {KeyDownEvent} from './FeedbackFormInput'
+import FeedbackFormInput from './FeedbackFormInput'
 import Indicator, {IndicatorState} from './Indicator'
 import EnterSymbol from './EnterSymbol'
 
@@ -13,11 +13,6 @@ interface Props {
 
 interface State {
   indicatorState: IndicatorState | null
-}
-
-interface SubmitEvent {
-  target: EventTarget
-  preventDefault: () => void
 }
 
 const DELAY_BEFORE_FINISHED = 3000
@@ -55,7 +50,7 @@ export default class FeedbackForm extends React.PureComponent<Props, State> {
     )
   }
 
-  private onSubmit = (event: SubmitEvent) => {
+  private onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     const text = (event.target as HTMLFormElement).text.value
@@ -72,7 +67,7 @@ export default class FeedbackForm extends React.PureComponent<Props, State> {
     })
   }
 
-  private onKeyDown = (event: KeyDownEvent) => {
+  private onKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.keyCode === 27) {
       event.preventDefault()
       this.props.onFinished()
