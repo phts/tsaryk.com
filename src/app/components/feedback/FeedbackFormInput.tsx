@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
+import AutosizedTextInput from 'app/components/AutosizedTextInput'
 
-const INPUT_MIN_WIDTH = 20
 
 interface Props {
   disabled: boolean
@@ -20,40 +20,24 @@ export default class FeedbackFormInput extends React.Component<Props> {
   private input: HTMLInputElement
 
   componentDidMount() {
-    this.reset()
+    this.input.value = ''
     this.input.focus()
   }
 
   render() {
     return (
-      <Input
+      <StyledAutosizedTextInput
         disabled={this.props.disabled}
-        innerRef={(input: HTMLInputElement) => this.input = input}
+        inputRef={(input: HTMLInputElement) => this.input = input}
         name={this.props.name}
-        onKeyUp={this.onKeyUp}
+        onKeyDown={this.props.onKeyDown}
         placeholder={this.props.placeholder}
       />
     )
   }
-
-  private reset() {
-    this.input.value = ''
-    this.adjustWidth()
-  }
-
-  private adjustWidth() {
-    const newWidth = Math.max(this.input.value.length + 2, INPUT_MIN_WIDTH)
-    this.input.style.width = `${newWidth}ch`
-  }
-
-  private onKeyUp = () => {
-    this.adjustWidth()
-  }
 }
 
-const Input = styled.input.attrs({
-  type: 'text',
-})`
+const StyledAutosizedTextInput = styled(AutosizedTextInput)`
   border: 0 none;
   font-family: monospace;
   margin: 0;
