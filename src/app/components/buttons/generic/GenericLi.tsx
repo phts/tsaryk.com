@@ -15,6 +15,7 @@ const Li = li`
   align-items: center;
   display: flex;
   flex-basis: ${props => props.flexBasis}px;
+  flex-grow: 1;
   justify-content: center;
   margin: 0 1em;
   list-style: none;
