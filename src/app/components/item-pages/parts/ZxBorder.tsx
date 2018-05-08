@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 import {media} from 'app/helpers/css'
 
 const ZxBorder: React.StatelessComponent = ({children}) => (
@@ -33,14 +33,36 @@ const Border = styled.div`
   min-width: 100%;
 `
 
-const PreloadingStep = styled.div`
-  animation: preloading 4s step-end forwards;
-  background-color: cyan;
+const stepCommonCss = css`
   display: block;
   height: 100%;
   position: absolute;
   visibility: hidden;
   width: 100%;
+`
+
+const loadingOverlayCommonCss = css`
+  background-position: top left;
+  background-repeat: repeat-y;
+  background-size: 100% 2em;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  ${media.min.desktop`
+    background-size: 100% 4em;
+  `}
+`
+
+const PreloadingStep = styled.div`
+  ${stepCommonCss}
+
+  animation: preloading 4s step-end forwards;
+  background-color: cyan;
 
   @keyframes preloading {
     0% {
@@ -59,33 +81,20 @@ const PreloadingStep = styled.div`
 `
 
 const StartingStep = styled.div`
+  ${stepCommonCss}
+
   animation: starting 5s step-end 4s forwards;
   background-color: cyan;
-  display: block;
-  height: 100%;
-  position: absolute;
-  visibility: hidden;
-  width: 100%;
 
   &::after {
+    ${loadingOverlayCommonCss}
+
     animation: telnyashka 0.8s linear infinite;
     background-image: linear-gradient(to bottom,\
                                       rgba(255, 0, 0, 0) 0%,
                                       rgba(255, 0, 0, 0) 49%,
                                       rgba(255, 0, 0, 1) 50%,
                                       rgba(255, 0, 0, 1) 100%);
-    background-position: top left;
-    background-repeat: repeat-y;
-    background-size: 100% 2em;
-    content: '';
-    display: block;
-    height: 100%;
-    position: relative;
-    width: 100%;
-
-    ${media.min.desktop`
-      background-size: 100% 4em;
-    `}
   }
 
   @keyframes telnyashka {
@@ -108,57 +117,36 @@ const StartingStep = styled.div`
 `
 
 const LoadingStep = styled.div`
+  ${stepCommonCss}
+
   animation: loading 10s step-end 9s infinite;
   background-color: yellow;
-  display: block;
-  height: 100%;
-  position: absolute;
-  visibility: hidden;
-  width: 100%;
 
   &::before {
+    ${loadingOverlayCommonCss}
+
     animation: sample1 .25s step-start infinite;
     background-image: linear-gradient(to bottom,
                                       blue 0%,
                                       blue 24%,
                                       rgba(0, 0, 0, 0) 25%);
-    background-position: top left;
-    background-repeat: repeat-y;
-    background-size: 100% 2em;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
 
     ${media.min.desktop`
       animation: sample1-desktop .25s step-start infinite;
-      background-size: 100% 4em;
     `}
   }
 
   &::after {
+    ${loadingOverlayCommonCss}
+
     animation: sample2 1s step-start infinite;
     background-image: linear-gradient(to bottom,
                                       blue 0%,
                                       blue 24%,
                                       rgba(0, 0, 0, 0) 25%);
-    background-position: top left;
-    background-repeat: repeat-y;
-    background-size: 100% 2em;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
 
     ${media.min.desktop`
       animation: sample2-desktop 1s step-start infinite;
-      background-size: 100% 4em;
     `}
   }
 
