@@ -7,7 +7,7 @@ import {
   ItemSize,
   ItemType,
 } from 'app/data/metaProps'
-import itemsStore, {Item, ItemId, ItemsStore} from './itemsStore'
+import itemsStore, {Item, Items, ItemId, ItemsStore} from './itemsStore'
 
 export {
   ItemId,
@@ -41,7 +41,12 @@ export class ListStore {
   @observable mode: Mode = Mode.Asc
   @observable list: List = []
 
+  private getListMemoized: (items: Items, mode: Mode) => List
+  private getCategorizedListMemoized: (items: Items) => List
+
   constructor(private items: ItemsStore) {
+    this.getListMemoized = R.memoize(this.getList)
+    this.getCategorizedListMemoized = R.memoize(this.getCategorizedList)
     autorun(() => {
       this.refresh()
     })
@@ -66,7 +71,11 @@ export class ListStore {
   }
 
   private refreshList() {
-    this.list = R.pipe(
+    this.list = this.getListMemoized(this.items.items, this.mode)
+  }
+
+  private getList(items: Items, mode: Mode): List {
+    return R.pipe(
       R.values,
       R.reject(R.propEq('type', ItemType.Category)),
       x => [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map(p => {
@@ -74,25 +83,29 @@ export class ListStore {
       }),
       x => [
         ...x[0],
-        ...sortFunc[this.mode](x[1]),
+        ...sortFunc[mode](x[1]),
         ...x[2],
       ],
-    )(this.items.items)
+    )(items)
   }
 
   private refreshCategorizedList() {
-    this.list = R.pipe(
+    this.list = this.getCategorizedListMemoized(this.items.items)
+  }
+
+  private getCategorizedList(items: Items): List {
+    return R.pipe(
       R.values,
       R.reject(R.propEq('type', ItemType.Category)),
       sortFunc[Mode.Asc],
       x => CATEGORIES.map(cat => {
         return R.concat(
-          [this.items.items[cat]],
+          [items[cat]],
           R.filter(R.propEq('category', cat), x),
         )
       }),
       R.flatten,
-    )(this.items.items) as List
+    )(items) as List
   }
 }
 
