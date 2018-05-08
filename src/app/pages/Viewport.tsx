@@ -12,12 +12,16 @@ interface Props {
 @observer
 export default class Viewport extends React.PureComponent<Props> {
   render() {
-    return <Div
-        backgroundColor={this.props.uiStore.backgroundColor}
-        fontColor={this.props.uiStore.fontColor}
-    >
-      {this.props.children}
-    </Div>
+    return (
+      <FlexContainerWrapper>
+        <FlexContainer
+            backgroundColor={this.props.uiStore.backgroundColor}
+            fontColor={this.props.uiStore.fontColor}
+        >
+          {this.props.children}
+        </FlexContainer>
+      </FlexContainerWrapper>
+    )
   }
 }
 
@@ -29,7 +33,12 @@ interface DivProps {
 type DivElProps = DivProps & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 const div: StyledFunction<DivElProps> = styled.div
 
-const Div = div`
+const FlexContainerWrapper = div`
+  display: flex;
+  flex-direction: column;
+`
+
+const FlexContainer = div`
   background-color: ${({backgroundColor}) => backgroundColor};
   box-sizing: border-box;
   color: ${({fontColor}) => fontColor};
