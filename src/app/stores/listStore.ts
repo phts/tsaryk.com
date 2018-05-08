@@ -7,12 +7,7 @@ import {
   ItemSize,
   ItemType,
 } from 'app/data/metaProps'
-import {
-  Item,
-  ItemId,
-  itemsStore,
-  ItemsStore,
-} from './itemsStore'
+import itemsStore, {Item, ItemId, ItemsStore} from './itemsStore'
 
 export {
   ItemId,
@@ -101,4 +96,4 @@ export class ListStore {
   }
 }
 
-export const listStore = new ListStore(itemsStore)
+export default new ListStore(itemsStore)

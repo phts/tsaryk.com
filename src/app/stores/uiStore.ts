@@ -5,4 +5,4 @@ export class UiStore {
   @observable fontColor: string
 }
 
-export const uiStore = new UiStore()
+export default new UiStore()

@@ -119,4 +119,4 @@ export class AgeStore {
   }
 }
 
-export const ageStore = new AgeStore()
+export default new AgeStore()

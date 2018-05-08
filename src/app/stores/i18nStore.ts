@@ -1,11 +1,6 @@
-
 import {computed} from 'mobx'
 
-import {
-  Lang,
-  LangStore,
-  langStore,
-} from './langStore'
+import langStore, {Lang, LangStore} from './langStore'
 
 enum KnownLabels {
   close,
@@ -53,4 +48,4 @@ export class I18nStore {
   }
 }
 
-export const i18nStore = new I18nStore(langStore)
+export default new I18nStore(langStore)

@@ -26,4 +26,4 @@ export class LangStore {
   }
 }
 
-export const langStore = new LangStore(getBrowserLang())
+export default new LangStore(getBrowserLang())

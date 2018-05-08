@@ -20,7 +20,7 @@ import {
   translations,
 } from 'app/data/translations'
 import {Names, KnownName} from 'app/data/names'
-import {LangStore, langStore} from './langStore'
+import langStore, {LangStore} from './langStore'
 
 
 export type ItemId = KnownName
@@ -98,4 +98,4 @@ export class ItemsStore {
   }
 }
 
-export const itemsStore = new ItemsStore(langStore)
+export default new ItemsStore(langStore)

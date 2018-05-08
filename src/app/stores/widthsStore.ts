@@ -23,4 +23,4 @@ export class WidthsStore {
   }
 }
 
-export const widthsStore = new WidthsStore()
+export default new WidthsStore()
