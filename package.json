@@ -64,7 +64,7 @@
     "tslint-loader": "https://github.com/wbuchwalter/tslint-loader.git#093230076f3b453c4f8b7aa2ee074932aa109e84",
     "typescript": "^2.7.2",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.1.0",
+    "webpack": "^4.8.1",
     "webpack-bundle-analyzer": "^2.11.0",
     "webpack-cli": "^2.0.10",
     "webpack-dev-server": "^3.1.0",
