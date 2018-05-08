@@ -36,7 +36,9 @@ const Border = styled.div`
 const stepCommonCss = css`
   display: block;
   height: 100%;
+  left: 0;
   position: absolute;
+  top: 0;
   visibility: hidden;
   width: 100%;
 `
