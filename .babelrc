@@ -8,6 +8,7 @@
   ],
   "plugins": [
     "date-fns",
-    "ramda"
+    "ramda",
+    "transform-object-assign"
   ]
 }
