@@ -43,6 +43,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
         {
           test: /\.tsx?$/,
           enforce: 'pre',
+          exclude: /node_modules/,
           loader: 'tslint-loader',
           options: {
             emitWarnings: !prod,
@@ -62,6 +63,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
         },
         {
           test: /\.jpg$/,
+          exclude: /node_modules/,
           loader: 'file-loader',
           options: {
             outputPath: 'static/img/',
