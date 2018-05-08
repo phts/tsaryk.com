@@ -84,7 +84,7 @@ export class ListStore {
     this.list = R.pipe(
       R.values,
       R.reject(R.propEq('type', ItemType.Category)),
-      sortFunc[this.mode],
+      sortFunc[Mode.Asc],
       x => CATEGORIES.map(cat => {
         return R.concat(
           [this.items.items[cat]],
