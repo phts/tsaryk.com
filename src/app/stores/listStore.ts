@@ -24,11 +24,26 @@ export enum Mode {
 export type ListItem = Item
 export type List = ListItem[]
 
-const sortFunc: {[index in Mode]: (x: List) => List} = {
+type PipeFn = (x: List) => List
+
+const sortFunc: {[index in Mode]: PipeFn} = {
   Asc: R.sortBy(R.compose(R.toLower, R.prop('name'))),
   Categories: R.sortBy(R.prop('id')),
   Random: shuffle,
 }
+
+const itemsBlock: (mode: Mode) => PipeFn = mode => R.pipe(
+  x => [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map(p => {
+    return R.filter(R.propEq('position', p), x) as ListItem[]
+  }),
+  x => [
+    ...x[0],
+    ...sortFunc[mode](x[1]),
+    ...x[2],
+  ],
+)
+
+const withoutCategoryItems: PipeFn = R.reject(R.propEq('type', ItemType.Category))
 
 const CATEGORIES: ItemId[] = [
   'Contacts',
@@ -68,27 +83,22 @@ export class ListStore {
   private refreshList() {
     this.list = R.pipe(
       R.values,
-      R.reject(R.propEq('type', ItemType.Category)),
-      x => [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map(p => {
-        return R.filter(R.propEq('position', p), x) as ListItem[]
-      }),
-      x => [
-        ...x[0],
-        ...sortFunc[this.mode](x[1]),
-        ...x[2],
-      ],
+      withoutCategoryItems,
+      itemsBlock(this.mode),
     )(this.items.items)
   }
 
   private refreshCategorizedList() {
     this.list = R.pipe(
       R.values,
-      R.reject(R.propEq('type', ItemType.Category)),
-      sortFunc[Mode.Asc],
+      withoutCategoryItems,
       x => CATEGORIES.map(cat => {
         return R.concat(
           [this.items.items[cat]],
-          R.filter(R.propEq('category', cat), x),
+          R.pipe(
+            R.filter(R.propEq('category', cat)),
+            itemsBlock(Mode.Asc),
+          )(x),
         )
       }),
       R.flatten,
