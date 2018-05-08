@@ -10,7 +10,7 @@ interface Props {
 }
 
 @inject('listStore', 'widthsStore')
-export class InitialRandomizeProvider extends React.PureComponent<Props> {
+export default class InitialRandomizeProvider extends React.PureComponent<Props> {
   componentWillMount() {
     this.props.widthsStore.randomize(this.props.listStore.list)
   }

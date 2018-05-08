@@ -7,8 +7,8 @@ import {
 
 import BtnListPage from './BtnListPage'
 import ShowItemPage from './ShowItemPage'
-import {Viewport} from './Viewport'
-import {InitialRandomizeProvider} from './InitialRandomizeProvider'
+import Viewport from './Viewport'
+import InitialRandomizeProvider from './InitialRandomizeProvider'
 import {routes} from 'app/routes'
 
 export const Pages: React.StatelessComponent = () => {

@@ -10,7 +10,7 @@ interface Props {
 
 @inject('uiStore')
 @observer
-export class Viewport extends React.PureComponent<Props> {
+export default class Viewport extends React.PureComponent<Props> {
   render() {
     return <Div
         backgroundColor={this.props.uiStore.backgroundColor}
