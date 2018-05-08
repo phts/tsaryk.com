@@ -15,6 +15,11 @@ const plugins = [
   }),
 ]
 
+const ES6_NODE_MODULES = [
+  'rambda',
+  'rambdax',
+]
+
 module.exports = ({prod = false, analyzer} = {}) => {
   if (analyzer) {
     const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
@@ -67,6 +72,15 @@ module.exports = ({prod = false, analyzer} = {}) => {
           loader: 'file-loader',
           options: {
             outputPath: 'static/img/',
+          },
+        },
+        {
+          test: /\.js$/,
+          include: ES6_NODE_MODULES.forEach(x => path.resolve(project, `node_modules/${x}`)),
+          loader: 'babel-loader',
+          options: {
+            babelrc: false,
+            extends: path.join(project, '.babelrc'),
           },
         },
       ],
