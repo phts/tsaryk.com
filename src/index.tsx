@@ -11,6 +11,10 @@ injectGlobal`
     padding: 0;
     font-family: sans-serif;
   }
+
+  * {
+    flex: 0 1 auto;
+  }
 `
 
 render(
