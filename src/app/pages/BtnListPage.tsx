@@ -59,17 +59,26 @@ const knownBtns: KnownBtnMap = {
 @inject('listStore', 'widthsStore')
 @observer
 export default class BtnListPage extends React.PureComponent<Props> {
+  componentDidMount() {
+    document.documentElement.scrollTop = parseInt(localStorage.getItem('scrollTop'), 10)
+  }
+
   render() {
     const els =  R.map((it: ListItem) => {
       const BtnComponent: BtnClass = knownBtns[it.id] || TextBtn
       return <BtnComponent
-        key={it.id}
         item={it}
+        key={it.id}
+        onNavigate={this.onNavigate}
         width={this.props.widthsStore.getWidth(it.id)}
       />
     })(this.props.listStore.list)
     return <Ul>
       {els}
     </Ul>
+  }
+
+  private onNavigate = () => {
+    localStorage.setItem('scrollTop', document.documentElement.scrollTop.toString())
   }
 }

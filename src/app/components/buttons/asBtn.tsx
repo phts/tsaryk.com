@@ -11,6 +11,7 @@ import {Hoc} from 'app/helpers/types'
 
 export interface BaseBtnProps {
   item: ListItem
+  onNavigate: React.MouseEventHandler<HTMLElement>
   width: number
 }
 
@@ -20,6 +21,7 @@ export interface BtnProps {
   flexBasis: number
   fontSize: string
   itemId: ItemId
+  onNavigate: React.MouseEventHandler<HTMLElement>
   text: string
 }
 
@@ -38,13 +40,14 @@ const buttonTypeMap: {[index in ItemType]?: BUTTON_TYPE} = {
 export type BtnClass = React.StatelessComponent<BaseBtnProps>
 
 const asBtn: Hoc<BtnProps, BtnClass> = WrappedComponent =>
-  ({item, width}) =>
+  ({item, onNavigate, width}) =>
     <WrappedComponent
       buttonType={buttonTypeMap[item.type]}
       description={item.description}
       flexBasis={width}
       fontSize={fontSizeMap[item.size]}
       itemId={item.id}
+      onNavigate={onNavigate}
       text={item.name}
     />
 

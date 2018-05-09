@@ -11,6 +11,7 @@ import {ShowItemPageMatch} from 'app/routes'
 import {ItemPageComponentClass} from 'app/components/item-pages/asItemPage'
 import SimpleItemPage from 'app/components/item-pages/SimpleItemPage'
 import ZxSpectrumItemPage from 'app/components/item-pages/ZxSpectrumItemPage'
+import scrollToTopOnMount from 'app/components/scrollToTopOnMount'
 
 interface Props extends RouteComponentProps<ShowItemPageMatch> {
   className: string
@@ -44,6 +45,7 @@ class ShowItemPage extends React.PureComponent<Props> {
 
 export default compose(
   withRouter,
+  scrollToTopOnMount,
   inject('itemsStore'),
 )(styled(ShowItemPage)`
   a[href^="callto"],

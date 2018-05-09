@@ -4,16 +4,16 @@ import styled, {StyledFunction} from 'styled-components'
 
 import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
 
-interface Props {
+interface Props extends LinkProps {
   buttonType: BUTTON_TYPE
   fontSize: string
   text: string
-  to: string
 }
 
 const GenericLink: React.StatelessComponent<Props> = props => (
   <StyledLink
-    to={props.to}
+    {...props}
+
     buttonType={props.buttonType}
     fontSize={props.fontSize}
   >
