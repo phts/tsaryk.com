@@ -78,4 +78,8 @@ export default compose(
     padding: 0 3px;
     text-weight: bold;
   }
+
+  img {
+    max-width: 100%;
+  }
 `)
