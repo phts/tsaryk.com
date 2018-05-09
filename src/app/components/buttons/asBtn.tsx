@@ -7,6 +7,7 @@ import {
   ListItem,
 } from 'app/stores/listStore'
 import {DEFAULT_FONT_SIZE, BUTTON_TYPE} from 'app/helpers/buttons'
+import {Hoc} from 'app/helpers/types'
 
 export interface BaseBtnProps {
   item: ListItem
@@ -36,11 +37,7 @@ const buttonTypeMap: {[index in ItemType]?: BUTTON_TYPE} = {
 
 export type BtnClass = React.StatelessComponent<BaseBtnProps>
 
-type WrappedComponentType = React.ComponentClass<BtnProps> | React.StatelessComponent<BtnProps>
-
-type AsBtnHoc = (WrappedComponent: WrappedComponentType) => BtnClass
-
-const asBtn: AsBtnHoc = WrappedComponent =>
+const asBtn: Hoc<BtnProps, BtnClass> = WrappedComponent =>
   ({item, width}) =>
     <WrappedComponent
       buttonType={buttonTypeMap[item.type]}
