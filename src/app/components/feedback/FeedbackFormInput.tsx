@@ -8,6 +8,7 @@ export default styled(AutosizedTextInput)`
   color: inherit;
   font-family: monospace;
   margin: 0;
+  outline: none;
   padding: 0;
 
   &:disabled {
