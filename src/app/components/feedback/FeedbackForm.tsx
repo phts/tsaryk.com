@@ -40,7 +40,7 @@ export default class FeedbackForm extends React.PureComponent<Props, State> {
   render() {
     const processing = this.state.indicatorState !== null
     return (
-      <ActionForm onSubmit={this.onSubmit} disabled={processing}>
+      <ActionForm onSubmit={this.onSubmit} disabled={processing} noValidate>
         <FeedbackFormInput
           autoComplete="off"
           disabled={processing}
