@@ -60,6 +60,12 @@ export default compose(
       100% 0;
   }
 
+  a[href^="callto"],
+  a[href^="mailto"],
+  a[href^="tel"] {
+    white-space: nowrap;
+  }
+
   a[href^="#/"] {
     border-bottom: ${getBorder(BUTTON_TYPE.Default)};
     text-decoration: none;
