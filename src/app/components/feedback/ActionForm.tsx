@@ -7,7 +7,7 @@ type Props = React.DetailedHTMLProps<React.FormHTMLAttributes<HTMLFormElement>, 
 }
 
 export default styled.form`
-  background: ${(props: Props) => props.disabled ? 'lightgray' : 'transparent'};
+  background: ${(props: Props) => props.disabled ? 'rgba(102, 102, 102, 0.25)' : 'transparent'};
   border: ${getBorder(BUTTON_TYPE.Action)};
   cursor: ${(props: Props) => props.disabled ? 'not-allowed' : 'default'};
 
