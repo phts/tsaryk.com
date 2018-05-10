@@ -54,19 +54,10 @@ export default compose(
   a[href^="http"] {
     padding-right: 12px;
     position: relative;
-
-    &::after {
-      background:
-        url(https://upload.wikimedia.org/wikipedia/commons/d/d9/VisualEditor_-_Icon_-_External-link.svg)
-        no-repeat;
-      content: '';
-      display: inline-block;
-      height: 12px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 12px;
-    }
+    background:
+      url(https://upload.wikimedia.org/wikipedia/commons/d/d9/VisualEditor_-_Icon_-_External-link.svg)
+      no-repeat
+      100% 0;
   }
 
   a[href^="#/"] {
