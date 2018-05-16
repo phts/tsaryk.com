@@ -18,13 +18,13 @@ type Medias = {
 export const media = Object.keys(breakpoints).reduce((acc: Medias, val: BreakpointsLabel) => {
   acc.min = acc.min || {}
   acc.min[val] = (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]) => css`
-    @media (min-width: ${breakpoints[val] / 16}em) {
+    @media (min-width: ${breakpoints[val]}px) {
       ${css(strings, ...interpolations)};
     }
   `
   acc.max = acc.max || {}
   acc.max[val] = (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]) => css`
-    @media (max-width: ${breakpoints[val] / 16}em) {
+    @media (max-width: ${breakpoints[val]}px) {
       ${css(strings, ...interpolations)};
     }
   `
