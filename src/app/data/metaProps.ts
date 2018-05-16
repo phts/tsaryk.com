@@ -84,9 +84,6 @@ export const metaPropsMap: MetaPropsMap = {
     type: ItemType.Meta,
   },
 
-  Angular: {
-    size: ItemSize.L,
-  },
   Cats: {
     size: ItemSize.XL,
   },

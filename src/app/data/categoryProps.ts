@@ -68,7 +68,6 @@ const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
     '© Phil Tsarik, 2018',
   ],
   Work: [
-    'Angular',
     'BitBucket',
     'Curriculum vitae',
     'Debian',
@@ -85,7 +84,6 @@ const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
     'Software Engineer',
     'Stack Overflow',
     'Sublime Text',
-    'Typescript',
   ],
 }
 

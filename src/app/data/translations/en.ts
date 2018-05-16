@@ -23,8 +23,6 @@ export const en: TranslatedStrings = {
   },
   Android: {
   },
-  Angular: {
-  },
   Ascending: {
   },
   'bash.org': {
@@ -124,8 +122,6 @@ export const en: TranslatedStrings = {
   Title: {
   },
   'The Netherlands': {
-  },
-  Typescript: {
   },
   Ultramarined: {
   },
