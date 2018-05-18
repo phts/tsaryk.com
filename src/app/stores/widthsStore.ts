@@ -14,7 +14,7 @@ export class WidthsStore {
   randomize(list: Item[]): void {
     this.widths = R.pipe(
       R.indexBy(R.prop('id')),
-      R.mapObjIndexed(() => random(60, 500)),
+      R.mapObjIndexed(() => random(5, 30)),
     )(list)
   }
 
