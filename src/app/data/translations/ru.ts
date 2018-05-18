@@ -433,8 +433,7 @@ export const ru: TranslatedStrings = {
     name: 'Стак Оверфлоу',
     description: `
       <p>
-        Иногда ${a('https://stackoverflow.com/users/2462524/phts', 'отвечаю и задаю')}
-        вопросы на Стак Оверфлоу.
+        Иногда ${a('https://stackoverflow.com/users/2462524/phts', 'задаю и отвечаю')} на вопросы на Стак Оверфлоу.
       </p>
     `,
   },
