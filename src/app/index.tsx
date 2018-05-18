@@ -1,3 +1,5 @@
+import './globalCss'
+
 import * as React from 'react'
 import {Provider} from 'mobx-react'
 
