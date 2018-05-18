@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
 
 import {media} from 'app/helpers/css'
+import {CommonElementProps} from 'app/helpers/types'
 
 interface LiProps {
   flexBasis: number
@@ -9,7 +10,7 @@ interface LiProps {
 
 export type GenericLiProps = LiProps
 
-type LiElProps = LiProps & React.DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>
+type LiElProps = LiProps & CommonElementProps<HTMLLIElement>
 const li: StyledFunction<LiElProps> = styled.li
 const Li = li`
   align-items: center;

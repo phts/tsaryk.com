@@ -1,7 +1,7 @@
-import * as React from 'react'
 import styled, {StyledFunction} from 'styled-components'
+import {CommonElementProps} from 'app/helpers/types'
 
-type Props = React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> & {
+type Props = CommonElementProps<HTMLSpanElement> & {
   fontSize?: string,
 }
 

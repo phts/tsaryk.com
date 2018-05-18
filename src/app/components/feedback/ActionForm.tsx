@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
+import {FormElementProps} from 'app/helpers/types'
 
-type Props = React.DetailedHTMLProps<React.FormHTMLAttributes<HTMLFormElement>, HTMLFormElement> & {
+type Props = FormElementProps & {
   disabled: boolean,
 }
 

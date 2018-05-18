@@ -3,6 +3,7 @@ import {observer, inject} from 'mobx-react'
 import styled, {StyledFunction} from 'styled-components'
 
 import {UiStore} from 'app/stores/uiStore'
+import {CommonElementProps} from 'app/helpers/types'
 
 interface Props {
   uiStore?: UiStore
@@ -30,7 +31,7 @@ interface DivProps {
   fontColor?: string
 }
 
-type DivElProps = DivProps & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+type DivElProps = DivProps & CommonElementProps<HTMLDivElement>
 const div: StyledFunction<DivElProps> = styled.div
 
 const FlexContainerWrapper = div`
