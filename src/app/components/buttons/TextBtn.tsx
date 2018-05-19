@@ -24,9 +24,8 @@ class TextBtn extends React.PureComponent<BtnProps> {
           buttonType={this.textBtnButtonType}
           fontSize={this.props.fontSize}
           onClick={this.props.onNavigate}
-          text={this.props.text}
           to={this.props.itemId}
-        />
+        >{this.props.text}</GenericLink>
       </GenericLi>
     )
   }
