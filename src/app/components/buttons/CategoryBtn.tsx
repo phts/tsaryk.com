@@ -11,6 +11,7 @@ const CategoryBtn: React.StatelessComponent<BtnProps> = ({text}) => (
 )
 
 const Li = styled.li`
+  align-items: center;
   display: flex;
   flex-basis: 100%;
   font-size: 2em;
