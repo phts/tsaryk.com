@@ -10,7 +10,19 @@ const dist = path.resolve(project, 'dist')
 
 const plugins = [
   new HtmlWebpackPlugin({
+    cache: false,
     filename: './index.html',
+    minify: {
+      collapseInlineTagWhitespace: true,
+      collapseWhitespace: true,
+      minifyCSS: true,
+      minifyJS: true,
+      minifyURLs: true,
+      removeComments: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true,
+    },
     template: 'index.html',
   }),
 ]
