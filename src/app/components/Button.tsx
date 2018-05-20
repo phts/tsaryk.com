@@ -1,7 +1,7 @@
 import styled, {StyledFunction} from 'styled-components'
-import {CommonElementProps} from 'app/helpers/types'
+import {ButtonElementProps} from 'app/helpers/types'
 
-type Props = CommonElementProps<HTMLButtonElement> & {
+interface Props extends ButtonElementProps {
   border?: string,
   fontSize?: string,
 }

@@ -2,21 +2,19 @@ import * as React from 'react'
 
 import Button from 'app/components/Button'
 import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
+import {ButtonElementProps} from 'app/helpers/types'
 
-interface Props {
+interface Props extends ButtonElementProps {
   buttonType: BUTTON_TYPE
   fontSize: string
-  onClick?: React.MouseEventHandler<HTMLButtonElement>
-  text: string
 }
 
 const GenericBtn: React.StatelessComponent<Props> = props => (
   <Button
-      border={getBorder(props.buttonType)}
-      fontSize={props.fontSize}
-      onClick={props.onClick}>
-    {props.text}
-  </Button>
+    {...props}
+    border={getBorder(props.buttonType)}
+    fontSize={props.fontSize}
+  />
 )
 
 export default GenericBtn

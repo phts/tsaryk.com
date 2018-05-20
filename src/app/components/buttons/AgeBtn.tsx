@@ -22,8 +22,7 @@ class AgeBtn extends React.PureComponent<Props> {
         <GenericBtn
           buttonType={this.props.buttonType}
           fontSize={this.props.fontSize}
-          text={this.text}
-        />
+        >{this.text}</GenericBtn>
       </GenericLi>
     )
   }

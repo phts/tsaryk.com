@@ -37,8 +37,7 @@ class FeedbackBtn extends React.PureComponent<Props, State> {
             buttonType={this.props.buttonType}
             fontSize={this.props.fontSize}
             onClick={this.onClick}
-            text={this.props.text}
-          />
+          >{this.props.text}</GenericBtn>
       }
       </GenericLi>
     )

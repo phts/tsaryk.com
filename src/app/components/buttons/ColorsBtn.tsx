@@ -20,8 +20,7 @@ class ColorsBtn extends React.PureComponent<Props> {
           buttonType={this.props.buttonType}
           fontSize={this.props.fontSize}
           onClick={this.onClick}
-          text={this.props.text}
-        />
+        >{this.props.text}</GenericBtn>
       </GenericLi>
     )
   }
