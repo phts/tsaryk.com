@@ -7,8 +7,8 @@ import GenericLi from './generic/GenericLi'
 import FeedbackForm from 'app/components/feedback/FeedbackForm'
 import {I18nStore} from 'app/stores/i18nStore'
 
-type Props = BtnProps & {
-  i18nStore?: I18nStore,
+interface Props extends BtnProps {
+  i18nStore?: I18nStore
 }
 
 interface State {

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
 import {FormElementProps} from 'app/helpers/types'
 
-type Props = FormElementProps & {
-  disabled: boolean,
+interface Props extends FormElementProps {
+  disabled: boolean
 }
 
 export default styled.form`
