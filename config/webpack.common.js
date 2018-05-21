@@ -1,12 +1,24 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const project = path.resolve(__dirname, '..')
 const src = path.resolve(project, 'src')
 const app = path.resolve(src, 'app')
 const static = path.resolve(src, 'static')
 const dist = path.resolve(project, 'dist')
+
+
+const ES6_NODE_MODULES = [
+  'rambda',
+  'rambdax',
+]
+
+const IMGS = [
+  path.resolve(static, 'img', 'loading-narrow.svg'),
+  path.resolve(static, 'img', 'loading-wide.svg'),
+]
 
 const plugins = [
   new HtmlWebpackPlugin({
@@ -25,11 +37,10 @@ const plugins = [
     },
     template: 'index.html',
   }),
-]
-
-const ES6_NODE_MODULES = [
-  'rambda',
-  'rambdax',
+  new CopyWebpackPlugin(IMGS.map(x => ({
+    from: x,
+    to: path.join('static', 'img'),
+  }))),
 ]
 
 module.exports = ({prod = false, analyzer} = {}) => {
