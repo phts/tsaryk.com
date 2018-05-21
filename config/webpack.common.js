@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const project = path.resolve(__dirname, '..')
@@ -10,15 +9,17 @@ const app = path.resolve(src, 'app')
 const static = path.resolve(src, 'static')
 const dist = path.resolve(project, 'dist')
 
+const imgOutputPath = 'static/img/'
+
 
 const ES6_NODE_MODULES = [
   'rambda',
   'rambdax',
 ]
 
-const IMGS = [
-  path.resolve(static, 'img', 'loading-narrow.svg'),
-  path.resolve(static, 'img', 'loading-wide.svg'),
+const INDEX_HTML_IMAGES = [
+  'loading-narrow.svg',
+  'loading-wide.svg',
 ]
 
 const plugins = [
@@ -38,10 +39,6 @@ const plugins = [
     },
     template: 'index.html',
   }),
-  new CopyWebpackPlugin(IMGS.map(x => ({
-    from: x,
-    to: path.join('static', 'img'),
-  }))),
   new FaviconsWebpackPlugin({
     icons: {
       android: false,
@@ -111,8 +108,29 @@ module.exports = ({prod = false, analyzer} = {}) => {
           exclude: /node_modules/,
           loader: 'file-loader',
           options: {
-            outputPath: 'static/img/',
+            outputPath: imgOutputPath,
           },
+        },
+        {
+          test: /\.svg$/i,
+          include: INDEX_HTML_IMAGES.forEach(x => path.resolve(project, 'svg', x)),
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
+                outputPath: imgOutputPath,
+              },
+            },
+            {
+              loader: 'image-webpack-loader',
+              options: {
+                svgo: {
+                  enabled: true,
+                },
+              },
+            },
+          ],
         },
         {
           test: /\.js$/,

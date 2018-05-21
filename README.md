@@ -25,9 +25,3 @@ My home page. And a chance to learn some new stuff.
 ```
 npm run build[:anything] -- --env.analyzer
 ```
-
-### Optimize SVG images from static folder using [svgo](https://www.npmjs.com/package/svgo)
-
-```
-npm run svg
-```
