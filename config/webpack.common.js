@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const project = path.resolve(__dirname, '..')
 const src = path.resolve(project, 'src')
@@ -41,6 +42,22 @@ const plugins = [
     from: x,
     to: path.join('static', 'img'),
   }))),
+  new FaviconsWebpackPlugin({
+    icons: {
+      android: false,
+      appleIcon: false,
+      appleStartup: false,
+      coast: false,
+      favicons: true,
+      firefox: false,
+      opengraph: false,
+      twitter: false,
+      yandex: false,
+      windows: false
+    },
+    logo: path.resolve(project, 'svg', 'favicon.svg'),
+    prefix: 'static/icons-[hash:4]/',
+  }),
 ]
 
 module.exports = ({prod = false, analyzer} = {}) => {
