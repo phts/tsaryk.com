@@ -108,6 +108,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
           exclude: /node_modules/,
           loader: 'file-loader',
           options: {
+            name: '[name].[hash:4].[ext]',
             outputPath: imgOutputPath,
           },
         },
