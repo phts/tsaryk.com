@@ -28,3 +28,9 @@ export function mailto(href: string, text = href) {
 export function tel(href: string, text = href) {
   return a(`tel:${href}`, text)
 }
+
+export function img(src: string, alt: string) {
+  return `
+    <img src="${src}" alt="${alt}">
+  `
+}
