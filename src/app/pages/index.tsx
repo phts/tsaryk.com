@@ -9,15 +9,15 @@ import BtnListPage from './BtnListPage'
 import ShowItemPage from './ShowItemPage'
 import Viewport from './Viewport'
 import InitialRandomizeProvider from './InitialRandomizeProvider'
-import {routes} from 'app/routes'
+import routes from 'app/routes'
 
 export const Pages: React.StatelessComponent = () => {
   return <Router>
     <Switch>
       <InitialRandomizeProvider>
         <Viewport>
-          <Route exact path={routes.indexPage} component={BtnListPage}/>
-          <Route path={routes.showItemPage} component={ShowItemPage}/>
+          <Route exact path={routes.index} component={BtnListPage}/>
+          <Route path={routes.showItem} component={ShowItemPage}/>
         </Viewport>
       </InitialRandomizeProvider>
     </Switch>
