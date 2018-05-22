@@ -31,6 +31,7 @@ const Border = styled.div`
   justify-content: center;
   min-height: 100%;
   min-width: 100%;
+  position: relative;
 `
 
 const stepCommonCss = css`
