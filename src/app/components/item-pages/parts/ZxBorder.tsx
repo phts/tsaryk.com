@@ -15,12 +15,12 @@ const ZxBorder: React.StatelessComponent = ({children}) => (
 
 const Content = styled.div`
   background-color: white;
-  height: calc(100% - 10em);
+  min-height: calc(100% - 10em);
   width: calc(100% - 10em);
   z-index: 1;
 
   ${media.max.smartphone`
-    height: calc(100% - 5em);
+    min-height: calc(100% - 5em);
     width: calc(100% - 5em);
   `}
 `
