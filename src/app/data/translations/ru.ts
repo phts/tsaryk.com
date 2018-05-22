@@ -1,5 +1,3 @@
-const skodaImg = require('static/img/skoda.jpg')
-
 import {TranslatedStrings} from './index'
 import {a, callto, img, link, mailto, p, tel} from 'app/helpers/html'
 
@@ -395,7 +393,7 @@ export const ru: TranslatedStrings = {
         (около $600 по тогдашнему курсу).
       </p>
       <p>Очень надежный автомобиль. Прошёл боевое крещение по украинским дорогам в Буковель.</p>
-      <p>${img(skodaImg, 'My S\u030Ckoda')}</p>
+      <p>${img('https://i.imgur.com/VYfgwDT.jpg', 'Моя S\u030Ckoda')}</p>
       <p>Хотя от старости уже начинает капризничать.</p>
     `,
   },

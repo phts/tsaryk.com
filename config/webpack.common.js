@@ -104,15 +104,6 @@ module.exports = ({prod = false, analyzer} = {}) => {
           },
         },
         {
-          test: /\.jpg$/,
-          exclude: /node_modules/,
-          loader: 'file-loader',
-          options: {
-            name: '[name].[hash:4].[ext]',
-            outputPath: imgOutputPath,
-          },
-        },
-        {
           test: /\.svg$/i,
           include: INDEX_HTML_IMAGES.forEach(x => path.resolve(project, 'svg', x)),
           use: [
