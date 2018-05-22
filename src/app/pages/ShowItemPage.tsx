@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {withRouter, RouteComponentProps} from 'react-router-dom'
+import {withRouter, RouteComponentProps, Redirect} from 'react-router-dom'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 import styled from 'styled-components'
@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import {ItemId, ItemsStore} from 'app/stores/itemsStore'
 import {openIndex} from 'app/helpers/routes'
 import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
-import {ShowItemPageMatch} from 'app/routes'
+import routes, {ShowItemPageMatch} from 'app/routes'
 import {ItemPageComponentClass} from 'app/components/item-pages/asItemPage'
 import SimpleItemPage from 'app/components/item-pages/SimpleItemPage'
 import ZxSpectrumItemPage from 'app/components/item-pages/ZxSpectrumItemPage'
@@ -30,6 +30,9 @@ const knownItemPages: KnownItemPagesMap = {
 class ShowItemPage extends React.PureComponent<Props> {
   render() {
     const item = this.props.itemsStore.items[this.props.match.params.id]
+    if (!item) {
+      return <Redirect to={routes.index}/>
+    }
     const ItemPageComponent: ItemPageComponentClass = knownItemPages[item.id] || SimpleItemPage
     return <ItemPageComponent
       item={item}
