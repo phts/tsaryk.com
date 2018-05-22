@@ -11,8 +11,8 @@ import Viewport from './Viewport'
 import InitialRandomizeProvider from './InitialRandomizeProvider'
 import routes from 'app/routes'
 
-export const Pages: React.StatelessComponent = () => {
-  return <Router>
+export default () => (
+  <Router>
     <Switch>
       <InitialRandomizeProvider>
         <Viewport>
@@ -22,4 +22,4 @@ export const Pages: React.StatelessComponent = () => {
       </InitialRandomizeProvider>
     </Switch>
   </Router>
-}
+)
