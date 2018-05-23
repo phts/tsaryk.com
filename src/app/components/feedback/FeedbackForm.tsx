@@ -4,7 +4,7 @@ import emailService from 'app/services/email'
 import ActionForm from './ActionForm'
 import FeedbackFormInput from './FeedbackFormInput'
 import Indicator, {IndicatorState} from './Indicator'
-import EnterSymbol from './EnterSymbol'
+import FeedbackFormSubmit from './FeedbackFormSubmit'
 
 interface Props {
   onFinished: () => void
@@ -52,7 +52,7 @@ export default class FeedbackForm extends React.PureComponent<Props, State> {
         {
           processing ?
             <Indicator state={this.state.indicatorState}/> :
-            <EnterSymbol/>
+            <FeedbackFormSubmit/>
         }
       </ActionForm>
     )
