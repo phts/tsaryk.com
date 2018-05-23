@@ -1,7 +1,7 @@
 import random from 'rambdax/modules/random'
 import {css, SimpleInterpolation} from 'styled-components'
 
-const breakpoints = {
+export const breakpoints = {
   mobile: 320,
   smartphone: 480,
   tablet: 720,

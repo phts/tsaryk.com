@@ -34,3 +34,12 @@ export function img(src: string, alt: string) {
     <img src="${src}" alt="${alt}">
   `
 }
+
+export function figure(imgEl: string, text: string) {
+  return `
+    <figure>
+      ${imgEl}
+      <figcaption>${text}</figcaption>
+    </figure>
+  `
+}

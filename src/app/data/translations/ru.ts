@@ -1,5 +1,6 @@
 import {TranslatedStrings} from './index'
-import {a, callto, img, link, mailto, p, tel} from 'app/helpers/html'
+import {a, callto, figure, img, link, mailto, p, tel} from 'app/helpers/html'
+import {picture} from 'app/helpers/imgur'
 
 export const ru: TranslatedStrings = {
   EN: {
@@ -240,6 +241,16 @@ export const ru: TranslatedStrings = {
         Является в некоторой степени противоположностью ${link('Space Resonance')} по стилю
         и настроению. Несмотря на это, я с огромным удовольствием играл в этой группе.
       </p>
+      <p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/egVPsfDi81A?rel=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </p>
       <p>Осталась страничка в контакте: ${a('https://vk.com/joyintimes', 'joyintimes')}</p>
     `,
   },
@@ -282,6 +293,28 @@ export const ru: TranslatedStrings = {
         <li>${link('Ultramarined')}</li>
       </ul>
       <p>Сейчас с ребятами в ${link('Krako\u0301w', 'Кракове')} пытаемся играть и сочинять что-то своё.<p>
+      <h3>Хожу на концерты</h3>
+      <p>Из своего маст-хэв списка уже побывал:</p>
+      ${figure(picture('FykwSDm', 'Deep Purple в Минске, 2011 год'),
+               'Deep Purple в Минске, 2011 год')}
+      ${figure(picture('qIIb0bR', 'God is an Astronaut в Санкт-Петербурге, 2012 год'),
+               'God is an Astronaut в Санкт-Петербурге, 2012 год')}
+      ${figure(picture('dPNRWdG', 'Australian Pink Floyd Show в Минске, 2013 год'),
+               'Australian Pink Floyd Show в Минске, 2013 год')}
+      ${figure(picture('tcyuP0Q', 'Dream Theater в Катовице, 2015 год'),
+               'Dream Theater в Катовице, 2015 год')}
+      ${figure(picture('yDFhHGF', 'Riverside в Катовице, 2015 год'),
+               'Riverside в Катовице, 2015 год')}
+      ${figure(picture('5oDXQ4s', 'Дэвид Гилмор во Франции, 2016 год'),
+               'Дэвид Гилмор во Франции, 2016 год')}
+      ${figure(picture('pxy4Skj', 'Anathema в Кракове, 2017 год'),
+               'Anathema в Кракове, 2017 год')}
+      ${figure(picture('FOuMsdO', 'Opeth в Варшаве, 2017 год'),
+               'Opeth в Варшаве, 2017 год')}
+      <p>Осталось:</p>
+      <ul>
+      <li>${link('Ritchie Blackmore', "Rainbow / Ritchie Blackmore's Night")}</li>
+      </ul>
     `,
   },
   Novopolotsk: {
@@ -296,7 +329,20 @@ export const ru: TranslatedStrings = {
   },
   'Phil Tsarik': {
     name: 'Филипп Царик',
-    description: p('Приятно познакомиться!'),
+    description: `
+      <p>
+        Меня зовут Филипп Царик. Родился 3 декабря 1987 года в городе ${link('Novopolotsk', 'Новополоцке')} в БССР
+        (сейчас &mdash; ${link('Belarus', 'Республика Беларусь')}).
+      </p>
+      <p>
+        В 2011 окончил ${link('PSU', 'Полоцкий Государственный Университет')} по специальности
+        ${link('Software Engineer', '&laquo;Программное обеспечение информационных технологий&raquo;')}.
+      </p>
+      <p>
+        Сейчас проживаю в ${link('Kraków', 'Кракове')} и работаю в компании ${link('Grand Parade')}
+        ${link('JavaScript', 'фронтэнд разработчиком')}.
+      </p>
+    `,
   },
   'Pilip Tsaryk': {
     name: 'Пiлiп Царык',
@@ -463,6 +509,7 @@ export const ru: TranslatedStrings = {
         Мы успешно репетировали, сочиняли песни, выступали, и всё складывалось хорошо. До того момента,
         как я не уехал в ${link('Krako\u0301w', 'Краков')}.
       </p>
+      ${figure(picture('V5Pazkk', 'Ultramarined'), 'Последнее выступление Ultramarined в 2015 году')}
       <p>
         Больше информации о группе доступно на
         ${a('http://phts.github.io/ultramarined.by/', 'зеркале официального сайта')}.

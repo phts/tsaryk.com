@@ -4,6 +4,7 @@ import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 import styled from 'styled-components'
 
+import {media} from 'app/helpers/css'
 import {ItemId, ItemsStore} from 'app/stores/itemsStore'
 import {openIndex} from 'app/helpers/routes'
 import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
@@ -83,5 +84,38 @@ export default compose(
 
   img {
     max-width: 100%;
+  }
+
+  figure {
+    margin: 1em auto;
+    max-width: 1200px;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+
+  picture img {
+    width: 100%;
+  }
+
+  iframe {
+    max-width: 720px;
+    max-height: 410px;
+    height: calc((100vw - 20em) * 0.57);
+    width: calc(100vw - 20em);
+
+    ${media.max.tablet`
+      height: calc((100vw - 14em)  * 0.57);
+      width: calc(100vw - 14em);
+    `}
+    ${media.max.smartphone`
+      height: calc((100vw - 4em)  * 0.57);
+      width: calc(100vw - 4em);
+    `}
+    ${media.max.mobile`
+      height: calc((100vw - 2em)  * 0.57);
+      width: calc(100vw - 2em);
+    `}
   }
 `)
