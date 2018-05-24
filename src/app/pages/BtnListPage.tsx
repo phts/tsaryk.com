@@ -1,5 +1,4 @@
 import * as React from 'react'
-import styled from 'styled-components'
 import * as R from 'ramda'
 import {observer, inject} from 'mobx-react'
 
@@ -11,6 +10,7 @@ import {
   Mode,
 } from 'app/stores/listStore'
 import {Lang} from 'app/stores/langStore'
+import BtnList from 'app/components/BtnList'
 import AgeBtn from 'app/components/buttons/AgeBtn'
 import {BtnClass} from 'app/components/buttons/asBtn'
 import CategoryBtn from 'app/components/buttons/CategoryBtn'
@@ -25,15 +25,6 @@ interface Props {
   listStore?: ListStore
   widthsStore?: WidthsStore
 }
-
-const Ul = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0;
-  min-width: 100%;
-  padding: 0.5em 0;
-`
 
 type KnownBtnMap = {
   [index in ItemId]?: BtnClass
@@ -73,9 +64,9 @@ export default class BtnListPage extends React.PureComponent<Props> {
         width={this.props.widthsStore.getWidth(it.id)}
       />
     })(this.props.listStore.list)
-    return <Ul>
+    return <BtnList>
       {els}
-    </Ul>
+    </BtnList>
   }
 
   private onNavigate = () => {
