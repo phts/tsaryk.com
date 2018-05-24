@@ -7,8 +7,8 @@ import asBtn, {BtnProps} from './asBtn'
 const TITLE = 'tsarik.me'
 const URL = 'http://tsarik.me/'
 
-const TitleBtn: React.StatelessComponent<BtnProps> = ({flexBasis}) => (
-  <GenericLi flexBasis={flexBasis}>
+const TitleBtn: React.StatelessComponent<BtnProps> = ({flexBasis, flexible}) => (
+  <GenericLi flexBasis={flexBasis} flexible={flexible}>
     <A href={URL}>{TITLE}</A>
   </GenericLi>
 )

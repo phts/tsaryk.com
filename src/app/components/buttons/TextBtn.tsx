@@ -10,7 +10,7 @@ class TextBtn extends React.PureComponent<BtnProps> {
   render() {
     if (!this.props.description) {
       return (
-        <GenericLi flexBasis={this.props.flexBasis}>
+        <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
           <Text fontSize={this.props.fontSize}>
             {this.props.text}
           </Text>
@@ -19,7 +19,7 @@ class TextBtn extends React.PureComponent<BtnProps> {
     }
 
     return (
-      <GenericLi flexBasis={this.props.flexBasis}>
+      <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
         <GenericLink
           buttonType={this.textBtnButtonType}
           fontSize={this.props.fontSize}

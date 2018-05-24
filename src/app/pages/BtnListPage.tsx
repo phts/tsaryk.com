@@ -55,16 +55,19 @@ export default class BtnListPage extends React.PureComponent<Props> {
   }
 
   render() {
+    const flexible = this.props.listStore.mode !== Mode.Categories
     const els =  R.map((it: ListItem) => {
+      const width = flexible ? this.props.widthsStore.getWidth(it.id) : 0
       const BtnComponent: BtnClass = knownBtns[it.id] || TextBtn
       return <BtnComponent
+        flexible={flexible}
         item={it}
         key={it.id}
         onNavigate={this.onNavigate}
-        width={this.props.widthsStore.getWidth(it.id)}
+        width={width}
       />
     })(this.props.listStore.list)
-    return <BtnList>
+    return <BtnList flexible={flexible}>
       {els}
     </BtnList>
   }

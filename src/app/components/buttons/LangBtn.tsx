@@ -15,7 +15,7 @@ export default function LangBtn(lang: Lang) {
   class AnyLangBtn extends React.PureComponent<Props> {
     render() {
       return (
-        <GenericLi flexBasis={this.props.flexBasis}>
+        <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
           <GenericBtn
             buttonType={this.props.buttonType}
             fontSize={this.props.fontSize}

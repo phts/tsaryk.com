@@ -10,6 +10,7 @@ import {DEFAULT_FONT_SIZE, BUTTON_TYPE} from 'app/helpers/buttons'
 import {Hoc} from 'app/helpers/types'
 
 export interface BaseBtnProps {
+  flexible: boolean
   item: ListItem
   onNavigate: React.MouseEventHandler<HTMLElement>
   width: number
@@ -19,6 +20,7 @@ export interface BtnProps {
   buttonType: BUTTON_TYPE
   description: string
   flexBasis: number
+  flexible: boolean
   fontSize: string
   itemId: ItemId
   onNavigate: React.MouseEventHandler<HTMLElement>
@@ -40,11 +42,12 @@ const buttonTypeMap: {[index in ItemType]?: BUTTON_TYPE} = {
 export type BtnClass = React.StatelessComponent<BaseBtnProps>
 
 const asBtn: Hoc<BtnProps, BtnClass> = WrappedComponent =>
-  ({item, onNavigate, width}) =>
+  ({flexible, item, onNavigate, width}) =>
     <WrappedComponent
       buttonType={buttonTypeMap[item.type]}
       description={item.description}
       flexBasis={width}
+      flexible={flexible}
       fontSize={fontSizeMap[item.size]}
       itemId={item.id}
       onNavigate={onNavigate}

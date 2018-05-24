@@ -4,6 +4,7 @@ import {CommonElementProps} from 'app/helpers/types'
 
 interface Props extends CommonElementProps<HTMLLIElement> {
   flexBasis: number
+  flexible: boolean
 }
 
 export default (styled.li as StyledFunction<Props>).attrs({
@@ -13,7 +14,7 @@ export default (styled.li as StyledFunction<Props>).attrs({
 })`
   align-items: center;
   display: flex;
-  flex-grow: 1;
+  flex-grow: ${({flexible}) => flexible ? 1 : 0};
   justify-content: center;
   margin: 0 1em;
   list-style: none;

@@ -26,7 +26,7 @@ class FeedbackBtn extends React.PureComponent<Props, State> {
 
   render() {
     return (
-      <GenericLi flexBasis={this.props.flexBasis}>
+      <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
       {
         this.state.open ?
           <FeedbackForm
