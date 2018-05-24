@@ -16,8 +16,13 @@ const Li = styled.li`
   flex-basis: 100%;
   font-size: 2em;
   list-style: none;
+  margin-top: 1em;
   text-align: left;
   white-space: nowrap;
+
+  &:first-child {
+    margin-top: 0;
+  }
 `
 
 export default asBtn(CategoryBtn)
