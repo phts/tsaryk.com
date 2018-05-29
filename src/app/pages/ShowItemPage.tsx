@@ -87,7 +87,7 @@ export default compose(
   }
 
   figure {
-    margin: 1em auto;
+    margin: 1rem auto;
     max-width: 1200px;
   }
 
@@ -102,20 +102,20 @@ export default compose(
   iframe {
     max-width: 720px;
     max-height: 410px;
-    height: calc((100vw - 20em) * 0.57);
-    width: calc(100vw - 20em);
+    height: calc((100vw - 20rem) * 0.57);
+    width: calc(100vw - 20rem);
 
     ${media.max.tablet`
-      height: calc((100vw - 14em)  * 0.57);
-      width: calc(100vw - 14em);
+      height: calc((100vw - 14rem)  * 0.57);
+      width: calc(100vw - 14rem);
     `}
     ${media.max.smartphone`
-      height: calc((100vw - 4em)  * 0.57);
-      width: calc(100vw - 4em);
+      height: calc((100vw - 4rem)  * 0.57);
+      width: calc(100vw - 4rem);
     `}
     ${media.max.mobile`
-      height: calc((100vw - 2em)  * 0.57);
-      width: calc(100vw - 2em);
+      height: calc((100vw - 2rem)  * 0.57);
+      width: calc(100vw - 2rem);
     `}
   }
 `)

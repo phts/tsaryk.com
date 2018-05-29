@@ -15,13 +15,13 @@ const ZxBorder: React.StatelessComponent = ({children}) => (
 
 const Content = styled.div`
   background-color: white;
-  min-height: calc(100% - 10em);
-  width: calc(100% - 10em);
+  min-height: calc(100% - 10rem);
+  width: calc(100% - 10rem);
   z-index: 1;
 
   ${media.max.smartphone`
-    min-height: calc(100% - 5em);
-    width: calc(100% - 5em);
+    min-height: calc(100% - 5rem);
+    width: calc(100% - 5rem);
   `}
 `
 
@@ -47,7 +47,7 @@ const stepCommonCss = css`
 const loadingOverlayCommonCss = css`
   background-position: top left;
   background-repeat: repeat-y;
-  background-size: 100% 2em;
+  background-size: 100% 2rem;
   content: '';
   display: block;
   height: 100%;
@@ -57,7 +57,7 @@ const loadingOverlayCommonCss = css`
   width: 100%;
 
   ${media.min.desktop`
-    background-size: 100% 4em;
+    background-size: 100% 4rem;
   `}
 `
 
@@ -105,7 +105,7 @@ const StartingStep = styled.div`
       background-position-y: 0;
     }
     100% {
-      background-position-y: -4em
+      background-position-y: -4rem
     }
   }
 
@@ -158,16 +158,16 @@ const LoadingStep = styled.div`
       background-position-y: 0;
     }
     25% {
-      background-position-y: 0.5em;
+      background-position-y: 0.5rem;
     }
     50% {
-      background-position-y: 1em;
+      background-position-y: 1rem;
     }
     75% {
-      background-position-y: 1.5em;
+      background-position-y: 1.5rem;
     }
     100% {
-      background-position-y: 2em;
+      background-position-y: 2rem;
     }
   }
 
@@ -176,16 +176,16 @@ const LoadingStep = styled.div`
       background-position-y: 0;
     }
     25% {
-      background-position-y: -0.5em;
+      background-position-y: -0.5rem;
     }
     50% {
-      background-position-y: -1em;
+      background-position-y: -1rem;
     }
     75% {
-      background-position-y: -1.5em;
+      background-position-y: -1.5rem;
     }
     100% {
-      background-position-y: -2em;
+      background-position-y: -2rem;
     }
   }
 
@@ -194,16 +194,16 @@ const LoadingStep = styled.div`
       background-position-y: 0;
     }
     25% {
-      background-position-y: 1em;
+      background-position-y: 1rem;
     }
     50% {
-      background-position-y: 2em;
+      background-position-y: 2rem;
     }
     75% {
-      background-position-y: 3em;
+      background-position-y: 3rem;
     }
     100% {
-      background-position-y: 4em;
+      background-position-y: 4rem;
     }
   }
 
@@ -212,16 +212,16 @@ const LoadingStep = styled.div`
       background-position-y: 0;
     }
     25% {
-      background-position-y: -1em;
+      background-position-y: -1rem;
     }
     50% {
-      background-position-y: -2em;
+      background-position-y: -2rem;
     }
     75% {
-      background-position-y: -3em;
+      background-position-y: -3rem;
     }
     100% {
-      background-position-y: -4em;
+      background-position-y: -4rem;
     }
   }
 

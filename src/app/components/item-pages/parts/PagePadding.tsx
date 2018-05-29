@@ -5,15 +5,15 @@ export default styled.div`
   box-sizing: border-box;
   min-height: 100%;
   min-width: 100%;
-  padding: 7em 10em;
+  padding: 7rem 10rem;
 
   ${media.max.tablet`
-    padding: 5em 7em;
+    padding: 5rem 7rem;
   `}
   ${media.max.smartphone`
-    padding: 2em;
+    padding: 2rem;
   `}
   ${media.max.mobile`
-    padding: 1em;
+    padding: 1rem;
   `}
 `

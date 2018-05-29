@@ -14,9 +14,9 @@ const Li = styled.li`
   align-items: center;
   display: flex;
   flex-basis: 100%;
-  font-size: 2em;
+  font-size: 2rem;
   list-style: none;
-  margin-top: 1em;
+  margin-top: 1rem;
   text-align: left;
   white-space: nowrap;
 
