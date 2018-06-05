@@ -1,6 +1,7 @@
-*.log
-*.sublime-workspace
 .idea/
 dist/
 node_modules/
-sh.exe.stackdump
+
+*.log
+*.stackdump
+*.sublime-workspace
