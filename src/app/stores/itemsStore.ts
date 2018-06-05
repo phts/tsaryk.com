@@ -33,6 +33,7 @@ export interface Item {
   name: string
   position: ItemPosition
   size: ItemSize
+  tooltip?: string
   type: ItemType
 }
 
@@ -59,7 +60,7 @@ function toItem(strings: TranslatedStrings, fallback: TranslatedStrings): (defau
     metaPropsMap[id] || {},
     categoryPropsMap[id] || {},
     R.pick(['description'], fallback[id]),
-    R.pick(['name', 'description', 'data'], strings[id]),
+    R.pick(['name', 'description', 'data', 'tooltip'], strings[id]),
   )
 }
 

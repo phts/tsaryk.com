@@ -5,6 +5,7 @@ import {picture} from 'app/helpers/imgur'
 export const ru: TranslatedStrings = {
   EN: {
     name: 'АНГ',
+    tooltip: 'Not translated yet. Sorry.',
   },
   RU: {
     name: 'РУС',

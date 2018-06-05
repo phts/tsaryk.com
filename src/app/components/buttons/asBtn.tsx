@@ -27,6 +27,7 @@ export interface BtnProps {
   itemId: ItemId
   onNavigate: React.MouseEventHandler<HTMLElement>
   text: string
+  tooltip: string
 }
 
 const fontSizeMap: {[index in ItemSize]: string} = {
@@ -55,6 +56,7 @@ const asBtn: Hoc<BtnProps, BtnClass> = WrappedComponent =>
       itemId={item.id}
       onNavigate={onNavigate}
       text={item.name}
+      tooltip={item.tooltip}
     />
 
 export default asBtn

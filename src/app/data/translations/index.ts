@@ -11,6 +11,7 @@ export interface Translatable {
   data?: {}
   description?: string
   name?: string
+  tooltip?: string
 }
 
 export type TranslatedStrings = {[index in KnownName]: Translatable}
