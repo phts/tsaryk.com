@@ -7,9 +7,10 @@ import {
   ItemSize,
   ItemType,
 } from 'app/data/metaProps'
-import itemsStore, {Item, ItemId, ItemsStore} from './itemsStore'
+import itemsStore, {Item, ItemData, ItemId, ItemsStore} from './itemsStore'
 
 export {
+  ItemData,
   ItemId,
   ItemPosition,
   ItemSize,

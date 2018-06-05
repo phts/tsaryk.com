@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import {
+  ItemData,
   ItemId,
   ItemSize,
   ItemType,
@@ -18,6 +19,7 @@ export interface BaseBtnProps {
 
 export interface BtnProps {
   buttonType: BUTTON_TYPE
+  data: ItemData
   description: string
   flexBasis: number
   flexible: boolean
@@ -45,6 +47,7 @@ const asBtn: Hoc<BtnProps, BtnClass> = WrappedComponent =>
   ({flexible, item, onNavigate, width}) =>
     <WrappedComponent
       buttonType={buttonTypeMap[item.type]}
+      data={item.data}
       description={item.description}
       flexBasis={width}
       flexible={flexible}

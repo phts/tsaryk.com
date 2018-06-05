@@ -42,6 +42,14 @@ export const ru: TranslatedStrings = {
   },
   Age: {
     name: 'Возраст',
+    data: {
+      days: 'дн.',
+      hours: 'ч.',
+      min: 'мин.',
+      months: 'мес.',
+      sec: 'сек.',
+      years: 'лет',
+    },
   },
   Android: {
     name: 'Андройд',
@@ -165,6 +173,9 @@ export const ru: TranslatedStrings = {
   },
   Feedback: {
     name: 'Обратная связь',
+    data: {
+      sayHello: 'Скажите «привет»...',
+    },
   },
   Firefox: {
     name: 'Файерфокс',

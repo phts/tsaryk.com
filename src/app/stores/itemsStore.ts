@@ -22,11 +22,12 @@ import {
 import {Names, KnownName} from 'app/data/names'
 import langStore, {LangStore} from './langStore'
 
-
+export type ItemData = {}
 export type ItemId = KnownName
 
 export interface Item {
   category: ItemCategory
+  data?: ItemData
   description?: string
   id: ItemId
   name: string
@@ -58,7 +59,7 @@ function toItem(strings: TranslatedStrings, fallback: TranslatedStrings): (defau
     metaPropsMap[id] || {},
     categoryPropsMap[id] || {},
     R.pick(['description'], fallback[id]),
-    R.pick(['name', 'description'], strings[id]),
+    R.pick(['name', 'description', 'data'], strings[id]),
   )
 }
 

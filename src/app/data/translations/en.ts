@@ -20,6 +20,14 @@ export const en: TranslatedStrings = {
   '+48534898187': {
   },
   Age: {
+    data: {
+      days: 'days',
+      hours: 'hours',
+      min: 'min',
+      months: 'months',
+      sec: 'sec',
+      years: 'years',
+    },
   },
   Android: {
   },
@@ -54,6 +62,9 @@ export const en: TranslatedStrings = {
   Facebook: {
   },
   Feedback: {
+    data: {
+      sayHello: 'Say hello...',
+    },
   },
   Firefox: {
   },
