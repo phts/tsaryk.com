@@ -11,6 +11,7 @@ import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
 import routes, {ShowItemPageMatch} from 'app/routes'
 import {ItemPageComponentClass} from 'app/components/item-pages/asItemPage'
 import SimpleItemPage from 'app/components/item-pages/SimpleItemPage'
+import CatsItemPage from 'app/components/item-pages/CatsItemPage'
 import ZxSpectrumItemPage from 'app/components/item-pages/ZxSpectrumItemPage'
 import scrollToTopOnMount from 'app/components/scrollToTopOnMount'
 
@@ -25,6 +26,7 @@ type KnownItemPagesMap = {
 }
 
 const knownItemPages: KnownItemPagesMap = {
+  Cats: CatsItemPage,
   'ZX Spectrum': ZxSpectrumItemPage,
 }
 

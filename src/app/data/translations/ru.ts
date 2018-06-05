@@ -112,6 +112,13 @@ export const ru: TranslatedStrings = {
   },
   Cats: {
     name: 'Коты',
+    description: '',
+    data: [
+      {icon: '&#x1F989;', text: 'Совы'},
+      {icon: '&#x1F47D;', text: 'Еноты', tooltip: 'У енотов пока нет своего emoji в юникоде'},
+      {icon: '&#x1F98A;', text: 'Лисицы'},
+      {icon: '&#x1F418;', text: 'Слоны'},
+    ],
   },
   Colors: {
     name: 'Цвета',
