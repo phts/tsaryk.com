@@ -19,4 +19,10 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
       - run: npm run lint
-      - run: npm test
+      - run: npm run build
+      - run:
+          name: Install lftp
+          command: |
+            sudo apt-get update
+            sudo apt-get -qq install lftp
+      - deploy: npm run deploy
