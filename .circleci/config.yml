@@ -25,4 +25,5 @@ jobs:
           command: |
             sudo apt-get update
             sudo apt-get -qq install lftp
-      - deploy: npm run deploy
+      - deploy:
+          command: npm run deploy
