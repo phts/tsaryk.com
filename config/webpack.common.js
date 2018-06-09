@@ -65,9 +65,11 @@ module.exports = ({prod = false, analyzer} = {}) => {
 
   return {
     context: src,
-    entry: './index',
+    entry: {
+      app: './index',
+    },
     output: {
-      filename: 'bundle.js',
+      filename: '[name].js',
       path: dist,
       publicPath: '/',
     },
@@ -79,6 +81,20 @@ module.exports = ({prod = false, analyzer} = {}) => {
         'react-dom': 'preact-compat',
       },
       extensions: ['.tsx', '.ts', '.js'],
+    },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        cacheGroups: {
+          vendors: {
+            priority: -10,
+            test: /[\\/]node_modules[\\/]/,
+          },
+          default: {
+            priority: -20,
+          },
+        },
+      },
     },
     module: {
       rules: [

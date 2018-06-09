@@ -2,7 +2,7 @@
   "name": "tsarik.me",
   "private": true,
   "scripts": {
-    "build": "npm run build:prod",
+    "build": "npm run build:prod --",
     "build:dev": "npm run webpack",
     "build:prod": "npm run webpack -- --env.prod",
     "build:prod:bb": "npm run build:prod -- --env.bb",

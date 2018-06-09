@@ -1,11 +1,10 @@
-const webpack = require('webpack')
 const merge = require('webpack-merge')
 const common = require('./webpack.common')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = (env = {}) => {
   const output = {
-    filename: 'bundle.[hash:4].js',
+    filename: '[name].[contenthash:4].js',
   }
 
   if (env.bb) {
