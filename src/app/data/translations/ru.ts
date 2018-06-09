@@ -332,7 +332,10 @@ export const ru: TranslatedStrings = {
                'Opeth в Варшаве, 2017 год')}
       <p>Осталось:</p>
       <ul>
-      <li>${link('Ritchie Blackmore', "Rainbow / Ritchie Blackmore's Night")}</li>
+      <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>
+      <li>The Gathering</li>
+      <li>The Morningside</li>
+      <li>Nightwish</li>
       </ul>
     `,
   },
