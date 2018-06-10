@@ -1,9 +1,9 @@
 import * as React from 'react'
 import {observer, inject} from 'mobx-react'
-import styled, {StyledFunction} from 'styled-components'
 
+import FlexContainerWrapper from 'app/components/FlexContainerWrapper'
+import FlexContainer from 'app/components/FlexContainer'
 import {UiStore} from 'app/stores/uiStore'
-import {CommonElementProps} from 'app/helpers/types'
 
 interface Props {
   uiStore?: UiStore
@@ -25,26 +25,3 @@ export default class Viewport extends React.PureComponent<Props> {
     )
   }
 }
-
-interface DivProps {
-  backgroundColor?: string
-  fontColor?: string
-}
-
-type DivElProps = DivProps & CommonElementProps<HTMLDivElement>
-const div: StyledFunction<DivElProps> = styled.div
-
-const FlexContainerWrapper = div`
-  display: flex;
-  flex-direction: column;
-`
-
-const FlexContainer = div`
-  background-color: ${({backgroundColor}) => backgroundColor};
-  box-sizing: border-box;
-  color: ${({fontColor}) => fontColor};
-  display: flex;
-  min-height: 100vh;
-  overflow-x: hidden;
-  width: 100%;
-`
