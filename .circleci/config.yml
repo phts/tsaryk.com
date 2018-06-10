@@ -8,6 +8,10 @@ jobs:
       only:
         - master
     steps:
+      - run:
+          name: Upgrade npm
+          command: |
+            sudo npm install -g npm@6.1.0
       - checkout
       - restore_cache:
           keys:
