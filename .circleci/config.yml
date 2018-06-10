@@ -1,12 +1,9 @@
 version: 2
 jobs:
-  build:
+  deploy-dev:
     docker:
       - image: circleci/node:9.5.0
     working_directory: ~/repo
-    branches:
-      only:
-        - master
     steps:
       - run:
           name: Upgrade npm
@@ -15,19 +12,59 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package-lock.json" }}
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
       - run: npm install
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
       - run: npm run lint
-      - run: npm run build
+      - run: npm run build:prod:relative
+      - add_ssh_keys:
+          fingerprints:
+            - "06:36:ad:60:32:63:b1:d9:c4:d8:89:98:87:c9:2e:c4"
+      - deploy:
+          command: npm run deploy:dev
+
+  deploy-prod:
+    docker:
+      - image: circleci/node:9.5.0
+    working_directory: ~/repo
+    steps:
+      - run:
+          name: Upgrade npm
+          command: |
+            sudo npm install -g npm@6.1.0
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+      - run: npm run lint
+      - run: npm run build:prod
       - run:
           name: Install lftp
           command: |
             sudo apt-get update
             sudo apt-get -qq install lftp
       - deploy:
-          command: npm run deploy
+          command: npm run deploy:prod
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - deploy-dev:
+          filters:
+            branches:
+              only: /dev-.*/
+      - deploy-prod:
+          filters:
+            branches:
+              only: master

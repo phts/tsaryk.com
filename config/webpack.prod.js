@@ -7,7 +7,7 @@ module.exports = (env = {}) => {
     filename: '[name].[contenthash:4].js',
   }
 
-  if (env.bb) {
+  if (env.relative) {
     output.publicPath = ''
   }
 
