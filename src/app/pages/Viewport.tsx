@@ -1,6 +1,8 @@
 import * as React from 'react'
 import {observer, inject} from 'mobx-react'
+import {ThemeProvider} from 'app/styled-components'
 
+import dynamicTheme from 'app/themes/dynamicTheme'
 import FlexContainerWrapper from 'app/components/FlexContainerWrapper'
 import FlexContainer from 'app/components/FlexContainer'
 import {UiStore} from 'app/stores/uiStore'
@@ -14,14 +16,13 @@ interface Props {
 export default class Viewport extends React.PureComponent<Props> {
   render() {
     return (
-      <FlexContainerWrapper>
-        <FlexContainer
-            backgroundColor={this.props.uiStore.backgroundColor}
-            fontColor={this.props.uiStore.fontColor}
-        >
-          {this.props.children}
-        </FlexContainer>
-      </FlexContainerWrapper>
+      <ThemeProvider theme={dynamicTheme(this.props.uiStore)}>
+        <FlexContainerWrapper>
+          <FlexContainer>
+            {this.props.children}
+          </FlexContainer>
+        </FlexContainerWrapper>
+      </ThemeProvider>
     )
   }
 }

@@ -27,7 +27,7 @@ class ColorsBtn extends React.PureComponent<Props> {
 
   private onClick = () => {
     this.props.uiStore.backgroundColor = getRandomCssColor()
-    this.props.uiStore.fontColor = getRandomCssColor()
+    this.props.uiStore.color = getRandomCssColor()
   }
 }
 

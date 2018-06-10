@@ -1,8 +1,8 @@
 import {observable} from 'mobx'
 
 export class UiStore {
-  @observable backgroundColor: string
-  @observable fontColor: string
+  @observable backgroundColor = 'white'
+  @observable color = 'black'
 }
 
 export default new UiStore()

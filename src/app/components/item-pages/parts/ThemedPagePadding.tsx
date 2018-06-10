@@ -1,11 +1,7 @@
 import styled from 'app/styled-components'
+import PagePadding from './PagePadding'
 
-export default styled.div`
+export default styled(PagePadding)`
   background-color: ${props => props.theme.backgroundColor};
-  box-sizing: border-box;
   color: ${props => props.theme.color};
-  display: flex;
-  min-height: 100vh;
-  overflow-x: hidden;
-  width: 100%;
 `
