@@ -36,9 +36,10 @@ export function getRandomColorComponent(): number {
 }
 
 export function getRandomCssColor(): string {
-  return `rgb(${getRandomColorComponent()}, \
-              ${getRandomColorComponent()}, \
-              ${getRandomColorComponent()})`
+  const r = getRandomColorComponent()
+  const g = getRandomColorComponent()
+  const b = getRandomColorComponent()
+  return `rgb(${r}, ${g}, ${b})`
 }
 
 export const blinkAnimation = css`
