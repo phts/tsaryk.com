@@ -14,9 +14,11 @@ export type ItemPageComponentClass = React.ComponentClass<ItemPageProps>
 const asItemPage: Hoc<ItemPageProps, ItemPageComponentClass> = WrappedComponent =>
   class ItemPageComponent extends React.PureComponent<ItemPageProps> {
     render() {
-      return <WrappedComponent
-        {...this.props}
-      />
+      return (
+        <WrappedComponent
+          {...this.props}
+        />
+       )
     }
   }
 

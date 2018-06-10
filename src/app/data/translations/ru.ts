@@ -372,6 +372,7 @@ export const ru: TranslatedStrings = {
   },
   'Pink Floyd': {
     name: 'Пинк Флойд',
+    description: '',
   },
   'Playing cards': {
     name: 'Игральные карты',
