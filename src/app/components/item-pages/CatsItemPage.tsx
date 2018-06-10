@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import styled from 'app/styled-components'
 import {inject} from 'mobx-react'
 import {prepend, compose} from 'ramda'
 

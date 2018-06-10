@@ -1,4 +1,4 @@
-import {injectGlobal} from 'styled-components'
+import {injectGlobal} from 'app/styled-components'
 import {media} from 'app/helpers/css'
 
 // tslint:disable-next-line no-unused-expression

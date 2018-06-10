@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import styled from 'app/styled-components'
 
 function liNumberToFontSize(liCount: number, n: number) {
   return 1.2 + (liCount - n) * 0.5

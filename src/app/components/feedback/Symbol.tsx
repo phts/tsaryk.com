@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'app/styled-components'
 
 import {blinkAnimation} from 'app/helpers/css'
 
