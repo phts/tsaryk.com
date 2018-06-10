@@ -54,6 +54,10 @@ export default compose(
   scrollToTopOnMount,
   inject('itemsStore'),
 )(styled(ShowItemPage)`
+  a {
+    color: inherit;
+  }
+
   a[href^="callto"],
   a[href^="mailto"],
   a[href^="tel"],
