@@ -6,6 +6,7 @@ export const breakpoints = {
   smartphone: 480,
   tablet: 720,
   desktop: 1020,
+  hd: 1440,
 }
 
 type BreakpointsLabel = keyof typeof breakpoints
