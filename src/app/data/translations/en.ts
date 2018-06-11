@@ -146,6 +146,10 @@ export const en: TranslatedStrings = {
   Uber: {
   },
   Ultramarined: {
+    data: {
+      ultrimarine: 'Ultramarine me!',
+      unultrimarine: 'Unultramarine',
+    },
   },
   'Video games': {
   },

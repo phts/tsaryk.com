@@ -550,6 +550,10 @@ export const ru: TranslatedStrings = {
         ${a('http://phts.github.io/ultramarined.by/', 'зеркале официального сайта')}.
       </p>
     `,
+    data: {
+      ultrimarine: 'Заультрамаринить',
+      unultrimarine: 'Разультрамаринить',
+    },
   },
   'Video games': {
     name: 'Компьютерные игры',
