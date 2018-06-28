@@ -520,6 +520,16 @@ export const ru: TranslatedStrings = {
     name: 'Нидерланды',
     description: p('Обязательно буду жить там.'),
   },
+  Uber: {
+    name: 'Убер',
+    description: `
+      <p>
+        На всякий случай мои промокоды: для Убера &mdash;
+        <strong>${a('https://www.uber.com/invite/3daguge8ue', '3daguge8ue')}</strong>,
+        для Убер-итс &mdash; <strong>eats-3daguge8ue</strong>.
+      </p>
+    `,
+  },
   Ultramarined: {
     name: 'Ультрамаринд',
     description: `

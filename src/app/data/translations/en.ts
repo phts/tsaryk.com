@@ -141,6 +141,8 @@ export const en: TranslatedStrings = {
   },
   'The Netherlands': {
   },
+  Uber: {
+  },
   Ultramarined: {
   },
   'Video games': {

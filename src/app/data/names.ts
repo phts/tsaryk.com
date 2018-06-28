@@ -59,6 +59,7 @@ export enum Names {
   'Stack Overflow',
   'Sublime Text',
   'The Netherlands',
+  Uber,
   Ultramarined,
   'Video games',
   VK,
