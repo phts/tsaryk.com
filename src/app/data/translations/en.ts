@@ -8,6 +8,8 @@ export const en: TranslatedStrings = {
   },
   '© Phil Tsarik, 2018': {
   },
+  About: {
+  },
   Contacts: {
   },
   Hobby: {

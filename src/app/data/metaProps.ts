@@ -55,6 +55,9 @@ export const metaPropsMap: MetaPropsMap = {
     position: ItemPosition.Tail,
   },
 
+  About: {
+    type: ItemType.Category,
+  },
   Contacts: {
     type: ItemType.Category,
   },

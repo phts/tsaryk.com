@@ -32,6 +32,7 @@ const sortFunc: {[index in Mode]: (x: List) => List} = {
 }
 
 const CATEGORIES: ItemId[] = [
+  'About',
   'Contacts',
   'Work',
   'Hobby',

@@ -14,12 +14,9 @@ export const DEFAULT_CATEGORY_PROPS: CategoryProps = {
 }
 
 const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
-  Contacts: [
-    '+375292181503',
-    '+48534898187',
+  About: [
     'Age',
     'Belarus',
-    'Email',
     'Facebook',
     'Kraków',
     'LinkedIn',
@@ -27,8 +24,13 @@ const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
     'Phil Tsarik',
     'Pilip Tsaryk',
     'Poland',
-    'Skype',
     'VK',
+  ],
+  Contacts: [
+    '+375292181503',
+    '+48534898187',
+    'Email',
+    'Skype',
   ],
   Hobby: [
     'Android',

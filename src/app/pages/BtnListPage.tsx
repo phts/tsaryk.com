@@ -31,6 +31,7 @@ type KnownBtnMap = {
 }
 
 const knownBtns: KnownBtnMap = {
+  About: CategoryBtn,
   Contacts: CategoryBtn,
   Hobby: CategoryBtn,
   Meta: CategoryBtn,

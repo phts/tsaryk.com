@@ -23,6 +23,9 @@ export const ru: TranslatedStrings = {
       <p>${a('https://github.com/phts/tsarik.me', 'Исходный код сайта выложен')} на Гитхаб.</p>
     `,
   },
+  About: {
+    name: 'Обо мне',
+  },
   Contacts: {
     name: 'Контакты',
   },

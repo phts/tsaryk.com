@@ -7,6 +7,7 @@ export enum Names {
   '© Phil Tsarik, 2018',
   '+375292181503',
   '+48534898187',
+  About,
   Age,
   Android,
   Ascending,
