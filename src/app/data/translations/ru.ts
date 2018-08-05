@@ -333,6 +333,8 @@ export const ru: TranslatedStrings = {
                'Anathema в Кракове, 2017 г.')}
       ${figure(picture('FOuMsdO', 'Opeth в Варшаве, 2017 г.'),
                'Opeth в Варшаве, 2017 г.')}
+      ${figure(picture('zMy5wbq', 'Roger Waters в Кракове, 2018 г.'),
+               'Roger Waters в Кракове, 2018 г.')}
       <p>Осталось:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>
