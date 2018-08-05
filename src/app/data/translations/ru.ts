@@ -317,22 +317,22 @@ export const ru: TranslatedStrings = {
       <p>Сейчас с ребятами в ${link('Krako\u0301w', 'Кракове')} пытаемся играть и сочинять что-то своё.<p>
       <h3>Хожу на концерты</h3>
       <p>Из своего маст-хэв списка уже побывал:</p>
-      ${figure(picture('FykwSDm', 'Deep Purple в Минске, 2011 год'),
-               'Deep Purple в Минске, 2011 год')}
-      ${figure(picture('qIIb0bR', 'God is an Astronaut в Санкт-Петербурге, 2012 год'),
-               'God is an Astronaut в Санкт-Петербурге, 2012 год')}
-      ${figure(picture('dPNRWdG', 'Australian Pink Floyd Show в Минске, 2013 год'),
-               'Australian Pink Floyd Show в Минске, 2013 год')}
-      ${figure(picture('tcyuP0Q', 'Dream Theater в Катовице, 2015 год'),
-               'Dream Theater в Катовице, 2015 год')}
-      ${figure(picture('yDFhHGF', 'Riverside в Катовице, 2015 год'),
-               'Riverside в Катовице, 2015 год')}
-      ${figure(picture('5oDXQ4s', 'Дэвид Гилмор во Франции, 2016 год'),
-               'Дэвид Гилмор во Франции, 2016 год')}
-      ${figure(picture('pxy4Skj', 'Anathema в Кракове, 2017 год'),
-               'Anathema в Кракове, 2017 год')}
-      ${figure(picture('FOuMsdO', 'Opeth в Варшаве, 2017 год'),
-               'Opeth в Варшаве, 2017 год')}
+      ${figure(picture('FykwSDm', 'Deep Purple в Минске, 2011 г.'),
+               'Deep Purple в Минске, 2011 г.')}
+      ${figure(picture('qIIb0bR', 'God is an Astronaut в Санкт-Петербурге, 2012 г.'),
+               'God is an Astronaut в Санкт-Петербурге, 2012 г.')}
+      ${figure(picture('dPNRWdG', 'Australian Pink Floyd Show в Минске, 2013 г.'),
+               'Australian Pink Floyd Show в Минске, 2013 г.')}
+      ${figure(picture('tcyuP0Q', 'Dream Theater в Катовице, 2015 г.'),
+               'Dream Theater в Катовице, 2015 г.')}
+      ${figure(picture('yDFhHGF', 'Riverside в Катовице, 2015 г.'),
+               'Riverside в Катовице, 2015 г.')}
+      ${figure(picture('5oDXQ4s', 'Дэвид Гилмор во Франции, 2016 г.'),
+               'Дэвид Гилмор во Франции, 2016 г.')}
+      ${figure(picture('pxy4Skj', 'Anathema в Кракове, 2017 г.'),
+               'Anathema в Кракове, 2017 г.')}
+      ${figure(picture('FOuMsdO', 'Opeth в Варшаве, 2017 г.'),
+               'Opeth в Варшаве, 2017 г.')}
       <p>Осталось:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>
