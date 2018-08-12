@@ -51,7 +51,7 @@ export const metaPropsMap: MetaPropsMap = {
     size: ItemSize.XXL,
     type: ItemType.Meta,
   },
-  '© Phil Tsarik, 2018': {
+  '© Phil Tsaryk, 2018': {
     position: ItemPosition.Tail,
   },
 
@@ -108,7 +108,7 @@ export const metaPropsMap: MetaPropsMap = {
   Music: {
     size: ItemSize.XL,
   },
-  'Phil Tsarik': {
+  'Phil Tsaryk': {
     size: ItemSize.XXL,
   },
   'Pink Floyd': {

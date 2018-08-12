@@ -6,7 +6,7 @@ export const en: TranslatedStrings = {
   },
   RU: {
   },
-  '© Phil Tsarik, 2018': {
+  '© Phil Tsaryk, 2018': {
   },
   About: {
   },
@@ -101,7 +101,7 @@ export const en: TranslatedStrings = {
   },
   Novopolotsk: {
   },
-  'Phil Tsarik': {
+  'Phil Tsaryk': {
   },
   'Pilip Tsaryk': {
     description: `

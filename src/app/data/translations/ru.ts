@@ -10,7 +10,7 @@ export const ru: TranslatedStrings = {
   RU: {
     name: 'РУС',
   },
-  '© Phil Tsarik, 2018': {
+  '© Phil Tsaryk, 2018': {
     name: '© Филипп Царик, 2018',
     description: `
       <p>Этот сайт создавался и поддерживается мной в свободное время.</p>
@@ -137,7 +137,7 @@ export const ru: TranslatedStrings = {
       <p>
         Если подробнее &mdash; всегда актуальное резюме доступно на
         ${a('https://github.com/phts/my-cv', 'Гитхабе')}, а также на
-        ${a('https://www.linkedin.com/in/tsarik/', 'Линкедине')}.
+        ${a('https://www.linkedin.com/in/tsaryk/', 'Линкедине')}.
       </p>
     `,
   },
@@ -180,7 +180,10 @@ export const ru: TranslatedStrings = {
   },
   Facebook: {
     name: 'Фейсбук',
-    description: p(`${a('https://www.facebook.com/phil.tsarik', 'Моя страничка')} на фэйсбуке.`),
+    description: `
+      <p>${a('https://www.facebook.com/ph.tsaryk', 'Моя страничка')} на фэйсбуке.</p>
+      <p>Захожу туда очень редко.</p>
+    `,
   },
   Feedback: {
     name: 'Обратная связь',
@@ -354,7 +357,7 @@ export const ru: TranslatedStrings = {
       </p>
     `,
   },
-  'Phil Tsarik': {
+  'Phil Tsaryk': {
     name: 'Филипп Царик',
     description: `
       <p>
@@ -585,7 +588,7 @@ export const ru: TranslatedStrings = {
   },
   VK: {
     name: 'ВК',
-    description: p(`${a('https://vk.com/phil.tsarik', 'Моя страница')} в ВК.`),
+    description: p(`${a('https://vk.com/phil.tsaryk', 'Моя страница')} в ВК.`),
   },
   'ZX Spectrum': {
     name: 'Зэд Икс Спектрум',

@@ -21,7 +21,7 @@ const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
     'Kraków',
     'LinkedIn',
     'Novopolotsk',
-    'Phil Tsarik',
+    'Phil Tsaryk',
     'Pilip Tsaryk',
     'Poland',
     'VK',
@@ -68,7 +68,7 @@ const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
     'Random',
     'Title',
     'Work',
-    '© Phil Tsarik, 2018',
+    '© Phil Tsaryk, 2018',
   ],
   Work: [
     'BitBucket',
