@@ -1,5 +1,6 @@
 # tsarik.me
 
+[![Last commit (master)](https://img.shields.io/github/last-commit/phts/tsarik.me/master.svg)](https://github.com/phts/tsarik.me)
 [![CircleCI](https://img.shields.io/circleci/project/github/phts/tsarik.me/master.svg)](https://circleci.com/gh/phts/tsarik.me/tree/master)
 
 My home page. And my playground for new stuff.
