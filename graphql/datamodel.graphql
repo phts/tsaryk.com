@@ -1,0 +1,10 @@
+type Item {
+  id: ID! @unique
+  name: String!
+
+  category: String
+  description: String
+  position: String
+  size: String
+  type: String
+}
