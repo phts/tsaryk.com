@@ -20,7 +20,7 @@ export const ru: TranslatedStrings = {
         <li>MobX</li>
         <li>TypeScript</li>
       </ul>
-      <p>${a('https://github.com/phts/tsarik.me', 'Исходный код сайта выложен')} на Гитхаб.</p>
+      <p>${a('https://github.com/phts/tsaryk.com', 'Исходный код сайта выложен')} на Гитхаб.</p>
     `,
   },
   About: {
