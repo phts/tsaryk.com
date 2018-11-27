@@ -3,6 +3,9 @@ import browserLocale from 'browser-locale'
 
 import langStore from 'app/stores/langStore'
 
+const SERVICE_ID = 'feedback_tsaryk_com'
+const TEMPLATE_ID = 'tsarik_me'
+
 emailjs.init('user_C3T41f8F0pv1ekwT39nYw')
 
 type TemplateParams = {
@@ -32,7 +35,7 @@ class EmailService {
       text,
       userAgent: navigator.userAgent,
     }
-    return emailjs.send('tsarik.me', 'tsarik_me', params)
+    return emailjs.send(SERVICE_ID, TEMPLATE_ID, params)
   }
 }
 

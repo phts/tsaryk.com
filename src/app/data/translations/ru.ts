@@ -161,7 +161,7 @@ export const ru: TranslatedStrings = {
   },
   Email: {
     name: 'Имейл',
-    description: p(`Мой имейл: ${mailto('phil.tsarik@gmail.com')}.`),
+    description: p(`Мой имейл: ${mailto('phil@tsaryk.com')}.`),
   },
   Epam: {
     name: 'Епам',

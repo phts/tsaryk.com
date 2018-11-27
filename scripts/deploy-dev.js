@@ -8,7 +8,7 @@ ghpages.publish('dist', {
   message: `Publish branch "${BRANCH}"`,
   user: {
     name: 'CircleCI',
-    email: 'phil.tsarik@gmail.com',
+    email: 'phil@tsaryk.com',
   },
 }, err => {
   if (err) {
