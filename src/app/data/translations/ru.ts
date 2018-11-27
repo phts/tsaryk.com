@@ -288,7 +288,7 @@ export const ru: TranslatedStrings = {
   },
   LinkedIn: {
     name: 'ЛинкедИн',
-    description: p(`${a('https://www.linkedin.com/in/tsarik/', 'Мой профиль')} на ЛинкедИне.`),
+    description: p(`${a('https://www.linkedin.com/in/tsaryk/', 'Мой профиль')} на ЛинкедИне.`),
   },
   Music: {
     name: 'Музыка',
