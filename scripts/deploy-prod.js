@@ -20,6 +20,7 @@ function printResult(result) {
   try {
     const result = await exec(
       `lftp -u ${FTP_USER},${FTP_PASSWORD} ${FTP_URL} <<END_SCRIPT
+      set ftp:ssl-allow no
       mirror -R --delete --delete-first dist/ .
       quit
       END_SCRIPT`
