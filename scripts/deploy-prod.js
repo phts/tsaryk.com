@@ -22,7 +22,7 @@ function printResult(result) {
 (async function () {
   try {
     const commands = [
-      ['scp', '-r', DIST_FILES, `${SSH_USER}@${SSH_HOST}:${SSH_PATH}`],
+      ['scp', '-r', '-o', 'StrictHostKeyChecking=no', DIST_FILES, `${SSH_USER}@${SSH_HOST}:${SSH_PATH}`],
       ['ssh', `${SSH_USER}@${SSH_HOST}`, SSH_SCRIPT],
     ]
     for (const args of commands) {
