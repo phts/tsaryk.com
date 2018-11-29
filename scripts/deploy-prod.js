@@ -22,8 +22,18 @@ function printResult(result) {
 (async function () {
   try {
     const commands = [
-      ['scp', '-r', '-o', 'StrictHostKeyChecking=no', DIST_FILES, `${SSH_USER}@${SSH_HOST}:${SSH_PATH}`],
-      ['ssh', `${SSH_USER}@${SSH_HOST}`, SSH_SCRIPT],
+      [
+        'scp', '-r',
+        '-o', 'StrictHostKeyChecking=no',
+        DIST_FILES,
+        `${SSH_USER}@${SSH_HOST}:${SSH_PATH}`,
+      ],
+      [
+        'ssh',
+        '-o', 'LogLevel=ERROR',
+        `${SSH_USER}@${SSH_HOST}`,
+        SSH_SCRIPT,
+      ],
     ]
     for (const args of commands) {
       const command = shellescape(args)
