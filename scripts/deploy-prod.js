@@ -2,10 +2,13 @@
 
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
+const shellescape = require('shell-escape')
 
-const FTP_URL = process.env.FTP_URL
-const FTP_USER = process.env.FTP_USER
-const FTP_PASSWORD = process.env.FTP_PASSWORD
+const DIST_FILES = 'dist/.'
+const SSH_HOST = process.env.SSH_HOST
+const SSH_PATH = process.env.SSH_PATH
+const SSH_SCRIPT = process.env.SSH_SCRIPT
+const SSH_USER = process.env.SSH_USER
 
 function printResult(result) {
   if (result.stdout) {
@@ -18,14 +21,15 @@ function printResult(result) {
 
 (async function () {
   try {
-    const result = await exec(
-      `lftp -u ${FTP_USER},${FTP_PASSWORD} ${FTP_URL} <<END_SCRIPT
-      set ftp:ssl-allow no
-      mirror -R --delete --delete-first dist/ .
-      quit
-      END_SCRIPT`
-    )
-    printResult(result)
+    const commands = [
+      ['scp', '-r', DIST_FILES, `${SSH_USER}@${SSH_HOST}:${SSH_PATH}`],
+      ['ssh', `${SSH_USER}@${SSH_HOST}`, SSH_SCRIPT],
+    ]
+    for (const args of commands) {
+      const command = shellescape(args)
+      const result = await exec(command)
+      printResult(result)
+    }
   } catch (e) {
     printResult(e)
     process.exit(1)

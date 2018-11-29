@@ -62,6 +62,7 @@
     "local-web-server": "^2.3.0",
     "mockdate": "^2.0.2",
     "rmrf": "^1.0.2",
+    "shell-escape": "^0.2.0",
     "ts-jest": "^21.2.1",
     "tslint": "^5.8.0",
     "tslint-loader": "https://github.com/wbuchwalter/tslint-loader.git#093230076f3b453c4f8b7aa2ee074932aa109e84",
