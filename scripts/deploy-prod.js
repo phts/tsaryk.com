@@ -25,6 +25,7 @@ function printResult(result) {
       [
         'scp', '-r',
         '-o', 'StrictHostKeyChecking=no',
+        '-o', 'LogLevel=ERROR',
         DIST_FILES,
         `${SSH_USER}@${SSH_HOST}:${SSH_PATH}`,
       ],
