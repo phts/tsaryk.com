@@ -9,8 +9,9 @@
     "clean": "rimraf ./dist",
     "deploy:dev": "node ./scripts/deploy-dev.js",
     "deploy:prod": "node ./scripts/deploy-prod.js",
+    "eslint": "eslint .",
     "fix": "npm run tslint -- --fix",
-    "lint": "npm run tslint",
+    "lint": "npm run tslint && npm run eslint",
     "prebuild:dev": "npm run clean",
     "prebuild:prod": "npm run clean",
     "serve": "ws --directory ./dist --spa ./index.html --port 8080",
@@ -40,6 +41,7 @@
     "styled-components": "^2.2.3"
   },
   "devDependencies": {
+    "@phts/eslint-config": "^1.2.1",
     "@types/jest": "^21.1.5",
     "@types/mockdate": "^2.0.0",
     "@types/ramda": "^0.25.2",
@@ -53,6 +55,7 @@
     "babel-plugin-ramda": "^1.4.3",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-env": "^1.6.1",
+    "eslint": "^5.9.0",
     "favicons-webpack-plugin": "0.0.9",
     "file-loader": "^1.1.11",
     "gh-pages": "^1.2.0",
