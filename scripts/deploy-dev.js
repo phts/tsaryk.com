@@ -1,3 +1,5 @@
+'use strict'
+
 const ghpages = require('gh-pages')
 
 const BRANCH = process.env.CIRCLE_BRANCH

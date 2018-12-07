@@ -1,12 +1,13 @@
+'use strict'
+
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const project = path.resolve(__dirname, '..')
 const src = path.resolve(project, 'src')
 const app = path.resolve(src, 'app')
-const static = path.resolve(src, 'static')
+const staticDir = path.resolve(src, 'static')
 const dist = path.resolve(project, 'dist')
 
 const imgOutputPath = 'static/img/'
@@ -50,7 +51,7 @@ const plugins = [
       opengraph: false,
       twitter: false,
       yandex: false,
-      windows: false
+      windows: false,
     },
     logo: path.resolve(project, 'svg', 'favicon.svg'),
     prefix: 'static/icons-[hash:4]/',
@@ -76,8 +77,8 @@ module.exports = ({prod = false, analyzer} = {}) => {
     resolve: {
       alias: {
         app,
-        static,
-        'react': 'preact-compat',
+        static: staticDir,
+        react: 'preact-compat',
         'react-dom': 'preact-compat',
       },
       extensions: ['.tsx', '.ts', '.js'],

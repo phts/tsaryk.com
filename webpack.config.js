@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = (env = {}) => {
   if (env.prod) {
     return require('./config/webpack.prod.js')(env)

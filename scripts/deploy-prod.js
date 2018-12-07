@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+'use strict'
+
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
 const shellescape = require('shell-escape')
@@ -45,4 +47,4 @@ function printResult(result) {
     printResult(e)
     process.exit(1)
   }
-})()
+}())

@@ -1,5 +1,7 @@
+'use strict'
+
 module.exports = {
-  process(src) {
+  process() {
     return ''
-  }
+  },
 }
