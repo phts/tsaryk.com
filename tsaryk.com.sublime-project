@@ -4,5 +4,9 @@
 		{
 			"path": "."
 		}
-	]
+	],
+  "settings":
+  {
+    "SublimeLinter.linters.tslint.args": ["-c", "./tslint.js", "-p", "./tsconfig.json"]
+  }
 }
