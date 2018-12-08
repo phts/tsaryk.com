@@ -51,7 +51,11 @@ export const en: TranslatedStrings = {
   Cats: {
     data: [
       {icon: '&#x1F989;', text: 'Owls'},
-      {icon: '&#x1F47D;', text: 'Raccoons', tooltip: 'Raccoons don\'t have their own emoji in unicode yet'},
+      {
+        icon: '&#x1F47D;',
+        text: 'Raccoons',
+        tooltip: 'Raccoons don\'t have their own emoji in unicode yet',
+      },
       {icon: '&#x1F98A;', text: 'Foxes'},
       {icon: '&#x1F418;', text: 'Elephants'},
     ],
