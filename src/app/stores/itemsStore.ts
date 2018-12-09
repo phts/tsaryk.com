@@ -54,7 +54,8 @@ function toDefaultItem(id: ItemId): Item {
   )
 }
 
-function toItem(strings: TranslatedStrings, fallback: TranslatedStrings): (defaultItem: Item, id: ItemId) => Item {
+function toItem(strings: TranslatedStrings, fallback: TranslatedStrings):
+               (defaultItem: Item, id: ItemId) => Item {
   return (defaultItem: Item, id: ItemId) => Object.assign({},
     defaultItem,
     metaPropsMap[id] || {},

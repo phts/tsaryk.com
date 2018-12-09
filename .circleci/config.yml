@@ -8,7 +8,7 @@ jobs:
       - run:
           name: Upgrade npm
           command: |
-            sudo npm install --no-progress -g npm@6.1.0
+            sudo npm install --no-progress -g npm@6.4.1
       - checkout
       - restore_cache:
           keys:
@@ -23,7 +23,7 @@ jobs:
       - run: npm run build:prod:relative
       - add_ssh_keys:
           fingerprints:
-            - "06:36:ad:60:32:63:b1:d9:c4:d8:89:98:87:c9:2e:c4"
+            - "ef:f5:a9:bb:63:8d:9e:1d:ce:ab:1b:12:8d:a3:db:22"
       - deploy:
           command: npm run deploy:dev
 
@@ -35,7 +35,7 @@ jobs:
       - run:
           name: Upgrade npm
           command: |
-            sudo npm install --no-progress -g npm@6.1.0
+            sudo npm install --no-progress -g npm@6.4.1
       - checkout
       - restore_cache:
           keys:
@@ -48,11 +48,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package-lock.json" }}
       - run: npm run lint
       - run: npm run build:prod
-      - run:
-          name: Install lftp
-          command: |
-            sudo apt-get update
-            sudo apt-get -qq install lftp
+      - add_ssh_keys:
+          fingerprints:
+            - "ef:f5:a9:bb:63:8d:9e:1d:ce:ab:1b:12:8d:a3:db:22"
       - deploy:
           command: npm run deploy:prod
 

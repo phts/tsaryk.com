@@ -1,7 +1,7 @@
-# tsarik.me
+# tsaryk.com
 
-[![Last commit (master)](https://img.shields.io/github/last-commit/phts/tsarik.me/master.svg)](https://github.com/phts/tsarik.me)
-[![CircleCI](https://img.shields.io/circleci/project/github/phts/tsarik.me/master.svg)](https://circleci.com/gh/phts/tsarik.me/tree/master)
+[![Last commit (master)](https://img.shields.io/github/last-commit/phts/tsaryk.com/master.svg)](https://github.com/phts/tsaryk.com)
+[![CircleCI](https://img.shields.io/circleci/project/github/phts/tsaryk.com/master.svg)](https://circleci.com/gh/phts/tsaryk.com/tree/master)
 
 My home page. And my playground for new stuff.
 

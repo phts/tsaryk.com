@@ -1,3 +1,4 @@
+/* tslint:disable:ter-max-len */
 import * as React from 'react'
 
 export type AnyComponentClass<P> = React.ComponentClass<P> | React.StatelessComponent<P>

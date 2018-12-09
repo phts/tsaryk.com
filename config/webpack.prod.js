@@ -1,3 +1,5 @@
+'use strict'
+
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const common = require('./webpack.common')
@@ -22,6 +24,7 @@ module.exports = (env = {}) => {
           sourceMap: true,
           uglifyOptions: {
             compress: {
+              // eslint-disable-next-line camelcase
               reduce_vars: false,
             },
           },

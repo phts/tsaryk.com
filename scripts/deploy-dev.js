@@ -1,7 +1,9 @@
+'use strict'
+
 const ghpages = require('gh-pages')
 
 const BRANCH = process.env.CIRCLE_BRANCH
-console.info(`Deploying to https://phts.github.io/tsarik.me/${BRANCH}/`)
+console.info(`Deploying to https://phts.github.io/tsaryk.com/${BRANCH}/`)
 
 ghpages.publish('dist', {
   dest: BRANCH,

@@ -4,7 +4,7 @@ import browserLocale from 'browser-locale'
 import langStore from 'app/stores/langStore'
 
 const SERVICE_ID = 'feedback_tsaryk_com'
-const TEMPLATE_ID = 'tsarik_me'
+const TEMPLATE_ID = 'tsaryk_com'
 
 emailjs.init('user_C3T41f8F0pv1ekwT39nYw')
 

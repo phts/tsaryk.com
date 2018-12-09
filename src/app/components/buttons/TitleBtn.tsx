@@ -4,8 +4,8 @@ import styled from 'app/styled-components'
 import GenericLi from './generic/GenericLi'
 import asBtn, {BtnProps} from './asBtn'
 
-const TITLE = 'tsarik.me'
-const URL = 'http://tsarik.me/'
+const TITLE = 'tsaryk.com'
+const URL = 'http://tsaryk.com/'
 
 const TitleBtn: React.StatelessComponent<BtnProps> = ({flexBasis, flexible}) => (
   <GenericLi flexBasis={flexBasis} flexible={flexible}>

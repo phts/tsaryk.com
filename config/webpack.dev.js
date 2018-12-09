@@ -1,3 +1,5 @@
+'use strict'
+
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const common = require('./webpack.common')
@@ -13,5 +15,5 @@ module.exports = (env = {}) => merge(common(env), {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-  ]
+  ],
 })
