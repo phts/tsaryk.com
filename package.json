@@ -20,7 +20,7 @@
     "start:dev:external": "npm run start:dev -- --host 0.0.0.0",
     "start:prod": "npm run build && npm run serve",
     "test": "jest",
-    "tslint": "tslint -c ./tslint.js -p ./tsconfig.json",
+    "tslint": "tslint -c ./.tslint.js -p ./tsconfig.json",
     "webpack": "webpack",
     "webpack-dev-server": "webpack-dev-server"
   },
