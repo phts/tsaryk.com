@@ -65,4 +65,4 @@ workflows:
       - deploy-prod:
           filters:
             branches:
-              only: tsaryk-com
+              only: master
