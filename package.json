@@ -42,6 +42,8 @@
   },
   "devDependencies": {
     "@phts/eslint-config": "^1.2.1",
+    "@phts/tslint-config": "^0.1.0",
+    "@teppeis/tslint-eslint-rules": "^5.4.0",
     "@types/jest": "^21.1.5",
     "@types/mockdate": "^2.0.0",
     "@types/ramda": "^0.25.2",
@@ -68,8 +70,6 @@
     "shell-escape": "^0.2.0",
     "ts-jest": "^21.2.1",
     "tslint": "^5.11.0",
-    "tslint-eslint-rules": "^5.4.0",
-    "tslint-import-eslint-config": "^1.0.3",
     "tslint-loader": "^3.5.4",
     "typescript": "^2.7.2",
     "typescript-eslint-parser": "^21.0.1",
