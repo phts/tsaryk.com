@@ -56,6 +56,7 @@ const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
     'foobar2000',
   ],
   Meta: [
+    'About',
     'Ascending',
     'Categorize',
     'Colors',
