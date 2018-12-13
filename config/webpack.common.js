@@ -11,6 +11,7 @@ const staticDir = path.resolve(src, 'static')
 const dist = path.resolve(project, 'dist')
 
 const imgOutputPath = 'static/img/'
+const cursorOutputPath = 'static/cursor/'
 
 
 const ES6_NODE_MODULES = [
@@ -140,6 +141,15 @@ module.exports = ({prod = false, analyzer} = {}) => {
               },
             },
           ],
+        },
+        {
+          test: /\.png$/,
+          exclude: /node_modules/,
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash:4].[ext]',
+            outputPath: cursorOutputPath,
+          },
         },
         {
           test: /\.js$/,
