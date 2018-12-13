@@ -353,12 +353,13 @@ export const ru: TranslatedStrings = {
                'Opeth в Варшаве, 2017 г.')}
       ${figure(picture('zMy5wbq', 'Roger Waters в Кракове, 2018 г.'),
                'Roger Waters в Кракове, 2018 г.')}
+      ${figure(picture('mROYG5y', 'Nightwish в Кракове, 2018 г.'),
+               'Nightwish в Кракове, 2018 г.')}
       <p>Осталось:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>
       <li>The Gathering</li>
       <li>The Morningside</li>
-      <li>Nightwish</li>
       </ul>
     `,
   },
