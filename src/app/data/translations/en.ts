@@ -2,7 +2,7 @@ import {TranslatedStrings} from './index'
 
 export const en: TranslatedStrings = {
   EN: {
-    tooltip: 'Not translated yet. Sorry.',
+    tooltip: 'Not fully translated yet. Sorry.',
   },
   RU: {
   },
