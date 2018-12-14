@@ -153,7 +153,7 @@ export const ru: TranslatedStrings = {
     description: `
       <h3>Мой сет</h3>
       <ul>
-        <li>Paiste Signature Dry Ride 20&Prime;</li>
+        <li>Paiste Dimensions Medium Heavy Wild Ride 21&Prime;</li>
         <li>Paiste 2002 Medium Crash 18&Prime;</li>
         <li>Paiste Signature Precision Crash 17&Prime;</li>
         <li>Paiste 2002 Sound Edge Hi-Hat 14&Prime;</li>
