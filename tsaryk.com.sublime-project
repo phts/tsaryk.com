@@ -7,6 +7,6 @@
 	],
   "settings":
   {
-    "SublimeLinter.linters.tslint.args": ["-c", "./.tslint.js", "-p", "./tsconfig.json"]
+    "SublimeLinter.linters.tslint.args": ["-p", "./tsconfig.json"]
   }
 }

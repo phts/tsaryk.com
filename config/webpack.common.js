@@ -106,7 +106,6 @@ module.exports = ({prod = false, analyzer} = {}) => {
           exclude: /node_modules/,
           loader: 'tslint-loader',
           options: {
-            configFile: '.tslint.js',
             emitWarnings: !prod,
             emitErrors: prod,
             failOnHint: prod,

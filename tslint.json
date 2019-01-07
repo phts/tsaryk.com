@@ -1,0 +1,3 @@
+{
+  "extends": "@phts/tslint-config"
+}
