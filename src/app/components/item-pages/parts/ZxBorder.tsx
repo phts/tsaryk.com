@@ -14,7 +14,7 @@ const ZxBorder: React.StatelessComponent = ({children}) => (
 )
 
 const Content = styled.div`
-  background-color: white;
+  background-color: ${props => props.theme.backgroundColor};
   min-height: calc(100% - 10rem);
   width: calc(100% - 10rem);
   z-index: 1;
