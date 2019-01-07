@@ -119,6 +119,8 @@ export const en: TranslatedStrings = {
   },
   Poland: {
   },
+  'Promo codes': {
+  },
   PSU: {
   },
   Random: {
@@ -146,8 +148,6 @@ export const en: TranslatedStrings = {
   Title: {
   },
   'The Netherlands': {
-  },
-  Uber: {
   },
   Ultramarined: {
     data: {

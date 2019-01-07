@@ -566,14 +566,20 @@ ${link('Krako\u0301w', 'Кракове')}.`),
     name: 'Нидерланды',
     description: p('Обязательно буду жить там.'),
   },
-  Uber: {
-    name: 'Убер',
+  'Promo codes': {
+    name: 'Промокоды',
     description: `
       <p>
-        На всякий случай мои промокоды: для Убера &mdash;
-        <strong>${a('https://www.uber.com/invite/3daguge8ue', '3daguge8ue')}</strong>,
-        для Убер-итс &mdash; <strong>eats-3daguge8ue</strong>.
+        Пользуйтесь:
       </p>
+      <ul>
+        <li>Bank Millennium:
+          ${a('https://www.bankmillennium.pl/lubietopolecam?id=24586296', '24586296')}</li>
+        <li>Revolut: ${a('https://revolut.com/r/pilip1ip', 'pilip1ip')}</li>
+        <li>Taxify: S5S8K8</li>
+        <li>Maxim: 9D06F7E7</li>
+        <li>Uber: ${a('https://www.uber.com/invite/3daguge8ue', '3daguge8ue')}</li>
+      </ul>
     `,
   },
   Ultramarined: {
