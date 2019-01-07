@@ -399,7 +399,7 @@ export const ru: TranslatedStrings = {
   },
   'Pilip Tsaryk': {
     name: 'Пiлiп Царык',
-    description: p('Па-беларуску маё імя пішацца менавіта так.'),
+    description: p('Афіцыйна маё імя пішацца менавіта так.'),
   },
   'Pink Floyd': {
     name: 'Пинк Флойд',
