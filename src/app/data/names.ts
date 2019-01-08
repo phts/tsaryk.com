@@ -26,6 +26,7 @@ export enum Names {
   Email,
   Epam,
   Facebook,
+  Family,
   Feedback,
   Firefox,
   foobar2000,

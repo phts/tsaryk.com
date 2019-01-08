@@ -74,6 +74,8 @@ export const en: TranslatedStrings = {
   },
   Facebook: {
   },
+  Family: {
+  },
   Feedback: {
     data: {
       sayHello: 'Say hello...',

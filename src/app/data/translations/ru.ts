@@ -188,6 +188,10 @@ export const ru: TranslatedStrings = {
       <p>Захожу туда очень редко.</p>
     `,
   },
+  Family: {
+    name: 'Семья',
+    description: picture('2GcRB9u', 'Царики'),
+  },
   Feedback: {
     name: 'Обратная связь',
     data: {
@@ -293,6 +297,11 @@ export const ru: TranslatedStrings = {
   },
   Krako\u0301w: {
     name: 'Краков',
+    description: `
+      <p>
+        Живём тут с ${link('Family', 'семьёй')} уже более трёх лет.
+      </p>
+    `,
   },
   'Last.fm': {
     name: 'Ласт.фм',
