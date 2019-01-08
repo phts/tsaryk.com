@@ -1,5 +1,5 @@
 import {TranslatedStrings} from './index'
-import {a, callto, figure, img, link, mailto, p, tel} from 'app/helpers/html'
+import {a, callto, figure, img, link, mailto, p, tel, youtube} from 'app/helpers/html'
 import {picture} from 'app/helpers/imgur'
 
 export const ru: TranslatedStrings = {
@@ -283,14 +283,7 @@ export const ru: TranslatedStrings = {
         и настроению. Несмотря на это, я с огромным удовольствием играл в этой группе.
       </p>
       <p>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/egVPsfDi81A?rel=0"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen>
-        </iframe>
+        ${youtube('egVPsfDi81A')}
       </p>
       <p>Осталась страничка в контакте: ${a('https://vk.com/joyintimes', 'joyintimes')}</p>
     `,

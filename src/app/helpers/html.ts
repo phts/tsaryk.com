@@ -43,3 +43,17 @@ export function figure(imgEl: string, text: string) {
     </figure>
   `
 }
+
+export function youtube(id: string) {
+  return `
+    <iframe
+      class="youtube"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/${id}?rel=0"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  `
+}

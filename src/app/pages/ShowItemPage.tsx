@@ -110,7 +110,7 @@ export default compose(
     width: 100%;
   }
 
-  iframe {
+  iframe.youtube {
     max-width: 720px;
     max-height: 410px;
     height: calc((100vw - 20rem) * 0.57);
