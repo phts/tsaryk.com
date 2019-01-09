@@ -115,8 +115,6 @@ export const en: TranslatedStrings = {
       <p>This is how it is written in my passport.</p>
     `,
   },
-  'Pink Floyd': {
-  },
   'Playing cards': {
   },
   Poland: {

@@ -114,9 +114,6 @@ export const metaPropsMap: MetaPropsMap = {
   'Phil Tsaryk': {
     size: ItemSize.XXL,
   },
-  'Pink Floyd': {
-    size: ItemSize.L,
-  },
   React: {
     size: ItemSize.L,
   },

@@ -45,7 +45,6 @@ export enum Names {
   Novopolotsk,
   'Phil Tsaryk',
   'Pilip Tsaryk',
-  'Pink Floyd',
   'Playing cards',
   Poland,
   'Promo codes',

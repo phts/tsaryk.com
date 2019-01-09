@@ -311,7 +311,7 @@ export const ru: TranslatedStrings = {
       <h3>Слушаю</h3>
       <p>Мой топ на данный момент:<p>
       <ul>
-        <li>${link('Pink Floyd')}</li>
+        <li>Pink Floyd</li>
         <li>Lunatic Soul</li>
         <li>Riverside</li>
         <li>Deep Purple</li>
@@ -402,9 +402,6 @@ export const ru: TranslatedStrings = {
   'Pilip Tsaryk': {
     name: 'Пiлiп Царык',
     description: p('Афіцыйна маё імя пішацца менавіта так.'),
-  },
-  'Pink Floyd': {
-    name: 'Пинк Флойд',
   },
   'Playing cards': {
     name: 'Игральные карты',

@@ -43,7 +43,6 @@ const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
     'Joy in Time',
     'Last.fm',
     'Music',
-    'Pink Floyd',
     'Playing cards',
     'Promo codes',
     'Ritchie Blackmore',
