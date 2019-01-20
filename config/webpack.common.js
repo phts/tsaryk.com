@@ -4,24 +4,21 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
-const project = path.resolve(__dirname, '..')
-const src = path.resolve(project, 'src')
-const app = path.resolve(src, 'app')
-const staticDir = path.resolve(src, 'static')
-const dist = path.resolve(project, 'dist')
+const projectDir = path.resolve(__dirname, '..')
+const srcDir = path.resolve(projectDir, 'src')
+const appDir = path.resolve(srcDir, 'app')
+const staticDir = path.resolve(srcDir, 'static')
+const staticCursorsDir = path.resolve(staticDir, 'cursor')
+const distDir = path.resolve(projectDir, 'dist')
+const svgDir = path.resolve(projectDir, 'svg')
 
-const imgOutputPath = 'static/img/'
-const cursorOutputPath = 'static/cursor/'
+const outputImgPath = path.join('static', 'img')
+const outputCursorsPath = path.join('static', 'cursor')
 
 
 const ES6_NODE_MODULES = [
   'rambda',
   'rambdax',
-]
-
-const INDEX_HTML_IMAGES = [
-  'loading-narrow.svg',
-  'loading-wide.svg',
 ]
 
 const plugins = [
@@ -54,7 +51,7 @@ const plugins = [
       yandex: false,
       windows: false,
     },
-    logo: path.resolve(project, 'svg', 'favicon.svg'),
+    logo: path.join(svgDir, 'favicon.svg'),
     prefix: 'static/icons-[hash:4]/',
   }),
 ]
@@ -66,18 +63,18 @@ module.exports = ({prod = false, analyzer} = {}) => {
   }
 
   return {
-    context: src,
+    context: srcDir,
     entry: {
       app: './index',
     },
     output: {
       filename: '[name].js',
-      path: dist,
+      path: distDir,
       publicPath: '/',
     },
     resolve: {
       alias: {
-        app,
+        app: appDir,
         static: staticDir,
         react: 'preact-compat',
         'react-dom': 'preact-compat',
@@ -122,14 +119,14 @@ module.exports = ({prod = false, analyzer} = {}) => {
           },
         },
         {
-          test: /\.svg$/i,
-          include: INDEX_HTML_IMAGES.forEach(x => path.resolve(project, 'svg', x)),
+          test: /\.svg$/,
+          include: svgDir,
           use: [
             {
               loader: 'file-loader',
               options: {
                 name: '[name].[ext]',
-                outputPath: imgOutputPath,
+                outputPath: outputImgPath,
               },
             },
             {
@@ -144,20 +141,21 @@ module.exports = ({prod = false, analyzer} = {}) => {
         },
         {
           test: /\.png$/,
+          include: staticCursorsDir,
           exclude: /node_modules/,
           loader: 'file-loader',
           options: {
             name: '[name].[hash:4].[ext]',
-            outputPath: cursorOutputPath,
+            outputPath: outputCursorsPath,
           },
         },
         {
           test: /\.js$/,
-          include: ES6_NODE_MODULES.forEach(x => path.resolve(project, `node_modules/${x}`)),
+          include: ES6_NODE_MODULES.forEach(x => path.resolve(projectDir, `node_modules/${x}`)),
           loader: 'babel-loader',
           options: {
             babelrc: false,
-            extends: path.join(project, '.babelrc'),
+            extends: path.join(projectDir, '.babelrc'),
           },
         },
       ],
