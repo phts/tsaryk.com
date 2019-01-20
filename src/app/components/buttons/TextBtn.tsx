@@ -7,7 +7,7 @@ import Text from 'app/components/Text'
 
 class TextBtn extends React.PureComponent<BtnProps> {
   render() {
-    if (this.props.description === undefined) {
+    if (!this.props.description && !this.props.data) {
       return (
         <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
           <Text fontSize={this.props.fontSize}>
