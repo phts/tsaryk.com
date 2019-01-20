@@ -65,7 +65,7 @@
     "jest": "^21.2.1",
     "local-web-server": "^2.3.0",
     "mockdate": "^2.0.2",
-    "rmrf": "^1.0.2",
+    "rimraf": "^2.6.3",
     "shell-escape": "^0.2.0",
     "ts-jest": "^21.2.1",
     "tslint": "^5.11.0",
