@@ -8,6 +8,7 @@ const projectDir = path.resolve(__dirname, '..')
 const srcDir = path.resolve(projectDir, 'src')
 const appDir = path.resolve(srcDir, 'app')
 const staticDir = path.resolve(srcDir, 'static')
+const staticImgDir = path.resolve(staticDir, 'img')
 const staticCursorsDir = path.resolve(staticDir, 'cursor')
 const distDir = path.resolve(projectDir, 'dist')
 const svgDir = path.resolve(projectDir, 'svg')
@@ -138,6 +139,11 @@ module.exports = ({prod = false, analyzer} = {}) => {
               },
             },
           ],
+        },
+        {
+          test: /\.svg$/,
+          include: staticImgDir,
+          loader: 'svg-react-loader',
         },
         {
           test: /\.png$/,

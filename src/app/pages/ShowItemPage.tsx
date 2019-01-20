@@ -15,6 +15,7 @@ import SimpleItemPage from 'app/components/item-pages/SimpleItemPage'
 import CatsItemPage from 'app/components/item-pages/CatsItemPage'
 import Heroes3ItemPage from 'app/components/item-pages/Heroes3ItemPage'
 import UltramarinedItemPage from 'app/components/item-pages/UltramarinedItemPage'
+import PlayingCardsPage from 'app/components/item-pages/PlayingCardsPage'
 import ZxSpectrumItemPage from 'app/components/item-pages/ZxSpectrumItemPage'
 import scrollToTopOnMount from 'app/components/scrollToTopOnMount'
 
@@ -31,6 +32,7 @@ type KnownItemPagesMap = {
 const knownItemPages: KnownItemPagesMap = {
   Cats: CatsItemPage,
   'Heroes of Might and Magic 3': Heroes3ItemPage,
+  'Playing cards': PlayingCardsPage,
   Ultramarined: UltramarinedItemPage,
   'ZX Spectrum': ZxSpectrumItemPage,
 }

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 4139 3000">
+  <style>
+    @media (max-width: 320px) {
+      svg {
+        background-image: url(https://i.imgur.com/ziSatcXt.jpg);
+      }
+    }
+    @media (min-width: 321px) and (max-width: 480px) {
+      svg {
+        background-image: url(https://i.imgur.com/ziSatcXm.jpg);
+      }
+    }
+    @media (min-width: 481px) and (max-width: 720px) {
+      svg {
+        background-image: url(https://i.imgur.com/ziSatcXl.jpg);
+      }
+    }
+    @media (min-width: 721px) and (max-width: 1439px) {
+      svg {
+        background-image: url(https://i.imgur.com/ziSatcXh.jpg);
+      }
+    }
+    @media (min-width: 1440px) {
+      svg {
+        background-image: url(https://i.imgur.com/ziSatcX.jpg);
+      }
+    }
+
+    svg {
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    path {
+      fill: transparent;
+      cursor: pointer;
+      transition: fill 0.2s
+    }
+    svg a:focus,
+    svg a:hover {
+      outline: none;
+    }
+    svg a:focus path,
+    svg a:hover path {
+      fill: rgba(255, 255, 255, 0.5);
+      <!-- fill: rgba(0, 0, 0, 0.5); -->
+      cursor: pointer;
+   }
+  </style>
+  <defs></defs>
+  <!-- Row #1 -->
+  <g>
+    <a xlink:href="https://playingarts.com/ru/special?utm_source=tema&amp;utm_medium=banner&amp;utm_campaign=300x300" target="_blank">
+      <title>Playing Arts: Special Edition</title>
+      <path d="M 30,0
+        v 490
+        h 360
+        v -490
+        h -360"/>
+    </a>
+  </g>
+  <!-- Row #2 -->
+  <g>
+    <a xlink:href="http://www.21king.ru/ru/museum/?deck=g00077" target="_blank">
+      <title>Derzhava</title>
+      <path d="M 30,490
+        v 490
+        h 360
+        v -490
+        h -360"/>
+    </a>
+  </g>
+  <!-- Row #3 -->
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/classic/salon-karte-66/" target="_blank">
+      <title>Salon-Karte №66</title>
+      <path d="M 30,980
+        v 490
+        h 330
+        v -490
+        h -330"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/computer-games/pixel-art/" target="_blank">
+      <title>Pixel Art</title>
+      <path d="M 360,980
+        v 490
+        h 350
+        v -490
+        h -350"/>
+    </a>
+  </g>
+</svg>

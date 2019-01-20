@@ -116,6 +116,13 @@ export const en: TranslatedStrings = {
     `,
   },
   'Playing cards': {
+    data: {
+      p1: 'Collecting since my childhood.',
+      p2: 'There is no purpose to gather everything from everywhere, \
+so the collection is no so big and contains today (January 2019) about 70 decks. \
+Collecting those which I really like.',
+      imgTitle: 'One card from each deck, January 2019',
+    },
   },
   Poland: {
   },
