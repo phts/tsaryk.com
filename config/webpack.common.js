@@ -143,7 +143,17 @@ module.exports = ({prod = false, analyzer} = {}) => {
         {
           test: /\.svg$/,
           include: staticImgDir,
-          loader: 'svg-react-loader',
+          use: [
+            'svg-react-loader',
+            {
+              loader: 'image-webpack-loader',
+              options: {
+                svgo: {
+                  enabled: true,
+                },
+              },
+            },
+          ],
         },
         {
           test: /\.png$/,
