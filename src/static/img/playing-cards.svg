@@ -31,28 +31,35 @@
       background-size: contain;
       background-repeat: no-repeat;
     }
-    rect {
-      fill: transparent;
+    svg a rect {
       cursor: pointer;
+      fill: transparent;
       transition: fill 0.2s
     }
     svg a:focus,
     svg a:hover {
       outline: none;
     }
-    svg a:focus rect,
     svg a:hover rect {
       fill: rgba(255, 255, 255, 0.5);
       cursor: pointer;
-   }
+    }
+    svg rect.no-link {
+      cursor: help;
+      fill: transparent;
+    }
   </style>
-  <defs></defs>
   <!-- Row #1 -->
   <g>
     <a xlink:href="https://playingarts.com/ru/special?utm_source=tema&amp;utm_medium=banner&amp;utm_campaign=300x300" target="_blank">
       <title>Playing Arts: Special Edition</title>
       <rect x="30" y="0" width="360" height="490"/>
     </a>
+  </g>
+  <g>
+    <rect x="390" y="0" width="340" height="490" class="no-link">
+      <title>Царик Филипп №2</title>
+    </rect>
   </g>
   <g>
     <a xlink:href="http://www.dama-pik.com.ua/cards/otherm/opernye-teatralnye-reprint-1974g-/" target="_blank">
@@ -112,7 +119,7 @@
   <g>
     <a xlink:href="https://symbal.by/t/1286-karty-bnr/" target="_blank">
       <title>100 гадоў БНР</title>
-      <rect x="1060" y="490" width="350" height="490"/>
+      <rect x="1060" y="490" width="350" height="500"/>
     </a>
   </g>
   <g>
@@ -168,6 +175,181 @@
     <a xlink:href="http://www.dama-pik.com.ua/cards/computer-games/pixel-art/" target="_blank">
       <title>Pixel Art</title>
       <rect x="360" y="980" width="350" height="490"/>
+    </a>
+  </g>
+  <g>
+    <rect x="720" y="980" width="340" height="490" class="no-link">
+      <title>Царик Филипп №3</title>
+    </rect>
+  </g>
+  <g>
+    <a xlink:href="http://www.a.trionfi.eu/WWPCM/decks04/d03409/d03409.htm" target="_blank">
+      <title>Ennia</title>
+      <rect x="1070" y="1000" width="320" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-1341.html" target="_blank">
+      <title>Rosina Watchmeister</title>
+      <rect x="1740" y="990" width="320" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-1119.html" target="_blank">
+      <title>Весела політика</title>
+      <rect x="2060" y="990" width="360" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/mythology-and-fantasy/greek-mythology+2/" target="_blank">
+      <title>Greek mythology</title>
+      <rect x="2420" y="990" width="360" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.21king.ru/ru/museum/?deck=g02726" target="_blank">
+      <title>Атласные</title>
+      <rect x="2780" y="1000" width="320" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.a.trionfi.eu/WWPCM/WWPCM/Turkey0.htm" target="_blank">
+      <title>Turkey</title>
+      <rect x="3100" y="1010" width="330" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="https://www.russcards.com/lapin-cards" target="_blank">
+      <title>Карты Лапиных</title>
+      <rect x="3430" y="1010" width="330" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-445.html" target="_blank">
+      <title>Исторические</title>
+      <rect x="3760" y="1020" width="330" height="500"/>
+    </a>
+  </g>
+  <!-- Row #4 -->
+  <g>
+    <a xlink:href="http://www.a.trionfi.eu/WWPCM/decks/d00150/d00150.htm" target="_blank">
+      <title>Петергоф</title>
+      <rect x="0" y="1470" width="330" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="https://unitedcardists.com/viewtopic.php?f=8&amp;t=5424" target="_blank">
+      <title>Pixel Cards</title>
+      <rect x="330" y="1470" width="350" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-272.html" target="_blank">
+      <title>Московский сувенир</title>
+      <rect x="680" y="1470" width="320" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/french-suit/vsya-vlast/" target="_blank">
+      <title>Вся власть</title>
+      <rect x="1310" y="1490" width="320" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-282.html" target="_blank">
+      <title>Партия</title>
+      <rect x="1630" y="1490" width="320" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-153.html" target="_blank">
+      <title>Княжеские</title>
+      <rect x="1960" y="1490" width="330" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="https://www.artlebedev.ru/space-invaders/" target="_blank">
+      <title>Космические захватчики</title>
+      <rect x="2290" y="1490" width="330" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://nacekomie.ru/hachette/enciklopediya-taro-ashet-kollekciya.html" target="_blank">
+      <title>Универсальное таро</title>
+      <rect x="3000" y="1550" width="380" height="680"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-694.html" target="_blank">
+      <title>Рококо</title>
+      <rect x="3450" y="1520" width="250" height="390"/>
+    </a>
+  </g>
+  <!-- Row #5 -->
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-137.html" target="_blank">
+      <title>Лубочные</title>
+      <rect x="0" y="2000" width="280" height="450"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-148.html" target="_blank">
+      <title>Времена года</title>
+      <rect x="930" y="1970" width="320" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="https://www.russcards.com/modern-style" target="_blank">
+      <title>Новый стиль</title>
+      <rect x="1580" y="1990" width="320" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-692.html" target="_blank">
+      <title>Палех</title>
+      <rect x="2270" y="1990" width="330" height="510"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/humor/gra-wstepna/" target="_blank">
+      <title>Gra wstępna</title>
+      <rect x="2600" y="2100" width="380" height="540"/>
+    </a>
+  </g>
+  <g>
+    <rect x="3000" y="2230" width="400" height="570" class="no-link">
+      <title>Царик Филипп №1</title>
+    </rect>
+  </g>
+  <!-- Row #6 -->
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-155.html" target="_blank">
+      <title>Диана</title>
+      <rect x="950" y="2470" width="330" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/international-style/international/" target="_blank">
+      <title>International</title>
+      <rect x="1280" y="2480" width="330" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="https://www.artlebedev.ru/mafia/" target="_blank">
+      <title>Mafia</title>
+      <rect x="1610" y="2480" width="330" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-690.html" target="_blank">
+      <title>Славянские</title>
+      <rect x="1940" y="2490" width="330" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/russian-motifs/igralnye-karty-vysshiy-sort-russkiy-stil/" target="_blank">
+      <title>Русский стиль</title>
+      <rect x="2270" y="2500" width="330" height="500"/>
     </a>
   </g>
 </svg>
