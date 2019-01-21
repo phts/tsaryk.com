@@ -150,6 +150,10 @@ module.exports = ({prod = false, analyzer} = {}) => {
               options: {
                 svgo: {
                   enabled: true,
+                  plugins: [
+                    {convertShapeToPath: false},
+                    {removeTitle: false},
+                  ],
                 },
               },
             },

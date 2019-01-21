@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 4139 3000">
+  <title>Playing cards collection</title>
   <style>
     @media (max-width: 320px) {
       svg {
@@ -30,7 +31,7 @@
       background-size: contain;
       background-repeat: no-repeat;
     }
-    path {
+    rect {
       fill: transparent;
       cursor: pointer;
       transition: fill 0.2s
@@ -39,10 +40,9 @@
     svg a:hover {
       outline: none;
     }
-    svg a:focus path,
-    svg a:hover path {
+    svg a:focus rect,
+    svg a:hover rect {
       fill: rgba(255, 255, 255, 0.5);
-      <!-- fill: rgba(0, 0, 0, 0.5); -->
       cursor: pointer;
    }
   </style>
@@ -51,43 +51,123 @@
   <g>
     <a xlink:href="https://playingarts.com/ru/special?utm_source=tema&amp;utm_medium=banner&amp;utm_campaign=300x300" target="_blank">
       <title>Playing Arts: Special Edition</title>
-      <path d="M 30,0
-        v 490
-        h 360
-        v -490
-        h -360"/>
+      <rect x="30" y="0" width="360" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/otherm/opernye-teatralnye-reprint-1974g-/" target="_blank">
+      <title>Оперные (репринт)</title>
+      <rect x="730" y="0" width="340" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/french-suit/classic-470/" target="_blank">
+      <title>Karty do gry №490</title>
+      <rect x="1070" y="0" width="340" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-667.html" target="_blank">
+      <title>Белый палех</title>
+      <rect x="2430" y="0" width="330" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-154.html" target="_blank">
+      <title>Госпожа удача</title>
+      <rect x="2760" y="0" width="330" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-701.html" target="_blank">
+      <title>Невские</title>
+      <rect x="3090" y="0" width="340" height="510"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-133.html" target="_blank">
+      <title>Атласные</title>
+      <rect x="3430" y="0" width="330" height="510"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-152.html" target="_blank">
+      <title>Командирские</title>
+      <rect x="3760" y="0" width="330" height="510"/>
     </a>
   </g>
   <!-- Row #2 -->
   <g>
     <a xlink:href="http://www.21king.ru/ru/museum/?deck=g00077" target="_blank">
       <title>Derzhava</title>
-      <path d="M 30,490
-        v 490
-        h 360
-        v -490
-        h -360"/>
+      <rect x="30" y="490" width="360" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-637.html" target="_blank">
+      <title>Jacob's Bible Cards</title>
+      <rect x="710" y="490" width="350" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="https://symbal.by/t/1286-karty-bnr/" target="_blank">
+      <title>100 гадоў БНР</title>
+      <rect x="1060" y="490" width="350" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/otherm/abraxas/" target="_blank">
+      <title>Abraxas</title>
+      <rect x="1410" y="490" width="340" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="https://www.behance.net/gallery/16822663/Hidden-part" target="_blank">
+      <title>Hidden Part</title>
+      <rect x="1750" y="490" width="310" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="https://www.artiphany.com/products/kitten-club" target="_blank">
+      <title>Kitten Club Playing Cards</title>
+      <rect x="2060" y="500" width="350" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="https://www.artiphany.com/products/mermaid-playing-cards" target="_blank">
+      <title>Mermaid Queen Playing Cards</title>
+      <rect x="2740" y="500" width="350" height="490"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-151.html" target="_blank">
+      <title>Державные</title>
+      <rect x="3100" y="510" width="320" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-693.html" target="_blank">
+      <title>Времена года</title>
+      <rect x="3420" y="510" width="340" height="500"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.a.trionfi.eu/WWPCM/decks06/d04208/d04208.htm" target="_blank">
+      <title>Skat</title>
+      <rect x="3760" y="510" width="330" height="500"/>
     </a>
   </g>
   <!-- Row #3 -->
   <g>
     <a xlink:href="http://www.dama-pik.com.ua/cards/classic/salon-karte-66/" target="_blank">
       <title>Salon-Karte №66</title>
-      <path d="M 30,980
-        v 490
-        h 330
-        v -490
-        h -330"/>
+      <rect x="30" y="980" width="330" height="490"/>
     </a>
   </g>
   <g>
     <a xlink:href="http://www.dama-pik.com.ua/cards/computer-games/pixel-art/" target="_blank">
       <title>Pixel Art</title>
-      <path d="M 360,980
-        v 490
-        h 350
-        v -490
-        h -350"/>
+      <rect x="360" y="980" width="350" height="490"/>
     </a>
   </g>
 </svg>
