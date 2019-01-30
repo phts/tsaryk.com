@@ -102,17 +102,6 @@ module.exports = ({prod = false, analyzer} = {}) => {
       rules: [
         {
           test: /\.tsx?$/,
-          enforce: 'pre',
-          exclude: /node_modules/,
-          loader: 'tslint-loader',
-          options: {
-            emitWarnings: !prod,
-            emitErrors: prod,
-            failOnHint: prod,
-          },
-        },
-        {
-          test: /\.tsx?$/,
           exclude: /node_modules/,
           loader: 'awesome-typescript-loader',
           options: {

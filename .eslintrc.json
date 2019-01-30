@@ -1,10 +1,40 @@
 {
-  "extends": "@phts",
+  "extends": [
+    "@phts/eslint-config/typescript",
+    "plugin:react/recommended"
+  ],
   "parserOptions": {
-    "ecmaVersion": 9
+    "ecmaVersion": 2018
   },
   "env": {
     "node": true,
     "es6": true
-  }
+  },
+  "settings": {
+    "react": {
+      "version": "16.0"
+    }
+  },
+
+  "rules": {
+    "react/display-name": "off"
+  },
+
+  "overrides": [
+    {
+      "files": "*.{ts,tsx}",
+      "env": {
+        "browser": true,
+        "node": false
+      },
+      "rules": {
+      }
+    },
+    {
+      "files": "*.test.{ts,tsx}",
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
