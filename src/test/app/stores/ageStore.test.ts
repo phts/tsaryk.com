@@ -10,7 +10,7 @@ jest.mock('app/config', () => {
 function expectAgeToEqual(age: Age, values: number[]) {
   ['years', 'months', 'days', 'hours', 'minutes', 'seconds']
     .forEach((m: AgePart, i) => {
-      expect(age[m]).toBe(values[i])
+      expect(age[m] === 0 ? +0 : age[m]).toEqual(values[i])
     })
 }
 
