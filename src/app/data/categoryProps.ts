@@ -7,7 +7,7 @@ interface CategoryProps {
   category: ItemCategory
 }
 
-type CategoryPropsMap = {[index in KnownName]?: CategoryProps}
+export type CategoryPropsMap = {[index in KnownName]?: CategoryProps}
 
 export const DEFAULT_CATEGORY_PROPS: CategoryProps = {
   category: null,

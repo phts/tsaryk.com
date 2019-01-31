@@ -9,7 +9,7 @@ interface Props extends CommonElementProps<HTMLLIElement> {
 
 export default (styled.li as StyledFunction<Props>).attrs({
   style: (props: Props) => ({
-    'flex-basis': `${props.flexBasis}vw`,
+    flexBasis: `${props.flexBasis}vw`,
   }),
 })`
   align-items: center;

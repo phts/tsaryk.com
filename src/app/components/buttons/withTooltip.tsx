@@ -11,7 +11,7 @@ function withTooltip<T extends CommonElementProps<HTMLElement>>(C: AnyComponentC
     }
     return (
       <span>
-        <C {...omit(['title'])(props)}/><TooltipAsterisk title={props.title}/>
+        <C {...(omit(['title'])(props) as T)}/><TooltipAsterisk title={props.title}/>
       </span>
     )
   }

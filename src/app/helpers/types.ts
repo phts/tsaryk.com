@@ -7,8 +7,8 @@ export type Hoc<WrappedComponentPropsType, ReturnComponentType> =
   (WrappedComponent: AnyComponentClass<WrappedComponentPropsType>) =>
     ReturnComponentType
 
-export type CommonElementProps<T> = React.DetailedHTMLProps<React.HTMLAttributes<T>, {}>
-export type InputElementProps = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
-export type FormElementProps = React.DetailedHTMLProps<React.FormHTMLAttributes<HTMLFormElement>, HTMLFormElement>
-export type ButtonElementProps = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, {}>
-export type ImageElementProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, {}>
+export type CommonElementProps<T> = React.HTMLAttributes<T>
+export type InputElementProps = React.InputHTMLAttributes<HTMLInputElement>
+export type FormElementProps = React.FormHTMLAttributes<HTMLFormElement>
+export type ButtonElementProps = React.ButtonHTMLAttributes<HTMLButtonElement>
+export type ImageElementProps = React.ImgHTMLAttributes<HTMLImageElement>
