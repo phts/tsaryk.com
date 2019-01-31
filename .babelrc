@@ -1,14 +1,14 @@
 {
   "presets": [
-    ["env", {
+    ["@babel/env", {
       "targets": {
         "browsers": ["last 2 versions"]
       }
     }]
   ],
   "plugins": [
-    "date-fns",
-    "ramda",
-    "transform-object-assign"
+    "babel-plugin-date-fns",
+    "babel-plugin-ramda",
+    "@babel/plugin-transform-object-assign"
   ]
 }

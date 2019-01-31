@@ -114,7 +114,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
           exclude: /node_modules/,
           loader: 'awesome-typescript-loader',
           options: {
-            babelCore: 'babel-core',
+            babelCore: '@babel/core',
             errorsAsWarnings: !prod,
             useBabel: true,
           },
