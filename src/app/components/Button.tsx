@@ -1,4 +1,4 @@
-import styled, {StyledFunction} from 'app/styled-components'
+import styled from 'app/styled-components'
 import {ButtonElementProps} from 'app/helpers/types'
 
 interface Props extends ButtonElementProps {
@@ -6,7 +6,7 @@ interface Props extends ButtonElementProps {
   fontSize?: string,
 }
 
-export default (styled.button as StyledFunction<Props>)`
+export default styled.button<Props>`
   background: none;
   border: 0 none;
   border-bottom: ${({border}) => border};

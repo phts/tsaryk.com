@@ -1,8 +1,7 @@
-import {injectGlobal} from 'app/styled-components'
+import {createGlobalStyle} from 'app/styled-components'
 import {media} from 'app/helpers/css'
 
-// tslint:disable-next-line no-unused-expression
-injectGlobal`
+export default createGlobalStyle`
   html {
     ${media.max.tablet`
       font-size: 90%;

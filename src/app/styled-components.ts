@@ -1,26 +1,21 @@
 import * as styledComponents from 'styled-components'
-import {
-  ThemedStyledComponentsModule,
-  SimpleInterpolation,
-  StyledFunction,
-} from 'styled-components'
+import {SimpleInterpolation} from 'styled-components'
 
 import Theme from 'app/themes/Theme'
 
 const {
+  createGlobalStyle,
   css,
   default: styled,
-  injectGlobal,
   keyframes,
   ThemeProvider,
-} = styledComponents as ThemedStyledComponentsModule<Theme>
+} = styledComponents as styledComponents.ThemedStyledComponentsModule<Theme>
 
 export {
+  createGlobalStyle,
   css,
-  injectGlobal,
   keyframes,
   SimpleInterpolation,
-  StyledFunction,
   ThemeProvider,
 }
 export default styled
