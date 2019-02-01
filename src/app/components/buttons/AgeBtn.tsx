@@ -12,12 +12,12 @@ interface Props extends BtnProps {
 }
 
 interface AgeItemData {
-  days: string,
-  hours: string,
-  min: string,
-  months: string,
-  sec: string,
-  years: string,
+  days: string
+  hours: string
+  min: string
+  months: string
+  sec: string
+  years: string
 }
 
 @inject('ageStore')

@@ -18,9 +18,9 @@ interface Props extends ItemPageProps {
 }
 
 interface Data {
-  p1: string,
-  p2: string,
-  imgTitle: string,
+  p1: string
+  p2: string
+  imgTitle: string
 }
 
 const PlayingCardsPage: React.StatelessComponent<Props> =

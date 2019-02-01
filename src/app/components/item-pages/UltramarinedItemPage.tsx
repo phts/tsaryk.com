@@ -26,8 +26,8 @@ interface State {
 }
 
 interface UltramarinedItemData {
-  ultrimarine: string,
-  unultrimarine: string,
+  ultrimarine: string
+  unultrimarine: string
 }
 
 class UltramarinedItemPage extends React.Component<Props, State> {

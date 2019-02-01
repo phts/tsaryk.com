@@ -1,3 +1,5 @@
+/* eslint-disable no-duplicate-imports */
+
 declare module 'rambdax/modules/random' {
   import {random} from 'rambdax'
   export default random

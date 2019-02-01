@@ -1,7 +1,6 @@
 import {injectGlobal} from 'app/styled-components'
 import {media} from 'app/helpers/css'
 
-// tslint:disable-next-line no-unused-expression
 injectGlobal`
   html {
     ${media.max.tablet`

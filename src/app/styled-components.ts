@@ -1,3 +1,5 @@
+/* eslint-disable no-duplicate-imports*/
+
 import * as styledComponents from 'styled-components'
 import {
   ThemedStyledComponentsModule,

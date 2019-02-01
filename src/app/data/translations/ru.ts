@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/indent */
 import {TranslatedStrings} from './index'
 import {a, callto, figure, img, link, mailto, p, tel, youtube} from 'app/helpers/html'
 import {picture} from 'app/helpers/imgur'

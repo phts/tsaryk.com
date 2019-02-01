@@ -1,5 +1,3 @@
-export type KnownName = keyof typeof Names
-
 export enum Names {
   EN,
   RU,
@@ -67,3 +65,5 @@ export enum Names {
   Work,
   'ZX Spectrum',
 }
+
+export type KnownName = keyof typeof Names

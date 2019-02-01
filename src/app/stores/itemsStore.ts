@@ -22,7 +22,8 @@ import {
 import {Names, KnownName} from 'app/data/names'
 import langStore, {LangStore} from './langStore'
 
-export type ItemData = {}
+export interface ItemData {
+}
 export type ItemId = KnownName
 
 export interface Item {
@@ -55,7 +56,7 @@ function toDefaultItem(id: ItemId): Item {
 }
 
 function toItem(strings: TranslatedStrings, fallback: TranslatedStrings):
-               (defaultItem: Item, id: ItemId) => Item {
+(defaultItem: Item, id: ItemId) => Item {
   return (defaultItem: Item, id: ItemId) => Object.assign({},
     defaultItem,
     metaPropsMap[id] || {},
@@ -73,6 +74,7 @@ function toItems(itemNamesMap: ItemNamesMap, strings: TranslatedStrings): Items 
 }
 
 export class ItemsStore {
+  /* eslint-disable no-useless-constructor */
   private cache: {[index in Lang]?: Items} = {}
 
   constructor(private languageStore: LangStore) {

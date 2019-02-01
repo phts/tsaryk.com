@@ -17,7 +17,8 @@
   },
 
   "rules": {
-    "react/display-name": "off"
+    "react/display-name": "off",
+    "react/prop-types": "off"
   },
 
   "overrides": [
@@ -28,6 +29,8 @@
         "node": false
       },
       "rules": {
+        "indent": "off",
+        "no-extra-parens": "off"
       }
     },
     {

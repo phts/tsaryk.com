@@ -11,9 +11,9 @@ export const breakpoints = {
 
 type BreakpointsLabel = keyof typeof breakpoints
 type MediaSet = {[index in keyof typeof breakpoints]?: typeof css}
-type Medias = {
-  min: MediaSet,
-  max: MediaSet,
+interface Medias {
+  min: MediaSet
+  max: MediaSet
 }
 
 export const media = Object.keys(breakpoints).reduce((acc: Medias, val: BreakpointsLabel) => {

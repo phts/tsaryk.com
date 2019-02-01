@@ -3,7 +3,7 @@ import styled from 'app/styled-components'
 
 import OrderedListWithItemHeight from 'app/components/OrderedListWithItemHeight'
 
-export type CatsItemsData = Array<{icon: string, text: string, tooltip?: string}>
+export type CatsItemsData = Array<{icon: string; text: string; tooltip?: string}>
 
 interface Props {
   items: CatsItemsData
@@ -14,7 +14,9 @@ export default (
     <OrderedListWithItemHeight>
       {
         items.map(x => (
-          <li><EmojiIcon dangerouslySetInnerHTML={{__html: x.icon}} title={x.tooltip}/>{x.text}</li>
+          <li key={x.tooltip}>
+            <EmojiIcon dangerouslySetInnerHTML={{__html: x.icon}} title={x.tooltip}/>{x.text}
+          </li>
         ))
       }
     </OrderedListWithItemHeight>

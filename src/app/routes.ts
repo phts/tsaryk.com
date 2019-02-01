@@ -1,10 +1,10 @@
 import {ItemId} from 'app/stores/itemsStore'
 
-export type IndexPageMatch = {
+export interface IndexPageMatch {
 }
 
-export type ShowItemPageMatch = {
-  id: ItemId,
+export interface ShowItemPageMatch {
+  id: ItemId
 }
 
 export default {

@@ -2,8 +2,8 @@ import styled, {StyledFunction} from 'app/styled-components'
 import {ButtonElementProps} from 'app/helpers/types'
 
 interface Props extends ButtonElementProps {
-  border?: string,
-  fontSize?: string,
+  border?: string
+  fontSize?: string
 }
 
 export default (styled.button as StyledFunction<Props>)`
