@@ -76,9 +76,6 @@ module.exports = ({prod = false, analyzer} = {}) => {
       publicPath: '/',
     },
     resolve: {
-      alias: {
-        'styled-components': path.join(appDir, 'styled-components'),
-      },
       extensions: ['.tsx', '.ts', '.js'],
       modules: [appDir, 'node_modules'],
     },

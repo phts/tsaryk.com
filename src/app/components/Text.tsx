@@ -1,10 +1,10 @@
-import styled, {StyledFunction} from 'styled-components'
+import styled from 'styled-components'
 import {CommonElementProps} from 'helpers/types'
 
 interface Props extends CommonElementProps<HTMLSpanElement> {
   fontSize?: string
 }
 
-export default (styled.span as StyledFunction<Props>)`
+export default styled.span<Props>`
   font-size: ${({fontSize}) => fontSize};
 `

@@ -1,5 +1,5 @@
 import {Link, LinkProps} from 'react-router-dom'
-import styled, {StyledFunction} from 'styled-components'
+import styled from 'styled-components'
 
 import {BUTTON_TYPE, getBorder} from 'helpers/buttons'
 
@@ -8,7 +8,7 @@ interface Props extends LinkProps {
   fontSize: string
 }
 
-export default (styled(Link) as StyledFunction<Props>)`
+export default styled(Link)<Props>`
   border-bottom: ${props => getBorder(props.buttonType)};
   color: inherit;
   font-size: ${props => props.fontSize};

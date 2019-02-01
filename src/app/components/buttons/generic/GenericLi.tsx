@@ -1,4 +1,4 @@
-import styled, {StyledFunction} from 'styled-components'
+import styled from 'styled-components'
 
 import {CommonElementProps} from 'helpers/types'
 
@@ -7,11 +7,11 @@ interface Props extends CommonElementProps<HTMLLIElement> {
   flexible: boolean
 }
 
-export default (styled.li as StyledFunction<Props>).attrs({
+export default styled.li.attrs<Props>({
   style: (props: Props) => ({
     flexBasis: `${props.flexBasis}vw`,
   }),
-})`
+})<Props>`
   align-items: center;
   display: flex;
   flex-grow: ${({flexible}) => (flexible ? 1 : 0)};
