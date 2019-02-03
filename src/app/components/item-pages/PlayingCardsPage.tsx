@@ -2,6 +2,7 @@ import * as React from 'react'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 
+import 'static/img/playing-cards.png'
 import PagePadding from './parts/PagePadding'
 import PageTitle from './parts/PageTitle'
 import PageContent from './parts/PageContent'
@@ -9,9 +10,11 @@ import asItemPage, {ItemPageProps} from './asItemPage'
 import {I18nStore} from 'app/stores/i18nStore'
 import ActionButton from 'app/components/ActionButton'
 import PlayingCards from 'static/img/playing-cards.svg'
+import {UiStore} from 'app/stores/uiStore'
 
 interface Props extends ItemPageProps {
   i18nStore?: I18nStore
+  uiStore?: UiStore
 }
 
 interface Data {
@@ -21,7 +24,7 @@ interface Data {
 }
 
 const PlayingCardsPage: React.StatelessComponent<Props> =
-  ({className, item, onClose, i18nStore}) => (
+  ({className, item, onClose, i18nStore, uiStore}) => (
     <PagePadding>
       <header>
         <PageTitle>{item.name}</PageTitle>
@@ -31,7 +34,7 @@ const PlayingCardsPage: React.StatelessComponent<Props> =
         <p>{(item.data as Data).p1}</p>
         <p>
           <figure>
-            <PlayingCards/>
+            <PlayingCards style={{color: uiStore.backgroundColor}}/>
             <figcaption>{(item.data as Data).imgTitle}</figcaption>
           </figure>
         </p>
@@ -48,4 +51,5 @@ const PlayingCardsPage: React.StatelessComponent<Props> =
 export default compose(
   asItemPage,
   inject('i18nStore'),
+  inject('uiStore'),
 )(PlayingCardsPage)

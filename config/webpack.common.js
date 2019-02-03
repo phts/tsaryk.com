@@ -152,6 +152,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
                   enabled: true,
                   plugins: [
                     {convertShapeToPath: false},
+                    {inlineStyles: false},
                     {removeTitle: false},
                   ],
                 },
@@ -167,6 +168,16 @@ module.exports = ({prod = false, analyzer} = {}) => {
           options: {
             name: '[name].[hash:4].[ext]',
             outputPath: outputCursorsPath,
+          },
+        },
+        {
+          test: /\.png$/,
+          include: staticImgDir,
+          exclude: /node_modules/,
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: outputImgPath,
           },
         },
         {
