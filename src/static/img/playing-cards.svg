@@ -1,8 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 1685">
   <title>Playing cards collection</title>
   <style>
+    @media (max-width: 480px) {
+      svg {
+        background-image: url(static/img/playing-cards-600.png);
+      }
+    }
+    @media (min-width: 481px) and (max-width: 720px) {
+      svg {
+        background-image: url(static/img/playing-cards-800.png);
+      }
+    }
+    @media (min-width: 720px) {
+      svg {
+        background-image: url(static/img/playing-cards-1200.png);
+      }
+    }
+
     svg {
-      background-image: url(static/img/playing-cards.png);
       background-size: contain;
       background-repeat: no-repeat;
     }

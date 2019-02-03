@@ -174,11 +174,20 @@ module.exports = ({prod = false, analyzer} = {}) => {
           test: /\.png$/,
           include: staticImgDir,
           exclude: /node_modules/,
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: outputImgPath,
-          },
+          use: [
+            {
+              loader: 'responsive-loader',
+              options: {
+                name: '[name]-[width].[ext]',
+                outputPath: outputImgPath,
+                sizes: [
+                  600,
+                  800,
+                  1200,
+                ],
+              },
+            },
+          ],
         },
         {
           test: /\.js$/,
