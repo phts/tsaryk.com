@@ -69,7 +69,7 @@ const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
     'Random',
     'Title',
     'Work',
-    '© Phil Tsaryk, 2018',
+    '©',
   ],
   Work: [
     'BitBucket',

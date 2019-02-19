@@ -4,7 +4,7 @@ export enum Names {
   EN,
   RU,
   Title,
-  '© Phil Tsaryk, 2018',
+  '©',
   '+375292181503',
   '+48534898187',
   About,

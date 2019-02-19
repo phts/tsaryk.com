@@ -51,7 +51,7 @@ export const metaPropsMap: MetaPropsMap = {
     size: ItemSize.XXL,
     type: ItemType.Meta,
   },
-  '© Phil Tsaryk, 2018': {
+  '©': {
     position: ItemPosition.Tail,
   },
 

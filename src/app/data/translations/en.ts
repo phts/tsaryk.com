@@ -6,7 +6,8 @@ export const en: TranslatedStrings = {
   },
   RU: {
   },
-  '© Phil Tsaryk, 2018': {
+  '©': {
+    name: '© Phil Tsaryk, 2019',
   },
   About: {
   },
