@@ -3,17 +3,17 @@
   <style>
     @media (max-width: 480px) {
       svg {
-        background-image: url(static/img/playing-cards-600.png);
+        background-image: url(static/img/playing-cards-600.png?__PLAYING_CARDS_PNG_HASH__);
       }
     }
     @media (min-width: 481px) and (max-width: 720px) {
       svg {
-        background-image: url(static/img/playing-cards-800.png);
+        background-image: url(static/img/playing-cards-800.png?__PLAYING_CARDS_PNG_HASH__);
       }
     }
     @media (min-width: 720px) {
       svg {
-        background-image: url(static/img/playing-cards-1200.png);
+        background-image: url(static/img/playing-cards-1200.png?__PLAYING_CARDS_PNG_HASH__);
       }
     }
 

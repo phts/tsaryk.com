@@ -3,6 +3,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const md5 = require('md5-file').sync
 
 const projectDir = path.resolve(__dirname, '..')
 const srcDir = path.resolve(projectDir, 'src')
@@ -16,7 +17,7 @@ const svgDir = path.resolve(projectDir, 'svg')
 const outputImgPath = path.join('static', 'img')
 const outputCursorsPath = path.join('static', 'cursor')
 
-
+const PLAYING_CARDS_PNG_HASH = md5(path.join(staticImgDir, 'playing-cards.png')).substring(0, 4)
 const ES6_NODE_MODULES = [
   'rambda',
   'rambdax',
@@ -156,6 +157,14 @@ module.exports = ({prod = false, analyzer} = {}) => {
                     {removeTitle: false},
                   ],
                 },
+              },
+            },
+            {
+              loader: 'webpack-replace-loader',
+              options: {
+                attr: 'g',
+                search: '__PLAYING_CARDS_PNG_HASH__',
+                replace: PLAYING_CARDS_PNG_HASH,
               },
             },
           ],
