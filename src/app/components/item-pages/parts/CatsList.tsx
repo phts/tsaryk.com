@@ -3,7 +3,7 @@ import styled from 'app/styled-components'
 
 import OrderedListWithItemHeight from 'app/components/OrderedListWithItemHeight'
 
-export type CatsItemsData = Array<{icon: string; text: string; tooltip?: string}>
+export type CatsItemsData = Array<{icon: string, text: string, tooltip?: string}>
 
 interface Props {
   items: CatsItemsData
@@ -24,7 +24,7 @@ export default (
 ) as React.StatelessComponent<Props>
 
 const EmojiIcon = styled.span`
-  display: inline-block;
+  display: inline-block,
   width: 4rem;
   text-align: right;
   margin-right: 0.5rem;
