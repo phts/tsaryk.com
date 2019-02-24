@@ -1,2 +1,2 @@
-import '../svg/loading-narrow.svg'
-import '../svg/loading-wide.svg'
+import 'static/img/loading/loading-narrow.svg'
+import 'static/img/loading/loading-wide.svg'

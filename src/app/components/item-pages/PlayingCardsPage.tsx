@@ -2,14 +2,14 @@ import * as React from 'react'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 
-import 'static/img/playing-cards.png'
+import 'static/img/playing-cards/playing-cards.png'
 import PagePadding from './parts/PagePadding'
 import PageTitle from './parts/PageTitle'
 import PageContent from './parts/PageContent'
 import asItemPage, {ItemPageProps} from './asItemPage'
 import {I18nStore} from 'app/stores/i18nStore'
 import ActionButton from 'app/components/ActionButton'
-import PlayingCards from 'static/img/playing-cards.svg'
+import PlayingCards from 'static/img/playing-cards/playing-cards.svg'
 import {UiStore} from 'app/stores/uiStore'
 
 interface Props extends ItemPageProps {

@@ -122,7 +122,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
         },
         {
           test: /\.svg$/,
-          include: svgDir,
+          include: path.join(staticImgDir, 'loading'),
           use: [
             {
               loader: 'file-loader',
@@ -143,7 +143,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
         },
         {
           test: /\.svg$/,
-          include: staticImgDir,
+          include: path.join(staticImgDir, 'playing-cards'),
           use: [
             'svg-react-loader',
             {
