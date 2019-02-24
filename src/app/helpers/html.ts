@@ -1,8 +1,16 @@
 import {KnownName} from 'app/data/names'
 
-function aTag(href: string, text: string, attrs = '') {
-  const attributes = ` href="${href}" ${attrs}`
-  return `<a${attributes}>${text}</a>`
+function aTag(href: string, text: string, attrs: string[] = []) {
+  const attributes = [
+    `href="${href}"`,
+    ...attrs,
+  ].join(' ')
+  return `<a ${attributes}>${text}</a>`
+}
+
+export function sprite(name: string, opts: {height: number, width: number, viewBox: string}) {
+  return `<svg height="${opts.height}" width="${opts.width}" viewBox="${opts.viewBox}">\
+<use xlink:href="#${name}"/></svg>`
 }
 
 export function p(str: string) {
@@ -10,7 +18,9 @@ export function p(str: string) {
 }
 
 export function a(href: string, text: string) {
-  return aTag(href, text, 'target="_blank"')
+  const sprt = sprite('external-link', {height: 12, width: 12, viewBox: '0 0 12 12'})
+  const content = `${text}${sprt}`
+  return `${aTag(href, content, ['target="_blank"'])}`
 }
 
 export function link(name: KnownName, text = name as string) {
