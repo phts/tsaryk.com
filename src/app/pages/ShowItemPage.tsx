@@ -1,4 +1,4 @@
-/* tslint:disable:ter-max-len */
+/* eslint-disable max-len */
 import * as React from 'react'
 import {withRouter, RouteComponentProps, Redirect} from 'react-router-dom'
 import {inject} from 'mobx-react'

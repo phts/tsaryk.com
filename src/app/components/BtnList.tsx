@@ -1,7 +1,7 @@
 import styled, {StyledFunction} from 'app/styled-components'
 
 interface Props {
-  flexible: boolean,
+  flexible: boolean
 }
 
 export default (styled.ul as StyledFunction<Props>)`

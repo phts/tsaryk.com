@@ -5,7 +5,9 @@ import random from 'rambdax/modules/random'
 import {ItemId, Item} from './itemsStore'
 
 type Width = number
-type Widths = {[index: string]: Width}
+interface Widths {
+  [index: string]: Width
+}
 
 export class WidthsStore {
   @observable widths: Widths = {}

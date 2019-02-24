@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "@phts/eslint-config/addons/typescript",
+    "@phts/eslint-config/addons/typescript/jest",
+    "@phts/eslint-config/addons/typescript/react"
+  ],
+  "overrides": [
+    {
+      "files": "*.{ts,tsx}",
+      "settings": {
+        "react": {
+          "version": "16.0"
+        }
+      }
+    }
+  ]
+}

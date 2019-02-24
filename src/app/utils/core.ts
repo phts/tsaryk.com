@@ -10,5 +10,5 @@ export function enumToArray<T>(en: EnumClass): Array<keyof T> {
 }
 
 export function padWithZero(value: number): string {
-  return ('0' + value).slice(-2)
+  return ('0' + value.toString()).slice(-2)
 }

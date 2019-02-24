@@ -8,17 +8,17 @@ const TEMPLATE_ID = 'tsaryk_com'
 
 emailjs.init('user_C3T41f8F0pv1ekwT39nYw')
 
-type TemplateParams = {
-  appLang: string,
-  innerHeight: number,
-  innerWidth: number,
-  locale: string,
-  localTime: string,
-  referrer: string,
-  screenHeight: number,
-  screenWidth: number,
-  text: string,
-  userAgent: string,
+interface TemplateParams {
+  appLang: string
+  innerHeight: number
+  innerWidth: number
+  locale: string
+  localTime: string
+  referrer: string
+  screenHeight: number
+  screenWidth: number
+  text: string
+  userAgent: string
 }
 
 class EmailService {

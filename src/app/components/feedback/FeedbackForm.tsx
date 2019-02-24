@@ -44,7 +44,9 @@ export default class FeedbackForm extends React.PureComponent<Props, State> {
         <FeedbackFormInput
           autoComplete="off"
           disabled={processing}
-          inputRef={input => this.input = input}
+          inputRef={input => {
+            this.input = input
+          }}
           name="text"
           onKeyDown={this.onKeyDown}
           placeholder={this.props.placeholder}

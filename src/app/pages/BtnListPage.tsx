@@ -38,14 +38,14 @@ const knownBtns: KnownBtnMap = {
   Work: CategoryBtn,
 
   Age: AgeBtn,
-  Ascending: ModeBtn(Mode.Asc),
-  Categorize: ModeBtn(Mode.Categories),
+  Ascending: ModeBtn(Mode.Asc), // eslint-disable-line new-cap
+  Categorize: ModeBtn(Mode.Categories), // eslint-disable-line new-cap
   Colors: ColorsBtn,
-  EN: LangBtn(Lang.EN),
+  EN: LangBtn(Lang.EN), // eslint-disable-line new-cap
   Feedback: FeedbackBtn,
-  Random: ModeBtn(Mode.Random),
+  Random: ModeBtn(Mode.Random), // eslint-disable-line new-cap
   Title: TitleBtn,
-  RU: LangBtn(Lang.RU),
+  RU: LangBtn(Lang.RU), // eslint-disable-line new-cap
 }
 
 @inject('listStore', 'widthsStore')

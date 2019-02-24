@@ -14,7 +14,9 @@ export default (
     <OrderedListWithItemHeight>
       {
         items.map(x => (
-          <li><EmojiIcon dangerouslySetInnerHTML={{__html: x.icon}} title={x.tooltip}/>{x.text}</li>
+          <li key={x.tooltip}>
+            <EmojiIcon dangerouslySetInnerHTML={{__html: x.icon}} title={x.tooltip}/>{x.text}
+          </li>
         ))
       }
     </OrderedListWithItemHeight>
@@ -22,7 +24,7 @@ export default (
 ) as React.StatelessComponent<Props>
 
 const EmojiIcon = styled.span`
-  display: inline-block;
+  display: inline-block,
   width: 4rem;
   text-align: right;
   margin-right: 0.5rem;

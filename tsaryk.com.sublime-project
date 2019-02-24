@@ -5,8 +5,9 @@
 			"path": "."
 		}
 	],
-  "settings":
-  {
-    "SublimeLinter.linters.tslint.args": ["-p", "./tsconfig.json"]
-  }
+	"settings":
+	{
+		"SublimeLinter.linters.eslint.selector": "source.js, source.ts, source.tsx",
+		"SublimeLinter.linters.tslint.disable": true
+	}
 }
