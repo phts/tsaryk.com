@@ -67,18 +67,6 @@ export default compose(
 
   a[href^="callto"],
   a[href^="mailto"],
-  a[href^="tel"],
-  a[href^="http"] {
-    padding-right: 12px;
-    position: relative;
-    background:
-      url(https://upload.wikimedia.org/wikipedia/commons/d/d9/VisualEditor_-_Icon_-_External-link.svg)
-      no-repeat
-      100% 0;
-  }
-
-  a[href^="callto"],
-  a[href^="mailto"],
   a[href^="tel"] {
     white-space: nowrap;
   }

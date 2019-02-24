@@ -5,6 +5,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const md5 = require('md5-file').sync
 
+const ES6_NODE_MODULES = [
+  'rambda',
+  'rambdax',
+]
+
 const projectDir = path.resolve(__dirname, '..')
 const srcDir = path.resolve(projectDir, 'src')
 const appDir = path.resolve(srcDir, 'app')
@@ -13,15 +18,11 @@ const staticImgDir = path.resolve(staticDir, 'img')
 const staticCursorsDir = path.resolve(staticDir, 'cursor')
 const distDir = path.resolve(projectDir, 'dist')
 const svgDir = path.resolve(projectDir, 'svg')
+const playingCardsImgDir = path.join(staticImgDir, 'playing-cards')
 
 const outputImgPath = path.join('static', 'img')
 const outputCursorsPath = path.join('static', 'cursor')
-
-const PLAYING_CARDS_PNG_HASH = md5(path.join(staticImgDir, 'playing-cards.png')).substring(0, 4)
-const ES6_NODE_MODULES = [
-  'rambda',
-  'rambdax',
-]
+const playingCardsPngHash = md5(path.join(playingCardsImgDir, 'playing-cards.png')).substring(0, 4)
 
 const plugins = [
   new HtmlWebpackPlugin({
@@ -122,7 +123,12 @@ module.exports = ({prod = false, analyzer} = {}) => {
         },
         {
           test: /\.svg$/,
-          include: svgDir,
+          include: path.join(staticImgDir, 'sprites'),
+          loader: 'svg-sprite-loader',
+        },
+        {
+          test: /\.svg$/,
+          include: path.join(staticImgDir, 'loading'),
           use: [
             {
               loader: 'file-loader',
@@ -143,7 +149,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
         },
         {
           test: /\.svg$/,
-          include: staticImgDir,
+          include: playingCardsImgDir,
           use: [
             'svg-react-loader',
             {
@@ -164,7 +170,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
               options: {
                 attr: 'g',
                 search: '__PLAYING_CARDS_PNG_HASH__',
-                replace: PLAYING_CARDS_PNG_HASH,
+                replace: playingCardsPngHash,
               },
             },
           ],
