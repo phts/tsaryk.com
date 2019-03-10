@@ -16,7 +16,7 @@ interface Props extends ItemPageProps {
 const SimpleItemPage: React.StatelessComponent<Props> = ({className, item, onClose, i18nStore}) => (
   <PagePadding>
     <header>
-      <PageTitle>{item.name}</PageTitle>
+      <PageTitle>{item.title || item.name}</PageTitle>
     </header>
     <PageHtmlContent className={className} html={item.description}/>
     <footer>

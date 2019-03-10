@@ -76,6 +76,13 @@ export const ru: TranslatedStrings = {
   },
   Belarus: {
     name: 'Беларусь &#x1F1E7;&#x1F1FE;',
+    title: `
+      <img height="18" style="vertical-align:middle;border:1px solid #000" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Flag_of_the_Byelorussian_Soviet_Socialist_Republic.svg">
+      &rarr;
+      <img height="18" style="vertical-align:middle;border:1px solid #000" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Flag_of_Belarus_%281918%2C_1991%E2%80%931995%29.svg">
+      &rarr;
+      <img height="18" style="vertical-align:middle;border:1px solid #000" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg">
+    `,
     description: p('Родом из Беларуси.'),
   },
   Billiard: {
@@ -175,10 +182,12 @@ export const ru: TranslatedStrings = {
   },
   Email: {
     name: 'Имейл',
+    title: '&#x1F4E7;',
     description: p(`Мой имейл: ${mailto(EMAIL)}.`),
   },
   Epam: {
     name: 'Епам',
+    title: '<pre>&lt;epam&gt;</pre>',
     description: `
       <p>
         Релоцировался в ${link('Krako\u0301w', 'Краков')} и проработал в Епаме

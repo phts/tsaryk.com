@@ -1,5 +1,9 @@
 import styled from 'app/styled-components'
 
-export default styled.h1`
+const H1 = styled.h1.attrs({
+  dangerouslySetInnerHTML: props => ({__html: props.children as string}),
+})`
   margin: 0 0 1rem;
 `
+
+export default H1

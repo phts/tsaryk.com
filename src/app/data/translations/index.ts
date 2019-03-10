@@ -11,6 +11,7 @@ export interface Translatable {
   data?: {}
   description?: string
   name?: string
+  title?: string
   tooltip?: string
 }
 
