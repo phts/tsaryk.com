@@ -1,7 +1,13 @@
 /* eslint-disable @typescript-eslint/indent */
+/* eslint-disable max-len */
 import {TranslatedStrings} from './index'
 import {a, callto, figure, img, link, mailto, p, tel, youtube} from 'app/helpers/html'
 import {picture} from 'app/helpers/imgur'
+import {
+  EMAIL,
+  LASTFM_URL,
+  LINKEDIN_URL,
+} from 'app/config'
 
 export const ru: TranslatedStrings = {
   EN: {
@@ -58,9 +64,7 @@ export const ru: TranslatedStrings = {
   },
   Android: {
     name: 'Андройд',
-    description: `
-      <p>Только андройд. Не люблю iOS.</p>
-    `,
+    description: p('Только андройд. Не люблю iOS.'),
   },
   Ascending: {
     name: 'По порядку',
@@ -76,7 +80,7 @@ export const ru: TranslatedStrings = {
   },
   Billiard: {
     name: 'Бильярд',
-    description: p('Играю в пул, в большинстве случаев. Смотрю снукер по Евроспорту.'),
+    description: p('Играю в &#x1F3B1; в большинстве случаев.'),
   },
   BitBucket: {
     name: 'БитБакет',
@@ -106,11 +110,11 @@ export const ru: TranslatedStrings = {
       <p>Люблю играть в настолки, особенно в стратегические.</p>
       <p>Из того, что есть у нас, можно выделить:</p>
       <ul>
-        <li>Эволюция</li>
-        <li>Улей</li>
-        <li>7 чудес</li>
-        <li>Космические дальнобойщики</li>
-        <li>Роскошь</li>
+        <li><a href="ttps://ru.wikipedia.org/wiki/Эволюция_(настольная_игра)">Эволюция</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Улей_(игра)">Улей</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/7_Чудес">7 чудес</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Galaxy_Trucker">Космические дальнобойщики</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Splendor_(game)">Роскошь</a></li>
       </ul>
     `,
   },
@@ -133,7 +137,7 @@ export const ru: TranslatedStrings = {
     name: 'Резюме',
     description: `
       <p>
-        Если коротко &mdash; я ${link('JavaScript', 'фронтэнд')} разработчик с более, чем шестью
+        Если коротко &mdash; я ${link('JavaScript', 'фронтэнд')} разработчик с более, чем семью
         годами стажа.
         Обладаю глубокими знаниями современных веб-технологий и фреймворков.
       </p>
@@ -151,7 +155,7 @@ export const ru: TranslatedStrings = {
   Drums: {
     name: 'Барабаны',
     description: `
-      <h3>Мой сет</h3>
+      <p>Мой сет:</p>
       <ul>
         <li>Paiste Dimensions Medium Heavy Wild Ride 21&Prime;</li>
         <li>Paiste 2002 Medium Crash 18&Prime;</li>
@@ -160,11 +164,18 @@ export const ru: TranslatedStrings = {
         <li>Sonor Force 3007 Maple Snare Drum 14&Prime;</li>
         <li>Палочки Vater Los Angeles 5A</li>
       </ul>
+      <p>Играл в качестве барабанщика в группах:<p>
+      <ul>
+        <li>${link('Space Resonance')}</li>
+        <li>${link('Joy in Time', 'Радость во времени')}</li>
+        <li>Mission: Jupiter</li>
+        <li>${link('Ultramarined')}</li>
+      </ul>
     `,
   },
   Email: {
     name: 'Имейл',
-    description: p(`Мой имейл: ${mailto('phil@tsaryk.com')}.`),
+    description: p(`Мой имейл: ${mailto(EMAIL)}.`),
   },
   Epam: {
     name: 'Епам',
@@ -202,16 +213,13 @@ export const ru: TranslatedStrings = {
     name: 'Файерфокс',
     description: `
       <p>
-        Пользуюсь только файерфоксом. Не взлюбил хром с самого начала из-за невозможности его
+        Пользуюсь только файерфоксом. Не взлюбил Хром с самого начала из-за невозможности его
         настроить под себя.
       </p>
       <p>
         ${a(
-          'https://github.com/phts?utf8=%e2%9C%93&tab=repositories&q=firefox&type=&language=',
-          'Иногда пишу')}
-        ${a(
-          'https://addons.mozilla.org/ru/firefox/addon/uft8-special-characters/',
-          'простые')} аддоны для фф.
+          'https://github.com/topics/firefox-webextension?q=user%3Aphts&unscoped_q=user%3Aphts',
+          'Иногда пишу')} простые аддоны для фф.
       </p>
     `,
   },
@@ -233,7 +241,11 @@ export const ru: TranslatedStrings = {
   'Grand Parade': {
     name: 'Гранд Парэйд',
     description: `
-      <p>Моё ${link('Curriculum vitae', 'текущее')} место работы.</p>
+      <p>
+        Моё ${link('Curriculum vitae', 'текущее')} место работы. Grand Parade является частью
+        большой букмейкерской конторы
+        ${a('https://en.wikipedia.org/wiki/William_Hill_(bookmaker)', 'William Hill')}.
+      </p>
       <p>Отличная продуктовая компания, отличные проекты, отличные люди.</p>
     `,
   },
@@ -241,7 +253,7 @@ export const ru: TranslatedStrings = {
     name: 'Хабр',
     description: `
       <p>
-        Для получения инвайта на Хабр я давным давно опубликовал
+        Для получения инвайта на ${a('https://habr.com/ru/', 'Хабр')} я давным давно опубликовал
         ${a('https://habrahabr.ru/post/128327/', 'статью &laquo;Стеганография в GIF&raquo;')}, в
         которой описал принцип работы программы
         ${a('https://bitbucket.org/phts-home/gifed/src/master/', 'Gifed')}, написанной в
@@ -271,7 +283,7 @@ export const ru: TranslatedStrings = {
     description: `
       <p>
         Основное направление моей деятельности &mdash; джаваскрит и всё, что с ним связано, включая
-        ES6+, Angular, ${link('React')}, Node.js, Typescript.
+        ES6+, Angular, ${link('React')}, Node.js, Typescript и т.д.
       </p>
     `,
   },
@@ -290,24 +302,20 @@ export const ru: TranslatedStrings = {
   },
   Krako\u0301w: {
     name: 'Краков',
-    description: `
-      <p>
-        Живём тут с ${link('Family', 'семьёй')} уже более трёх лет.
-      </p>
-    `,
+    description: p(`Живём тут с ${link('Family', 'семьёй')} уже более трёх лет.`),
   },
   'Last.fm': {
     name: 'Ласт.фм',
-    description: p(`${a('https://www.last.fm/user/phil_tsarik', 'Мой профиль')} на Ласт.фм`),
+    description: p(`${a(LASTFM_URL, 'Мой профиль')} на Ласт.фм`),
   },
   LinkedIn: {
     name: 'ЛинкедИн',
-    description: p(`${a('https://www.linkedin.com/in/tsaryk/', 'Мой профиль')} на ЛинкедИне.`),
+    description: p(`${a(LINKEDIN_URL, 'Мой профиль')} на ЛинкедИне.`),
   },
   Music: {
     name: 'Музыка',
     description: `
-      <p>Важнейшая часть моей жизни.</p>
+      <p>Одна из важнейших частей моей жизни.</p>
       <h3>Слушаю</h3>
       <p>Мой топ на данный момент:<p>
       <ul>
@@ -322,6 +330,7 @@ export const ru: TranslatedStrings = {
         <li>Anathema</li>
       </ul>
       <p>Также я есть на ${link('Last.fm', 'Ластфм')}.</p>
+      <p>Часто слушать музыку ${link('Vinyl', 'на виниле')}.</p>
       <h3>Играю</h3>
       <p>На ${link('Drums', 'барабанах')}.<p>
       <p>Участвовал в группах:<p>
@@ -331,10 +340,6 @@ export const ru: TranslatedStrings = {
         <li>Mission: Jupiter</li>
         <li>${link('Ultramarined')}</li>
       </ul>
-      <p>
-        Сейчас с ребятами в ${link('Krako\u0301w', 'Кракове')} пытаемся играть и сочинять что-то
-        своё.
-      <p>
       <h3>Хожу на концерты</h3>
       <p>Из своего маст-хэв списка уже побывал:</p>
       ${figure(picture('FykwSDm', 'Deep Purple в Минске, 2011 г.'),
@@ -416,7 +421,23 @@ export const ru: TranslatedStrings = {
   Poland: {
     name: 'Польша',
     description: p(`В данный момент проживаю в Польше в городе \
-${link('Krako\u0301w', 'Кракове')}.`),
+${link('Krako\u0301w', 'Краков')}.`),
+  },
+  'Promo codes': {
+    name: 'Промокоды',
+    description: `
+      <p>
+        Пользуйтесь:
+      </p>
+      <ul>
+        <li>Bank Millennium:
+          ${a('https://www.bankmillennium.pl/lubietopolecam?id=24586296', '24586296')}</li>
+        <li>Revolut: ${a('https://revolut.com/r/pilip1ip', 'pilip1ip')}</li>
+        <li>Taxify: S5S8K8</li>
+        <li>Maxim: 9D06F7E7</li>
+        <li>Uber: ${a('https://www.uber.com/invite/3daguge8ue', '3daguge8ue')}</li>
+      </ul>
+    `,
   },
   PSU: {
     name: 'ПГУ',
@@ -561,22 +582,6 @@ ${link('Krako\u0301w', 'Кракове')}.`),
     name: 'Нидерланды',
     description: p('Обязательно буду жить там.'),
   },
-  'Promo codes': {
-    name: 'Промокоды',
-    description: `
-      <p>
-        Пользуйтесь:
-      </p>
-      <ul>
-        <li>Bank Millennium:
-          ${a('https://www.bankmillennium.pl/lubietopolecam?id=24586296', '24586296')}</li>
-        <li>Revolut: ${a('https://revolut.com/r/pilip1ip', 'pilip1ip')}</li>
-        <li>Taxify: S5S8K8</li>
-        <li>Maxim: 9D06F7E7</li>
-        <li>Uber: ${a('https://www.uber.com/invite/3daguge8ue', '3daguge8ue')}</li>
-      </ul>
-    `,
-  },
   Ultramarined: {
     name: 'Ультрамаринд',
     description: `
@@ -628,6 +633,9 @@ ${link('Krako\u0301w', 'Кракове')}.`),
       </ul>
       <p>А также некоторые игры на ${link('ZX Spectrum')}.</p>
     `,
+  },
+  Vinyl: {
+    description: p('Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским'),
   },
   VK: {
     name: 'ВК',

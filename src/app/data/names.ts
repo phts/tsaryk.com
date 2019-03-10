@@ -61,6 +61,7 @@ export enum Names {
   'The Netherlands',
   Ultramarined,
   'Video games',
+  Vinyl,
   VK,
   Work,
   'ZX Spectrum',

@@ -51,6 +51,7 @@ const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
     'The Netherlands',
     'Ultramarined',
     'Video games',
+    'Vinyl',
     'ZX Spectrum',
     'bash.org',
     'foobar2000',
