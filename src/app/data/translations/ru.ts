@@ -635,7 +635,7 @@ ${link('Krako\u0301w', 'Краков')}.`),
     `,
   },
   Vinyl: {
-    description: p('Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским'),
+    description: p('Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским.'),
   },
   VK: {
     name: 'ВК',

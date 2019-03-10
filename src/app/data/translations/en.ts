@@ -422,7 +422,7 @@ Collecting those which I really like.',
   'Video games': {
   },
   Vinyl: {
-    description: p('Audio-Technica AT-LP120USBHC + Yamaha A-S501 + Hand-made speakers by Andrzej Figarski'),
+    description: p('Audio-Technica AT-LP120USBHC + Yamaha A-S501 + Hand-made speakers by Andrzej Figarski.'),
   },
   VK: {
   },
