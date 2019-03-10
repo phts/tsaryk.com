@@ -62,6 +62,7 @@ export const en: TranslatedStrings = {
   'bash.org': {
   },
   Belarus: {
+    name: 'Belarus &#x1F1E7;&#x1F1FE;',
     description: p('My native country is Belarus.'),
   },
   Billiard: {
@@ -207,6 +208,7 @@ Evolution: The Origin of Species</a></li>
     `,
   },
   GitHub: {
+    name: 'GitHub &#x1F47E;',
     description: p(`${a('https://github.com/phts', 'There are')} my useful and useless projects
       which are accessible for everyone.`),
   },
@@ -360,6 +362,7 @@ Collecting those which I really like.',
     },
   },
   Poland: {
+    name: 'Poland &#x1F1F5;&#x1F1F1;',
     description: p(`Currently living in Poland in ${link('Krako\u0301w')}.`),
   },
   'Promo codes': {
@@ -412,6 +415,7 @@ Collecting those which I really like.',
   Title: {
   },
   'The Netherlands': {
+    name: 'The Netherlands &#x1F1F3;&#x1F1F1;',
   },
   Ultramarined: {
     data: {

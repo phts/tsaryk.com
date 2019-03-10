@@ -8,7 +8,9 @@ interface Props extends LinkProps {
   fontSize: string
 }
 
-export default (styled(Link) as StyledFunction<Props>)`
+export default (styled(Link) as StyledFunction<Props>).attrs({
+  dangerouslySetInnerHTML: props => ({__html: props.children as string}),
+})`
   border-bottom: ${props => getBorder(props.buttonType)};
   color: inherit;
   font-size: ${props => props.fontSize};

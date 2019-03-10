@@ -75,7 +75,7 @@ export const ru: TranslatedStrings = {
       bash.org.`),
   },
   Belarus: {
-    name: 'Беларусь',
+    name: 'Беларусь &#x1F1E7;&#x1F1FE;',
     description: p('Родом из Беларуси.'),
   },
   Billiard: {
@@ -234,7 +234,7 @@ export const ru: TranslatedStrings = {
     `,
   },
   GitHub: {
-    name: 'ГитХаб',
+    name: 'ГитХаб &#x1F47E;',
     description: p(`${a('https://github.com/phts', 'Здесь')} находятся полезные и\
       бесполезные проекты, которые доступны для всех.`),
   },
@@ -419,7 +419,7 @@ export const ru: TranslatedStrings = {
     },
   },
   Poland: {
-    name: 'Польша',
+    name: 'Польша &#x1F1F5;&#x1F1F1;',
     description: p(`В данный момент проживаю в Польше в городе \
 ${link('Krako\u0301w', 'Краков')}.`),
   },
@@ -579,7 +579,7 @@ ${link('Krako\u0301w', 'Краков')}.`),
   Title: {
   },
   'The Netherlands': {
-    name: 'Нидерланды',
+    name: 'Нидерланды &#x1F1F3;&#x1F1F1;',
     description: p('Обязательно буду жить там.'),
   },
   Ultramarined: {
