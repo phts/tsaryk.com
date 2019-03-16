@@ -93,13 +93,17 @@ export const ru: TranslatedStrings = {
       <p>На данный момент в публичный доступ выложены:</p>
       <ul>
         <li>
-          ${a('https://bitbucket.org/account/user/phts-home/projects/PSU', 'University Projects')}
-          &mdash; программы, которые были написаны в период обучения в
-          ${link('PSU', 'университете')}.
+          ${a('https://bitbucket.org/account/user/phts-home/projects/JAV', 'First Java Apps')}
+          &mdash; первые программы, написанные на Джаве, когда её начал изучать.
         </li>
         <li>
           ${a('https://bitbucket.org/account/user/phts-home/projects/OLD', 'Old Delphi Apps')}
           &mdash; программы, написанные на Delphi примерно в 2004&ndash;2006 годах.
+        </li>
+        <li>
+          ${a('https://bitbucket.org/account/user/phts-home/projects/PSU', 'University Projects')}
+          &mdash; программы, которые были написаны в период обучения в
+          ${link('PSU', 'университете')}.
         </li>
       </ul>
     `,

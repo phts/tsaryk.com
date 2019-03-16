@@ -77,12 +77,16 @@ export const en: TranslatedStrings = {
       <p>Currently there are a few public projects:</p>
       <ul>
         <li>
-          ${a('https://bitbucket.org/account/user/phts-home/projects/PSU', 'University Projects')}
-          &mdash; programswhich were written by me during studying in ${link('PSU', 'University')}.
+          ${a('https://bitbucket.org/account/user/phts-home/projects/JAV', 'First Java Apps')}
+          &mdash; my first apps written on Java when started to leart it.
         </li>
         <li>
           ${a('https://bitbucket.org/account/user/phts-home/projects/OLD', 'Old Delphi Apps')}
           &mdash; programs written on Delphi in 2004&ndash;2006 years.
+        </li>
+        <li>
+          ${a('https://bitbucket.org/account/user/phts-home/projects/PSU', 'University Projects')}
+          &mdash; programswhich were written by me during studying in ${link('PSU', 'University')}.
         </li>
       </ul>
     `,
