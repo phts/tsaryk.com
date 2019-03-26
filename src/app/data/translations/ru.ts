@@ -334,7 +334,7 @@ export const ru: TranslatedStrings = {
         <li>Anathema</li>
       </ul>
       <p>Также я есть на ${link('Last.fm', 'Ластфм')}.</p>
-      <p>Часто слушать музыку ${link('Vinyl', 'на виниле')}.</p>
+      <p>Часто слушаю музыку ${link('Vinyl', 'на виниле')}.</p>
       <h3>Играю</h3>
       <p>На ${link('Drums', 'барабанах')}.<p>
       <p>Участвовал в группах:<p>
@@ -641,6 +641,7 @@ ${link('Krako\u0301w', 'Краков')}.`),
     `,
   },
   Vinyl: {
+    name: 'Винил',
     description: p('Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским.'),
   },
   VK: {
