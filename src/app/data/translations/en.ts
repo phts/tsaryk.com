@@ -96,12 +96,12 @@ export const en: TranslatedStrings = {
       <p>I like playing board games especially strategic.</p>
       <p>Among those what we have I can select:</p>
       <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Evolution:_The_Origin_of_Species">\
-Evolution: The Origin of Species</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Hive_(game)">Hive</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/7_Wonders_(board_game)">7 wonders</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Galaxy_Trucker">Galaxy Trucker</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Splendor_(game)">Splendor</a></li>
+        <li>${a('https://en.wikipedia.org/wiki/Evolution:_The_Origin_of_Species',
+                'Evolution: The Origin of Species')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Hive_(game)', 'Hive')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/7_Wonders_(board_game)', '7 wonders')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Galaxy_Trucker', 'Galaxy Trucker')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Splendor_(game)', 'Splendor')}</li>
       </ul>
     `,
   },
@@ -229,8 +229,8 @@ Evolution: The Origin of Species</a></li>
   'Heroes of Might and Magic 3': {
     description: `
       <p>
-        I like playing to <a href="https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III">HoMM3</a>
-        / <a href="http://h3hota.com/en/documentation">HotA</a> when having free time.
+        I like playing to ${a('https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III', 'HoMM3')}
+        / ${a('http://h3hota.com/en/documentation', 'HotA')} when having free time.
       </p>
       <p>
         It is nice since the game is old it still has a huge community, tournaments are taking
@@ -435,23 +435,23 @@ Collecting those which I really like.',
       </p>
       <p>Made a huge impression on me and still making:</p>
       <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Warcraft_II:_Tides_of_Darkness">Warcraft 2</a>
-          / <a href="https://en.wikipedia.org/wiki/Warcraft_III:_Reign_of_Chaos">3</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/StarCraft">Starcraft</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Stronghold_(2001_video_game)">Stronghold</a></li>
+        <li>${a('https://en.wikipedia.org/wiki/Warcraft_II:_Tides_of_Darkness', 'Warcraft 2')}
+          / ${a('https://en.wikipedia.org/wiki/Warcraft_III:_Reign_of_Chaos', '3')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/StarCraft', 'Starcraft')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Stronghold_(2001_video_game)', 'Stronghold')}</li>
         <li>${link('Heroes of Might and Magic 3')}
-          / <a href="https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_IV">4</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Half-Life_(series)">Half-Life</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Syberia">Syberia</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Majesty:_The_Fantasy_Kingdom_Sim">Majesty</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Mafia_(video_game)">Mafia</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Grand_Theft_Auto">GTA</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Knights_and_Merchants:_The_Shattered_Kingdom">Knights and Merchants: The Shattered Kingdom</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Portal_(series)">Portal</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Anno_1701">Anno 1701</a>
-          / <a href="https://en.wikipedia.org/wiki/Anno_1404">1404</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Space_Rangers_(video_game)">Space Rangers</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/The_Talos_Principle">The Talos Principle</a></li>
+          / ${a('https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_IV', '4')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Half-Life_(series)', 'Half-Life')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Syberia', 'Syberia')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Majesty:_The_Fantasy_Kingdom_Sim', 'Majesty')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Mafia_(video_game)', 'Mafia')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Grand_Theft_Auto', 'GTA')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Knights_and_Merchants:_The_Shattered_Kingdom', 'Knights and Merchants: The Shattered Kingdom')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Portal_(series)', 'Portal')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Anno_1701', 'Anno 1701')}
+          / ${a('https://en.wikipedia.org/wiki/Anno_1404', '1404')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/Space_Rangers_(video_game)', 'Space Rangers')}</li>
+        <li>${a('https://en.wikipedia.org/wiki/The_Talos_Principle', 'The Talos Principle')}</li>
       </ul>
       <p>And some games on ${link('ZX Spectrum')} as well.</p>
     `,
