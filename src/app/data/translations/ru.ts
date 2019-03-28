@@ -664,8 +664,12 @@ ${link('Krako\u0301w', 'Краков')}.`),
         была, скорее всего, <code>LOAD "" &crarr;</code> &mdash; для загрузки игры с кассеты.
       </p>
       <p>
-        Любимые игрушки: Highway Encounter, Battle Ships, Exolon, Tujad, Boulder Dash,
-        Spy Hunter и многие другие.
+        Любимые игрушки: ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=2323', 'Highway Encounter')},
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=461', 'Battle Ships')},
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=1686', 'Exolon')},
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=5448', 'Tujad')},
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=639', 'Boulder Dash')},
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=4784', 'Spy Hunter')} и многие другие.
       </p>
     `,
   },

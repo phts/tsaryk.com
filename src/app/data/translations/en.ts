@@ -469,8 +469,12 @@ Collecting those which I really like.',
         &mdash; to load game from сassette tape.
       </p>
       <p>
-        Most loved games: Highway Encounter, Battle Ships, Exolon, Tujad, Boulder Dash,
-        Spy Hunter and many more.
+        Most loved games: ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=2323', 'Highway Encounter')},
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=461', 'Battle Ships')},
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=1686', 'Exolon')},
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=5448', 'Tujad')},
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=639', 'Boulder Dash')},
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=4784', 'Spy Hunter')} and many more.
       </p>
     `,
   },
