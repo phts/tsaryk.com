@@ -15,14 +15,15 @@ const srcDir = path.resolve(projectDir, 'src')
 const appDir = path.resolve(srcDir, 'app')
 const staticDir = path.resolve(srcDir, 'static')
 const staticImgDir = path.resolve(staticDir, 'img')
-const staticCursorsDir = path.resolve(staticDir, 'cursor')
 const distDir = path.resolve(projectDir, 'dist')
 const svgDir = path.resolve(projectDir, 'svg')
-const playingCardsImgDir = path.join(staticImgDir, 'playing-cards')
 
 const outputImgPath = path.join('static', 'img')
-const outputCursorsPath = path.join('static', 'cursor')
-const playingCardsPngHash = md5(path.join(playingCardsImgDir, 'playing-cards.png')).substring(0, 4)
+
+const heroes3AssetsDir = path.join(appDir, 'components', 'item-pages', 'Heroes3ItemPage')
+const playingCardsAssetsDir = path.join(appDir, 'components', 'item-pages', 'PlayingCardsPage')
+const playingCardsPng = path.join(playingCardsAssetsDir, 'playing-cards.png')
+const playingCardsPngHash = md5(playingCardsPng).substring(0, 4)
 
 const plugins = [
   new HtmlWebpackPlugin({
@@ -138,7 +139,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
         },
         {
           test: /\.svg$/,
-          include: playingCardsImgDir,
+          include: playingCardsAssetsDir,
           use: [
             'svg-react-loader',
             {
@@ -166,17 +167,17 @@ module.exports = ({prod = false, analyzer} = {}) => {
         },
         {
           test: /\.png$/,
-          include: staticCursorsDir,
+          include: heroes3AssetsDir,
           exclude: /node_modules/,
           loader: 'file-loader',
           options: {
             name: '[name].[hash:4].[ext]',
-            outputPath: outputCursorsPath,
+            outputPath: staticImgDir,
           },
         },
         {
           test: /\.png$/,
-          include: staticImgDir,
+          include: playingCardsAssetsDir,
           exclude: /node_modules/,
           use: [
             {

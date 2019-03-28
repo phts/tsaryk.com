@@ -3,7 +3,7 @@ declare module '*.png' {
   export default png
 }
 
-declare module 'static/img/*.svg' {
+declare module '*.component.svg' {
   const svg: React.ComponentType<React.HTMLAttributes<SVGElement>>
   export default svg
 }

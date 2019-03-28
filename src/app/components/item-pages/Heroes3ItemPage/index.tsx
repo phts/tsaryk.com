@@ -3,15 +3,15 @@ import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 import styled from 'app/styled-components'
 
-import PagePadding from './parts/PagePadding'
-import PageTitle from './parts/PageTitle'
-import PageHtmlContent from './parts/PageHtmlContent'
-import asItemPage, {ItemPageProps} from './asItemPage'
+import PagePadding from 'app/components/item-pages/parts/PagePadding'
+import PageTitle from 'app/components/item-pages/parts/PageTitle'
+import PageHtmlContent from 'app/components/item-pages/parts/PageHtmlContent'
+import asItemPage, {ItemPageProps} from 'app/components/item-pages/asItemPage'
 import {I18nStore} from 'app/stores/i18nStore'
 import ActionButton from 'app/components/ActionButton'
 
-import cursorDefaultPng from 'static/cursor/h3-deafult.png'
-import cursorPointerPng from 'static/cursor/h3-pointer.png'
+import cursorDefaultPng from './h3-default.png'
+import cursorPointerPng from './h3-pointer.png'
 
 interface Props extends ItemPageProps {
   i18nStore?: I18nStore
