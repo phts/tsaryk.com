@@ -275,7 +275,12 @@ export const ru: TranslatedStrings = {
   'Heroes of Might and Magic 3': {
     name: 'Герои меча и магии 3',
     description: `
-      <p>До сих пор играю, если появляется свободное время.</p>
+      <p>
+        До сих пор играю в
+        <a href="https://ru.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III">HoMM3</a>
+        / <a href="https://ru.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_Horn_of_the_Abyss">HotA</a>,
+        если появляется свободное время.
+      </p>
       <p>
         Радует, что несмотря на то, что игра старая, у неё огромное комьюнити, проходят турниры,
         выпускаются аддоны и патчи.
@@ -622,20 +627,23 @@ ${link('Krako\u0301w', 'Краков')}.`),
       </p>
       <p>Произведшие на меня огромное впечатление, и производят до сих пор:</p>
       <ul>
-        <li>Warcraft 2 / 3</li>
-        <li>Starcraft</li>
-        <li>Stronghold</li>
-        <li>${link('Heroes of Might and Magic 3')} / 4</li>
-        <li>Half Life</li>
-        <li>Syberia</li>
-        <li>Majesty</li>
-        <li>Mafia</li>
-        <li>GTA</li>
-        <li>Война и Мир</li>
-        <li>Portal</li>
-        <li>Anno 1701 / 1404</li>
-        <li>Космические рэйнджеры</li>
-        <li>The Talos Principle</li>
+        <li><a href="https://ru.wikipedia.org/wiki/Warcraft_II:_Tides_of_Darkness">Warcraft 2</a>
+          / <a href="https://ru.wikipedia.org/wiki/Warcraft_III:_Reign_of_Chaos">3</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/StarCraft_(серия_игр)>Starcraft</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Stronghold">Stronghold</a></li>
+        <li>${link('Heroes of Might and Magic 3')}
+          / <a href="https://ru.wikipedia.org/wiki/Heroes_of_Might_and_Magic_IV">4</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Half-Life_(серия_игр)">Half-Life</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Syberia">Syberia</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Majesty:_The_Fantasy_Kingdom_Sim">Majesty</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Mafia:_The_City_of_Lost_Heaven">Mafia</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Grand_Theft_Auto_(серия_игр)">GTA</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Knights_and_Merchants:_The_Shattered_Kingdom">Война и Мир</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Portal">Portal</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Anno_1701">Anno 1701</a>
+          / <a href="https://ru.wikipedia.org/wiki/Anno_1404">1404</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Космические_рейнджеры">Космические рэйнджеры</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/The_Talos_Principle">The Talos Principle</a></li>
       </ul>
       <p>А также некоторые игры на ${link('ZX Spectrum')}.</p>
     `,
