@@ -172,7 +172,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
           loader: 'file-loader',
           options: {
             name: '[name].[hash:4].[ext]',
-            outputPath: staticImgDir,
+            outputPath: outputImgPath,
           },
         },
         {
