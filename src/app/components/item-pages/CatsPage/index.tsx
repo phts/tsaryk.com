@@ -3,8 +3,8 @@ import styled from 'app/styled-components'
 import {inject} from 'mobx-react'
 import {prepend, compose} from 'ramda'
 
-import PagePadding from 'app/components/item-pages/parts/PagePadding'
-import PageContent from 'app/components/item-pages/parts/PageContent'
+import Padding from 'app/components/item-pages/parts/Padding'
+import Content from 'app/components/item-pages/parts/Content'
 import CatsList, {CatsItemsData} from './CatsList'
 import asItemPage, {ItemPageProps} from 'app/components/item-pages/asItemPage'
 import {I18nStore} from 'app/stores/i18nStore'
@@ -17,17 +17,17 @@ interface Props extends ItemPageProps {
 const CatsPage: React.StatelessComponent<Props> = ({className, item, onClose, i18nStore}) => {
   const items = prepend({icon: '&#x1F408;', text: item.name})(item.data as CatsItemsData)
   return (
-    <PagePadding>
-      <PageContent className={className}>
+    <Padding>
+      <Content className={className}>
         <CatsList items={items}/>
-      </PageContent>
+      </Content>
       <Footer>
         <ActionButton
           onClick={onClose}>
           {i18nStore.labels.close}
         </ActionButton>
       </Footer>
-    </PagePadding>
+    </Padding>
   )
 }
 

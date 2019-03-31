@@ -3,9 +3,9 @@ import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 
 import './playing-cards.png'
-import PagePadding from 'app/components/item-pages/parts/PagePadding'
-import PageTitle from 'app/components/item-pages/parts/PageTitle'
-import PageContent from 'app/components/item-pages/parts/PageContent'
+import Padding from 'app/components/item-pages/parts/Padding'
+import Title from 'app/components/item-pages/parts/Title'
+import Content from 'app/components/item-pages/parts/Content'
 import asItemPage, {ItemPageProps} from 'app/components/item-pages/asItemPage'
 import {I18nStore} from 'app/stores/i18nStore'
 import ActionButton from 'app/components/ActionButton'
@@ -25,11 +25,11 @@ interface Data {
 
 const PlayingCardsPage: React.StatelessComponent<Props> =
   ({className, item, onClose, i18nStore, uiStore}) => (
-    <PagePadding>
+    <Padding>
       <header>
-        <PageTitle>{item.name}</PageTitle>
+        <Title>{item.name}</Title>
       </header>
-      <PageContent className={className}>
+      <Content className={className}>
         <p>{(item.data as Data).p2}</p>
         <p>{(item.data as Data).p1}</p>
         <p>
@@ -38,14 +38,14 @@ const PlayingCardsPage: React.StatelessComponent<Props> =
             <figcaption>{(item.data as Data).imgTitle}</figcaption>
           </figure>
         </p>
-      </PageContent>
+      </Content>
       <footer>
         <ActionButton
           onClick={onClose}>
           {i18nStore.labels.close}
         </ActionButton>
       </footer>
-    </PagePadding>
+    </Padding>
   )
 
 export default compose(

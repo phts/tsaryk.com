@@ -5,11 +5,11 @@ import {ThemeProvider} from 'app/styled-components'
 
 import ultramarinedTheme from 'app/themes/ultramarinedTheme'
 import Buttons from 'app/components/item-pages/parts/Buttons'
-import ThemedPagePadding from 'app/components/item-pages/parts/ThemedPagePadding'
-import PageTitle from 'app/components/item-pages/parts/PageTitle'
-import CenteredPageTitle from 'app/components/item-pages/parts/CenteredPageTitle'
-import PageContent from 'app/components/item-pages/parts/PageContent'
-import PageHtmlContent from 'app/components/item-pages/parts/PageHtmlContent'
+import ThemedPadding from 'app/components/item-pages/parts/ThemedPadding'
+import Title from 'app/components/item-pages/parts/Title'
+import CenteredTitle from 'app/components/item-pages/parts/CenteredTitle'
+import Content from 'app/components/item-pages/parts/Content'
+import HtmlContent from 'app/components/item-pages/parts/HtmlContent'
 import UltramarinedContent from './UltramarinedContent'
 import Logo from './Logo'
 import asItemPage, {ItemPageProps} from 'app/components/item-pages/asItemPage'
@@ -41,23 +41,23 @@ class UltramarinedPage extends React.Component<Props, State> {
   render() {
     const data = this.props.item.data as UltramarinedItemData
     const title = this.state.isUltramarined ?
-      <CenteredPageTitle><Logo/></CenteredPageTitle> :
-      <PageTitle>{this.props.item.name}</PageTitle>
+      <CenteredTitle><Logo/></CenteredTitle> :
+      <Title>{this.props.item.name}</Title>
     const content = this.state.isUltramarined ? (
-      <PageContent className={this.props.className}>
+      <Content className={this.props.className}>
         <UltramarinedContent>
           <ImgurPicture imageId="XlCoMYy" alt="Jenya"/>
           <ImgurPicture imageId="82GwSq9" alt="Dasha"/>
           <ImgurPicture imageId="uAs0gjm" alt="Galya"/>
           <ImgurPicture imageId="i2VIacr" alt="Phil"/>
         </UltramarinedContent>
-      </PageContent>
+      </Content>
     ) : (
-      <PageHtmlContent className={this.props.className} html={this.props.item.description}/>
+      <HtmlContent className={this.props.className} html={this.props.item.description}/>
     )
     const ultramarineButtonText = this.state.isUltramarined ? data.unultrimarine : data.ultrimarine
     const page = (
-      <ThemedPagePadding>
+      <ThemedPadding>
         <header>
           {title}
         </header>
@@ -74,7 +74,7 @@ class UltramarinedPage extends React.Component<Props, State> {
             </ActionButton>
           </Buttons>
         </footer>
-      </ThemedPagePadding>
+      </ThemedPadding>
     )
     return this.state.isUltramarined ? (
       <ThemeProvider theme={ultramarinedTheme}>

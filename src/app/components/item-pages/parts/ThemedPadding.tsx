@@ -1,7 +1,7 @@
 import styled from 'app/styled-components'
-import PagePadding from './PagePadding'
+import Padding from './Padding'
 
-export default styled(PagePadding)`
+export default styled(Padding)`
   background-color: ${props => props.theme.backgroundColor};
   color: ${props => props.theme.color};
 `
