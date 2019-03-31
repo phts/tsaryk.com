@@ -12,11 +12,11 @@ import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
 import routes, {ShowItemPageMatch} from 'app/routes'
 import {ItemPageComponentClass} from 'app/components/item-pages/asItemPage'
 import SimpleItemPage from 'app/components/item-pages/SimpleItemPage'
-import CatsItemPage from 'app/components/item-pages/CatsItemPage'
-import Heroes3ItemPage from 'app/components/item-pages/Heroes3ItemPage'
-import UltramarinedItemPage from 'app/components/item-pages/UltramarinedItemPage'
+import CatsPage from 'app/components/item-pages/CatsPage'
+import Heroes3Page from 'app/components/item-pages/Heroes3Page'
+import UltramarinedPage from 'app/components/item-pages/UltramarinedPage'
 import PlayingCardsPage from 'app/components/item-pages/PlayingCardsPage'
-import ZxSpectrumItemPage from 'app/components/item-pages/ZxSpectrumItemPage'
+import ZxSpectrumPage from 'app/components/item-pages/ZxSpectrumPage'
 import scrollToTopOnMount from 'app/components/scrollToTopOnMount'
 
 interface Props extends RouteComponentProps<ShowItemPageMatch> {
@@ -30,11 +30,11 @@ type KnownItemPagesMap = {
 }
 
 const knownItemPages: KnownItemPagesMap = {
-  Cats: CatsItemPage,
-  'Heroes of Might and Magic 3': Heroes3ItemPage,
+  Cats: CatsPage,
+  'Heroes of Might and Magic 3': Heroes3Page,
   'Playing cards': PlayingCardsPage,
-  Ultramarined: UltramarinedItemPage,
-  'ZX Spectrum': ZxSpectrumItemPage,
+  Ultramarined: UltramarinedPage,
+  'ZX Spectrum': ZxSpectrumPage,
 }
 
 class ShowItemPage extends React.PureComponent<Props> {

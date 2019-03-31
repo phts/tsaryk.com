@@ -17,7 +17,7 @@ interface Props extends ItemPageProps {
   i18nStore?: I18nStore
 }
 
-const Heroes3ItemPage: React.StatelessComponent<Props> =
+const Heroes3Page: React.StatelessComponent<Props> =
   ({className, item, onClose, i18nStore}) => (
     <PagePaddingWithCursor>
       <header>
@@ -44,4 +44,4 @@ const PagePaddingWithCursor = styled(PagePadding)`
 export default compose(
   asItemPage,
   inject('i18nStore'),
-)(Heroes3ItemPage)
+)(Heroes3Page)

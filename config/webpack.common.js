@@ -20,7 +20,7 @@ const svgDir = path.resolve(projectDir, 'svg')
 
 const outputImgPath = path.join('static', 'img')
 
-const heroes3AssetsDir = path.join(appDir, 'components', 'item-pages', 'Heroes3ItemPage')
+const heroes3AssetsDir = path.join(appDir, 'components', 'item-pages', 'Heroes3Page')
 const playingCardsAssetsDir = path.join(appDir, 'components', 'item-pages', 'PlayingCardsPage')
 const playingCardsPng = path.join(playingCardsAssetsDir, 'playing-cards.png')
 const playingCardsPngHash = md5(playingCardsPng).substring(0, 4)

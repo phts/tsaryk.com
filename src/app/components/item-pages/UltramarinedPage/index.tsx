@@ -4,15 +4,15 @@ import {compose} from 'ramda'
 import {ThemeProvider} from 'app/styled-components'
 
 import ultramarinedTheme from 'app/themes/ultramarinedTheme'
-import Buttons from './parts/Buttons'
-import ThemedPagePadding from './parts/ThemedPagePadding'
-import PageTitle from './parts/PageTitle'
-import CenteredPageTitle from './parts/CenteredPageTitle'
-import PageContent from './parts/PageContent'
-import PageHtmlContent from './parts/PageHtmlContent'
-import UltramarinedContent from './parts/UltramarinedContent'
-import UltramarinedLogo from './parts/UltramarinedLogo'
-import asItemPage, {ItemPageProps} from './asItemPage'
+import Buttons from 'app/components/item-pages/parts/Buttons'
+import ThemedPagePadding from 'app/components/item-pages/parts/ThemedPagePadding'
+import PageTitle from 'app/components/item-pages/parts/PageTitle'
+import CenteredPageTitle from 'app/components/item-pages/parts/CenteredPageTitle'
+import PageContent from 'app/components/item-pages/parts/PageContent'
+import PageHtmlContent from 'app/components/item-pages/parts/PageHtmlContent'
+import UltramarinedContent from './UltramarinedContent'
+import Logo from './Logo'
+import asItemPage, {ItemPageProps} from 'app/components/item-pages/asItemPage'
 import {I18nStore} from 'app/stores/i18nStore'
 import ActionButton from 'app/components/ActionButton'
 import ImgurPicture from 'app/components/ImgurPicture'
@@ -30,7 +30,7 @@ interface UltramarinedItemData {
   unultrimarine: string
 }
 
-class UltramarinedItemPage extends React.Component<Props, State> {
+class UltramarinedPage extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {
@@ -41,7 +41,7 @@ class UltramarinedItemPage extends React.Component<Props, State> {
   render() {
     const data = this.props.item.data as UltramarinedItemData
     const title = this.state.isUltramarined ?
-      <CenteredPageTitle><UltramarinedLogo/></CenteredPageTitle> :
+      <CenteredPageTitle><Logo/></CenteredPageTitle> :
       <PageTitle>{this.props.item.name}</PageTitle>
     const content = this.state.isUltramarined ? (
       <PageContent className={this.props.className}>
@@ -94,4 +94,4 @@ class UltramarinedItemPage extends React.Component<Props, State> {
 export default compose(
   asItemPage,
   inject('i18nStore'),
-)(UltramarinedItemPage)
+)(UltramarinedPage)
