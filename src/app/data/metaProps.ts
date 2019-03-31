@@ -87,6 +87,12 @@ export const metaPropsMap: MetaPropsMap = {
     type: ItemType.Meta,
   },
 
+  Belarus: {
+    size: ItemSize.L,
+  },
+  'Board games': {
+    size: ItemSize.L,
+  },
   Cats: {
     size: ItemSize.XL,
   },
@@ -113,6 +119,9 @@ export const metaPropsMap: MetaPropsMap = {
   },
   'Phil Tsaryk': {
     size: ItemSize.XXL,
+  },
+  'Playing cards': {
+    size: ItemSize.L,
   },
   React: {
     size: ItemSize.L,
