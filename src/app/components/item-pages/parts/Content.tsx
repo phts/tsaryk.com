@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import {CommonElementProps} from 'app/helpers/types'
+import {CommonElementProps} from 'helpers/types'
 
 interface Props extends CommonElementProps<HTMLDivElement> {
   className: string

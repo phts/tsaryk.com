@@ -1,7 +1,7 @@
 import * as MockDate from 'mockdate'
-import {AgeStore, AgePart, Age} from 'app/stores/ageStore'
+import {AgeStore, AgePart, Age} from 'stores/ageStore'
 
-jest.mock('app/config', () => {
+jest.mock('config', () => {
   return {
     DATE_OF_BIRTH: new Date(1987, 11, 3, 10, 30, 0),
   }

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {omit} from 'ramda'
 
-import {AnyComponentClass, CommonElementProps} from 'app/helpers/types'
+import {AnyComponentClass, CommonElementProps} from 'helpers/types'
 import TooltipAsterisk from './TooltipAsterisk'
 
 function withTooltip<T extends CommonElementProps<HTMLElement>>(C: AnyComponentClass<T>) {

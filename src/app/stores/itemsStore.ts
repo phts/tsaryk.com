@@ -1,25 +1,25 @@
 import {computed} from 'mobx'
 import * as R from 'ramda'
 
-import {enumToArray} from 'app/utils/core'
+import {enumToArray} from 'utils/core'
 import {
   DEFAULT_META_PROPS,
   ItemPosition,
   ItemSize,
   ItemType,
   metaPropsMap,
-} from 'app/data/metaProps'
+} from 'data/metaProps'
 import {
   DEFAULT_CATEGORY_PROPS,
   ItemCategory,
   categoryPropsMap,
-} from 'app/data/categoryProps'
+} from 'data/categoryProps'
 import {
   Lang,
   TranslatedStrings,
   translations,
-} from 'app/data/translations'
-import {Names, KnownName} from 'app/data/names'
+} from 'data/translations'
+import {Names, KnownName} from 'data/names'
 import langStore, {LangStore} from './langStore'
 
 export interface ItemData {

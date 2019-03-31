@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {media} from 'app/helpers/css'
+import {media} from 'helpers/css'
 
 export default styled.div`
   box-sizing: border-box;

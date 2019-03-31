@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/indent */
 /* eslint-disable max-len */
 import {TranslatedStrings} from './index'
-import {a, callto, figure, img, link, mailto, p, tel, youtube} from 'app/helpers/html'
-import {picture} from 'app/helpers/imgur'
+import {a, callto, figure, img, link, mailto, p, tel, youtube} from 'helpers/html'
+import {picture} from 'helpers/imgur'
 import {
   EMAIL,
   LASTFM_URL,
   LINKEDIN_URL,
-} from 'app/config'
+} from 'config'
 
 export const ru: TranslatedStrings = {
   EN: {

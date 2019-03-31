@@ -2,24 +2,24 @@ import * as React from 'react'
 import * as R from 'ramda'
 import {observer, inject} from 'mobx-react'
 
-import {WidthsStore} from 'app/stores/widthsStore'
+import {WidthsStore} from 'stores/widthsStore'
 import {
   ItemId,
   ListItem,
   ListStore,
   Mode,
-} from 'app/stores/listStore'
-import {Lang} from 'app/stores/langStore'
-import BtnList from 'app/components/BtnList'
-import AgeBtn from 'app/components/buttons/AgeBtn'
-import {BtnClass} from 'app/components/buttons/asBtn'
-import CategoryBtn from 'app/components/buttons/CategoryBtn'
-import ColorsBtn from 'app/components/buttons/ColorsBtn'
-import FeedbackBtn from 'app/components/buttons/FeedbackBtn'
-import LangBtn from 'app/components/buttons/LangBtn'
-import ModeBtn from 'app/components/buttons/ModeBtn'
-import TextBtn from 'app/components/buttons/TextBtn'
-import TitleBtn from 'app/components/buttons/TitleBtn'
+} from 'stores/listStore'
+import {Lang} from 'stores/langStore'
+import BtnList from 'components/BtnList'
+import AgeBtn from 'components/buttons/AgeBtn'
+import {BtnClass} from 'components/buttons/asBtn'
+import CategoryBtn from 'components/buttons/CategoryBtn'
+import ColorsBtn from 'components/buttons/ColorsBtn'
+import FeedbackBtn from 'components/buttons/FeedbackBtn'
+import LangBtn from 'components/buttons/LangBtn'
+import ModeBtn from 'components/buttons/ModeBtn'
+import TextBtn from 'components/buttons/TextBtn'
+import TitleBtn from 'components/buttons/TitleBtn'
 
 interface Props {
   listStore?: ListStore

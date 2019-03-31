@@ -1,5 +1,5 @@
 import React from 'react'
-import {CommonElementProps} from 'app/helpers/types'
+import {CommonElementProps} from 'helpers/types'
 
 type Props = CommonElementProps<HTMLElement>
 

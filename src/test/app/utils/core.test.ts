@@ -1,4 +1,4 @@
-import {enumToArray} from 'app/utils/core'
+import {enumToArray} from 'utils/core'
 
 describe('enumToArray', () => {
   enum EnumToTest {

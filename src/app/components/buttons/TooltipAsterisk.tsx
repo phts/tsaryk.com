@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import {CommonElementProps} from 'app/helpers/types'
+import {CommonElementProps} from 'helpers/types'
 
 type Props = CommonElementProps<HTMLSpanElement>
 

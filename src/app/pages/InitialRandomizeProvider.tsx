@@ -1,8 +1,8 @@
 import * as React from 'react'
 import {inject} from 'mobx-react'
 
-import {WidthsStore} from 'app/stores/widthsStore'
-import {ListStore} from 'app/stores/listStore'
+import {WidthsStore} from 'stores/widthsStore'
+import {ListStore} from 'stores/listStore'
 
 interface Props {
   listStore?: ListStore

@@ -1,6 +1,6 @@
 import {History} from 'history'
-import {ItemId} from 'app/stores/itemsStore'
-import routes from 'app/routes'
+import {ItemId} from 'stores/itemsStore'
+import routes from 'routes'
 
 export function openItem(history: History, id: ItemId) {
   history.push(id)

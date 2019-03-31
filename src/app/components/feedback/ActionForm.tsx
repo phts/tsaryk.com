@@ -1,7 +1,7 @@
 import styled, {StyledFunction} from 'styled-components'
 
-import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
-import {FormElementProps} from 'app/helpers/types'
+import {BUTTON_TYPE, getBorder} from 'helpers/buttons'
+import {FormElementProps} from 'helpers/types'
 
 interface Props extends FormElementProps {
   disabled: boolean

@@ -96,9 +96,10 @@
       "jsx",
       "json"
     ],
-    "moduleNameMapper": {
-      "^app/(.*)": "<rootDir>/src/app/$1"
-    },
+    "moduleDirectories": [
+      "app",
+      "node_modules"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!(rambdax)/)"
     ]

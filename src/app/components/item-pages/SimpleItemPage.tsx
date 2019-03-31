@@ -8,8 +8,8 @@ import Padding from './parts/Padding'
 import Title from './parts/Title'
 import HtmlContent from './parts/HtmlContent'
 import asItemPage, {ItemPageProps} from './asItemPage'
-import {I18nStore} from 'app/stores/i18nStore'
-import ActionButton from 'app/components/ActionButton'
+import {I18nStore} from 'stores/i18nStore'
+import ActionButton from 'components/ActionButton'
 
 interface Props extends ItemPageProps {
   i18nStore?: I18nStore

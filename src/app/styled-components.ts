@@ -7,7 +7,7 @@ import {
   StyledFunction,
 } from '../../node_modules/styled-components'
 
-import Theme from 'app/themes/Theme'
+import Theme from 'themes/Theme'
 
 const {
   css,

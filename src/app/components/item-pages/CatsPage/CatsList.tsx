@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import OrderedListWithItemHeight from 'app/components/OrderedListWithItemHeight'
+import OrderedListWithItemHeight from 'components/OrderedListWithItemHeight'
 
 export type CatsItemsData = Array<{icon: string, text: string, tooltip?: string}>
 

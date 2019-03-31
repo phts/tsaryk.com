@@ -1,4 +1,4 @@
-import {ItemId} from 'app/stores/itemsStore'
+import {ItemId} from 'stores/itemsStore'
 
 export interface IndexPageMatch {
 }

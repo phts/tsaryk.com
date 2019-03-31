@@ -78,13 +78,15 @@ module.exports = ({prod = false, analyzer} = {}) => {
     },
     resolve: {
       alias: {
-        app: appDir,
-        static: staticDir,
         react: 'preact-compat',
         'react-dom': 'preact-compat',
         'styled-components': path.join(appDir, 'styled-components'),
       },
       extensions: ['.tsx', '.ts', '.js'],
+      modules: [
+        appDir,
+        'node_modules',
+      ],
     },
     optimization: {
       splitChunks: {
