@@ -3,6 +3,7 @@ import styled from 'app/styled-components'
 import {inject} from 'mobx-react'
 import {prepend, compose} from 'ramda'
 
+import Footer from 'app/components/item-pages/parts/Footer'
 import Padding from 'app/components/item-pages/parts/Padding'
 import Content from 'app/components/item-pages/parts/Content'
 import CatsList, {CatsItemsData} from './CatsList'
@@ -21,17 +22,17 @@ const CatsPage: React.StatelessComponent<Props> = ({className, item, onClose, i1
       <Content className={className}>
         <CatsList items={items}/>
       </Content>
-      <Footer>
+      <CatsFooter>
         <ActionButton
           onClick={onClose}>
           {i18nStore.labels.close}
         </ActionButton>
-      </Footer>
+      </CatsFooter>
     </Padding>
   )
 }
 
-const Footer = styled.footer`
+const CatsFooter = styled(Footer)`
   padding-left: 4.5rem;
 `
 

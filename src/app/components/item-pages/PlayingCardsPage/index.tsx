@@ -3,6 +3,8 @@ import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 
 import './playing-cards.png'
+import Header from 'app/components/item-pages/parts/Header'
+import Footer from 'app/components/item-pages/parts/Footer'
 import Padding from 'app/components/item-pages/parts/Padding'
 import Title from 'app/components/item-pages/parts/Title'
 import Content from 'app/components/item-pages/parts/Content'
@@ -26,9 +28,9 @@ interface Data {
 const PlayingCardsPage: React.StatelessComponent<Props> =
   ({className, item, onClose, i18nStore, uiStore}) => (
     <Padding>
-      <header>
+      <Header>
         <Title>{item.name}</Title>
-      </header>
+      </Header>
       <Content className={className}>
         <p>{(item.data as Data).p2}</p>
         <p>{(item.data as Data).p1}</p>
@@ -39,12 +41,12 @@ const PlayingCardsPage: React.StatelessComponent<Props> =
           </figure>
         </p>
       </Content>
-      <footer>
+      <Footer>
         <ActionButton
           onClick={onClose}>
           {i18nStore.labels.close}
         </ActionButton>
-      </footer>
+      </Footer>
     </Padding>
   )
 

@@ -3,6 +3,8 @@ import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 import {ThemeProvider} from 'app/styled-components'
 
+import Header from 'app/components/item-pages/parts/Header'
+import Footer from 'app/components/item-pages/parts/Footer'
 import ultramarinedTheme from 'app/themes/ultramarinedTheme'
 import Buttons from 'app/components/item-pages/parts/Buttons'
 import ThemedPadding from 'app/components/item-pages/parts/ThemedPadding'
@@ -58,11 +60,11 @@ class UltramarinedPage extends React.Component<Props, State> {
     const ultramarineButtonText = this.state.isUltramarined ? data.unultrimarine : data.ultrimarine
     const page = (
       <ThemedPadding>
-        <header>
+        <Header>
           {title}
-        </header>
+        </Header>
         {content}
-        <footer>
+        <Footer>
           <Buttons>
             <ActionButton
               onClick={this.props.onClose}>
@@ -73,7 +75,7 @@ class UltramarinedPage extends React.Component<Props, State> {
               {ultramarineButtonText}
             </ActionButton>
           </Buttons>
-        </footer>
+        </Footer>
       </ThemedPadding>
     )
     return this.state.isUltramarined ? (

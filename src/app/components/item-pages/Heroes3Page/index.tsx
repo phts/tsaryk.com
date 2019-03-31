@@ -3,6 +3,8 @@ import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 import styled from 'app/styled-components'
 
+import Header from 'app/components/item-pages/parts/Header'
+import Footer from 'app/components/item-pages/parts/Footer'
 import Padding from 'app/components/item-pages/parts/Padding'
 import Title from 'app/components/item-pages/parts/Title'
 import HtmlContent from 'app/components/item-pages/parts/HtmlContent'
@@ -20,16 +22,16 @@ interface Props extends ItemPageProps {
 const Heroes3Page: React.StatelessComponent<Props> =
   ({className, item, onClose, i18nStore}) => (
     <PaddingWithCursor>
-      <header>
+      <Header>
         <Title>{item.name}</Title>
-      </header>
+      </Header>
       <HtmlContent className={className} html={item.description}/>
-      <footer>
+      <Footer>
         <ActionButton
           onClick={onClose}>
           {i18nStore.labels.close}
         </ActionButton>
-      </footer>
+      </Footer>
     </PaddingWithCursor>
   )
 

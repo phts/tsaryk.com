@@ -2,6 +2,8 @@ import * as React from 'react'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 
+import Header from 'app/components/item-pages/parts/Header'
+import Footer from 'app/components/item-pages/parts/Footer'
 import HtmlContent from 'app/components/item-pages/parts/HtmlContent'
 import Title from 'app/components/item-pages/parts/Title'
 import ZxBorder from './ZxBorder'
@@ -16,16 +18,16 @@ interface Props extends ItemPageProps {
 const ZxSpectrumPage: React.StatelessComponent<Props> =
   ({className, item, onClose, i18nStore}) => (
     <ZxBorder>
-      <header>
+      <Header>
         <Title>{item.name}</Title>
-      </header>
+      </Header>
       <HtmlContent className={className} html={item.description}/>
-      <footer>
+      <Footer>
         <ActionButton
           onClick={onClose}>
           {i18nStore.labels.close}
         </ActionButton>
-      </footer>
+      </Footer>
     </ZxBorder>
   )
 

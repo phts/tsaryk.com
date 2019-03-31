@@ -2,6 +2,8 @@ import * as React from 'react'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 
+import Header from './parts/Header'
+import Footer from './parts/Footer'
 import Padding from './parts/Padding'
 import Title from './parts/Title'
 import HtmlContent from './parts/HtmlContent'
@@ -15,16 +17,16 @@ interface Props extends ItemPageProps {
 
 const SimpleItemPage: React.StatelessComponent<Props> = ({className, item, onClose, i18nStore}) => (
   <Padding>
-    <header>
+    <Header>
       <Title>{item.name}</Title>
-    </header>
+    </Header>
     <HtmlContent className={className} html={item.description}/>
-    <footer>
+    <Footer>
       <ActionButton
         onClick={onClose}>
         {i18nStore.labels.close}
       </ActionButton>
-    </footer>
+    </Footer>
   </Padding>
 )
 
