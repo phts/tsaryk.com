@@ -24,9 +24,9 @@ export default (
 ) as React.StatelessComponent<Props>
 
 const EmojiIcon = styled.span`
-  display: inline-block,
-  width: 4rem;
-  text-align: right;
-  margin-right: 0.5rem;
   cursor: ${props => props.title ? 'help' : 'default'};
+  display: inline-block;
+  margin-right: 0.5rem;
+  text-align: right;
+  width: 4rem;
 `
