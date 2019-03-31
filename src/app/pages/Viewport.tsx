@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {observer, inject} from 'mobx-react'
-import {ThemeProvider} from 'app/styled-components'
+import {ThemeProvider} from 'styled-components'
 
 import dynamicTheme from 'app/themes/dynamicTheme'
 import FlexContainerWrapper from 'app/components/FlexContainerWrapper'

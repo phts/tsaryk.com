@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
-import {ThemeProvider} from 'app/styled-components'
+import {ThemeProvider} from 'styled-components'
 
 import Header from 'app/components/item-pages/parts/Header'
 import Footer from 'app/components/item-pages/parts/Footer'

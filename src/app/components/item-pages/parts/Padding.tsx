@@ -1,4 +1,4 @@
-import styled from 'app/styled-components'
+import styled from 'styled-components'
 import {media} from 'app/helpers/css'
 
 export default styled.div`

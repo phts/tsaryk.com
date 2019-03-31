@@ -1,4 +1,4 @@
-import {injectGlobal} from 'app/styled-components'
+import {injectGlobal} from 'styled-components'
 import {media} from 'app/helpers/css'
 
 injectGlobal`

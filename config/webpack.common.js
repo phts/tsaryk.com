@@ -82,6 +82,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
         static: staticDir,
         react: 'preact-compat',
         'react-dom': 'preact-compat',
+        'styled-components': path.join(appDir, 'styled-components'),
       },
       extensions: ['.tsx', '.ts', '.js'],
     },

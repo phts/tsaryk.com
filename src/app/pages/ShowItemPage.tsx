@@ -3,7 +3,7 @@ import * as React from 'react'
 import {withRouter, RouteComponentProps, Redirect} from 'react-router-dom'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
-import styled from 'app/styled-components'
+import styled from 'styled-components'
 
 import {media} from 'app/helpers/css'
 import {ItemId, ItemsStore} from 'app/stores/itemsStore'

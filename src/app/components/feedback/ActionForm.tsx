@@ -1,4 +1,4 @@
-import styled, {StyledFunction} from 'app/styled-components'
+import styled, {StyledFunction} from 'styled-components'
 
 import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
 import {FormElementProps} from 'app/helpers/types'
