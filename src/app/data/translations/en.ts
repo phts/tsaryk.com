@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/indent */
 /* eslint-disable max-len */
-import {a, mailto, link, p, tel, youtube, figure} from 'app/helpers/html'
+import {a, callto, mailto, link, p, tel, youtube, figure} from 'app/helpers/html'
 import {picture} from 'app/helpers/imgur'
 import {TranslatedStrings} from './index'
 import {
@@ -391,6 +391,7 @@ Collecting those which I really like.',
   Random: {
   },
   React: {
+    description: p(`At this moment I am specializing exactly ${a('https://reactjs.org/', 'on this library')}.`),
   },
   'Ritchie Blackmore': {
     description: p('In my opinion the best guitarist ever.'),
@@ -409,18 +410,37 @@ Collecting those which I really like.',
   Škoda: {
   },
   Skype: {
+    description: p(`My name in Skype: ${callto('phil.tsarik')}.`),
   },
   'Software Engineer': {
+    description: p(`My speciality after graduating from ${link('PSU', 'university')}.`),
   },
   'Space Resonance': {
   },
   'Stack Overflow': {
+    description: `
+      <p>
+        Sometimes I ${a('https://stackoverflow.com/users/2462524/phts', 'ask and answer')} questions
+        on ${a('https://stackoverflow.com/', 'Stack Overflow')}.
+      </p>
+    `,
   },
   'Sublime Text': {
+    description: `
+      <p>Great code editor. Using it every day.</p>
+      <p>
+        Occasionally I
+        ${a(
+          'https://github.com/phts?utf8=%e2%9C%93&tab=repositories&q=sublime&type=&language=',
+          'make plugins',
+        )} for it.
+      </p>
+    `,
   },
   Title: {
   },
   'The Netherlands': {
+    description: p('Someday I will live there for sure.'),
   },
   Traveling: {
     description: `

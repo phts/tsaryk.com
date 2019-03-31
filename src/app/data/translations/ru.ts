@@ -488,7 +488,7 @@ ${link('Krako\u0301w', 'Краков')}.`),
   },
   React: {
     name: 'Реакт',
-    description: p('В данный момент специализируюсь именно на этой библиотеке.'),
+    description: p(`В данный момент специализируюсь именно ${a('https://reactjs.org/', 'на этой библиотеке')}.`),
   },
   'Ritchie Blackmore': {
     name: 'Ричи Блэкмор',
@@ -570,7 +570,7 @@ ${link('Krako\u0301w', 'Краков')}.`),
     description: `
       <p>
         Иногда ${a('https://stackoverflow.com/users/2462524/phts', 'задаю и отвечаю')} на вопросы
-        на Стак Оверфлоу.
+        на ${a('https://stackoverflow.com/', 'Стак Оверфлоу')}.
       </p>
     `,
   },
