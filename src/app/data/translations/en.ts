@@ -422,6 +422,24 @@ Collecting those which I really like.',
   },
   'The Netherlands': {
   },
+  Traveling: {
+    description: `
+      <p>I like traveling with my ${link('Family', 'family')}. By car, by train, by plane, by anything.</p>
+      <p>There are countries which we have already visited:</p>
+      <ul style="list-style-type: none;">
+        <li>&#127463;&#127486; ${link('Belarus')} &mdash; obviously</li>
+        <li>&#127464;&#127487; Czech Republic</li>
+        <li>&#127466;&#127480; Spain</li>
+        <li>&#127467;&#127479; France</li>
+        <li>&#127468;&#127479; Greece</li>
+        <li>&#127475;&#127473; ${link('The Netherlands')}</li>
+        <li>&#127477;&#127473; ${link('Poland')} &mdash; also obviously :)</li>
+        <li>&#127479;&#127482; Russia</li>
+        <li>&#127481;&#127479; Turkey</li>
+        <li>&#127482;&#127462; Ukraine</li>
+      </ul>
+    `,
+  },
   Ultramarined: {
     data: {
       ultrimarine: 'Ultramarine me!',

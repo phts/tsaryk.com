@@ -120,4 +120,7 @@ export const metaPropsMap: MetaPropsMap = {
   'Software Engineer': {
     size: ItemSize.L,
   },
+  Traveling: {
+    size: ItemSize.L,
+  },
 }
