@@ -2,30 +2,32 @@ import * as React from 'react'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 
-import PagePadding from './parts/PagePadding'
-import PageTitle from './parts/PageTitle'
-import PageHtmlContent from './parts/PageHtmlContent'
+import Header from './parts/Header'
+import Footer from './parts/Footer'
+import Padding from './parts/Padding'
+import Title from './parts/Title'
+import HtmlContent from './parts/HtmlContent'
 import asItemPage, {ItemPageProps} from './asItemPage'
-import {I18nStore} from 'app/stores/i18nStore'
-import ActionButton from 'app/components/ActionButton'
+import {I18nStore} from 'stores/i18nStore'
+import ActionButton from 'components/ActionButton'
 
 interface Props extends ItemPageProps {
   i18nStore?: I18nStore
 }
 
 const SimpleItemPage: React.StatelessComponent<Props> = ({className, item, onClose, i18nStore}) => (
-  <PagePadding>
-    <header>
-      <PageTitle>{item.name}</PageTitle>
-    </header>
-    <PageHtmlContent className={className} html={item.description}/>
-    <footer>
+  <Padding>
+    <Header>
+      <Title>{item.name}</Title>
+    </Header>
+    <HtmlContent className={className} html={item.description}/>
+    <Footer>
       <ActionButton
         onClick={onClose}>
         {i18nStore.labels.close}
       </ActionButton>
-    </footer>
-  </PagePadding>
+    </Footer>
+  </Padding>
 )
 
 export default compose(

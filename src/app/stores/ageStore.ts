@@ -13,8 +13,8 @@ import {
   differenceInYears,
 } from 'date-fns'
 
-import {daysInMonth} from 'app/utils/date'
-import {DATE_OF_BIRTH} from 'app/config'
+import {daysInMonth} from 'utils/date'
+import {DATE_OF_BIRTH} from 'config'
 
 export interface Age {
   days?: number

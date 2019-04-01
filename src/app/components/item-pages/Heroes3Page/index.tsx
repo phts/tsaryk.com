@@ -1,57 +1,49 @@
 import * as React from 'react'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
+import styled from 'styled-components'
 
-import './playing-cards.png'
 import Header from 'components/item-pages/parts/Header'
 import Footer from 'components/item-pages/parts/Footer'
 import Padding from 'components/item-pages/parts/Padding'
 import Title from 'components/item-pages/parts/Title'
-import Content from 'components/item-pages/parts/Content'
+import HtmlContent from 'components/item-pages/parts/HtmlContent'
 import asItemPage, {ItemPageProps} from 'components/item-pages/asItemPage'
 import {I18nStore} from 'stores/i18nStore'
 import ActionButton from 'components/ActionButton'
-import PlayingCards from './playing-cards.component.svg'
-import {UiStore} from 'stores/uiStore'
+
+import cursorDefaultPng from './h3-default.png'
+import cursorPointerPng from './h3-pointer.png'
 
 interface Props extends ItemPageProps {
   i18nStore?: I18nStore
-  uiStore?: UiStore
 }
 
-interface Data {
-  p1: string
-  p2: string
-  imgTitle: string
-}
-
-const PlayingCardsPage: React.StatelessComponent<Props> =
-  ({className, item, onClose, i18nStore, uiStore}) => (
-    <Padding>
+const Heroes3Page: React.StatelessComponent<Props> =
+  ({className, item, onClose, i18nStore}) => (
+    <PaddingWithCursor>
       <Header>
         <Title>{item.name}</Title>
       </Header>
-      <Content className={className}>
-        <p>{(item.data as Data).p2}</p>
-        <p>{(item.data as Data).p1}</p>
-        <p>
-          <figure>
-            <PlayingCards style={{color: uiStore.backgroundColor}}/>
-            <figcaption>{(item.data as Data).imgTitle}</figcaption>
-          </figure>
-        </p>
-      </Content>
+      <HtmlContent className={className} html={item.description}/>
       <Footer>
         <ActionButton
           onClick={onClose}>
           {i18nStore.labels.close}
         </ActionButton>
       </Footer>
-    </Padding>
+    </PaddingWithCursor>
   )
+
+const PaddingWithCursor = styled(Padding)`
+  cursor: url(${cursorDefaultPng}) 16 16, default;
+
+  button {
+    cursor: url(${cursorPointerPng}) 16 16, pointer;
+  }
+`
 
 export default compose(
   asItemPage,
   inject('i18nStore'),
-  inject('uiStore'),
-)(PlayingCardsPage)
+)(Heroes3Page)

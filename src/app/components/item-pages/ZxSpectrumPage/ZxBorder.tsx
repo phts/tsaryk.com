@@ -1,6 +1,6 @@
 import * as React from 'react'
-import styled, {css} from 'app/styled-components'
-import {media} from 'app/helpers/css'
+import styled, {css} from 'styled-components'
+import {media} from 'helpers/css'
 
 const ZxBorder: React.StatelessComponent = ({children}) => (
   <Border>

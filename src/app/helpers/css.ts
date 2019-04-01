@@ -1,5 +1,5 @@
 import random from 'rambdax/modules/random'
-import {css, SimpleInterpolation} from 'app/styled-components'
+import {css, SimpleInterpolation} from 'styled-components'
 
 export const breakpoints = {
   mobile: 320,

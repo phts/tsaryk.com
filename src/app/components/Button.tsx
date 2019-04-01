@@ -1,5 +1,5 @@
-import styled, {StyledFunction} from 'app/styled-components'
-import {ButtonElementProps} from 'app/helpers/types'
+import styled, {StyledFunction} from 'styled-components'
+import {ButtonElementProps} from 'helpers/types'
 
 interface Props extends ButtonElementProps {
   border?: string

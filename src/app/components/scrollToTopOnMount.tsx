@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import {Hoc} from 'app/helpers/types'
+import {Hoc} from 'helpers/types'
 
 export default (
   WrappedComponent => {

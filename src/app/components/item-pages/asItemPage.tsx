@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import {Item} from 'app/stores/itemsStore'
-import {Hoc} from 'app/helpers/types'
+import {Item} from 'stores/itemsStore'
+import {Hoc} from 'helpers/types'
 
 export interface ItemPageProps {
   className: string

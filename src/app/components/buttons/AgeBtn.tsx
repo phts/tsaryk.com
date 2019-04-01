@@ -4,8 +4,8 @@ import {observer, inject} from 'mobx-react'
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
-import {AgeStore} from 'app/stores/ageStore'
-import {padWithZero} from 'app/utils/core'
+import {AgeStore} from 'stores/ageStore'
+import {padWithZero} from 'utils/core'
 
 interface Props extends BtnProps {
   ageStore?: AgeStore

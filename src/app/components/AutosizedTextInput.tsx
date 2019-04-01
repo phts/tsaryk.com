@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {InputElementProps} from 'app/helpers/types'
+import {InputElementProps} from 'helpers/types'
 
 const INPUT_MIN_WIDTH = 20
 

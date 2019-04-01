@@ -1,7 +1,7 @@
 import * as R from 'ramda'
-import {categoryPropsMap, CategoryPropsMap} from 'app/data/categoryProps'
-import {KnownName, Names} from 'app/data/names'
-import {enumToArray} from 'app/utils/core'
+import {categoryPropsMap, CategoryPropsMap} from 'data/categoryProps'
+import {KnownName, Names} from 'data/names'
+import {enumToArray} from 'utils/core'
 
 const includedItemNames: KnownName[] = R.compose(
   R.flatten,

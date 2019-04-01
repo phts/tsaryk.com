@@ -1,13 +1,13 @@
 /* eslint-disable no-duplicate-imports*/
 
-import * as styledComponents from 'styled-components'
+import * as styledComponents from '../../node_modules/styled-components'
 import {
   ThemedStyledComponentsModule,
   SimpleInterpolation,
   StyledFunction,
-} from 'styled-components'
+} from '../../node_modules/styled-components'
 
-import Theme from 'app/themes/Theme'
+import Theme from 'themes/Theme'
 
 const {
   css,

@@ -9,7 +9,7 @@ import BtnListPage from './BtnListPage'
 import ShowItemPage from './ShowItemPage'
 import Viewport from './Viewport'
 import InitialRandomizeProvider from './InitialRandomizeProvider'
-import routes from 'app/routes'
+import routes from 'routes'
 
 export default () => (
   <Router>

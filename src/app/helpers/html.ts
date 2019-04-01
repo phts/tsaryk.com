@@ -1,4 +1,4 @@
-import {KnownName} from 'app/data/names'
+import {KnownName} from 'data/names'
 
 function aTag(href: string, text: string, attrs: string[] = []) {
   const attributes = [

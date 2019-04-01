@@ -1,7 +1,7 @@
 import {Link, LinkProps} from 'react-router-dom'
-import styled, {StyledFunction} from 'app/styled-components'
+import styled, {StyledFunction} from 'styled-components'
 
-import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
+import {BUTTON_TYPE, getBorder} from 'helpers/buttons'
 
 interface Props extends LinkProps {
   buttonType: BUTTON_TYPE

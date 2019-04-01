@@ -1,4 +1,4 @@
-import styled, {StyledFunction} from 'app/styled-components'
+import styled, {StyledFunction} from 'styled-components'
 
 interface Props {
   flexible: boolean

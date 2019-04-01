@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import emailService from 'app/services/email'
+import emailService from 'services/email'
 import ActionForm from './ActionForm'
 import FeedbackFormInput from './FeedbackFormInput'
 import Indicator, {IndicatorState} from './Indicator'

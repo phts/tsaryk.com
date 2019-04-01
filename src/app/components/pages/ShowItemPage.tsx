@@ -3,21 +3,21 @@ import * as React from 'react'
 import {withRouter, RouteComponentProps, Redirect} from 'react-router-dom'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
-import styled from 'app/styled-components'
+import styled from 'styled-components'
 
-import {media} from 'app/helpers/css'
-import {ItemId, ItemsStore} from 'app/stores/itemsStore'
-import {openIndex} from 'app/helpers/routes'
-import {BUTTON_TYPE, getBorder} from 'app/helpers/buttons'
-import routes, {ShowItemPageMatch} from 'app/routes'
-import {ItemPageComponentClass} from 'app/components/item-pages/asItemPage'
-import SimpleItemPage from 'app/components/item-pages/SimpleItemPage'
-import CatsItemPage from 'app/components/item-pages/CatsItemPage'
-import Heroes3ItemPage from 'app/components/item-pages/Heroes3ItemPage'
-import UltramarinedItemPage from 'app/components/item-pages/UltramarinedItemPage'
-import PlayingCardsPage from 'app/components/item-pages/PlayingCardsPage'
-import ZxSpectrumItemPage from 'app/components/item-pages/ZxSpectrumItemPage'
-import scrollToTopOnMount from 'app/components/scrollToTopOnMount'
+import {media} from 'helpers/css'
+import {ItemId, ItemsStore} from 'stores/itemsStore'
+import {openIndex} from 'helpers/routes'
+import {BUTTON_TYPE, getBorder} from 'helpers/buttons'
+import routes, {ShowItemPageMatch} from 'routes'
+import {ItemPageComponentClass} from 'components/item-pages/asItemPage'
+import SimpleItemPage from 'components/item-pages/SimpleItemPage'
+import CatsPage from 'components/item-pages/CatsPage'
+import Heroes3Page from 'components/item-pages/Heroes3Page'
+import UltramarinedPage from 'components/item-pages/UltramarinedPage'
+import PlayingCardsPage from 'components/item-pages/PlayingCardsPage'
+import ZxSpectrumPage from 'components/item-pages/ZxSpectrumPage'
+import scrollToTopOnMount from 'components/scrollToTopOnMount'
 
 interface Props extends RouteComponentProps<ShowItemPageMatch> {
   className: string
@@ -30,11 +30,11 @@ type KnownItemPagesMap = {
 }
 
 const knownItemPages: KnownItemPagesMap = {
-  Cats: CatsItemPage,
-  'Heroes of Might and Magic 3': Heroes3ItemPage,
+  Cats: CatsPage,
+  'Heroes of Might and Magic 3': Heroes3Page,
   'Playing cards': PlayingCardsPage,
-  Ultramarined: UltramarinedItemPage,
-  'ZX Spectrum': ZxSpectrumItemPage,
+  Ultramarined: UltramarinedPage,
+  'ZX Spectrum': ZxSpectrumPage,
 }
 
 class ShowItemPage extends React.PureComponent<Props> {

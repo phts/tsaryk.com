@@ -1,6 +1,6 @@
-import styled, {StyledFunction} from 'app/styled-components'
+import styled, {StyledFunction} from 'styled-components'
 
-import {CommonElementProps} from 'app/helpers/types'
+import {CommonElementProps} from 'helpers/types'
 
 interface Props extends CommonElementProps<HTMLLIElement> {
   flexBasis: number

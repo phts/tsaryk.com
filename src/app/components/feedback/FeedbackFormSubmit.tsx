@@ -1,5 +1,5 @@
 import * as React from 'react'
-import styled from 'app/styled-components'
+import styled from 'styled-components'
 
 import EnterSymbol from './EnterSymbol'
 

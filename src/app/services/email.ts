@@ -1,7 +1,7 @@
 import * as emailjs from 'emailjs-com'
 import browserLocale from 'browser-locale'
 
-import langStore from 'app/stores/langStore'
+import langStore from 'stores/langStore'
 
 const SERVICE_ID = 'feedback_tsaryk_com'
 const TEMPLATE_ID = 'tsaryk_com'

@@ -1,7 +1,7 @@
 import {observable, action} from 'mobx'
 import browserLocale from 'browser-locale'
 
-import {Lang} from 'app/data/translations'
+import {Lang} from 'data/translations'
 
 export {Lang}
 

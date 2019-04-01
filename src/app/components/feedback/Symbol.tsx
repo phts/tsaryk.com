@@ -1,6 +1,6 @@
-import styled from 'app/styled-components'
+import styled from 'styled-components'
 
-import {blinkAnimation} from 'app/helpers/css'
+import {blinkAnimation} from 'helpers/css'
 
 interface Props {
   color: string

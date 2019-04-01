@@ -4,8 +4,8 @@ import {inject} from 'mobx-react'
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
-import {getRandomCssColor} from 'app/helpers/css'
-import {UiStore} from 'app/stores/uiStore'
+import {getRandomCssColor} from 'helpers/css'
+import {UiStore} from 'stores/uiStore'
 
 interface Props extends BtnProps {
   uiStore?: UiStore

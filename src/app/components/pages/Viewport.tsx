@@ -1,11 +1,11 @@
 import * as React from 'react'
 import {observer, inject} from 'mobx-react'
-import {ThemeProvider} from 'app/styled-components'
+import {ThemeProvider} from 'styled-components'
 
-import dynamicTheme from 'app/themes/dynamicTheme'
-import FlexContainerWrapper from 'app/components/FlexContainerWrapper'
-import FlexContainer from 'app/components/FlexContainer'
-import {UiStore} from 'app/stores/uiStore'
+import dynamicTheme from 'themes/dynamicTheme'
+import FlexContainerWrapper from 'components/FlexContainerWrapper'
+import FlexContainer from 'components/FlexContainer'
+import {UiStore} from 'stores/uiStore'
 
 interface Props {
   uiStore?: UiStore

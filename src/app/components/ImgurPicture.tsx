@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import {breakpoints} from 'app/helpers/css'
-import {ImageElementProps} from 'app/helpers/types'
+import {breakpoints} from 'helpers/css'
+import {ImageElementProps} from 'helpers/types'
 
 interface Props extends ImageElementProps {
   imageId: string

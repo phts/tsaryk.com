@@ -6,9 +6,9 @@ import {
   ItemSize,
   ItemType,
   ListItem,
-} from 'app/stores/listStore'
-import {DEFAULT_FONT_SIZE, BUTTON_TYPE} from 'app/helpers/buttons'
-import {Hoc} from 'app/helpers/types'
+} from 'stores/listStore'
+import {DEFAULT_FONT_SIZE, BUTTON_TYPE} from 'helpers/buttons'
+import {Hoc} from 'helpers/types'
 
 export interface BaseBtnProps {
   flexible: boolean

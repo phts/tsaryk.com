@@ -1,6 +1,6 @@
-import styled from 'app/styled-components'
+import styled from 'styled-components'
 
-import AutosizedTextInput from 'app/components/AutosizedTextInput'
+import AutosizedTextInput from 'components/AutosizedTextInput'
 
 export default styled(AutosizedTextInput)`
   background-color: transparent;

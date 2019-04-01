@@ -3,7 +3,7 @@ import * as React from 'react'
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
-import FeedbackForm from 'app/components/feedback/FeedbackForm'
+import FeedbackForm from 'components/feedback/FeedbackForm'
 
 type Props = BtnProps
 

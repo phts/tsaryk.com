@@ -4,8 +4,8 @@ import {inject} from 'mobx-react'
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
-import {Mode, ListStore} from 'app/stores/listStore'
-import {WidthsStore} from 'app/stores/widthsStore'
+import {Mode, ListStore} from 'stores/listStore'
+import {WidthsStore} from 'stores/widthsStore'
 
 interface Props extends BtnProps {
   listStore?: ListStore
