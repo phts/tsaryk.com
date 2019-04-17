@@ -2,13 +2,12 @@ version: 2
 jobs:
   deploy-dev:
     docker:
-      - image: circleci/node:9.5.0
+      - image: circleci/node:10.15.3
     working_directory: ~/repo
     steps:
       - run:
           name: Upgrade npm
-          command: |
-            sudo npm install --no-progress -g npm@6.4.1
+          command: sudo npm i --no-progress -g npm@6.9.0
       - checkout
       - restore_cache:
           keys:
@@ -29,13 +28,12 @@ jobs:
 
   deploy-prod:
     docker:
-      - image: circleci/node:9.5.0
+      - image: circleci/node:10.15.3
     working_directory: ~/repo
     steps:
       - run:
           name: Upgrade npm
-          command: |
-            sudo npm install --no-progress -g npm@6.4.1
+          command: sudo npm i --no-progress -g npm@6.9.0
       - checkout
       - restore_cache:
           keys:
