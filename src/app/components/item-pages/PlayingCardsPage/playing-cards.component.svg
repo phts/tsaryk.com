@@ -23,7 +23,7 @@
     }
     svg a rect {
       cursor: pointer;
-      fill: red;
+      fill: transparent;
       opacity: 0.5;
       transition: fill 0.2s
     }
