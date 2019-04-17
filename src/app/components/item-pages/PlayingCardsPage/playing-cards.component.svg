@@ -23,7 +23,7 @@
     }
     svg a rect {
       cursor: pointer;
-      fill: transparent;
+      fill: red;
       opacity: 0.5;
       transition: fill 0.2s
     }
@@ -304,7 +304,7 @@
   <g>
     <a xlink:href="http://www.ukrcards.com.ua/product-692.html" target="_blank">
       <title>Палех</title>
-      <rect x="1106" y="970" width="160" height="250"/>
+      <rect x="1106" y="970" width="160" height="245"/>
     </a>
   </g>
   <g>
@@ -328,7 +328,7 @@
   <g>
     <a xlink:href="http://www.dama-pik.com.ua/cards/international-style/international/" target="_blank">
       <title>International</title>
-      <rect x="627" y="1208" width="160" height="240"/>
+      <rect x="627" y="1208" width="160" height="237"/>
     </a>
   </g>
   <g>
@@ -340,26 +340,44 @@
   <g>
     <a xlink:href="http://www.ukrcards.com.ua/product-690.html" target="_blank">
       <title>Славянские</title>
-      <rect x="944" y="1213" width="160" height="248"/>
+      <rect x="944" y="1211" width="160" height="245"/>
     </a>
   </g>
   <g>
     <a xlink:href="http://www.dama-pik.com.ua/cards/russian-motifs/igralnye-karty-vysshiy-sort-russkiy-stil/" target="_blank">
       <title>Русский стиль</title>
-      <rect x="1105" y="1218" width="160" height="243"/>
+      <rect x="1105" y="1215" width="160" height="240"/>
     </a>
   <!-- Row #7 -->
   </g>
   <g>
     <a xlink:href="http://www.ukrcards.com.ua/product-732.html" target="_blank">
       <title>Karty do gry № 410</title>
-      <rect x="478" y="1445" width="161" height="242"/>
+      <rect x="478" y="1445" width="159" height="238"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-737.html" target="_blank">
+      <title>Рейнские</title>
+      <rect x="637" y="1445" width="170" height="248"/>
     </a>
   </g>
   <g>
     <a xlink:href="https://wearmedicine.com/p/medicine-karty-do-gry-11788" target="_blank">
       <title>Kartу do gry Medicine</title>
-      <rect x="794" y="1453" width="161" height="242"/>
+      <rect x="808" y="1453" width="160" height="242"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/otherm/brosmino-deck/" target="_blank">
+      <title>Bicycle: Brosmind</title>
+      <rect x="1127" y="1455" width="173" height="240"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/personality/jagellonskie/" target="_blank">
+      <title>Jagiellońskie</title>
+      <rect x="1300" y="1455" width="162" height="240"/>
     </a>
   </g>
 </svg>
