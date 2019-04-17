@@ -2,6 +2,7 @@
 
 [![Last commit (master)](https://img.shields.io/github/last-commit/phts/tsaryk.com/master.svg)](https://github.com/phts/tsaryk.com)
 [![CircleCI](https://img.shields.io/circleci/project/github/phts/tsaryk.com/master.svg)](https://circleci.com/gh/phts/tsaryk.com/tree/master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/phts/tsaryk.com.svg)](https://greenkeeper.io/)
 
 My home page. And a playground for experiments.
 
