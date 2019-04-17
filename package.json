@@ -103,5 +103,12 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(rambdax)/)"
     ]
+  },
+  "greenkeeper": {
+    "ignore": [
+      "@types/styled-components",
+      "styled-components",
+      "typescript"
+    ]
   }
 }
