@@ -315,6 +315,8 @@ export const en: TranslatedStrings = {
                'Roger Waters in Kraków, 2018')}
       ${figure(picture('mROYG5y', 'Nightwish in Kraków, 2018'),
                'Nightwish in Kraków, 2018')}
+      ${figure(picture('KhtC73G', 'RPWL in Warsaw, 2019'),
+               'RPWL in Warsaw, 2019')}
       <p>Remaining:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow or Ritchie Blackmore's Night")}</li>
@@ -361,9 +363,9 @@ export const en: TranslatedStrings = {
     data: {
       p1: 'Collecting since my childhood.',
       p2: 'There is no purpose to gather everything from everywhere, \
-so the collection is no so big and contains today more than 70 decks. \
+so the collection is no so big and contains today more than 80 decks. \
 Collecting those which I really like.',
-      imgTitle: 'One card from each deck (clickable). March 2019',
+      imgTitle: 'One card from each deck (clickable). April 2019',
     },
   },
   Poland: {
