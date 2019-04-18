@@ -50,7 +50,7 @@ const knownBtns: KnownBtnMap = {
 
 @inject('listStore', 'widthsStore')
 @observer
-export default class BtnListPage extends React.PureComponent<Props> {
+export default class BtnListPage extends React.Component<Props> {
   componentDidMount() {
     document.documentElement.scrollTop = parseInt(localStorage.getItem('scrollTop'), 10)
   }

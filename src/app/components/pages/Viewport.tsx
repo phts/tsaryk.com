@@ -13,7 +13,7 @@ interface Props {
 
 @inject('uiStore')
 @observer
-export default class Viewport extends React.PureComponent<Props> {
+export default class Viewport extends React.Component<Props> {
   render() {
     return (
       <ThemeProvider theme={dynamicTheme(this.props.uiStore)}>
