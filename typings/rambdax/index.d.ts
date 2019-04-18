@@ -1,11 +1,11 @@
 /* eslint-disable no-duplicate-imports */
 
-declare module 'rambdax/modules/random' {
+declare module 'rambdax/src/random' {
   import {random} from 'rambdax'
-  export default random
+  export {random}
 }
 
-declare module 'rambdax/modules/shuffle' {
+declare module 'rambdax/src/shuffle' {
   import {shuffle} from 'rambdax'
-  export default shuffle
+  export {shuffle}
 }

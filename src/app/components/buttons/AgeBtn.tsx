@@ -22,7 +22,7 @@ interface AgeItemData {
 
 @inject('ageStore')
 @observer
-class AgeBtn extends React.PureComponent<Props> {
+class AgeBtn extends React.Component<Props> {
   render() {
     return (
       <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>

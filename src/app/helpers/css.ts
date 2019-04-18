@@ -1,4 +1,4 @@
-import random from 'rambdax/modules/random'
+import {random} from 'rambdax/src/random'
 import {css, SimpleInterpolation} from 'styled-components'
 
 export const breakpoints = {
