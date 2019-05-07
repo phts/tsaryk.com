@@ -2,16 +2,6 @@
   name: Upgrade npm
   command: sudo npm i --no-progress -g npm@6.9.0
 
-.restore_cache_step: &restore_cache_step
-  keys:
-    - v1-dependencies-{{ checksum "package-lock.json" }}
-    - v1-dependencies-
-
-.save_cache_step: &save_cache_step
-  paths:
-    - node_modules
-  key: v1-dependencies-{{ checksum "package-lock.json" }}
-
 version: 2
 jobs:
   test:
@@ -21,9 +11,7 @@ jobs:
     steps:
       - run: *upgrade_npm_step
       - checkout
-      - restore_cache: *restore_cache_step
-      - run: npm i --no-progress
-      - save_cache: *save_cache_step
+      - run: npm ci
       - run: npm run lint
       - run: npm test
 
@@ -34,9 +22,7 @@ jobs:
     steps:
       - run: *upgrade_npm_step
       - checkout
-      - restore_cache: *restore_cache_step
-      - run: npm i --no-progress
-      - save_cache: *save_cache_step
+      - run: npm ci
       - run: npm run build:prod:relative
       - add_ssh_keys:
           fingerprints:
@@ -51,9 +37,7 @@ jobs:
     steps:
       - run: *upgrade_npm_step
       - checkout
-      - restore_cache: *restore_cache_step
-      - run: npm i --no-progress
-      - save_cache: *save_cache_step
+      - run: npm ci
       - run: npm run build:prod
       - add_ssh_keys:
           fingerprints:
