@@ -13,7 +13,7 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package-lock.json" }}
             - v1-dependencies-
-      - run: npm ci
+      - run: npm i --no-progress
       - save_cache:
           paths:
             - node_modules
@@ -34,7 +34,7 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package-lock.json" }}
             - v1-dependencies-
-      - run: npm ci
+      - run: npm i --no-progress
       - save_cache:
           paths:
             - node_modules
@@ -61,7 +61,7 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package-lock.json" }}
             - v1-dependencies-
-      - run: npm ci
+      - run: npm i --no-progress
       - save_cache:
           paths:
             - node_modules
