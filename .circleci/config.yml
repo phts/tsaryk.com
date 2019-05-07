@@ -39,8 +39,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
-      - run: npm run lint
-      - run: npm test
       - run: npm run build:prod:relative
       - add_ssh_keys:
           fingerprints:
@@ -66,8 +64,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
-      - run: npm run lint
-      - run: npm test
       - run: npm run build:prod
       - add_ssh_keys:
           fingerprints:
@@ -77,17 +73,18 @@ jobs:
 
 workflows:
   version: 2
-  build-deploy:
+  test-and-deploy:
     jobs:
-      - test:
-          filters:
-            branches:
-              only: /^greenkeeper\/.*$/
+      - test
       - deploy-dev:
+          requires:
+            - test
           filters:
             branches:
               only: /dev-.*/
       - deploy-prod:
+          requires:
+            - test
           filters:
             branches:
               only: master
