@@ -446,7 +446,10 @@ Collecting those which I really like.',
   },
   Traveling: {
     description: `
-      <p>I like traveling with my ${link('Family', 'family')}. By car, by train, by plane, by anything.</p>
+      <p>
+        I like traveling with my ${link('Family', 'family')}. ${link('Škoda', 'By car')},
+        by train, by plane, by anything.
+      </p>
       <p>There are countries which we have already visited:</p>
       <ul style="list-style-type: none;">
         <li>&#127463;&#127486; ${link('Belarus')} &mdash; obviously</li>
