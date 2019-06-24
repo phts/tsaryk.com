@@ -189,8 +189,8 @@ module.exports = ({prod = false, analyzer} = {}) => {
                 name: '[name]-[width].[ext]',
                 outputPath: outputImgPath,
                 sizes: [
-                  600,
                   800,
+                  1000,
                   1200,
                 ],
               },
