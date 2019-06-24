@@ -261,19 +261,13 @@
   <g>
     <a xlink:href="https://www.artlebedev.ru/space-invaders/" target="_blank">
       <title>Космические захватчики</title>
-      <rect x="1116" y="728" width="157" height="242"/>
+      <rect x="1116" y="728" width="155" height="242"/>
     </a>
   </g>
   <g>
     <a xlink:href="http://www.ukrcards.com.ua/product-1503.html" target="_blank">
       <title>Schafkopf Tarock</title>
-      <rect x="1286" y="745" width="157" height="277"/>
-    </a>
-  </g>
-  <g>
-    <a xlink:href="http://nacekomie.ru/hachette/enciklopediya-taro-ashet-kollekciya.html" target="_blank">
-      <title>Универсальное таро</title>
-      <rect x="1462" y="755" width="185" height="332"/>
+      <rect x="1270" y="730" width="157" height="277"/>
     </a>
   </g>
   <g>
@@ -310,7 +304,7 @@
   <g>
     <a xlink:href="http://www.dama-pik.com.ua/cards/humor/gra-wstepna/" target="_blank">
       <title>Gra wstępna</title>
-      <rect x="1268" y="1023" width="187" height="270"/>
+      <rect x="1268" y="1184" width="187" height="270"/>
     </a>
   </g>
   <g>
@@ -378,6 +372,24 @@
     <a xlink:href="http://www.dama-pik.com.ua/cards/personality/jagellonskie/" target="_blank">
       <title>Jagiellońskie</title>
       <rect x="1300" y="1455" width="162" height="240"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://nacekomie.ru/hachette/enciklopediya-taro-ashet-kollekciya.html" target="_blank">
+      <title>Универсальное таро</title>
+      <rect x="1462" y="1366" width="185" height="328"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="https://www.kickstarter.com/projects/1495552219/ephemerid-playing-cards" target="_blank">
+      <title>Ephemerid</title>
+      <rect x="1655" y="1450" width="175" height="244"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.ukrcards.com.ua/product-700.html" target="_blank">
+      <title>Майа</title>
+      <rect x="1835" y="1446" width="160" height="248"/>
     </a>
   </g>
 </svg>
