@@ -5,11 +5,11 @@ import {
   Switch,
 } from 'react-router-dom'
 
+import routes from 'routes'
 import BtnListPage from './BtnListPage'
 import ShowItemPage from './ShowItemPage'
 import Viewport from './Viewport'
 import InitialRandomizeProvider from './InitialRandomizeProvider'
-import routes from 'routes'
 
 export default () => (
   <Router>

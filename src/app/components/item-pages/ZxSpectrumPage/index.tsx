@@ -6,10 +6,10 @@ import Header from 'components/item-pages/parts/Header'
 import Footer from 'components/item-pages/parts/Footer'
 import HtmlContent from 'components/item-pages/parts/HtmlContent'
 import Title from 'components/item-pages/parts/Title'
-import ZxBorder from './ZxBorder'
 import asItemPage, {ItemPageProps} from 'components/item-pages/asItemPage'
 import {I18nStore} from 'stores/i18nStore'
 import ActionButton from 'components/ActionButton'
+import ZxBorder from './ZxBorder'
 
 interface Props extends ItemPageProps {
   i18nStore?: I18nStore

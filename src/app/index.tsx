@@ -8,8 +8,10 @@ import stores from 'stores'
 
 export class App extends React.PureComponent<{}, {}> {
   render() {
-    return <Provider {...stores}>
-      <Pages/>
-    </Provider>
+    return (
+      <Provider {...stores}>
+        <Pages />
+      </Provider>
+    )
   }
 }

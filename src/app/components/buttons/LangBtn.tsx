@@ -1,10 +1,10 @@
 import * as React from 'react'
 import {inject} from 'mobx-react'
 
+import {LangStore, Lang} from 'stores/langStore'
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
-import {LangStore, Lang} from 'stores/langStore'
 
 interface Props extends BtnProps {
   langStore?: LangStore
