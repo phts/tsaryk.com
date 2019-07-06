@@ -19,7 +19,7 @@ const labelsMap: LabelsMap = {
 }
 
 export class I18nStore {
-  /* eslint-disable no-useless-constructor */
+  // eslint-disable-next-line no-useless-constructor
   constructor(private lang: LangStore) {}
 
   @computed

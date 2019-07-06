@@ -74,11 +74,10 @@ function toItems(itemNamesMap: ItemNamesMap, strings: TranslatedStrings): Items 
 }
 
 export class ItemsStore {
-  /* eslint-disable no-useless-constructor */
   private cache: {[index in Lang]?: Items} = {}
 
-  constructor(private languageStore: LangStore) {
-  }
+  // eslint-disable-next-line no-useless-constructor
+  constructor(private languageStore: LangStore) {}
 
   @computed
   get items(): Items {

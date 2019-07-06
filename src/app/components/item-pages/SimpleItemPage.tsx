@@ -2,14 +2,14 @@ import * as React from 'react'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 
+import {I18nStore} from 'stores/i18nStore'
+import ActionButton from 'components/ActionButton'
 import Header from './parts/Header'
 import Footer from './parts/Footer'
 import Padding from './parts/Padding'
 import Title from './parts/Title'
 import HtmlContent from './parts/HtmlContent'
 import asItemPage, {ItemPageProps} from './asItemPage'
-import {I18nStore} from 'stores/i18nStore'
-import ActionButton from 'components/ActionButton'
 
 interface Props extends ItemPageProps {
   i18nStore?: I18nStore

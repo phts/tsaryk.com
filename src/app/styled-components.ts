@@ -1,5 +1,6 @@
 /* eslint-disable no-duplicate-imports*/
 
+import Theme from 'themes/Theme'
 import * as styledComponents from '../../node_modules/styled-components'
 import {
   ThemedStyledComponentsModule,
@@ -7,7 +8,6 @@ import {
   StyledFunction,
 } from '../../node_modules/styled-components'
 
-import Theme from 'themes/Theme'
 
 const {
   css,

@@ -1,6 +1,6 @@
+import {KnownName} from '../names'
 import {en} from './en'
 import {ru} from './ru'
-import {KnownName} from '../names'
 
 export enum Lang {
   EN = 'EN',

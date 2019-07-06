@@ -12,12 +12,12 @@ import Title from 'components/item-pages/parts/Title'
 import CenteredTitle from 'components/item-pages/parts/CenteredTitle'
 import Content from 'components/item-pages/parts/Content'
 import HtmlContent from 'components/item-pages/parts/HtmlContent'
-import UltramarinedContent from './UltramarinedContent'
-import Logo from './Logo'
 import asItemPage, {ItemPageProps} from 'components/item-pages/asItemPage'
 import {I18nStore} from 'stores/i18nStore'
 import ActionButton from 'components/ActionButton'
 import ImgurPicture from 'components/ImgurPicture'
+import Logo from './Logo'
+import UltramarinedContent from './UltramarinedContent'
 
 interface Props extends ItemPageProps {
   i18nStore?: I18nStore

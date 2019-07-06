@@ -6,10 +6,10 @@ import {prepend, compose} from 'ramda'
 import Footer from 'components/item-pages/parts/Footer'
 import Padding from 'components/item-pages/parts/Padding'
 import Content from 'components/item-pages/parts/Content'
-import CatsList, {CatsItemsData} from './CatsList'
 import asItemPage, {ItemPageProps} from 'components/item-pages/asItemPage'
 import {I18nStore} from 'stores/i18nStore'
 import ActionButton from 'components/ActionButton'
+import CatsList, {CatsItemsData} from './CatsList'
 
 interface Props extends ItemPageProps {
   i18nStore?: I18nStore

@@ -1,11 +1,11 @@
 import * as React from 'react'
 import {observer, inject} from 'mobx-react'
 
+import {AgeStore} from 'stores/ageStore'
+import {padWithZero} from 'utils/core'
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
-import {AgeStore} from 'stores/ageStore'
-import {padWithZero} from 'utils/core'
 
 interface Props extends BtnProps {
   ageStore?: AgeStore

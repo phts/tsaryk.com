@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-import Button from './Button'
 import {BUTTON_TYPE, DEFAULT_FONT_SIZE, getBorder} from 'helpers/buttons'
 import {ButtonElementProps} from 'helpers/types'
+import Button from './Button'
 
 type Props = ButtonElementProps
 

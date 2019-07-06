@@ -2,12 +2,12 @@
 /* eslint-disable max-len */
 import {a, callto, mailto, link, p, tel, youtube, figure} from 'helpers/html'
 import {picture} from 'helpers/imgur'
-import {TranslatedStrings} from './index'
 import {
   EMAIL,
   LASTFM_URL,
   LINKEDIN_URL,
 } from 'config'
+import {TranslatedStrings} from './index'
 
 export const en: TranslatedStrings = {
   EN: {

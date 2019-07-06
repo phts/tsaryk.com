@@ -1,9 +1,9 @@
 import * as React from 'react'
 
+import Text from 'components/Text'
 import asBtn, {BtnProps} from './asBtn'
 import GenericLi from './generic/GenericLi'
 import GenericLink from './generic/GenericLink'
-import Text from 'components/Text'
 
 class TextBtn extends React.PureComponent<BtnProps> {
   render() {
