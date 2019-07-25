@@ -19,21 +19,17 @@ interface Props extends ItemPageProps {
   i18nStore?: I18nStore
 }
 
-const Heroes3Page: React.StatelessComponent<Props> =
-  ({className, item, onClose, i18nStore}) => (
-    <PaddingWithCursor>
-      <Header>
-        <Title>{item.name}</Title>
-      </Header>
-      <HtmlContent className={className} html={item.description}/>
-      <Footer>
-        <ActionButton
-          onClick={onClose}>
-          {i18nStore.labels.close}
-        </ActionButton>
-      </Footer>
-    </PaddingWithCursor>
-  )
+const Heroes3Page: React.StatelessComponent<Props> = ({className, item, onClose, i18nStore}) => (
+  <PaddingWithCursor>
+    <Header>
+      <Title>{item.name}</Title>
+    </Header>
+    <HtmlContent className={className} html={item.description} />
+    <Footer>
+      <ActionButton onClick={onClose}>{i18nStore.labels.close}</ActionButton>
+    </Footer>
+  </PaddingWithCursor>
+)
 
 const PaddingWithCursor = styled(Padding)`
   cursor: url(${cursorDefaultPng}) 16 16, default;

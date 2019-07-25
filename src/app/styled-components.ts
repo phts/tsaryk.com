@@ -8,7 +8,6 @@ import {
   StyledFunction,
 } from '../../node_modules/styled-components'
 
-
 const {
   css,
   default: styled,
@@ -17,12 +16,5 @@ const {
   ThemeProvider,
 } = styledComponents as ThemedStyledComponentsModule<Theme>
 
-export {
-  css,
-  injectGlobal,
-  keyframes,
-  SimpleInterpolation,
-  StyledFunction,
-  ThemeProvider,
-}
+export {css, injectGlobal, keyframes, SimpleInterpolation, StyledFunction, ThemeProvider}
 export default styled

@@ -20,13 +20,10 @@ const CatsPage: React.StatelessComponent<Props> = ({className, item, onClose, i1
   return (
     <Padding>
       <Content className={className}>
-        <CatsList items={items}/>
+        <CatsList items={items} />
       </Content>
       <CatsFooter>
-        <ActionButton
-          onClick={onClose}>
-          {i18nStore.labels.close}
-        </ActionButton>
+        <ActionButton onClick={onClose}>{i18nStore.labels.close}</ActionButton>
       </CatsFooter>
     </Padding>
   )

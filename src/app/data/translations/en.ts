@@ -1,20 +1,14 @@
 /* eslint-disable @typescript-eslint/indent */
-/* eslint-disable max-len */
 import {a, callto, mailto, link, p, tel, youtube, figure} from 'helpers/html'
 import {picture} from 'helpers/imgur'
-import {
-  EMAIL,
-  LASTFM_URL,
-  LINKEDIN_URL,
-} from 'config'
+import {EMAIL, LASTFM_URL, LINKEDIN_URL} from 'config'
 import {TranslatedStrings} from './index'
 
 export const en: TranslatedStrings = {
   EN: {
     tooltip: 'Not fully translated yet. Sorry.',
   },
-  RU: {
-  },
+  RU: {},
   '©': {
     name: '© Phil Tsaryk, 2019',
     description: `
@@ -25,19 +19,14 @@ export const en: TranslatedStrings = {
         <li>MobX</li>
         <li>TypeScript</li>
       </ul>
-      <p>${a('https://github.com/phts/tsaryk.com', 'Site\'s source code is')} on Github.</p>
+      <p>${a('https://github.com/phts/tsaryk.com', "Site's source code is")} on Github.</p>
     `,
   },
-  About: {
-  },
-  Contacts: {
-  },
-  Hobby: {
-  },
-  Meta: {
-  },
-  Work: {
-  },
+  About: {},
+  Contacts: {},
+  Hobby: {},
+  Meta: {},
+  Work: {},
   '+375292181503': {
     description: p(`My Byelorussian phone number: ${tel('+375292181503', '+375 29 218-15-03')}.`),
   },
@@ -55,12 +44,10 @@ export const en: TranslatedStrings = {
     },
   },
   Android: {
-    description: p('Only Android. I don\'t like iOS.'),
+    description: p("Only Android. I don't like iOS."),
   },
-  Ascending: {
-  },
-  'bash.org': {
-  },
+  Ascending: {},
+  'bash.org': {},
   Belarus: {
     description: p('My native country is Belarus.'),
   },
@@ -96,8 +83,10 @@ export const en: TranslatedStrings = {
       <p>I like playing board games especially strategic.</p>
       <p>Among those what we have I can select:</p>
       <ul>
-        <li>${a('https://en.wikipedia.org/wiki/Evolution:_The_Origin_of_Species',
-                'Evolution: The Origin of Species')}</li>
+        <li>${a(
+          'https://en.wikipedia.org/wiki/Evolution:_The_Origin_of_Species',
+          'Evolution: The Origin of Species',
+        )}</li>
         <li>${a('https://en.wikipedia.org/wiki/Hive_(game)', 'Hive')}</li>
         <li>${a('https://en.wikipedia.org/wiki/7_Wonders_(board_game)', '7 wonders')}</li>
         <li>${a('https://en.wikipedia.org/wiki/Galaxy_Trucker', 'Galaxy Trucker')}</li>
@@ -105,22 +94,20 @@ export const en: TranslatedStrings = {
       </ul>
     `,
   },
-  Categorize: {
-  },
+  Categorize: {},
   Cats: {
     data: [
       {icon: '&#x1F989;', text: 'Owls'},
       {
         icon: '&#x1F47D;',
         text: 'Raccoons',
-        tooltip: 'Raccoons don\'t have their own emoji in unicode yet',
+        tooltip: "Raccoons don't have their own emoji in unicode yet",
       },
       {icon: '&#x1F98A;', text: 'Foxes'},
       {icon: '&#x1F418;', text: 'Elephants'},
     ],
   },
-  Colors: {
-  },
+  Colors: {},
   'Curriculum vitae': {
     description: `
       <p>
@@ -181,8 +168,7 @@ export const en: TranslatedStrings = {
       <p>Being here very very rarely.</p>
     `,
   },
-  Family: {
-  },
+  Family: {},
   Feedback: {
     data: {
       sayHello: 'Say hello...',
@@ -197,7 +183,8 @@ export const en: TranslatedStrings = {
       <p>
         ${a(
           'https://github.com/topics/firefox-webextension?q=user%3Aphts&unscoped_q=user%3Aphts',
-          'Occasionally writing')} simple addons for FF.
+          'Occasionally writing',
+        )} simple addons for FF.
       </p>
     `,
   },
@@ -224,12 +211,14 @@ export const en: TranslatedStrings = {
       <p>Excellent product company, fine projects, fine people.</p>
     `,
   },
-  Habr: {
-  },
+  Habr: {},
   'Heroes of Might and Magic 3': {
     description: `
       <p>
-        I like playing to ${a('https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III', 'HoMM3')}
+        I like playing to ${a(
+          'https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III',
+          'HoMM3',
+        )}
         / ${a('http://h3hota.com/en/documentation', 'HotA')} when having free time.
       </p>
       <p>
@@ -295,28 +284,29 @@ export const en: TranslatedStrings = {
       </ul>
       <h3>Going to concerts</h3>
       <p>From my must-have list already visited:</p>
-      ${figure(picture('FykwSDm', 'Deep Purple in Minsk, 2011'),
-               'Deep Purple in Minsk, 2011')}
-      ${figure(picture('qIIb0bR', 'God is an Astronaut in Saint Petersburg, 2012'),
-               'God is an Astronaut in Saint Petersburg, 2012')}
-      ${figure(picture('dPNRWdG', 'Australian Pink Floyd Show in Minsk, 2013'),
-               'Australian Pink Floyd Show in Minsk, 2013')}
-      ${figure(picture('tcyuP0Q', 'Dream Theater in Katowice, 2015'),
-               'Dream Theater in Katowice, 2015')}
-      ${figure(picture('yDFhHGF', 'Riverside in Katowice, 2015'),
-               'Riverside in Katowice, 2015')}
-      ${figure(picture('5oDXQ4s', 'David Gilmour in France, 2016'),
-               'David Gilmour in France, 2016')}
-      ${figure(picture('pxy4Skj', 'Anathema in Kraków, 2017'),
-               'Anathema in Kraków, 2017')}
-      ${figure(picture('FOuMsdO', 'Opeth in Warsaw, 2017'),
-               'Opeth in Warsaw, 2017')}
-      ${figure(picture('zMy5wbq', 'Roger Waters in Kraków, 2018'),
-               'Roger Waters in Kraków, 2018')}
-      ${figure(picture('mROYG5y', 'Nightwish in Kraków, 2018'),
-               'Nightwish in Kraków, 2018')}
-      ${figure(picture('KhtC73G', 'RPWL in Warsaw, 2019'),
-               'RPWL in Warsaw, 2019')}
+      ${figure(picture('FykwSDm', 'Deep Purple in Minsk, 2011'), 'Deep Purple in Minsk, 2011')}
+      ${figure(
+        picture('qIIb0bR', 'God is an Astronaut in Saint Petersburg, 2012'),
+        'God is an Astronaut in Saint Petersburg, 2012',
+      )}
+      ${figure(
+        picture('dPNRWdG', 'Australian Pink Floyd Show in Minsk, 2013'),
+        'Australian Pink Floyd Show in Minsk, 2013',
+      )}
+      ${figure(
+        picture('tcyuP0Q', 'Dream Theater in Katowice, 2015'),
+        'Dream Theater in Katowice, 2015',
+      )}
+      ${figure(picture('yDFhHGF', 'Riverside in Katowice, 2015'), 'Riverside in Katowice, 2015')}
+      ${figure(
+        picture('5oDXQ4s', 'David Gilmour in France, 2016'),
+        'David Gilmour in France, 2016',
+      )}
+      ${figure(picture('pxy4Skj', 'Anathema in Kraków, 2017'), 'Anathema in Kraków, 2017')}
+      ${figure(picture('FOuMsdO', 'Opeth in Warsaw, 2017'), 'Opeth in Warsaw, 2017')}
+      ${figure(picture('zMy5wbq', 'Roger Waters in Kraków, 2018'), 'Roger Waters in Kraków, 2018')}
+      ${figure(picture('mROYG5y', 'Nightwish in Kraków, 2018'), 'Nightwish in Kraków, 2018')}
+      ${figure(picture('KhtC73G', 'RPWL in Warsaw, 2019'), 'RPWL in Warsaw, 2019')}
       <p>Remaining:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow or Ritchie Blackmore's Night")}</li>
@@ -331,7 +321,7 @@ export const en: TranslatedStrings = {
         My native town. It is located in Vitsebsk Province, ${link('Belarus')}.
         Coordinates:
         ${a(
-      'https://tools.wmflabs.org/geohack/geohack.php?pagename=Novopolotsk&params=55_32_N_28_39_E_region:BY_type:city',
+          'https://tools.wmflabs.org/geohack/geohack.php?pagename=Novopolotsk&params=55_32_N_28_39_E_region:BY_type:city',
           '55°32′00″ N 28°40′00″ E',
         )}
       </p>
@@ -362,7 +352,8 @@ export const en: TranslatedStrings = {
   'Playing cards': {
     data: {
       p1: 'Collecting since my childhood.',
-      p2: 'There is no purpose to gather everything from everywhere, \
+      p2:
+        'There is no purpose to gather everything from everywhere, \
 so the collection is no so big and contains today more than 80 decks. \
 Collecting those which I really like.',
       imgTitle: 'One card from each deck (clickable). June 2019',
@@ -388,12 +379,12 @@ Collecting those which I really like.',
       </ul>
     `,
   },
-  PSU: {
-  },
-  Random: {
-  },
+  PSU: {},
+  Random: {},
   React: {
-    description: p(`At this moment I am specializing exactly ${a('https://reactjs.org/', 'on this library')}.`),
+    description: p(
+      `At this moment I am specializing exactly ${a('https://reactjs.org/', 'on this library')}.`,
+    ),
   },
   'Ritchie Blackmore': {
     description: p('In my opinion the best guitarist ever.'),
@@ -407,18 +398,15 @@ Collecting those which I really like.',
       </p>
     `,
   },
-  'SaM Solutions': {
-  },
-  Škoda: {
-  },
+  'SaM Solutions': {},
+  Škoda: {},
   Skype: {
     description: p(`My name in Skype: ${callto('phil.tsarik')}.`),
   },
   'Software Engineer': {
     description: p(`My speciality after graduating from ${link('PSU', 'university')}.`),
   },
-  'Space Resonance': {
-  },
+  'Space Resonance': {},
   'Stack Overflow': {
     description: `
       <p>
@@ -439,8 +427,7 @@ Collecting those which I really like.',
       </p>
     `,
   },
-  Title: {
-  },
+  Title: {},
   'The Netherlands': {
     description: p('Someday I will live there for sure.'),
   },
@@ -489,7 +476,10 @@ Collecting those which I really like.',
         <li>${a('https://en.wikipedia.org/wiki/Majesty:_The_Fantasy_Kingdom_Sim', 'Majesty')}</li>
         <li>${a('https://en.wikipedia.org/wiki/Mafia_(video_game)', 'Mafia')}</li>
         <li>${a('https://en.wikipedia.org/wiki/Grand_Theft_Auto', 'GTA')}</li>
-        <li>${a('https://en.wikipedia.org/wiki/Knights_and_Merchants:_The_Shattered_Kingdom', 'Knights and Merchants: The Shattered Kingdom')}</li>
+        <li>${a(
+          'https://en.wikipedia.org/wiki/Knights_and_Merchants:_The_Shattered_Kingdom',
+          'Knights and Merchants: The Shattered Kingdom',
+        )}</li>
         <li>${a('https://en.wikipedia.org/wiki/Portal_(series)', 'Portal')}</li>
         <li>${a('https://en.wikipedia.org/wiki/Anno_1701', 'Anno 1701')}
           / ${a('https://en.wikipedia.org/wiki/Anno_1404', '1404')}</li>
@@ -500,7 +490,9 @@ Collecting those which I really like.',
     `,
   },
   Vinyl: {
-    description: p('Audio-Technica AT-LP120USBHC + Yamaha A-S501 + Hand-made speakers by Andrzej Figarski.'),
+    description: p(
+      'Audio-Technica AT-LP120USBHC + Yamaha A-S501 + Hand-made speakers by Andrzej Figarski.',
+    ),
   },
   VK: {
     description: p(`${a('https://vk.com/phil.tsaryk', 'My profile')} in VK.`),
@@ -512,12 +504,18 @@ Collecting those which I really like.',
         &mdash; to load game from сassette tape.
       </p>
       <p>
-        Most loved games: ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=2323', 'Highway Encounter')},
+        Most loved games: ${a(
+          'https://spectrumcomputing.co.uk/index.php?cat=96&id=2323',
+          'Highway Encounter',
+        )},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=461', 'Battle Ships')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=1686', 'Exolon')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=5448', 'Tujad')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=639', 'Boulder Dash')},
-        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=4784', 'Spy Hunter')} and many more.
+        ${a(
+          'https://spectrumcomputing.co.uk/index.php?cat=96&id=4784',
+          'Spy Hunter',
+        )} and many more.
       </p>
     `,
   },

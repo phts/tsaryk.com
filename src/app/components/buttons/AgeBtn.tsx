@@ -26,10 +26,9 @@ class AgeBtn extends React.Component<Props> {
   render() {
     return (
       <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
-        <GenericBtn
-          buttonType={this.props.buttonType}
-          fontSize={this.props.fontSize}
-        >{this.text}</GenericBtn>
+        <GenericBtn buttonType={this.props.buttonType} fontSize={this.props.fontSize}>
+          {this.text}
+        </GenericBtn>
       </GenericLi>
     )
   }

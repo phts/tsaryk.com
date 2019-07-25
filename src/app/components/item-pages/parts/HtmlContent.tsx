@@ -6,7 +6,7 @@ interface Props {
 }
 
 const PageHtmlContent: React.StatelessComponent<Props> = ({className, html}) => (
-  <div className={className} dangerouslySetInnerHTML={{__html: html}}/>
+  <div className={className} dangerouslySetInnerHTML={{__html: html}} />
 )
 
 export default PageHtmlContent

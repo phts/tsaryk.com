@@ -1,14 +1,11 @@
 import {KnownName} from 'data/names'
 
 function aTag(href: string, text: string, attrs: string[] = []) {
-  const attributes = [
-    `href="${href}"`,
-    ...attrs,
-  ].join(' ')
+  const attributes = [`href="${href}"`, ...attrs].join(' ')
   return `<a ${attributes}>${text}</a>`
 }
 
-export function sprite(name: string, opts: {height: number, width: number, viewBox: string}) {
+export function sprite(name: string, opts: {height: number; width: number; viewBox: string}) {
   return `<svg height="${opts.height}" width="${opts.width}" viewBox="${opts.viewBox}">\
 <use xlink:href="#${name}"/></svg>`
 }

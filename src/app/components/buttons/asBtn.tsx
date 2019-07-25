@@ -1,12 +1,6 @@
 import * as React from 'react'
 
-import {
-  ItemData,
-  ItemId,
-  ItemSize,
-  ItemType,
-  ListItem,
-} from 'stores/listStore'
+import {ItemData, ItemId, ItemSize, ItemType, ListItem} from 'stores/listStore'
 import {DEFAULT_FONT_SIZE, BUTTON_TYPE} from 'helpers/buttons'
 import {Hoc} from 'helpers/types'
 
@@ -44,19 +38,24 @@ const buttonTypeMap: {[index in ItemType]?: BUTTON_TYPE} = {
 
 export type BtnClass = React.StatelessComponent<BaseBtnProps>
 
-const asBtn: Hoc<BtnProps, BtnClass> = WrappedComponent =>
-  ({flexible, item, onNavigate, width}) =>
-    <WrappedComponent
-      buttonType={buttonTypeMap[item.type]}
-      data={item.data}
-      description={item.description}
-      flexBasis={width}
-      flexible={flexible}
-      fontSize={fontSizeMap[item.size]}
-      itemId={item.id}
-      onNavigate={onNavigate}
-      text={item.name}
-      tooltip={item.tooltip}
-    />
+const asBtn: Hoc<BtnProps, BtnClass> = WrappedComponent => ({
+  flexible,
+  item,
+  onNavigate,
+  width,
+}) => (
+  <WrappedComponent
+    buttonType={buttonTypeMap[item.type]}
+    data={item.data}
+    description={item.description}
+    flexBasis={width}
+    flexible={flexible}
+    fontSize={fontSizeMap[item.size]}
+    itemId={item.id}
+    onNavigate={onNavigate}
+    text={item.name}
+    tooltip={item.tooltip}
+  />
+)
 
 export default asBtn

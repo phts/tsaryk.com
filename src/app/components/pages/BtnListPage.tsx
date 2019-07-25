@@ -3,12 +3,7 @@ import * as R from 'ramda'
 import {observer, inject} from 'mobx-react'
 
 import {WidthsStore} from 'stores/widthsStore'
-import {
-  ItemId,
-  ListItem,
-  ListStore,
-  Mode,
-} from 'stores/listStore'
+import {ItemId, ListItem, ListStore, Mode} from 'stores/listStore'
 import {Lang} from 'stores/langStore'
 import BtnList from 'components/BtnList'
 import AgeBtn from 'components/buttons/AgeBtn'
@@ -57,20 +52,20 @@ export default class BtnListPage extends React.Component<Props> {
 
   render() {
     const flexible = this.props.listStore.mode !== Mode.Categories
-    const els =  R.map((it: ListItem) => {
+    const els = R.map((it: ListItem) => {
       const width = flexible ? this.props.widthsStore.getWidth(it.id) : 0
       const BtnComponent: BtnClass = knownBtns[it.id] || TextBtn
-      return <BtnComponent
-        flexible={flexible}
-        item={it}
-        key={it.id}
-        onNavigate={this.onNavigate}
-        width={width}
-      />
+      return (
+        <BtnComponent
+          flexible={flexible}
+          item={it}
+          key={it.id}
+          onNavigate={this.onNavigate}
+          width={width}
+        />
+      )
     })(this.props.listStore.list)
-    return <BtnList flexible={flexible}>
-      {els}
-    </BtnList>
+    return <BtnList flexible={flexible}>{els}</BtnList>
   }
 
   private onNavigate = () => {

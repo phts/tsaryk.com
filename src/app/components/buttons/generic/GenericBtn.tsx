@@ -11,11 +11,7 @@ interface Props extends ButtonElementProps {
 }
 
 const GenericBtn: React.StatelessComponent<Props> = props => (
-  <Button
-    {...props}
-    border={getBorder(props.buttonType)}
-    fontSize={props.fontSize}
-  />
+  <Button {...props} border={getBorder(props.buttonType)} fontSize={props.fontSize} />
 )
 
 export default withTooltip(GenericBtn)

@@ -7,11 +7,12 @@ import TooltipAsterisk from './TooltipAsterisk'
 function withTooltip<T extends CommonElementProps<HTMLElement>>(C: AnyComponentClass<T>) {
   return (props: T) => {
     if (!props.title) {
-      return <C {...props}/>
+      return <C {...props} />
     }
     return (
       <span>
-        <C {...(omit(['title'])(props) as T)}/><TooltipAsterisk title={props.title}/>
+        <C {...(omit(['title'])(props) as T)} />
+        <TooltipAsterisk title={props.title} />
       </span>
     )
   }

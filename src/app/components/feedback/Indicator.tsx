@@ -17,15 +17,9 @@ interface Props {
 
 const Indicator: React.StatelessComponent<Props> = ({state}) => (
   <Span>
-    {
-      state === IndicatorState.Processing ? <Spinner/> : ''
-    }
-    {
-      state === IndicatorState.Success ? <SuccessSymbol/> : ''
-    }
-    {
-      state === IndicatorState.Failed ? <FailedSymbol/> : ''
-    }
+    {state === IndicatorState.Processing ? <Spinner /> : ''}
+    {state === IndicatorState.Success ? <SuccessSymbol /> : ''}
+    {state === IndicatorState.Failed ? <FailedSymbol /> : ''}
   </Span>
 )
 

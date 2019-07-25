@@ -40,14 +40,10 @@ class ShowItemPage extends React.PureComponent<Props> {
   render() {
     const item = this.props.itemsStore.items[this.props.match.params.id]
     if (!item) {
-      return <Redirect to={routes.index}/>
+      return <Redirect to={routes.index} />
     }
     const ItemPageComponent: ItemPageComponentClass = knownItemPages[item.id] || SimpleItemPage
-    return <ItemPageComponent
-      item={item}
-      onClose={this.onBack}
-      className={this.props.className}
-    />
+    return <ItemPageComponent item={item} onClose={this.onBack} className={this.props.className} />
   }
 
   private onBack = () => {

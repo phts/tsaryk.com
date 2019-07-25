@@ -20,15 +20,7 @@ export default class AutosizedTextInput extends React.Component<Props> {
   }
 
   render() {
-    return (
-      <input
-        {...this.props}
-
-        onKeyUp={this.onKeyUp}
-        ref={this.inputRef}
-        type="text"
-      />
-    )
+    return <input {...this.props} onKeyUp={this.onKeyUp} ref={this.inputRef} type="text" />
   }
 
   private adjustWidth() {

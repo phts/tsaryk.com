@@ -1,12 +1,7 @@
 /* eslint-disable @typescript-eslint/indent */
-/* eslint-disable max-len */
 import {a, callto, figure, img, link, mailto, p, tel, youtube} from 'helpers/html'
 import {picture} from 'helpers/imgur'
-import {
-  EMAIL,
-  LASTFM_URL,
-  LINKEDIN_URL,
-} from 'config'
+import {EMAIL, LASTFM_URL, LINKEDIN_URL} from 'config'
 import {TranslatedStrings} from './index'
 
 export const ru: TranslatedStrings = {
@@ -223,7 +218,8 @@ export const ru: TranslatedStrings = {
       <p>
         ${a(
           'https://github.com/topics/firefox-webextension?q=user%3Aphts&unscoped_q=user%3Aphts',
-          'Иногда пишу')} простые аддоны для фф.
+          'Иногда пишу',
+        )} простые аддоны для фф.
       </p>
     `,
   },
@@ -278,7 +274,10 @@ export const ru: TranslatedStrings = {
       <p>
         До сих пор играю в
         ${a('https://ru.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III', 'HoMM3')}
-        / ${a('https://ru.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_Horn_of_the_Abyss', 'HotA')},
+        / ${a(
+          'https://ru.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_Horn_of_the_Abyss',
+          'HotA',
+        )},
         если появляется свободное время.
       </p>
       <p>
@@ -309,7 +308,7 @@ export const ru: TranslatedStrings = {
       <p>Осталась страничка в контакте: ${a('https://vk.com/joyintimes', 'joyintimes')}</p>
     `,
   },
-  Krako\u0301w: {
+  Kraków: {
     name: 'Краков',
     description: p(`Живём тут с ${link('Family', 'семьёй')} уже более трёх лет.`),
   },
@@ -351,28 +350,38 @@ export const ru: TranslatedStrings = {
       </ul>
       <h3>Хожу на концерты</h3>
       <p>Из своего маст-хэв списка уже побывал:</p>
-      ${figure(picture('FykwSDm', 'Deep Purple в Минске, 2011 г.'),
-               'Deep Purple в Минске, 2011 г.')}
-      ${figure(picture('qIIb0bR', 'God is an Astronaut в Санкт-Петербурге, 2012 г.'),
-               'God is an Astronaut в Санкт-Петербурге, 2012 г.')}
-      ${figure(picture('dPNRWdG', 'Australian Pink Floyd Show в Минске, 2013 г.'),
-               'Australian Pink Floyd Show в Минске, 2013 г.')}
-      ${figure(picture('tcyuP0Q', 'Dream Theater в Катовице, 2015 г.'),
-               'Dream Theater в Катовице, 2015 г.')}
-      ${figure(picture('yDFhHGF', 'Riverside в Катовице, 2015 г.'),
-               'Riverside в Катовице, 2015 г.')}
-      ${figure(picture('5oDXQ4s', 'Дэвид Гилмор во Франции, 2016 г.'),
-               'Дэвид Гилмор во Франции, 2016 г.')}
-      ${figure(picture('pxy4Skj', 'Anathema в Кракове, 2017 г.'),
-               'Anathema в Кракове, 2017 г.')}
-      ${figure(picture('FOuMsdO', 'Opeth в Варшаве, 2017 г.'),
-               'Opeth в Варшаве, 2017 г.')}
-      ${figure(picture('zMy5wbq', 'Roger Waters в Кракове, 2018 г.'),
-               'Roger Waters в Кракове, 2018 г.')}
-      ${figure(picture('mROYG5y', 'Nightwish в Кракове, 2018 г.'),
-               'Nightwish в Кракове, 2018 г.')}
-      ${figure(picture('KhtC73G', 'RPWL в Варшаве, 2019 г.'),
-               'RPWL в Варшаве, 2019 г.')}
+      ${figure(
+        picture('FykwSDm', 'Deep Purple в Минске, 2011 г.'),
+        'Deep Purple в Минске, 2011 г.',
+      )}
+      ${figure(
+        picture('qIIb0bR', 'God is an Astronaut в Санкт-Петербурге, 2012 г.'),
+        'God is an Astronaut в Санкт-Петербурге, 2012 г.',
+      )}
+      ${figure(
+        picture('dPNRWdG', 'Australian Pink Floyd Show в Минске, 2013 г.'),
+        'Australian Pink Floyd Show в Минске, 2013 г.',
+      )}
+      ${figure(
+        picture('tcyuP0Q', 'Dream Theater в Катовице, 2015 г.'),
+        'Dream Theater в Катовице, 2015 г.',
+      )}
+      ${figure(
+        picture('yDFhHGF', 'Riverside в Катовице, 2015 г.'),
+        'Riverside в Катовице, 2015 г.',
+      )}
+      ${figure(
+        picture('5oDXQ4s', 'Дэвид Гилмор во Франции, 2016 г.'),
+        'Дэвид Гилмор во Франции, 2016 г.',
+      )}
+      ${figure(picture('pxy4Skj', 'Anathema в Кракове, 2017 г.'), 'Anathema в Кракове, 2017 г.')}
+      ${figure(picture('FOuMsdO', 'Opeth в Варшаве, 2017 г.'), 'Opeth в Варшаве, 2017 г.')}
+      ${figure(
+        picture('zMy5wbq', 'Roger Waters в Кракове, 2018 г.'),
+        'Roger Waters в Кракове, 2018 г.',
+      )}
+      ${figure(picture('mROYG5y', 'Nightwish в Кракове, 2018 г.'), 'Nightwish в Кракове, 2018 г.')}
+      ${figure(picture('KhtC73G', 'RPWL в Варшаве, 2019 г.'), 'RPWL в Варшаве, 2019 г.')}
       <p>Осталось:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>
@@ -388,7 +397,7 @@ export const ru: TranslatedStrings = {
         Мой родной город. Находится в Витебской области, ${link('Belarus', 'Республика Беларусь')}.
         Точные координаты:
         ${a(
-      'https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D1%86%D0%BA',
+          'https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D1%86%D0%BA',
           '55°32′00″ с. ш. 28°40′00″ в. д.',
         )}
       </p>
@@ -423,7 +432,8 @@ export const ru: TranslatedStrings = {
     name: 'Игральные карты',
     data: {
       p1: 'Коллекционирую с детства.',
-      p2: 'Не ставлю себе задачу собрать очень много и всё подряд, поэтому коллекция не очень \
+      p2:
+        'Не ставлю себе задачу собрать очень много и всё подряд, поэтому коллекция не очень \
 большая и насчитывает на данный момент более 80 колод. Собираю именно те, \
 которые понравились.',
       imgTitle: 'По одной карте из каждой колоды (кликабельно). Июнь 2019',
@@ -490,7 +500,9 @@ ${link('Krako\u0301w', 'Краков')}.`),
   },
   React: {
     name: 'Реакт',
-    description: p(`В данный момент специализируюсь именно ${a('https://reactjs.org/', 'на этой библиотеке')}.`),
+    description: p(
+      `В данный момент специализируюсь именно ${a('https://reactjs.org/', 'на этой библиотеке')}.`,
+    ),
   },
   'Ritchie Blackmore': {
     name: 'Ричи Блэкмор',
@@ -524,7 +536,7 @@ ${link('Krako\u0301w', 'Краков')}.`),
       </p>
     `,
   },
-  S\u030Ckoda: {
+  Škoda: {
     name: 'Шкода',
     description: `
       <p>А точнее, S\u030Ckoda Felicia II 1.6 (1999 г. в.).</p>
@@ -589,8 +601,7 @@ ${link('Krako\u0301w', 'Краков')}.`),
       </p>
     `,
   },
-  Title: {
-  },
+  Title: {},
   'The Netherlands': {
     name: 'Нидерланды',
     description: p('Обязательно буду жить там.'),
@@ -662,11 +673,17 @@ ${link('Krako\u0301w', 'Краков')}.`),
         <li>${a('https://ru.wikipedia.org/wiki/Majesty:_The_Fantasy_Kingdom_Sim', 'Majesty')}</li>
         <li>${a('https://ru.wikipedia.org/wiki/Mafia:_The_City_of_Lost_Heaven', 'Mafia')}</li>
         <li>${a('https://ru.wikipedia.org/wiki/Grand_Theft_Auto_(серия_игр)', 'GTA')}</li>
-        <li>${a('https://ru.wikipedia.org/wiki/Knights_and_Merchants:_The_Shattered_Kingdom', 'Война и Мир')}</li>
+        <li>${a(
+          'https://ru.wikipedia.org/wiki/Knights_and_Merchants:_The_Shattered_Kingdom',
+          'Война и Мир',
+        )}</li>
         <li>${a('https://ru.wikipedia.org/wiki/Portal', 'Portal')}</li>
         <li>${a('https://ru.wikipedia.org/wiki/Anno_1701', 'Anno 1701')}
           / ${a('https://ru.wikipedia.org/wiki/Anno_1404', '1404')}</li>
-        <li>${a('https://ru.wikipedia.org/wiki/Космические_рейнджеры', 'Космические рэйнджеры')}</li>
+        <li>${a(
+          'https://ru.wikipedia.org/wiki/Космические_рейнджеры',
+          'Космические рэйнджеры',
+        )}</li>
         <li>${a('https://ru.wikipedia.org/wiki/The_Talos_Principle', 'The Talos Principle')}</li>
       </ul>
       <p>А также некоторые игры на ${link('ZX Spectrum')}.</p>
@@ -674,7 +691,9 @@ ${link('Krako\u0301w', 'Краков')}.`),
   },
   Vinyl: {
     name: 'Винил',
-    description: p('Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским.'),
+    description: p(
+      'Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским.',
+    ),
   },
   VK: {
     name: 'ВК',
@@ -688,12 +707,18 @@ ${link('Krako\u0301w', 'Краков')}.`),
         была, скорее всего, <code>LOAD "" &crarr;</code> &mdash; для загрузки игры с кассеты.
       </p>
       <p>
-        Любимые игрушки: ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=2323', 'Highway Encounter')},
+        Любимые игрушки: ${a(
+          'https://spectrumcomputing.co.uk/index.php?cat=96&id=2323',
+          'Highway Encounter',
+        )},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=461', 'Battle Ships')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=1686', 'Exolon')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=5448', 'Tujad')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=639', 'Boulder Dash')},
-        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=4784', 'Spy Hunter')} и многие другие.
+        ${a(
+          'https://spectrumcomputing.co.uk/index.php?cat=96&id=4784',
+          'Spy Hunter',
+        )} и многие другие.
       </p>
     `,
   },

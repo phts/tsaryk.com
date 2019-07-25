@@ -3,4 +3,4 @@ import {CommonElementProps} from 'helpers/types'
 
 type Props = CommonElementProps<HTMLElement>
 
-export default (props: Props) => <header {...props}/>
+export default (props: Props) => <header {...props} />

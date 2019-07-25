@@ -29,8 +29,6 @@ export default class Spinner extends React.PureComponent<{}, State> {
 
   render() {
     const symbol = SYMBOLS[this.state.symbolIndex]
-    return (
-      <span>{symbol}</span>
-    )
+    return <span>{symbol}</span>
   }
 }

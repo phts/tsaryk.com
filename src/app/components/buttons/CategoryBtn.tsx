@@ -3,11 +3,7 @@ import styled from 'styled-components'
 
 import asBtn, {BtnProps} from './asBtn'
 
-const CategoryBtn: React.StatelessComponent<BtnProps> = ({text}) => (
-  <Li>
-    # {text}
-  </Li>
-)
+const CategoryBtn: React.StatelessComponent<BtnProps> = ({text}) => <Li># {text}</Li>
 
 const Li = styled.li`
   align-items: center;

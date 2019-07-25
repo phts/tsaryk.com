@@ -2,28 +2,13 @@ import {computed} from 'mobx'
 import * as R from 'ramda'
 
 import {enumToArray} from 'utils/core'
-import {
-  DEFAULT_META_PROPS,
-  ItemPosition,
-  ItemSize,
-  ItemType,
-  metaPropsMap,
-} from 'data/metaProps'
-import {
-  DEFAULT_CATEGORY_PROPS,
-  ItemCategory,
-  categoryPropsMap,
-} from 'data/categoryProps'
-import {
-  Lang,
-  TranslatedStrings,
-  translations,
-} from 'data/translations'
+import {DEFAULT_META_PROPS, ItemPosition, ItemSize, ItemType, metaPropsMap} from 'data/metaProps'
+import {DEFAULT_CATEGORY_PROPS, ItemCategory, categoryPropsMap} from 'data/categoryProps'
+import {Lang, TranslatedStrings, translations} from 'data/translations'
 import {Names, KnownName} from 'data/names'
 import langStore, {LangStore} from './langStore'
 
-export interface ItemData {
-}
+export interface ItemData {}
 export type ItemId = KnownName
 
 export interface Item {
@@ -48,22 +33,22 @@ const FALLBACK_LANG = Lang.RU
 const FALLBACK = translations[FALLBACK_LANG]
 
 function toDefaultItem(id: ItemId): Item {
-  return Object.assign({},
-    DEFAULT_META_PROPS,
-    DEFAULT_CATEGORY_PROPS,
-    {id, name: id},
-  )
+  return Object.assign({}, DEFAULT_META_PROPS, DEFAULT_CATEGORY_PROPS, {id, name: id})
 }
 
-function toItem(strings: TranslatedStrings, fallback: TranslatedStrings):
-(defaultItem: Item, id: ItemId) => Item {
-  return (defaultItem: Item, id: ItemId) => Object.assign({},
-    defaultItem,
-    metaPropsMap[id] || {},
-    categoryPropsMap[id] || {},
-    R.pick(['description'], fallback[id]),
-    R.pick(['name', 'description', 'data', 'tooltip'], strings[id]),
-  )
+function toItem(
+  strings: TranslatedStrings,
+  fallback: TranslatedStrings,
+): (defaultItem: Item, id: ItemId) => Item {
+  return (defaultItem: Item, id: ItemId) =>
+    Object.assign(
+      {},
+      defaultItem,
+      metaPropsMap[id] || {},
+      categoryPropsMap[id] || {},
+      R.pick(['description'], fallback[id]),
+      R.pick(['name', 'description', 'data', 'tooltip'], strings[id]),
+    )
 }
 
 function toItems(itemNamesMap: ItemNamesMap, strings: TranslatedStrings): Items {

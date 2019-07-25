@@ -31,8 +31,6 @@ module.exports = (env = {}) => {
         }),
       ],
     },
-    plugins: [
-      new webpack.HashedModuleIdsPlugin(),
-    ],
+    plugins: [new webpack.HashedModuleIdsPlugin()],
   })
 }

@@ -20,12 +20,9 @@ const SimpleItemPage: React.StatelessComponent<Props> = ({className, item, onClo
     <Header>
       <Title>{item.name}</Title>
     </Header>
-    <HtmlContent className={className} html={item.description}/>
+    <HtmlContent className={className} html={item.description} />
     <Footer>
-      <ActionButton
-        onClick={onClose}>
-        {i18nStore.labels.close}
-      </ActionButton>
+      <ActionButton onClick={onClose}>{i18nStore.labels.close}</ActionButton>
     </Footer>
   </Padding>
 )

@@ -51,11 +51,7 @@ export default class FeedbackForm extends React.PureComponent<Props, State> {
           onKeyDown={this.onKeyDown}
           placeholder={this.props.placeholder}
         />
-        {
-          processing ?
-            <Indicator state={this.state.indicatorState}/> :
-            <FeedbackFormSubmit/>
-        }
+        {processing ? <Indicator state={this.state.indicatorState} /> : <FeedbackFormSubmit />}
       </ActionForm>
     )
   }
@@ -70,11 +66,14 @@ export default class FeedbackForm extends React.PureComponent<Props, State> {
 
     this.setState({indicatorState: IndicatorState.Processing})
 
-    emailService.send(text).then(() => {
-      this.finish(IndicatorState.Success)
-    }).catch(() => {
-      this.finish(IndicatorState.Failed)
-    })
+    emailService
+      .send(text)
+      .then(() => {
+        this.finish(IndicatorState.Success)
+      })
+      .catch(() => {
+        this.finish(IndicatorState.Failed)
+      })
   }
 
   private onKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {

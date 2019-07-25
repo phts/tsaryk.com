@@ -5,10 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const md5 = require('md5-file').sync
 
-const ES6_NODE_MODULES = [
-  'rambda',
-  'rambdax',
-]
+const ES6_NODE_MODULES = ['rambda', 'rambdax']
 
 const projectDir = path.resolve(__dirname, '..')
 const srcDir = path.resolve(projectDir, 'src')
@@ -83,10 +80,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
         'styled-components': path.join(appDir, 'styled-components'),
       },
       extensions: ['.tsx', '.ts', '.js'],
-      modules: [
-        appDir,
-        'node_modules',
-      ],
+      modules: [appDir, 'node_modules'],
     },
     optimization: {
       splitChunks: {
@@ -188,11 +182,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
               options: {
                 name: '[name]-[width].[ext]',
                 outputPath: outputImgPath,
-                sizes: [
-                  800,
-                  1000,
-                  1200,
-                ],
+                sizes: [800, 1000, 1200],
               },
             },
           ],

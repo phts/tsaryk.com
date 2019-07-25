@@ -4,12 +4,10 @@ import {media} from 'helpers/css'
 
 const ZxBorder: React.StatelessComponent = ({children}) => (
   <Border>
-    <PreloadingStep/>
-    <StartingStep/>
-    <LoadingStep/>
-    <Content>
-      {children}
-    </Content>
+    <PreloadingStep />
+    <StartingStep />
+    <LoadingStep />
+    <Content>{children}</Content>
   </Border>
 )
 
@@ -93,11 +91,13 @@ const StartingStep = styled.div`
     ${loadingOverlayCommonCss}
 
     animation: telnyashka 0.8s linear infinite;
-    background-image: linear-gradient(to bottom,\
-                                      rgba(255, 0, 0, 0) 0%,
-                                      rgba(255, 0, 0, 0) 49%,
-                                      rgba(255, 0, 0, 1) 50%,
-                                      rgba(255, 0, 0, 1) 100%);
+    background-image: linear-gradient(
+      to bottom,
+      \rgba(255, 0, 0, 0)0%,
+      rgba(255, 0, 0, 0) 49%,
+      rgba(255, 0, 0, 1) 50%,
+      rgba(255, 0, 0, 1) 100%
+    );
   }
 
   @keyframes telnyashka {
@@ -105,7 +105,7 @@ const StartingStep = styled.div`
       background-position-y: 0;
     }
     100% {
-      background-position-y: -4rem
+      background-position-y: -4rem;
     }
   }
 
@@ -129,10 +129,7 @@ const LoadingStep = styled.div`
     ${loadingOverlayCommonCss}
 
     animation: sample1 .25s step-start infinite;
-    background-image: linear-gradient(to bottom,
-                                      blue 0%,
-                                      blue 24%,
-                                      rgba(0, 0, 0, 0) 25%);
+    background-image: linear-gradient(to bottom, blue 0%, blue 24%, rgba(0, 0, 0, 0) 25%);
 
     ${media.min.desktop`
       animation: sample1-desktop .25s step-start infinite;
@@ -143,10 +140,7 @@ const LoadingStep = styled.div`
     ${loadingOverlayCommonCss}
 
     animation: sample2 1s step-start infinite;
-    background-image: linear-gradient(to bottom,
-                                      blue 0%,
-                                      blue 24%,
-                                      rgba(0, 0, 0, 0) 25%);
+    background-image: linear-gradient(to bottom, blue 0%, blue 24%, rgba(0, 0, 0, 0) 25%);
 
     ${media.min.desktop`
       animation: sample2-desktop 1s step-start infinite;

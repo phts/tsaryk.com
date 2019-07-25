@@ -2,20 +2,10 @@ import {observable, action, autorun} from 'mobx'
 import * as R from 'ramda'
 import {shuffle} from 'rambdax/src/shuffle'
 
-import {
-  ItemPosition,
-  ItemSize,
-  ItemType,
-} from 'data/metaProps'
+import {ItemPosition, ItemSize, ItemType} from 'data/metaProps'
 import itemsStore, {Item, ItemData, ItemId, ItemsStore} from './itemsStore'
 
-export {
-  ItemData,
-  ItemId,
-  ItemPosition,
-  ItemSize,
-  ItemType,
-}
+export {ItemData, ItemId, ItemPosition, ItemSize, ItemType}
 export enum Mode {
   Asc = 'Asc',
   Categories = 'Categories',
@@ -26,18 +16,17 @@ export type ListItem = Item
 export type List = ListItem[]
 
 const sortFunc: {[index in Mode]: (x: List) => List} = {
-  Asc: R.sortBy(R.compose(R.toLower, R.prop('name'))),
+  Asc: R.sortBy(
+    R.compose(
+      R.toLower,
+      R.prop('name'),
+    ),
+  ),
   Categories: R.sortBy(R.prop('id')),
   Random: shuffle,
 }
 
-const CATEGORIES: ItemId[] = [
-  'About',
-  'Contacts',
-  'Work',
-  'Hobby',
-  'Meta',
-]
+const CATEGORIES: ItemId[] = ['About', 'Contacts', 'Work', 'Hobby', 'Meta']
 
 export class ListStore {
   @observable mode: Mode = Mode.Asc
@@ -71,14 +60,11 @@ export class ListStore {
     this.list = R.pipe(
       R.values,
       R.reject(R.propEq('type', ItemType.Category)),
-      x => [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map(p => {
-        return R.filter(R.propEq('position', p), x) as ListItem[]
-      }),
-      x => [
-        ...x[0],
-        ...sortFunc[this.mode](x[1]),
-        ...x[2],
-      ],
+      x =>
+        [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map(p => {
+          return R.filter(R.propEq('position', p), x) as ListItem[]
+        }),
+      x => [...x[0], ...sortFunc[this.mode](x[1]), ...x[2]],
     )(this.items.items)
   }
 
@@ -87,12 +73,10 @@ export class ListStore {
       R.values,
       R.reject(R.propEq('type', ItemType.Category)),
       sortFunc[Mode.Asc],
-      x => CATEGORIES.map(cat => {
-        return R.concat(
-          [this.items.items[cat]],
-          R.filter(R.propEq('category', cat), x),
-        )
-      }),
+      x =>
+        CATEGORIES.map(cat => {
+          return R.concat([this.items.items[cat]], R.filter(R.propEq('category', cat), x))
+        }),
       R.flatten,
     )(this.items.items) as List
   }

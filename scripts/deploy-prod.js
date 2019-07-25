@@ -21,22 +21,20 @@ function printResult(result) {
   }
 }
 
-(async function () {
+;(async function() {
   try {
     const commands = [
       [
-        'scp', '-r',
-        '-o', 'StrictHostKeyChecking=no',
-        '-o', 'LogLevel=ERROR',
+        'scp',
+        '-r',
+        '-o',
+        'StrictHostKeyChecking=no',
+        '-o',
+        'LogLevel=ERROR',
         DIST_FILES,
         `${SSH_USER}@${SSH_HOST}:${SSH_PATH}`,
       ],
-      [
-        'ssh',
-        '-o', 'LogLevel=ERROR',
-        `${SSH_USER}@${SSH_HOST}`,
-        SSH_SCRIPT,
-      ],
+      ['ssh', '-o', 'LogLevel=ERROR', `${SSH_USER}@${SSH_HOST}`, SSH_SCRIPT],
     ]
     for (const args of commands) {
       const command = shellescape(args)
@@ -47,4 +45,4 @@ function printResult(result) {
     printResult(e)
     process.exit(1)
   }
-}())
+})()

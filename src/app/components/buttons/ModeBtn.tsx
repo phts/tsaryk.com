@@ -22,7 +22,9 @@ export default function ModeBtn(mode: Mode) {
             buttonType={this.props.buttonType}
             fontSize={this.props.fontSize}
             onClick={this.onClick}
-          >{this.props.text}</GenericBtn>
+          >
+            {this.props.text}
+          </GenericBtn>
         </GenericLi>
       )
     }

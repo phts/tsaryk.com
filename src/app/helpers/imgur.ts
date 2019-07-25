@@ -2,7 +2,6 @@ import {breakpoints} from './css'
 
 const BASE_NAME = 'https://i.imgur.com/'
 
-
 export function picture(id: string, alt: string) {
   const prefix = `${BASE_NAME}${id}`
   return `

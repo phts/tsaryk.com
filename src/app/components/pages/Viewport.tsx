@@ -18,9 +18,7 @@ export default class Viewport extends React.Component<Props> {
     return (
       <ThemeProvider theme={dynamicTheme(this.props.uiStore)}>
         <FlexContainerWrapper>
-          <FlexContainer>
-            {this.props.children}
-          </FlexContainer>
+          <FlexContainer>{this.props.children}</FlexContainer>
         </FlexContainerWrapper>
       </ThemeProvider>
     )

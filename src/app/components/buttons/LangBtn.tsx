@@ -21,7 +21,9 @@ export default function LangBtn(lang: Lang) {
             fontSize={this.props.fontSize}
             onClick={this.onClick}
             title={this.props.tooltip}
-          >{this.props.text}</GenericBtn>
+          >
+            {this.props.text}
+          </GenericBtn>
         </GenericLi>
       )
     }

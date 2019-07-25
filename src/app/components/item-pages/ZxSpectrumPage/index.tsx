@@ -15,21 +15,17 @@ interface Props extends ItemPageProps {
   i18nStore?: I18nStore
 }
 
-const ZxSpectrumPage: React.StatelessComponent<Props> =
-  ({className, item, onClose, i18nStore}) => (
-    <ZxBorder>
-      <Header>
-        <Title>{item.name}</Title>
-      </Header>
-      <HtmlContent className={className} html={item.description}/>
-      <Footer>
-        <ActionButton
-          onClick={onClose}>
-          {i18nStore.labels.close}
-        </ActionButton>
-      </Footer>
-    </ZxBorder>
-  )
+const ZxSpectrumPage: React.StatelessComponent<Props> = ({className, item, onClose, i18nStore}) => (
+  <ZxBorder>
+    <Header>
+      <Title>{item.name}</Title>
+    </Header>
+    <HtmlContent className={className} html={item.description} />
+    <Footer>
+      <ActionButton onClick={onClose}>{i18nStore.labels.close}</ActionButton>
+    </Footer>
+  </ZxBorder>
+)
 
 export default compose(
   asItemPage,

@@ -3,13 +3,11 @@ import styled from 'styled-components'
 
 import EnterSymbol from './EnterSymbol'
 
-export default (
-  () => (
-    <Button type="submit">
-      <EnterSymbol/>
-    </Button>
-  )
-) as React.StatelessComponent
+export default (() => (
+  <Button type="submit">
+    <EnterSymbol />
+  </Button>
+)) as React.StatelessComponent
 
 const Button = styled.button`
   background: none;

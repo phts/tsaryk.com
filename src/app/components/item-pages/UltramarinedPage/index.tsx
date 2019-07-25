@@ -42,46 +42,42 @@ class UltramarinedPage extends React.Component<Props, State> {
 
   render() {
     const data = this.props.item.data as UltramarinedItemData
-    const title = this.state.isUltramarined ?
-      <CenteredTitle><Logo/></CenteredTitle> :
+    const title = this.state.isUltramarined ? (
+      <CenteredTitle>
+        <Logo />
+      </CenteredTitle>
+    ) : (
       <Title>{this.props.item.name}</Title>
+    )
     const content = this.state.isUltramarined ? (
       <Content className={this.props.className}>
         <UltramarinedContent>
-          <ImgurPicture imageId="XlCoMYy" alt="Jenya"/>
-          <ImgurPicture imageId="82GwSq9" alt="Dasha"/>
-          <ImgurPicture imageId="uAs0gjm" alt="Galya"/>
-          <ImgurPicture imageId="i2VIacr" alt="Phil"/>
+          <ImgurPicture imageId="XlCoMYy" alt="Jenya" />
+          <ImgurPicture imageId="82GwSq9" alt="Dasha" />
+          <ImgurPicture imageId="uAs0gjm" alt="Galya" />
+          <ImgurPicture imageId="i2VIacr" alt="Phil" />
         </UltramarinedContent>
       </Content>
     ) : (
-      <HtmlContent className={this.props.className} html={this.props.item.description}/>
+      <HtmlContent className={this.props.className} html={this.props.item.description} />
     )
     const ultramarineButtonText = this.state.isUltramarined ? data.unultrimarine : data.ultrimarine
     const page = (
       <ThemedPadding>
-        <Header>
-          {title}
-        </Header>
+        <Header>{title}</Header>
         {content}
         <Footer>
           <Buttons>
-            <ActionButton
-              onClick={this.props.onClose}>
+            <ActionButton onClick={this.props.onClose}>
               {this.props.i18nStore.labels.close}
             </ActionButton>
-            <ActionButton
-              onClick={this.toggleUltramarined}>
-              {ultramarineButtonText}
-            </ActionButton>
+            <ActionButton onClick={this.toggleUltramarined}>{ultramarineButtonText}</ActionButton>
           </Buttons>
         </Footer>
       </ThemedPadding>
     )
     return this.state.isUltramarined ? (
-      <ThemeProvider theme={ultramarinedTheme}>
-        {page}
-      </ThemeProvider>
+      <ThemeProvider theme={ultramarinedTheme}>{page}</ThemeProvider>
     ) : (
       page
     )

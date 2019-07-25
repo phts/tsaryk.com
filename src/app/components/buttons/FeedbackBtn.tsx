@@ -26,18 +26,20 @@ class FeedbackBtn extends React.PureComponent<Props, State> {
   render() {
     return (
       <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
-        {
-          this.state.open ?
-            <FeedbackForm
-              onFinished={this.onFinished}
-              placeholder={(this.props.data as FeedbackItemData).sayHello}
-            /> :
-            <GenericBtn
-              buttonType={this.props.buttonType}
-              fontSize={this.props.fontSize}
-              onClick={this.onClick}
-            >{this.props.text}</GenericBtn>
-        }
+        {this.state.open ? (
+          <FeedbackForm
+            onFinished={this.onFinished}
+            placeholder={(this.props.data as FeedbackItemData).sayHello}
+          />
+        ) : (
+          <GenericBtn
+            buttonType={this.props.buttonType}
+            fontSize={this.props.fontSize}
+            onClick={this.onClick}
+          >
+            {this.props.text}
+          </GenericBtn>
+        )}
       </GenericLi>
     )
   }
