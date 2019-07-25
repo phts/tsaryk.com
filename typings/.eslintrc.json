@@ -1,5 +1,0 @@
-{
-  "extends": [
-    "@phts/eslint-config/addons/typescript"
-  ]
-}

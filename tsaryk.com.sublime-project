@@ -1,12 +1,18 @@
 {
-	"folders":
-	[
+	"folders": [
 		{
 			"path": "."
 		}
 	],
-	"settings":
-	{
+	"settings": {
+		"js_prettier": {
+			"auto_format_on_save": true,
+			"auto_format_on_save_excludes": ["*/node_modules/*", "*.html", "*.js"],
+			"prettier_cli_path": "./node_modules/.bin/prettier"
+		},
+		"ESLint-Formatter": {
+			"format_on_save": true
+		},
 		"SublimeLinter.linters.eslint.selector": "source.js, source.ts, source.tsx",
 		"SublimeLinter.linters.tslint.disable": true
 	}
