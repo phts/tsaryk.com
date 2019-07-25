@@ -58,6 +58,7 @@ export enum Names {
   'Space Resonance',
   'Stack Overflow',
   'Sublime Text',
+  Telegram,
   'The Netherlands',
   Traveling,
   Ultramarined,

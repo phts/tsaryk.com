@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/indent */
-import {a, callto, mailto, link, p, tel, youtube, figure} from 'helpers/html'
+import {a, mailto, link, p, tel, youtube, figure} from 'helpers/html'
 import {picture} from 'helpers/imgur'
 import {EMAIL, LASTFM_URL, LINKEDIN_URL} from 'config'
 import {TranslatedStrings} from './index'
@@ -401,7 +401,7 @@ Collecting those which I really like.',
   'SaM Solutions': {},
   Škoda: {},
   Skype: {
-    description: p(`My name in Skype: ${callto('phil.tsarik')}.`),
+    description: p(`Deprecated in favor of ${link('Telegram')}.`),
   },
   'Software Engineer': {
     description: p(`My speciality after graduating from ${link('PSU', 'university')}.`),
@@ -426,6 +426,9 @@ Collecting those which I really like.',
         )} for it.
       </p>
     `,
+  },
+  Telegram: {
+    description: p(`My username in Telegram: ${a('https://t.me/ptsaryk', '@ptsaryk')}`),
   },
   Title: {},
   'The Netherlands': {
