@@ -275,7 +275,8 @@ export const en: TranslatedStrings = {
       <p>Also I have ${link('Last.fm', 'Last.fm profile')}.</p>
       <p>Often listening to music ${link('Vinyl', 'on vinyl')}.</p>
       <h3>Playing</h3>
-      <p>drums in bands:<p>
+      <p>...${link('Drums', 'drums')}.<p>
+      <p>Used to play in bands:<p>
       <ul>
         <li>${link('Space Resonance')}</li>
         <li>${link('Joy in Time')}</li>
@@ -307,6 +308,7 @@ export const en: TranslatedStrings = {
       ${figure(picture('zMy5wbq', 'Roger Waters in Kraków, 2018'), 'Roger Waters in Kraków, 2018')}
       ${figure(picture('mROYG5y', 'Nightwish in Kraków, 2018'), 'Nightwish in Kraków, 2018')}
       ${figure(picture('KhtC73G', 'RPWL in Warsaw, 2019'), 'RPWL in Warsaw, 2019')}
+      ${figure(picture('x7kkpYK', 'Pink in Warsaw, 2019'), 'Pink in Warsaw, 2019')}
       <p>Remaining:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow or Ritchie Blackmore's Night")}</li>

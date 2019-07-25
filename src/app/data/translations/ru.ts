@@ -340,7 +340,7 @@ export const ru: TranslatedStrings = {
       <p>Также я есть на ${link('Last.fm', 'Ластфм')}.</p>
       <p>Часто слушаю музыку ${link('Vinyl', 'на виниле')}.</p>
       <h3>Играю</h3>
-      <p>На ${link('Drums', 'барабанах')}.<p>
+      <p>...на ${link('Drums', 'барабанах')}.<p>
       <p>Участвовал в группах:<p>
       <ul>
         <li>${link('Space Resonance')}</li>
@@ -382,6 +382,7 @@ export const ru: TranslatedStrings = {
       )}
       ${figure(picture('mROYG5y', 'Nightwish в Кракове, 2018 г.'), 'Nightwish в Кракове, 2018 г.')}
       ${figure(picture('KhtC73G', 'RPWL в Варшаве, 2019 г.'), 'RPWL в Варшаве, 2019 г.')}
+      ${figure(picture('x7kkpYK', 'Pink в Варшаве, 2019 г.'), 'Pink в Варшаве, 2019 г.')}
       <p>Осталось:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>
