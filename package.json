@@ -4,7 +4,7 @@
   "scripts": {
     "build": "npm run build:prod --",
     "build:dev": "webpack",
-    "build:prod": "webpack -- --env.prod",
+    "build:prod": "webpack --env.prod",
     "build:prod:relative": "npm run build:prod -- --env.relative",
     "clean": "rimraf ./dist",
     "deploy:dev": "node ./scripts/deploy-dev.js",
