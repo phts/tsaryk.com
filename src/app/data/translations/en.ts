@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/indent */
 import {a, mailto, link, p, tel, youtube, figure} from 'helpers/html'
 import {picture} from 'helpers/imgur'
 import {EMAIL, LASTFM_URL, LINKEDIN_URL} from 'config'
