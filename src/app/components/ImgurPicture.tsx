@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 import {breakpoints} from 'helpers/css'
 import {ImageElementProps} from 'helpers/types'

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import {withRouter, RouteComponentProps, Redirect} from 'react-router-dom'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'

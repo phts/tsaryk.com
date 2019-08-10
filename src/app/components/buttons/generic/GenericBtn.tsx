@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 import Button from 'components/Button'
 import {BUTTON_TYPE, getBorder} from 'helpers/buttons'

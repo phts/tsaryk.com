@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {inject} from 'mobx-react'
 import {prepend, compose} from 'ramda'

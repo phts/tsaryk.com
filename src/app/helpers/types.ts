@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 export type AnyComponentClass<P> = React.ComponentClass<P> | React.StatelessComponent<P>
 

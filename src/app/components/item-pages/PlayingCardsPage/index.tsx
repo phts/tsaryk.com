@@ -1,6 +1,6 @@
 import './playing-cards.png'
 
-import * as React from 'react'
+import React from 'react'
 import {inject} from 'mobx-react'
 import {compose} from 'ramda'
 

@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 import {ItemData, ItemId, ItemSize, ItemType, ListItem} from 'stores/listStore'
 import {DEFAULT_FONT_SIZE, BUTTON_TYPE} from 'helpers/buttons'
