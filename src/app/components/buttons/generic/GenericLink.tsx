@@ -1,3 +1,4 @@
+import React from 'react'
 import {Link, LinkProps} from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -8,7 +9,12 @@ interface Props extends LinkProps {
   fontSize: string
 }
 
-export default styled(Link)<Props>`
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const PureLink: React.FunctionComponent<Props> = ({buttonType, fontSize, ...props}) => (
+  <Link {...props} />
+)
+
+export default styled(PureLink)<Props>`
   border-bottom: ${props => getBorder(props.buttonType)};
   color: inherit;
   font-size: ${props => props.fontSize};
