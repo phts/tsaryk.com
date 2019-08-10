@@ -77,8 +77,6 @@ module.exports = ({prod = false, analyzer} = {}) => {
     },
     resolve: {
       alias: {
-        react: 'preact-compat',
-        'react-dom': 'preact-compat',
         'styled-components': path.join(appDir, 'styled-components'),
       },
       extensions: ['.tsx', '.ts', '.js'],
