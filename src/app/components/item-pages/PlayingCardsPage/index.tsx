@@ -41,12 +41,10 @@ const PlayingCardsPage: React.StatelessComponent<Props> = ({
     <Content className={className}>
       <p>{(item.data as Data).p2}</p>
       <p>{(item.data as Data).p1}</p>
-      <p>
-        <figure>
-          <PlayingCards style={{color: uiStore.backgroundColor}} />
-          <figcaption>{(item.data as Data).imgTitle}</figcaption>
-        </figure>
-      </p>
+      <figure>
+        <PlayingCards style={{color: uiStore.backgroundColor}} />
+        <figcaption>{(item.data as Data).imgTitle}</figcaption>
+      </figure>
     </Content>
     <Footer>
       <ActionButton onClick={onClose}>{i18nStore.labels.close}</ActionButton>
