@@ -93,7 +93,7 @@ const StartingStep = styled.div`
     animation: telnyashka 0.8s linear infinite;
     background-image: linear-gradient(
       to bottom,
-      \rgba(255, 0, 0, 0)0%,
+      rgba(255, 0, 0, 0) 0%,
       rgba(255, 0, 0, 0) 49%,
       rgba(255, 0, 0, 1) 50%,
       rgba(255, 0, 0, 1) 100%
