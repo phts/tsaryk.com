@@ -7,11 +7,11 @@ interface Props extends CommonElementProps<HTMLLIElement> {
   flexible: boolean
 }
 
-export default styled.li.attrs<Props>({
-  style: (props: Props) => ({
+export default styled.li.attrs<Props>(props => ({
+  style: {
     flexBasis: `${props.flexBasis}vw`,
-  }),
-})<Props>`
+  },
+}))<Props>`
   align-items: center;
   display: flex;
   flex-grow: ${({flexible}) => (flexible ? 1 : 0)};
