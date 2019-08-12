@@ -49,7 +49,7 @@ const UltramarinedPage: React.FunctionComponent<ItemPageProps> = props => {
       </UltramarinedContent>
     </Content>
   ) : (
-    <HtmlContent className={props.className} html={props.item.description} />
+    <HtmlContent className={props.className} html={props.item.description!} />
   )
   const ultramarineButtonText = isUltramarined ? data.unultrimarine : data.ultrimarine
   const page = (

@@ -47,7 +47,7 @@ const BtnListPage: React.FunctionComponent = () => {
   }, [])
 
   useEffect(() => {
-    document.documentElement.scrollTop = parseInt(localStorage.getItem('scrollTop'), 10)
+    document.documentElement.scrollTop = parseInt(localStorage.getItem('scrollTop') || '0', 10)
   }, [])
 
   const flexible = listStore.mode !== Mode.Categories

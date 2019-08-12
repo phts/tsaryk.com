@@ -17,12 +17,12 @@ import {daysInMonth} from 'utils/date'
 import {DATE_OF_BIRTH} from 'config'
 
 export interface Age {
-  days?: number
-  hours?: number
-  minutes?: number
-  months?: number
-  seconds?: number
-  years?: number
+  days: number
+  hours: number
+  minutes: number
+  months: number
+  seconds: number
+  years: number
 }
 
 export type AgePart = keyof Age
@@ -82,13 +82,13 @@ export class AgeStore {
   }
 
   private reduceDate(date: Date, parts: AgePart[]): [Age, Date] {
-    const reducedParts: Age = {}
+    const reducedParts: Partial<Age> = {}
     const reducedDate: Date = parts.reduce((acc, value) => {
       const diffVal = diffMethods[value](this.initialTime, acc)
       reducedParts[value] = diffVal
       return addMethods[value](acc, diffVal)
     }, date)
-    return [reducedParts, reducedDate]
+    return [reducedParts as Age, reducedDate]
   }
 
   private inc() {

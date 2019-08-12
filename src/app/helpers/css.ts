@@ -9,28 +9,34 @@ export const breakpoints = {
   hd: 1440,
 }
 
+type BreakpointKeys = Array<keyof typeof breakpoints>
 type BreakpointsLabel = keyof typeof breakpoints
-type MediaSet = {[index in keyof typeof breakpoints]?: typeof css}
+type MediaSet = {[index in keyof typeof breakpoints]: typeof css}
 interface Medias {
   min: MediaSet
   max: MediaSet
 }
 
-export const media = Object.keys(breakpoints).reduce((acc: Medias, val: BreakpointsLabel) => {
-  acc.min = acc.min || {}
-  acc.min[val] = (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]) => css`
-    @media (min-width: ${breakpoints[val]}px) {
-      ${css(strings, ...interpolations)};
-    }
-  `
-  acc.max = acc.max || {}
-  acc.max[val] = (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]) => css`
-    @media (max-width: ${breakpoints[val]}px) {
-      ${css(strings, ...interpolations)};
-    }
-  `
-  return acc
-}, {}) as Medias
+export const media = (Object.keys(breakpoints) as BreakpointKeys).reduce(
+  (acc: Medias, val: BreakpointsLabel) => {
+    acc.min = acc.min || {}
+    // @ts-ignore
+    acc.min[val] = (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]) => css`
+      @media (min-width: ${breakpoints[val]}px) {
+        ${css(strings, ...interpolations)};
+      }
+    `
+    acc.max = acc.max || {}
+    // @ts-ignore
+    acc.max[val] = (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]) => css`
+      @media (max-width: ${breakpoints[val]}px) {
+        ${css(strings, ...interpolations)};
+      }
+    `
+    return acc
+  },
+  ({} as unknown) as Medias,
+) as Medias
 
 export function getRandomColorComponent(): number {
   return random(0, 255)

@@ -18,8 +18,8 @@ interface State {
 const DELAY_BEFORE_FINISHED = 3000
 
 export default class FeedbackForm extends React.PureComponent<Props, State> {
-  private input: HTMLInputElement
-  private finishTimeout: number
+  private input?: HTMLInputElement
+  private finishTimeout?: number
 
   constructor(props: Props) {
     super(props)
@@ -29,8 +29,8 @@ export default class FeedbackForm extends React.PureComponent<Props, State> {
   }
 
   componentDidMount() {
-    this.input.value = ''
-    this.input.focus()
+    this.input!.value = ''
+    this.input!.focus()
   }
 
   componentWillUnmount() {
@@ -51,7 +51,7 @@ export default class FeedbackForm extends React.PureComponent<Props, State> {
           onKeyDown={this.onKeyDown}
           placeholder={this.props.placeholder}
         />
-        {processing ? <Indicator state={this.state.indicatorState} /> : <FeedbackFormSubmit />}
+        {processing ? <Indicator state={this.state.indicatorState!} /> : <FeedbackFormSubmit />}
       </ActionForm>
     )
   }

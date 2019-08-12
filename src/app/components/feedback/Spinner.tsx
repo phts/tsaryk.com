@@ -8,7 +8,7 @@ interface State {
 }
 
 export default class Spinner extends React.PureComponent<{}, State> {
-  private interval: number
+  private interval?: number
 
   constructor(props: {}) {
     super(props)

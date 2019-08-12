@@ -16,7 +16,7 @@ const SimpleItemPage: React.FunctionComponent<ItemPageProps> = ({className, item
       <Header>
         <Title>{item.name}</Title>
       </Header>
-      <HtmlContent className={className} html={item.description} />
+      <HtmlContent className={className} html={item.description!} />
       <Footer>
         <ActionButton onClick={onClose}>{i18nStore.labels.close}</ActionButton>
       </Footer>

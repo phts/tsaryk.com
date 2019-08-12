@@ -19,7 +19,7 @@ const CatsPage: React.FunctionComponent<ItemPageProps> = ({className, item, onCl
         <CatsList items={items} />
       </Content>
       <CatsFooter>
-        <ActionButton onClick={onClose}>{i18nStore.labels.close}</ActionButton>
+        <ActionButton onClick={onClose}>{i18nStore!.labels.close}</ActionButton>
       </CatsFooter>
     </Padding>
   )

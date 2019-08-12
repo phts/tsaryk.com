@@ -30,7 +30,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
         <p>{(item.data as Data).p2}</p>
         <p>{(item.data as Data).p1}</p>
         <figure>
-          <PlayingCards style={{color: uiStore.backgroundColor}} />
+          <PlayingCards style={{color: uiStore!.backgroundColor}} />
           <figcaption>{(item.data as Data).imgTitle}</figcaption>
         </figure>
       </Content>

@@ -42,7 +42,7 @@ export class ListStore {
   setMode(mode: Mode): void {
     const forceRefresh = mode === Mode.Random && this.mode === mode
     if (forceRefresh) {
-      this.mode = null
+      this.mode = (null as unknown) as Mode
     }
 
     this.mode = mode

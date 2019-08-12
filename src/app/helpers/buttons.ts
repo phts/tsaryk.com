@@ -6,8 +6,6 @@ export enum BUTTON_TYPE {
   Simple = 'Simple',
 }
 
-const DEFAULT_BUTTON_TYPE = BUTTON_TYPE.Default
-
 const TYPE_TO_BORDER: {[index in keyof typeof BUTTON_TYPE]: string} = {
   Action: '2px dotted',
   Default: '1px dashed',
@@ -15,5 +13,5 @@ const TYPE_TO_BORDER: {[index in keyof typeof BUTTON_TYPE]: string} = {
 }
 
 export function getBorder(type: BUTTON_TYPE) {
-  return TYPE_TO_BORDER[type] || DEFAULT_BUTTON_TYPE
+  return TYPE_TO_BORDER[type]
 }
