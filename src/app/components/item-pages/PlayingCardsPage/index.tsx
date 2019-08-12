@@ -27,7 +27,7 @@ interface Data {
   imgTitle: string
 }
 
-const PlayingCardsPage: React.StatelessComponent<Props> = ({
+const PlayingCardsPage: React.FunctionComponent<Props> = ({
   className,
   item,
   onClose,

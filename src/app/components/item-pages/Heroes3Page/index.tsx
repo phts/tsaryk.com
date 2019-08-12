@@ -19,7 +19,7 @@ interface Props extends ItemPageProps {
   i18nStore?: I18nStore
 }
 
-const Heroes3Page: React.StatelessComponent<Props> = ({className, item, onClose, i18nStore}) => (
+const Heroes3Page: React.FunctionComponent<Props> = ({className, item, onClose, i18nStore}) => (
   <PaddingWithCursor>
     <Header>
       <Title>{item.name}</Title>

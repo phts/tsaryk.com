@@ -15,7 +15,7 @@ interface Props extends ItemPageProps {
   i18nStore?: I18nStore
 }
 
-const CatsPage: React.StatelessComponent<Props> = ({className, item, onClose, i18nStore}) => {
+const CatsPage: React.FunctionComponent<Props> = ({className, item, onClose, i18nStore}) => {
   const items = prepend({icon: '&#x1F408;', text: item.name})(item.data as CatsItemsData)
   return (
     <Padding>

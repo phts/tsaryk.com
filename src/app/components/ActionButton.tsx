@@ -8,4 +8,4 @@ type Props = ButtonElementProps
 
 export default ((props: Props) => (
   <Button {...props} border={getBorder(BUTTON_TYPE.Action)} fontSize={DEFAULT_FONT_SIZE} />
-)) as React.StatelessComponent<Props>
+)) as React.FunctionComponent<Props>

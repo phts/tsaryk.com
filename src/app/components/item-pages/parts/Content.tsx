@@ -8,4 +8,4 @@ interface Props extends CommonElementProps<HTMLDivElement> {
 
 export default (({children, className}) => (
   <div className={className}>{children}</div>
-)) as React.StatelessComponent<Props>
+)) as React.FunctionComponent<Props>

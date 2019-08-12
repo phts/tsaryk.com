@@ -36,7 +36,7 @@ const buttonTypeMap: {[index in ItemType]?: BUTTON_TYPE} = {
   Meta: BUTTON_TYPE.Action,
 }
 
-export type BtnClass = React.StatelessComponent<BaseBtnProps>
+export type BtnClass = React.FunctionComponent<BaseBtnProps>
 
 const asBtn: Hoc<BtnProps, BtnClass> = WrappedComponent => ({
   flexible,

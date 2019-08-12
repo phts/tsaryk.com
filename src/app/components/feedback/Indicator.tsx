@@ -15,7 +15,7 @@ interface Props {
   state: IndicatorState
 }
 
-const Indicator: React.StatelessComponent<Props> = ({state}) => (
+const Indicator: React.FunctionComponent<Props> = ({state}) => (
   <Span>
     {state === IndicatorState.Processing ? <Spinner /> : ''}
     {state === IndicatorState.Success ? <SuccessSymbol /> : ''}

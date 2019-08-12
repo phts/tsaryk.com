@@ -7,7 +7,7 @@ export default (() => (
   <Button type="submit">
     <EnterSymbol />
   </Button>
-)) as React.StatelessComponent
+)) as React.FunctionComponent
 
 const Button = styled.button`
   background: none;

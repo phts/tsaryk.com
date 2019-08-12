@@ -5,7 +5,7 @@ interface Props {
   html: string
 }
 
-const PageHtmlContent: React.StatelessComponent<Props> = ({className, html}) => (
+const PageHtmlContent: React.FunctionComponent<Props> = ({className, html}) => (
   <div className={className} dangerouslySetInnerHTML={{__html: html}} />
 )
 

@@ -10,7 +10,7 @@ interface Props extends ButtonElementProps {
   fontSize: string
 }
 
-const GenericBtn: React.StatelessComponent<Props> = props => (
+const GenericBtn: React.FunctionComponent<Props> = props => (
   <Button {...props} border={getBorder(props.buttonType)} fontSize={props.fontSize} />
 )
 

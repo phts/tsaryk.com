@@ -2,7 +2,7 @@ import React from 'react'
 import styled, {css} from 'styled-components'
 import {media} from 'helpers/css'
 
-const ZxBorder: React.StatelessComponent = ({children}) => (
+const ZxBorder: React.FunctionComponent = ({children}) => (
   <Border>
     <PreloadingStep />
     <StartingStep />

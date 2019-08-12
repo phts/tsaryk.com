@@ -18,4 +18,4 @@ export default (({imageId, ...props}) => {
       <img src={`${prefix}h.jpg`} {...props} />
     </picture>
   )
-}) as React.StatelessComponent<Props>
+}) as React.FunctionComponent<Props>

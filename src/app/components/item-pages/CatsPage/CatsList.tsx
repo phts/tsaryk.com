@@ -18,7 +18,7 @@ export default (({items}) => (
       </li>
     ))}
   </OrderedListWithItemHeight>
-)) as React.StatelessComponent<Props>
+)) as React.FunctionComponent<Props>
 
 const EmojiIcon = styled.span`
   cursor: ${props => (props.title ? 'help' : 'default')};

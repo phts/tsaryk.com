@@ -15,7 +15,7 @@ interface Props extends ItemPageProps {
   i18nStore?: I18nStore
 }
 
-const ZxSpectrumPage: React.StatelessComponent<Props> = ({className, item, onClose, i18nStore}) => (
+const ZxSpectrumPage: React.FunctionComponent<Props> = ({className, item, onClose, i18nStore}) => (
   <ZxBorder>
     <Header>
       <Title>{item.name}</Title>
