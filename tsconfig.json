@@ -15,17 +15,7 @@
     "noUnusedParameters": true,
     "sourceMap": true,
     "target": "es6",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./typings"
-    ]
+    "typeRoots": ["./node_modules/@types", "./@types"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "typings/global/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "@types/global/*.ts"]
 }
