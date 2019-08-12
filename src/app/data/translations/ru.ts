@@ -452,10 +452,12 @@ ${link('Krako\u0301w', 'Краков')}.`),
       </p>
       <ul>
         <li>Airbnb: ${a('https://www.airbnb.ru/c/philt68?currency=PLN', 'philt68')}</li>
+        <li>Allegro: ${a('https://allegro.pl/aplikacja/polecam/pilip782627', 'pilip782627')}</li>
         <li>Bank Millennium:
           ${a('https://www.bankmillennium.pl/lubietopolecam?id=24586296', '24586296')}</li>
         <li>Bolt (Taxify): S5S8K8</li>
         <li>Booking.com: ${a('https://www.booking.com/s/18_6/pilip212', 'pilip212')}</li>
+        <li>Hulaj: zDNRAA</li>
         <li>Maxim: 9D06F7E7</li>
         <li>Revolut: ${a('https://revolut.com/r/pilip1ip', 'pilip1ip')}</li>
         <li>Uber: ${a('https://www.uber.com/invite/3daguge8ue', '3daguge8ue')}</li>
