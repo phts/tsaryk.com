@@ -8,19 +8,18 @@ My home page. And a playground for experiments.
 
 ## Technologies
 
-* [Jest](https://facebook.github.io/jest/)
-* [MobX](https://mobx.js.org/)
-* [preact-compat](https://github.com/developit/preact-compat)
-* [Preact](https://preactjs.com/)
-* [rambdax](https://selfrefactor.github.io/rambdax/#/) (only for `random` and `shuffle` methods)
-* [Ramda](http://ramdajs.com/)
-* [React Router](https://github.com/ReactTraining/react-router/)
-* [styled-components](https://www.styled-components.com/)
-* [Typescript](https://www.typescriptlang.org/)
+- [Jest](https://facebook.github.io/jest/)
+- [MobX](https://mobx.js.org/)
+- [rambdax](https://selfrefactor.github.io/rambdax/#/) (only for `random` and `shuffle` methods)
+- [Ramda](http://ramdajs.com/)
+- [React](https://reactjs.org/)
+- [React Router](https://github.com/ReactTraining/react-router/)
+- [styled-components](https://www.styled-components.com/)
+- [Typescript](https://www.typescriptlang.org/)
 
 ## Services
 
-* [emailjs.com](http://www.emailjs.com/) - Sending emails via JavaScript
+- [emailjs.com](http://www.emailjs.com/) - Sending emails via JavaScript
 
 ## npm scripts
 
