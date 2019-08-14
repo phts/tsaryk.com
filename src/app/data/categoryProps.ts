@@ -3,7 +3,7 @@ import {KnownName} from './names'
 
 export type ItemCategory = KnownName | null
 
-interface CategoryProps {
+export interface CategoryProps {
   category: ItemCategory
 }
 
