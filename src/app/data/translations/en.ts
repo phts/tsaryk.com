@@ -14,8 +14,8 @@ export const en: TranslatedStrings = {
       <p>This site was created and being supported by me in free time.</p>
       <p>Main technologies:</p>
       <ul>
-        <li>Preact</li>
         <li>MobX</li>
+        <li>React</li>
         <li>TypeScript</li>
       </ul>
       <p>${a('https://github.com/phts/tsaryk.com', "Site's source code is")} on Github.</p>

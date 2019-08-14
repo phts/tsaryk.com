@@ -17,8 +17,8 @@ export const ru: TranslatedStrings = {
       <p>Этот сайт создавался и поддерживается мной в свободное время.</p>
       <p>Основные используемые технологии:</p>
       <ul>
-        <li>Preact</li>
         <li>MobX</li>
+        <li>React</li>
         <li>TypeScript</li>
       </ul>
       <p>${a('https://github.com/phts/tsaryk.com', 'Исходный код сайта выложен')} на Гитхаб.</p>
