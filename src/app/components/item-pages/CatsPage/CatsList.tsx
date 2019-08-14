@@ -12,7 +12,7 @@ interface Props {
 export default (({items}) => (
   <OrderedListWithItemHeight>
     {items.map(x => (
-      <li key={x.tooltip}>
+      <li key={x.icon}>
         <EmojiIcon dangerouslySetInnerHTML={{__html: x.icon}} title={x.tooltip} />
         {x.text}
       </li>
