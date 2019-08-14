@@ -1,36 +1,31 @@
-import React from 'react'
-import {inject} from 'mobx-react'
+import React, {useCallback} from 'react'
 
-import {LangStore, Lang} from 'stores/langStore'
+import useStores from 'hooks/useStores'
+import {Lang} from 'stores/langStore'
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
 
-interface Props extends BtnProps {
-  langStore?: LangStore
-}
-
 export default function LangBtn(lang: Lang) {
-  @inject('langStore')
-  class AnyLangBtn extends React.PureComponent<Props> {
-    render() {
-      return (
-        <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
-          <GenericBtn
-            buttonType={this.props.buttonType}
-            fontSize={this.props.fontSize}
-            onClick={this.onClick}
-            title={this.props.tooltip}
-          >
-            {this.props.text}
-          </GenericBtn>
-        </GenericLi>
-      )
-    }
+  const AnyLangBtn: React.FunctionComponent<BtnProps> = props => {
+    const {langStore} = useStores()
 
-    private onClick = () => {
-      this.props.langStore.setLang(lang)
-    }
+    const onClick = useCallback(() => {
+      langStore.setLang(lang)
+    }, [])
+
+    return (
+      <GenericLi flexBasis={props.flexBasis} flexible={props.flexible}>
+        <GenericBtn
+          buttonType={props.buttonType}
+          fontSize={props.fontSize}
+          onClick={onClick}
+          title={props.tooltip}
+        >
+          {props.text}
+        </GenericBtn>
+      </GenericLi>
+    )
   }
 
   return asBtn(AnyLangBtn)

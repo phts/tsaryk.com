@@ -1,11 +1,9 @@
-import React from 'react'
+import React, {useCallback} from 'react'
 import {withRouter, RouteComponentProps, Redirect} from 'react-router-dom'
-import {inject} from 'mobx-react'
-import {compose} from 'ramda'
 import styled from 'styled-components'
 
 import {media} from 'helpers/css'
-import {ItemId, ItemsStore} from 'stores/itemsStore'
+import {ItemId} from 'stores/itemsStore'
 import {openIndex} from 'helpers/routes'
 import {BUTTON_TYPE, getBorder} from 'helpers/buttons'
 import routes, {ShowItemPageMatch} from 'routes'
@@ -16,12 +14,12 @@ import Heroes3Page from 'components/item-pages/Heroes3Page'
 import UltramarinedPage from 'components/item-pages/UltramarinedPage'
 import PlayingCardsPage from 'components/item-pages/PlayingCardsPage'
 import ZxSpectrumPage from 'components/item-pages/ZxSpectrumPage'
-import scrollToTopOnMount from 'components/scrollToTopOnMount'
+import useScrollToTopOnMount from 'hooks/useScrollToTopOnMount'
+import useStores from 'hooks/useStores'
 
 interface Props extends RouteComponentProps<ShowItemPageMatch> {
   className: string
   itemId: ItemId
-  itemsStore?: ItemsStore
 }
 
 type KnownItemPagesMap = {
@@ -36,26 +34,22 @@ const knownItemPages: KnownItemPagesMap = {
   'ZX Spectrum': ZxSpectrumPage,
 }
 
-class ShowItemPage extends React.PureComponent<Props> {
-  render() {
-    const item = this.props.itemsStore.items[this.props.match.params.id]
-    if (!item) {
-      return <Redirect to={routes.index} />
-    }
-    const ItemPageComponent: ItemPageComponentClass = knownItemPages[item.id] || SimpleItemPage
-    return <ItemPageComponent item={item} onClose={this.onBack} className={this.props.className} />
-  }
+const ShowItemPage: React.FunctionComponent<Props> = ({match, className, history}) => {
+  const {itemsStore} = useStores()
+  const onClose = useCallback(() => {
+    openIndex(history)
+  }, [])
+  useScrollToTopOnMount()
 
-  private onBack = () => {
-    openIndex(this.props.history)
+  const item = itemsStore.items[match.params.id]
+  if (!item) {
+    return <Redirect to={routes.index} />
   }
+  const ItemPageComponent: ItemPageComponentClass = knownItemPages[item.id] || SimpleItemPage
+  return <ItemPageComponent item={item} onClose={onClose} className={className} />
 }
 
-export default compose(
-  withRouter,
-  scrollToTopOnMount,
-  inject('itemsStore'),
-)(styled(ShowItemPage)`
+export default withRouter(styled(ShowItemPage)`
   a {
     color: inherit;
   }

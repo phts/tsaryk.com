@@ -1,15 +1,13 @@
 import React from 'react'
-import {observer, inject} from 'mobx-react'
+import * as R from 'ramda'
+import {observer} from 'mobx-react'
 
+import useStores from 'hooks/useStores'
 import {AgeStore} from 'stores/ageStore'
 import {padWithZero} from 'utils/core'
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
-
-interface Props extends BtnProps {
-  ageStore?: AgeStore
-}
 
 interface AgeItemData {
   days: string
@@ -20,29 +18,34 @@ interface AgeItemData {
   years: string
 }
 
-@inject('ageStore')
-@observer
-class AgeBtn extends React.Component<Props> {
-  render() {
-    return (
-      <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
-        <GenericBtn buttonType={this.props.buttonType} fontSize={this.props.fontSize}>
-          {this.text}
-        </GenericBtn>
-      </GenericLi>
-    )
-  }
-
-  private get text() {
-    const {years, months, days, hours, minutes, seconds} = this.props.ageStore.age
-    const labels = this.props.data as AgeItemData
-    return `${years} ${labels.years} \
-      ${months} ${labels.months} \
-      ${days} ${labels.days} \
-      ${hours} ${labels.hours} \
-      ${padWithZero(minutes)} ${labels.min} \
-      ${padWithZero(seconds)} ${labels.sec}`
-  }
+function text(ageStore: AgeStore, data: AgeItemData): string {
+  const {years, months, days, hours, minutes, seconds} = ageStore.age
+  return `${years} ${data.years} \
+      ${months} ${data.months} \
+      ${days} ${data.days} \
+      ${hours} ${data.hours} \
+      ${padWithZero(minutes)} ${data.min} \
+      ${padWithZero(seconds)} ${data.sec}`
 }
 
-export default asBtn(AgeBtn)
+const AgeBtn: React.FunctionComponent<BtnProps> = ({
+  flexBasis,
+  flexible,
+  buttonType,
+  fontSize,
+  data,
+}) => {
+  const {ageStore} = useStores()
+  return (
+    <GenericLi flexBasis={flexBasis} flexible={flexible}>
+      <GenericBtn buttonType={buttonType} fontSize={fontSize}>
+        {text(ageStore, data as AgeItemData)}
+      </GenericBtn>
+    </GenericLi>
+  )
+}
+
+export default R.compose(
+  asBtn,
+  observer,
+)(AgeBtn)

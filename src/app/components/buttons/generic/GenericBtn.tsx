@@ -10,8 +10,8 @@ interface Props extends ButtonElementProps {
   fontSize: string
 }
 
-const GenericBtn: React.FunctionComponent<Props> = props => (
-  <Button {...props} border={getBorder(props.buttonType)} fontSize={props.fontSize} />
+const GenericBtn: React.FunctionComponent<Props> = ({buttonType, fontSize, ...props}) => (
+  <Button {...props} border={getBorder(buttonType)} fontSize={fontSize} />
 )
 
 export default withTooltip(GenericBtn)

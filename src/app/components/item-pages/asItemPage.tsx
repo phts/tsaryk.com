@@ -9,13 +9,10 @@ export interface ItemPageProps {
   onClose: () => void
 }
 
-export type ItemPageComponentClass = React.ComponentClass<ItemPageProps>
+export type ItemPageComponentClass = React.FunctionComponent<ItemPageProps>
 
-const asItemPage: Hoc<ItemPageProps, ItemPageComponentClass> = WrappedComponent =>
-  class ItemPageComponent extends React.PureComponent<ItemPageProps> {
-    render() {
-      return <WrappedComponent {...this.props} />
-    }
-  }
+const asItemPage: Hoc<ItemPageProps, ItemPageComponentClass> = WrappedComponent => props => (
+  <WrappedComponent {...props} />
+)
 
 export default asItemPage

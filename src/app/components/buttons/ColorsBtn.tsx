@@ -1,36 +1,27 @@
-import React from 'react'
-import {inject} from 'mobx-react'
+import React, {useCallback} from 'react'
+import * as R from 'ramda'
 
+import useStores from 'hooks/useStores'
 import {getRandomCssColor} from 'helpers/css'
-import {UiStore} from 'stores/uiStore'
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
 
-interface Props extends BtnProps {
-  uiStore?: UiStore
+const ColorsBtn: React.FunctionComponent<BtnProps> = props => {
+  const {uiStore} = useStores()
+
+  const onClick = useCallback(() => {
+    uiStore.backgroundColor = getRandomCssColor()
+    uiStore.color = getRandomCssColor()
+  }, [])
+
+  return (
+    <GenericLi flexBasis={props.flexBasis} flexible={props.flexible}>
+      <GenericBtn buttonType={props.buttonType} fontSize={props.fontSize} onClick={onClick}>
+        {props.text}
+      </GenericBtn>
+    </GenericLi>
+  )
 }
 
-@inject('uiStore')
-class ColorsBtn extends React.PureComponent<Props> {
-  render() {
-    return (
-      <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
-        <GenericBtn
-          buttonType={this.props.buttonType}
-          fontSize={this.props.fontSize}
-          onClick={this.onClick}
-        >
-          {this.props.text}
-        </GenericBtn>
-      </GenericLi>
-    )
-  }
-
-  private onClick = () => {
-    this.props.uiStore.backgroundColor = getRandomCssColor()
-    this.props.uiStore.color = getRandomCssColor()
-  }
-}
-
-export default asBtn(ColorsBtn)
+export default R.compose(asBtn)(ColorsBtn)

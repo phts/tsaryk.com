@@ -1,22 +1,13 @@
-import React from 'react'
-import {inject} from 'mobx-react'
+import React, {useEffect} from 'react'
 
-import {WidthsStore} from 'stores/widthsStore'
-import {ListStore} from 'stores/listStore'
+import useStores from 'hooks/useStores'
 
-interface Props {
-  listStore?: ListStore
-  widthsStore?: WidthsStore
+const InitialRandomizeProvider: React.FunctionComponent = ({children}) => {
+  const {listStore, widthsStore} = useStores()
+  useEffect(() => {
+    widthsStore.randomize(listStore.list)
+  }, [])
+  return <>{children}</>
 }
 
-@inject('listStore', 'widthsStore')
-export default class InitialRandomizeProvider extends React.PureComponent<Props> {
-  constructor(props: Props) {
-    super(props)
-    this.props.widthsStore.randomize(this.props.listStore.list)
-  }
-
-  render() {
-    return React.Children.only(this.props.children)
-  }
-}
+export default InitialRandomizeProvider
