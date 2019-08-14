@@ -6,7 +6,7 @@ import Footer from 'components/item-pages/parts/Footer'
 import Padding from 'components/item-pages/parts/Padding'
 import Title from 'components/item-pages/parts/Title'
 import HtmlContent from 'components/item-pages/parts/HtmlContent'
-import asItemPage, {ItemPageProps} from 'components/item-pages/asItemPage'
+import {ItemPageProps} from 'components/item-pages/types'
 import ActionButton from 'components/ActionButton'
 import useStores from 'hooks/useStores'
 
@@ -36,4 +36,4 @@ const PaddingWithCursor = styled(Padding)`
   }
 `
 
-export default asItemPage(Heroes3Page)
+export default Heroes3Page

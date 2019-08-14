@@ -7,7 +7,7 @@ import Footer from './parts/Footer'
 import Padding from './parts/Padding'
 import Title from './parts/Title'
 import HtmlContent from './parts/HtmlContent'
-import asItemPage, {ItemPageProps} from './asItemPage'
+import {ItemPageProps} from './types'
 
 const SimpleItemPage: React.FunctionComponent<ItemPageProps> = ({className, item, onClose}) => {
   const {i18nStore} = useStores()
@@ -24,4 +24,4 @@ const SimpleItemPage: React.FunctionComponent<ItemPageProps> = ({className, item
   )
 }
 
-export default asItemPage(SimpleItemPage)
+export default SimpleItemPage

@@ -5,7 +5,7 @@ import {prepend} from 'ramda'
 import Footer from 'components/item-pages/parts/Footer'
 import Padding from 'components/item-pages/parts/Padding'
 import Content from 'components/item-pages/parts/Content'
-import asItemPage, {ItemPageProps} from 'components/item-pages/asItemPage'
+import {ItemPageProps} from 'components/item-pages/types'
 import ActionButton from 'components/ActionButton'
 import useStores from 'hooks/useStores'
 import CatsList, {CatsItemsData} from './CatsList'
@@ -29,4 +29,4 @@ const CatsFooter = styled(Footer)`
   padding-left: 4.5rem;
 `
 
-export default asItemPage(CatsPage)
+export default CatsPage

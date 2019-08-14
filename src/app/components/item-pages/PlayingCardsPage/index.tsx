@@ -7,7 +7,7 @@ import Footer from 'components/item-pages/parts/Footer'
 import Padding from 'components/item-pages/parts/Padding'
 import Title from 'components/item-pages/parts/Title'
 import Content from 'components/item-pages/parts/Content'
-import asItemPage, {ItemPageProps} from 'components/item-pages/asItemPage'
+import {ItemPageProps} from 'components/item-pages/types'
 import ActionButton from 'components/ActionButton'
 import useStores from 'hooks/useStores'
 
@@ -41,4 +41,4 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
   )
 }
 
-export default asItemPage(PlayingCardsPage)
+export default PlayingCardsPage

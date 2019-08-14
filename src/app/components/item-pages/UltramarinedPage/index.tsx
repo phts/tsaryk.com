@@ -10,7 +10,7 @@ import Title from 'components/item-pages/parts/Title'
 import CenteredTitle from 'components/item-pages/parts/CenteredTitle'
 import Content from 'components/item-pages/parts/Content'
 import HtmlContent from 'components/item-pages/parts/HtmlContent'
-import asItemPage, {ItemPageProps} from 'components/item-pages/asItemPage'
+import {ItemPageProps} from 'components/item-pages/types'
 import ActionButton from 'components/ActionButton'
 import ImgurPicture from 'components/ImgurPicture'
 import useStores from 'hooks/useStores'
@@ -67,4 +67,4 @@ const UltramarinedPage: React.FunctionComponent<ItemPageProps> = props => {
   return isUltramarined ? <ThemeProvider theme={ultramarinedTheme}>{page}</ThemeProvider> : page
 }
 
-export default asItemPage(UltramarinedPage)
+export default UltramarinedPage
