@@ -1,41 +1,31 @@
-import React, {useCallback, useEffect} from 'react'
+import React, {useCallback, useEffect, useRef} from 'react'
 import {InputElementProps} from 'helpers/types'
 
 const INPUT_MIN_WIDTH = 20
 
 interface Props extends InputElementProps {
   minLength?: number
-  inputRef?: (input: HTMLInputElement) => void
+  inputRef?: React.RefObject<HTMLInputElement>
 }
 
 const AutosizedTextInput: React.FunctionComponent<Props> = ({minLength, inputRef, ...props}) => {
-  let input: HTMLInputElement
+  inputRef = inputRef || useRef<HTMLInputElement>(null)
 
   const adjustWidth = useCallback(() => {
     const ml = minLength || INPUT_MIN_WIDTH
-    const newWidth = Math.max(input.value.length + 2, ml)
-    input.style.width = `${newWidth}ch`
+    const newWidth = Math.max(inputRef!.current!.value.length + 2, ml)
+    inputRef!.current!.style.width = `${newWidth}ch`
   }, [minLength])
 
   const onKeyUp = useCallback(() => {
     adjustWidth()
   }, [])
 
-  const ref = useCallback(
-    (_input: HTMLInputElement) => {
-      input = _input
-      if (inputRef) {
-        inputRef(input)
-      }
-    },
-    [inputRef],
-  )
-
   useEffect(() => {
     adjustWidth()
   }, [])
 
-  return <input {...props} onKeyUp={onKeyUp} ref={ref} type="text" />
+  return <input {...props} onKeyUp={onKeyUp} ref={inputRef} type="text" />
 }
 
 export default AutosizedTextInput
