@@ -1,5 +1,4 @@
 import React from 'react'
-import * as R from 'ramda'
 import {observer} from 'mobx-react'
 
 import useStores from 'hooks/useStores'
@@ -45,7 +44,4 @@ const AgeBtn: React.FunctionComponent<BtnProps> = ({
   )
 }
 
-export default R.compose(
-  asBtn,
-  observer,
-)(AgeBtn)
+export default asBtn(observer(AgeBtn))
