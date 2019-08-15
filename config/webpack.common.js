@@ -40,20 +40,22 @@ const plugins = [
     template: 'index.html',
   }),
   new FaviconsWebpackPlugin({
-    icons: {
-      android: false,
-      appleIcon: false,
-      appleStartup: false,
-      coast: false,
-      favicons: true,
-      firefox: false,
-      opengraph: false,
-      twitter: false,
-      yandex: false,
-      windows: false,
+    favicons: {
+      icons: {
+        android: false,
+        appleIcon: false,
+        appleStartup: false,
+        coast: false,
+        favicons: true,
+        firefox: false,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false,
+      },
     },
     logo: path.join(svgDir, 'favicon.svg'),
-    prefix: 'static/icons-[hash:4]/',
+    prefix: 'static/icons/',
   }),
 ]
 
