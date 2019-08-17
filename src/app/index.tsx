@@ -3,7 +3,7 @@ import {Provider} from 'mobx-react'
 
 import Pages from 'components/pages/Pages'
 import stores from 'stores'
-import GlobalStyle from './GlobalStyle'
+import GlobalStyle from 'components/GlobalStyle'
 
 export const App: React.FunctionComponent = () => (
   <>
