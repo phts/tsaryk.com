@@ -191,7 +191,7 @@ module.exports = ({prod = false, analyzer} = {}) => {
         },
         {
           test: /\.js$/,
-          include: ES6_NODE_MODULES.forEach(x => path.resolve(projectDir, `node_modules/${x}`)),
+          include: ES6_NODE_MODULES.map(x => path.resolve(projectDir, `node_modules/${x}`)),
           loader: 'babel-loader',
           options: {
             babelrc: false,
