@@ -11,14 +11,14 @@ export const en: TranslatedStrings = {
   '©': {
     name: '© Phil Tsaryk, 2019',
     description: `
-      <p>This site was created and being supported by me in free time.</p>
+      <p>This site was created and being supported by ${link('Phil Tsaryk', 'me')} in free time.</p>
       <p>Main technologies:</p>
       <ul>
         <li>MobX</li>
         <li>React</li>
         <li>TypeScript</li>
       </ul>
-      <p>${a('https://github.com/phts/tsaryk.com', "Site's source code is")} on Github.</p>
+      <p>The source code is ${a('https://github.com/phts/tsaryk.com', 'on Github')}.</p>
     `,
   },
   About: {},

@@ -14,14 +14,14 @@ export const ru: TranslatedStrings = {
   '©': {
     name: '© Филипп Царик, 2019',
     description: `
-      <p>Этот сайт создавался и поддерживается мной в свободное время.</p>
+      <p>Этот сайт создавался и поддерживается ${link('Phil Tsaryk', 'мной')} в свободное время.</p>
       <p>Основные используемые технологии:</p>
       <ul>
         <li>MobX</li>
         <li>React</li>
         <li>TypeScript</li>
       </ul>
-      <p>${a('https://github.com/phts/tsaryk.com', 'Исходный код сайта выложен')} на Гитхаб.</p>
+      <p>Исходный код сайта выложен ${a('https://github.com/phts/tsaryk.com', 'на Гитхабе')}.</p>
     `,
   },
   About: {
@@ -442,7 +442,7 @@ export const ru: TranslatedStrings = {
   Poland: {
     name: 'Польша',
     description: p(`В данный момент проживаю в Польше в городе \
-${link('Krako\u0301w', 'Краков')}.`),
+${link('Krako\u0301w', 'Кракове')}.`),
   },
   'Promo codes': {
     name: 'Промокоды',
