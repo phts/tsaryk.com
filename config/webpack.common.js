@@ -5,8 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const md5 = require('md5-file').sync
 
-const ES6_NODE_MODULES = ['rambda', 'rambdax']
-
 const projectDir = path.resolve(__dirname, '..')
 const srcDir = path.resolve(projectDir, 'src')
 const appDir = path.resolve(srcDir, 'app')
@@ -183,15 +181,6 @@ module.exports = ({prod = false, analyzer} = {}) => {
               },
             },
           ],
-        },
-        {
-          test: /\.js$/,
-          include: ES6_NODE_MODULES.map(x => path.resolve(projectDir, `node_modules/${x}`)),
-          loader: 'babel-loader',
-          options: {
-            babelrc: false,
-            extends: path.join(projectDir, '.babelrc'),
-          },
         },
       ],
     },
