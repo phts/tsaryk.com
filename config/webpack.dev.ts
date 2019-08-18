@@ -1,10 +1,8 @@
-'use strict'
+import webpack from 'webpack'
+import merge from 'webpack-merge'
+import common, {Options} from './webpack.common'
 
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const common = require('./webpack.common')
-
-module.exports = (env = {}) =>
+export default (env: Options = {}) =>
   merge(common(env), {
     mode: 'development',
     devtool: 'cheap-module-source-map',

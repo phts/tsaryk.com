@@ -1,9 +1,8 @@
-'use strict'
-
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const md5 = require('md5-file').sync
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
+import * as md5 from 'md5-file'
+import {Configuration} from 'webpack'
 
 const projectDir = path.resolve(__dirname, '..')
 const srcDir = path.resolve(projectDir, 'src')
@@ -18,7 +17,13 @@ const outputImgPath = path.join('static', 'img')
 const heroes3AssetsDir = path.join(appDir, 'components', 'item-pages', 'Heroes3Page')
 const playingCardsAssetsDir = path.join(appDir, 'components', 'item-pages', 'PlayingCardsPage')
 const playingCardsPng = path.join(playingCardsAssetsDir, 'playing-cards.png')
-const playingCardsPngHash = md5(playingCardsPng).substring(0, 4)
+const playingCardsPngHash = md5.sync(playingCardsPng).substring(0, 4)
+
+export interface Options {
+  analyzer?: boolean
+  prod?: boolean
+  relative?: boolean
+}
 
 const plugins = [
   new HtmlWebpackPlugin({
@@ -57,7 +62,7 @@ const plugins = [
   }),
 ]
 
-module.exports = ({prod = false, analyzer} = {}) => {
+const config: (opts: Options) => Configuration = ({prod = false, analyzer = false} = {}) => {
   if (analyzer) {
     const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
     plugins.push(new BundleAnalyzerPlugin())
@@ -190,3 +195,5 @@ module.exports = ({prod = false, analyzer} = {}) => {
     },
   }
 }
+
+export default config

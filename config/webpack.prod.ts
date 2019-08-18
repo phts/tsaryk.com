@@ -1,11 +1,9 @@
-'use strict'
+import webpack, {Configuration} from 'webpack'
+import merge from 'webpack-merge'
+import common, {Options} from './webpack.common'
 
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const common = require('./webpack.common')
-
-module.exports = (env = {}) => {
-  const output = {
+export default (env: Options = {}) => {
+  const output: Configuration['output'] = {
     filename: '[name].[contenthash:4].js',
   }
 
