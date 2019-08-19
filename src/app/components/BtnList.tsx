@@ -1,10 +1,10 @@
-import styled, {StyledFunction} from 'styled-components'
+import styled from 'styled-components'
 
 interface Props {
   flexible: boolean
 }
 
-export default (styled.ul as StyledFunction<Props>)`
+export default styled.ul<Props>`
   display: flex;
   flex-wrap: wrap;
   justify-content: ${({flexible}) => (flexible ? 'space-around' : 'flex-start')};

@@ -29,14 +29,14 @@
     "browser-locale": "^1.0.3",
     "date-fns": "^1.30.1",
     "emailjs-com": "^2.3.2",
-    "mobx": "^5.9.4",
-    "mobx-react": "^5.4.4",
-    "preact": "^8.4.2",
-    "preact-compat": "^3.18.4",
+    "mobx": "^5.13.0",
+    "mobx-react": "^6.1.3",
     "rambdax": "^2.10.0",
     "ramda": "^0.26.1",
-    "react-router-dom": "^4.3.1",
-    "styled-components": "^3.4.10"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -46,11 +46,11 @@
     "@phts/prettier-config": "^1.0.4",
     "@types/history": "^4.7.2",
     "@types/jest": "^24.0.11",
-    "@types/ramda": "^0.26.6",
-    "@types/react": "^16.8.13",
-    "@types/react-dom": "^16.8.4",
-    "@types/react-router-dom": "^4.3.2",
-    "@types/styled-components": "^3.0.2",
+    "@types/ramda": "^0.26.19",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "@types/react-router-dom": "^4.3.4",
+    "@types/styled-components": "4.1.8",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-date-fns": "^0.2.1",
@@ -74,8 +74,7 @@
     "svg-react-loader": "^0.4.6",
     "svg-sprite-loader": "^4.1.3",
     "ts-jest": "^24.0.2",
-    "typescript": "~3.3.4000",
-    "uglifyjs-webpack-plugin": "^2.1.2",
+    "typescript": "^3.5.3",
     "webpack": "^4.38.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.0",
@@ -102,15 +101,6 @@
     ],
     "transformIgnorePatterns": [
       "node_modules/(?!(rambdax)/)"
-    ]
-  },
-  "greenkeeper": {
-    "ignore": [
-      "@types/styled-components",
-      "mobx-react",
-      "react-router-dom",
-      "styled-components",
-      "typescript"
     ]
   }
 }

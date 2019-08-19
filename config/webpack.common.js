@@ -5,8 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const md5 = require('md5-file').sync
 
-const ES6_NODE_MODULES = ['rambda', 'rambdax']
-
 const projectDir = path.resolve(__dirname, '..')
 const srcDir = path.resolve(projectDir, 'src')
 const appDir = path.resolve(srcDir, 'app')
@@ -76,11 +74,6 @@ module.exports = ({prod = false, analyzer} = {}) => {
       publicPath: '/',
     },
     resolve: {
-      alias: {
-        react: 'preact-compat',
-        'react-dom': 'preact-compat',
-        'styled-components': path.join(appDir, 'styled-components'),
-      },
       extensions: ['.tsx', '.ts', '.js'],
       modules: [appDir, 'node_modules'],
     },
@@ -188,15 +181,6 @@ module.exports = ({prod = false, analyzer} = {}) => {
               },
             },
           ],
-        },
-        {
-          test: /\.js$/,
-          include: ES6_NODE_MODULES.map(x => path.resolve(projectDir, `node_modules/${x}`)),
-          loader: 'babel-loader',
-          options: {
-            babelrc: false,
-            extends: path.join(projectDir, '.babelrc'),
-          },
         },
       ],
     },

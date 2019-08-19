@@ -1,6 +1,6 @@
-import * as React from 'react'
+import React from 'react'
 
-export type AnyComponentClass<P> = React.ComponentClass<P> | React.StatelessComponent<P>
+export type AnyComponentClass<P> = React.ComponentClass<P> | React.FunctionComponent<P>
 
 export type Hoc<WrappedComponentPropsType, ReturnComponentType> = (
   WrappedComponent: AnyComponentClass<WrappedComponentPropsType>,

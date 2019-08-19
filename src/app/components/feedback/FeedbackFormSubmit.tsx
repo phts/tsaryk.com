@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import EnterSymbol from './EnterSymbol'
@@ -7,7 +7,7 @@ export default (() => (
   <Button type="submit">
     <EnterSymbol />
   </Button>
-)) as React.StatelessComponent
+)) as React.FunctionComponent
 
 const Button = styled.button`
   background: none;

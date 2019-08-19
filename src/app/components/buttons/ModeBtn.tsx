@@ -1,40 +1,29 @@
-import * as React from 'react'
-import {inject} from 'mobx-react'
+import React, {useCallback} from 'react'
 
-import {Mode, ListStore} from 'stores/listStore'
-import {WidthsStore} from 'stores/widthsStore'
+import useStores from 'hooks/useStores'
+import {Mode} from 'stores/listStore'
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
 
-interface Props extends BtnProps {
-  listStore?: ListStore
-  widthsStore?: WidthsStore
-}
-
 export default function ModeBtn(mode: Mode) {
-  @inject('listStore', 'widthsStore')
-  class AnyModeBtn extends React.PureComponent<Props> {
-    render() {
-      return (
-        <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
-          <GenericBtn
-            buttonType={this.props.buttonType}
-            fontSize={this.props.fontSize}
-            onClick={this.onClick}
-          >
-            {this.props.text}
-          </GenericBtn>
-        </GenericLi>
-      )
-    }
+  const AnyModeBtn: React.FunctionComponent<BtnProps> = props => {
+    const {listStore, widthsStore} = useStores()
 
-    private onClick = () => {
-      if (mode !== this.props.listStore.mode) {
-        this.props.widthsStore.randomize(this.props.listStore.list)
+    const onClick = useCallback(() => {
+      if (mode !== listStore.mode) {
+        widthsStore.randomize(listStore.list)
       }
-      this.props.listStore.setMode(mode)
-    }
+      listStore.setMode(mode)
+    }, [])
+
+    return (
+      <GenericLi flexBasis={props.flexBasis} flexible={props.flexible}>
+        <GenericBtn buttonType={props.buttonType} fontSize={props.fontSize} onClick={onClick}>
+          {props.text}
+        </GenericBtn>
+      </GenericLi>
+    )
   }
 
   return asBtn(AnyModeBtn)

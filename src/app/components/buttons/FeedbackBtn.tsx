@@ -1,56 +1,39 @@
-import * as React from 'react'
+import React, {useCallback, useState} from 'react'
 
 import FeedbackForm from 'components/feedback/FeedbackForm'
 import asBtn, {BtnProps} from './asBtn'
 import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
 
-type Props = BtnProps
-
-interface State {
-  open: boolean
-}
-
 interface FeedbackItemData {
   sayHello: string
 }
 
-class FeedbackBtn extends React.PureComponent<Props, State> {
-  constructor(props: BtnProps) {
-    super(props)
-    this.state = {
-      open: false,
-    }
-  }
+const FeedbackBtn: React.FunctionComponent<BtnProps> = props => {
+  const [isOpen, setOpen] = useState(false)
 
-  render() {
-    return (
-      <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
-        {this.state.open ? (
-          <FeedbackForm
-            onFinished={this.onFinished}
-            placeholder={(this.props.data as FeedbackItemData).sayHello}
-          />
-        ) : (
-          <GenericBtn
-            buttonType={this.props.buttonType}
-            fontSize={this.props.fontSize}
-            onClick={this.onClick}
-          >
-            {this.props.text}
-          </GenericBtn>
-        )}
-      </GenericLi>
-    )
-  }
+  const onClick = useCallback(() => {
+    setOpen(true)
+  }, [])
 
-  private onClick = () => {
-    this.setState({open: true})
-  }
+  const onFinished = useCallback(() => {
+    setOpen(false)
+  }, [])
 
-  private onFinished = () => {
-    this.setState({open: false})
-  }
+  return (
+    <GenericLi flexBasis={props.flexBasis} flexible={props.flexible}>
+      {isOpen ? (
+        <FeedbackForm
+          onFinished={onFinished}
+          placeholder={(props.data as FeedbackItemData).sayHello}
+        />
+      ) : (
+        <GenericBtn buttonType={props.buttonType} fontSize={props.fontSize} onClick={onClick}>
+          {props.text}
+        </GenericBtn>
+      )}
+    </GenericLi>
+  )
 }
 
 export default asBtn(FeedbackBtn)

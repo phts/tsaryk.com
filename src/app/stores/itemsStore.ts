@@ -52,9 +52,9 @@ function toItem(
 }
 
 function toItems(itemNamesMap: ItemNamesMap, strings: TranslatedStrings): Items {
-  return R.pipe(
+  return R.pipe<ItemNamesMap, {[id: string]: Item}, {[id: string]: Item}>(
     R.mapObjIndexed(toDefaultItem),
-    R.mapObjIndexed(toItem(strings, FALLBACK)),
+    R.mapObjIndexed(toItem(strings, FALLBACK) as (defaultItem: Item, id: string) => Item),
   )(itemNamesMap) as Items
 }
 

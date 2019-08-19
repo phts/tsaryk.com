@@ -1,34 +1,20 @@
-import * as React from 'react'
+import React, {useEffect, useState} from 'react'
 
 const SYMBOLS = ['\\', '|', '/', '-']
 const SYMBOL_COUNT = SYMBOLS.length
 
-interface State {
-  symbolIndex: number
-}
+const Spinner: React.FunctionComponent = () => {
+  const [symbolIndex, setSymbolIndex] = useState(0)
 
-export default class Spinner extends React.PureComponent<{}, State> {
-  private interval: number
-
-  constructor(props: {}) {
-    super(props)
-    this.state = {
-      symbolIndex: 0,
-    }
-  }
-
-  componentDidMount() {
-    this.interval = window.setInterval(() => {
-      this.setState(state => ({symbolIndex: (state.symbolIndex + 1) % SYMBOL_COUNT}))
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setSymbolIndex(x => (x + 1) % SYMBOL_COUNT)
     }, 100)
-  }
 
-  componentWillUnmount() {
-    clearInterval(this.interval)
-  }
+    return () => clearInterval(interval)
+  }, [])
 
-  render() {
-    const symbol = SYMBOLS[this.state.symbolIndex]
-    return <span>{symbol}</span>
-  }
+  return <span>{SYMBOLS[symbolIndex]}</span>
 }
+
+export default Spinner

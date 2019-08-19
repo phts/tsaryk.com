@@ -1,4 +1,5 @@
-import styled, {StyledFunction} from 'styled-components'
+import React from 'react'
+import styled from 'styled-components'
 import {ButtonElementProps} from 'helpers/types'
 
 interface Props extends ButtonElementProps {
@@ -6,7 +7,12 @@ interface Props extends ButtonElementProps {
   fontSize?: string
 }
 
-export default (styled.button as StyledFunction<Props>)`
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const Button: React.FunctionComponent<Props> = ({border, fontSize, ...props}) => (
+  <button {...props} />
+)
+
+export default styled(Button)<Props>`
   background: none;
   border: 0 none;
   border-bottom: ${({border}) => border};

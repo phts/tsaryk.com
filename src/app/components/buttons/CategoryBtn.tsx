@@ -1,9 +1,9 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import asBtn, {BtnProps} from './asBtn'
 
-const CategoryBtn: React.StatelessComponent<BtnProps> = ({text}) => <Li># {text}</Li>
+const CategoryBtn: React.FunctionComponent<BtnProps> = ({text}) => <Li># {text}</Li>
 
 const Li = styled.li`
   align-items: center;

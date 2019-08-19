@@ -1,17 +1,18 @@
-import './globalCss'
-
-import * as React from 'react'
+import React from 'react'
 import {Provider} from 'mobx-react'
 
 import Pages from 'components/pages/Pages'
 import stores from 'stores'
+import GlobalStyle from 'components/GlobalStyle'
+import initStores from './initStores'
 
-export class App extends React.PureComponent<{}, {}> {
-  render() {
-    return (
-      <Provider {...stores}>
-        <Pages />
-      </Provider>
-    )
-  }
-}
+initStores()
+
+export const App: React.FunctionComponent = () => (
+  <>
+    <GlobalStyle />
+    <Provider {...stores}>
+      <Pages />
+    </Provider>
+  </>
+)

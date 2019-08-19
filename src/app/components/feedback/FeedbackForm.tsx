@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, {useCallback, useEffect, useRef, useState} from 'react'
 
 import emailService from 'services/email'
 import ActionForm from './ActionForm'
@@ -11,52 +11,36 @@ interface Props {
   placeholder: string
 }
 
-interface State {
-  indicatorState: IndicatorState | null
-}
-
 const DELAY_BEFORE_FINISHED = 3000
 
-export default class FeedbackForm extends React.PureComponent<Props, State> {
-  private input: HTMLInputElement
-  private finishTimeout: number
+const FeedbackForm: React.FunctionComponent<Props> = ({placeholder, onFinished}) => {
+  const input = useRef<HTMLInputElement>(null)
+  let finishTimeout: number
 
-  constructor(props: Props) {
-    super(props)
-    this.state = {
-      indicatorState: null,
-    }
-  }
+  const [indicatorState, setIndicatorState] = useState<IndicatorState | null>(null)
 
-  componentDidMount() {
-    this.input.value = ''
-    this.input.focus()
-  }
+  const onKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (event.keyCode === 27) {
+        event.preventDefault()
+        onFinished()
+      }
+    },
+    [onFinished],
+  )
 
-  componentWillUnmount() {
-    clearTimeout(this.finishTimeout)
-  }
+  const finish = useCallback(
+    (result: IndicatorState) => {
+      setIndicatorState(result)
+      finishTimeout = window.setTimeout(() => {
+        setIndicatorState(null)
+        onFinished()
+      }, DELAY_BEFORE_FINISHED)
+    },
+    [onFinished],
+  )
 
-  render() {
-    const processing = this.state.indicatorState !== null
-    return (
-      <ActionForm onSubmit={this.onSubmit} disabled={processing} noValidate>
-        <FeedbackFormInput
-          autoComplete="off"
-          disabled={processing}
-          inputRef={input => {
-            this.input = input
-          }}
-          name="text"
-          onKeyDown={this.onKeyDown}
-          placeholder={this.props.placeholder}
-        />
-        {processing ? <Indicator state={this.state.indicatorState} /> : <FeedbackFormSubmit />}
-      </ActionForm>
-    )
-  }
-
-  private onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = useCallback((event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     const text = (event.target as HTMLFormElement).text.value
@@ -64,31 +48,39 @@ export default class FeedbackForm extends React.PureComponent<Props, State> {
       return
     }
 
-    this.setState({indicatorState: IndicatorState.Processing})
+    setIndicatorState(IndicatorState.Processing)
 
     emailService
       .send(text)
       .then(() => {
-        this.finish(IndicatorState.Success)
+        finish(IndicatorState.Success)
       })
       .catch(() => {
-        this.finish(IndicatorState.Failed)
+        finish(IndicatorState.Failed)
       })
-  }
+  }, [])
 
-  private onKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.keyCode === 27) {
-      event.preventDefault()
-      this.props.onFinished()
-      return
-    }
-  }
+  useEffect(() => {
+    input.current!.value = ''
+    input.current!.focus()
 
-  private finish(result: IndicatorState) {
-    this.setState({indicatorState: result})
-    this.finishTimeout = window.setTimeout(() => {
-      this.setState({indicatorState: null})
-      this.props.onFinished()
-    }, DELAY_BEFORE_FINISHED)
-  }
+    return () => clearTimeout(finishTimeout)
+  }, [])
+
+  const processing = indicatorState !== null
+  return (
+    <ActionForm onSubmit={onSubmit} disabled={processing} noValidate>
+      <FeedbackFormInput
+        autoComplete="off"
+        disabled={processing}
+        inputRef={input}
+        name="text"
+        onKeyDown={onKeyDown}
+        placeholder={placeholder}
+      />
+      {processing ? <Indicator state={indicatorState!} /> : <FeedbackFormSubmit />}
+    </ActionForm>
+  )
 }
+
+export default FeedbackForm

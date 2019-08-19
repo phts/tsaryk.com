@@ -1,11 +1,13 @@
-import * as React from 'react'
+import React from 'react'
 import {omit} from 'ramda'
 
 import {AnyComponentClass, CommonElementProps} from 'helpers/types'
 import TooltipAsterisk from './TooltipAsterisk'
 
-function withTooltip<T extends CommonElementProps<HTMLElement>>(C: AnyComponentClass<T>) {
-  return (props: T) => {
+export default function withTooltip<T extends CommonElementProps<HTMLElement>>(
+  C: AnyComponentClass<T>,
+): React.FunctionComponent<T> {
+  return props => {
     if (!props.title) {
       return <C {...props} />
     }
@@ -17,5 +19,3 @@ function withTooltip<T extends CommonElementProps<HTMLElement>>(C: AnyComponentC
     )
   }
 }
-
-export default withTooltip

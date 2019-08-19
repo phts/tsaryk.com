@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import OrderedListWithItemHeight from 'components/OrderedListWithItemHeight'
@@ -12,13 +12,13 @@ interface Props {
 export default (({items}) => (
   <OrderedListWithItemHeight>
     {items.map(x => (
-      <li key={x.tooltip}>
+      <li key={x.icon}>
         <EmojiIcon dangerouslySetInnerHTML={{__html: x.icon}} title={x.tooltip} />
         {x.text}
       </li>
     ))}
   </OrderedListWithItemHeight>
-)) as React.StatelessComponent<Props>
+)) as React.FunctionComponent<Props>
 
 const EmojiIcon = styled.span`
   cursor: ${props => (props.title ? 'help' : 'default')};

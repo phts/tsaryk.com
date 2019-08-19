@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 import {breakpoints} from 'helpers/css'
 import {ImageElementProps} from 'helpers/types'
@@ -18,4 +18,4 @@ export default (({imageId, ...props}) => {
       <img src={`${prefix}h.jpg`} {...props} />
     </picture>
   )
-}) as React.StatelessComponent<Props>
+}) as React.FunctionComponent<Props>

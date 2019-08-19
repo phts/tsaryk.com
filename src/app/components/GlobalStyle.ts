@@ -1,7 +1,7 @@
-import {injectGlobal} from 'styled-components'
+import {createGlobalStyle} from 'styled-components'
 import {media} from 'helpers/css'
 
-injectGlobal`
+export default createGlobalStyle`
   html {
     ${media.max.tablet`
       font-size: 90%;

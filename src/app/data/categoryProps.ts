@@ -3,17 +3,19 @@ import {KnownName} from './names'
 
 export type ItemCategory = KnownName | null
 
-interface CategoryProps {
+export interface CategoryProps {
   category: ItemCategory
 }
 
-export type CategoryPropsMap = {[index in KnownName]?: CategoryProps}
+export type CategoryPropsMap = {[index in KnownName]: CategoryProps}
 
 export const DEFAULT_CATEGORY_PROPS: CategoryProps = {
   category: null,
 }
 
-const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
+type CatigoryName = 'About' | 'Contacts' | 'Hobby' | 'Meta' | 'Work'
+
+const CATEGORY_MAP: {[index in CatigoryName]: KnownName[]} = {
   About: [
     'Age',
     'Belarus',
@@ -88,7 +90,7 @@ const CATEGORY_MAP: {[index in KnownName]?: KnownName[]} = {
   ],
 }
 
-const calculatedCategoryProps: CategoryPropsMap = {}
+const calculatedCategoryProps: CategoryPropsMap = ({} as unknown) as CategoryPropsMap
 R.forEachObjIndexed((its, cat) => {
   R.forEach(it => {
     calculatedCategoryProps[it] = {category: cat}

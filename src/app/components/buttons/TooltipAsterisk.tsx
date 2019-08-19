@@ -1,11 +1,11 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import {CommonElementProps} from 'helpers/types'
 
 type Props = CommonElementProps<HTMLSpanElement>
 
-export default (props => <Asterisk {...props}>*</Asterisk>) as React.StatelessComponent<Props>
+export default (props => <Asterisk {...props}>*</Asterisk>) as React.FunctionComponent<Props>
 
 const Asterisk = styled.span`
   color: #aa0000;

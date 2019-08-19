@@ -1,33 +1,31 @@
-import * as React from 'react'
+import React from 'react'
 
 import Text from 'components/Text'
 import asBtn, {BtnProps} from './asBtn'
 import GenericLi from './generic/GenericLi'
 import GenericLink from './generic/GenericLink'
 
-class TextBtn extends React.PureComponent<BtnProps> {
-  render() {
-    if (!this.props.description && !this.props.data) {
-      return (
-        <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
-          <Text fontSize={this.props.fontSize}>{this.props.text}</Text>
-        </GenericLi>
-      )
-    }
-
+const TextBtn: React.FunctionComponent<BtnProps> = props => {
+  if (!props.description && !props.data) {
     return (
-      <GenericLi flexBasis={this.props.flexBasis} flexible={this.props.flexible}>
-        <GenericLink
-          buttonType={this.props.buttonType}
-          fontSize={this.props.fontSize}
-          onClick={this.props.onNavigate}
-          to={this.props.itemId}
-        >
-          {this.props.text}
-        </GenericLink>
+      <GenericLi flexBasis={props.flexBasis} flexible={props.flexible}>
+        <Text fontSize={props.fontSize}>{props.text}</Text>
       </GenericLi>
     )
   }
+
+  return (
+    <GenericLi flexBasis={props.flexBasis} flexible={props.flexible}>
+      <GenericLink
+        buttonType={props.buttonType}
+        fontSize={props.fontSize}
+        onClick={props.onNavigate}
+        to={props.itemId}
+      >
+        {props.text}
+      </GenericLink>
+    </GenericLi>
+  )
 }
 
 export default asBtn(TextBtn)

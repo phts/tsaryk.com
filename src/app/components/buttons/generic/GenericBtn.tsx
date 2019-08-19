@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 
 import Button from 'components/Button'
 import {BUTTON_TYPE, getBorder} from 'helpers/buttons'
@@ -10,8 +10,8 @@ interface Props extends ButtonElementProps {
   fontSize: string
 }
 
-const GenericBtn: React.StatelessComponent<Props> = props => (
-  <Button {...props} border={getBorder(props.buttonType)} fontSize={props.fontSize} />
+const GenericBtn: React.FunctionComponent<Props> = ({buttonType, fontSize, ...props}) => (
+  <Button {...props} border={getBorder(buttonType)} fontSize={fontSize} />
 )
 
 export default withTooltip(GenericBtn)
