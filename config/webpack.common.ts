@@ -103,9 +103,7 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
           exclude: /node_modules/,
           loader: 'awesome-typescript-loader',
           options: {
-            babelCore: '@babel/core',
             errorsAsWarnings: !prod,
-            useBabel: true,
           },
         },
         {
