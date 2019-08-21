@@ -7,7 +7,6 @@
     }]
   ],
   "plugins": [
-    "babel-plugin-date-fns",
     "babel-plugin-ramda",
     "@babel/plugin-transform-object-assign"
   ]

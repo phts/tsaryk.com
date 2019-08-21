@@ -53,7 +53,6 @@
     "@types/styled-components": "4.1.8",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.5",
-    "babel-plugin-date-fns": "^0.2.1",
     "babel-plugin-ramda": "^2.0.0",
     "eslint": "^6.1.0",
     "favicons-webpack-plugin": "1.0.1",
