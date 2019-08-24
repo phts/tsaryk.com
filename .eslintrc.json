@@ -7,5 +7,14 @@
     "@phts/eslint-config/addons/typescript/react",
     "@phts/eslint-config/addons/typescript/jest",
     "@phts/eslint-config/addons/prettier"
+  ],
+
+  "overrides": [
+    {
+      "files": "webpack.*.ts",
+      "parserOptions": {
+        "project": "./config/webpack.tsconfig.json"
+      }
+    }
   ]
 }

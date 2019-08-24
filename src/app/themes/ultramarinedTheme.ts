@@ -1,7 +1,8 @@
-/* eslint-disable @typescript-eslint/no-object-literal-type-assertion */
 import Theme from './Theme'
 
-export default {
+const theme: Theme = {
   backgroundColor: '#572fce',
   color: 'white',
-} as Theme
+}
+
+export default theme

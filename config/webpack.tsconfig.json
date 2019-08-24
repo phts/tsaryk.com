@@ -3,5 +3,6 @@
     "esModuleInterop": true,
     "module": "commonjs",
     "target": "es5"
-  }
+  },
+  "include": ["./webpack.*.ts", "../webpack.config.ts"]
 }
