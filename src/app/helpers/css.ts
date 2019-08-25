@@ -35,7 +35,7 @@ export const media = (Object.keys(breakpoints) as BreakpointKeys).reduce(
     `
     return acc
   },
-  ({} as unknown) as Medias,
+  ({} as unknown) as Medias
 ) as Medias
 
 export function getRandomColorComponent(): number {

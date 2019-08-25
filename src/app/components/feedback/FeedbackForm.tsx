@@ -26,7 +26,7 @@ const FeedbackForm: React.FunctionComponent<Props> = ({placeholder, onFinished})
         onFinished()
       }
     },
-    [onFinished],
+    [onFinished]
   )
 
   const finish = useCallback(
@@ -37,7 +37,7 @@ const FeedbackForm: React.FunctionComponent<Props> = ({placeholder, onFinished})
         onFinished()
       }, DELAY_BEFORE_FINISHED)
     },
-    [onFinished],
+    [onFinished]
   )
 
   const onSubmit = useCallback((event: React.FormEvent<HTMLFormElement>) => {

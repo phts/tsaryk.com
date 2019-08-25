@@ -38,7 +38,7 @@ function toDefaultItem(id: ItemId): Item {
 
 function toItem(
   strings: TranslatedStrings,
-  fallback: TranslatedStrings,
+  fallback: TranslatedStrings
 ): (defaultItem: Item, id: ItemId) => Item {
   return (defaultItem: Item, id: ItemId) =>
     Object.assign(
@@ -47,14 +47,14 @@ function toItem(
       metaPropsMap[id] || {},
       categoryPropsMap[id] || {},
       R.pick(['description'], fallback[id]),
-      R.pick(['name', 'description', 'data', 'tooltip'], strings[id]),
+      R.pick(['name', 'description', 'data', 'tooltip'], strings[id])
     )
 }
 
 function toItems(itemNamesMap: ItemNamesMap, strings: TranslatedStrings): Items {
   return R.pipe<ItemNamesMap, {[id: string]: Item}, {[id: string]: Item}>(
     R.mapObjIndexed(toDefaultItem),
-    R.mapObjIndexed(toItem(strings, FALLBACK) as (defaultItem: Item, id: string) => Item),
+    R.mapObjIndexed(toItem(strings, FALLBACK) as (defaultItem: Item, id: string) => Item)
   )(itemNamesMap) as Items
 }
 

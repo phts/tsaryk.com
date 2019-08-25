@@ -11,7 +11,7 @@ const includedItemNames: KnownNames = R.compose<
   string[]
 >(
   R.map((pair: [string, CategoryProps]) => pair[0]),
-  R.toPairs,
+  R.toPairs
 )(categoryPropsMap) as KnownNames
 
 const names: string[] = enumToArray(Names) as string[]

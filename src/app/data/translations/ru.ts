@@ -217,7 +217,7 @@ export const ru: TranslatedStrings = {
       <p>
         ${a(
           'https://github.com/topics/firefox-webextension?q=user%3Aphts&unscoped_q=user%3Aphts',
-          'Иногда пишу',
+          'Иногда пишу'
         )} простые аддоны для фф.
       </p>
     `,
@@ -275,7 +275,7 @@ export const ru: TranslatedStrings = {
         ${a('https://ru.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III', 'HoMM3')}
         / ${a(
           'https://ru.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_Horn_of_the_Abyss',
-          'HotA',
+          'HotA'
         )},
         если появляется свободное время.
       </p>
@@ -351,33 +351,33 @@ export const ru: TranslatedStrings = {
       <p>Из своего маст-хэв списка уже побывал:</p>
       ${figure(
         picture('FykwSDm', 'Deep Purple в Минске, 2011 г.'),
-        'Deep Purple в Минске, 2011 г.',
+        'Deep Purple в Минске, 2011 г.'
       )}
       ${figure(
         picture('qIIb0bR', 'God is an Astronaut в Санкт-Петербурге, 2012 г.'),
-        'God is an Astronaut в Санкт-Петербурге, 2012 г.',
+        'God is an Astronaut в Санкт-Петербурге, 2012 г.'
       )}
       ${figure(
         picture('dPNRWdG', 'Australian Pink Floyd Show в Минске, 2013 г.'),
-        'Australian Pink Floyd Show в Минске, 2013 г.',
+        'Australian Pink Floyd Show в Минске, 2013 г.'
       )}
       ${figure(
         picture('tcyuP0Q', 'Dream Theater в Катовице, 2015 г.'),
-        'Dream Theater в Катовице, 2015 г.',
+        'Dream Theater в Катовице, 2015 г.'
       )}
       ${figure(
         picture('yDFhHGF', 'Riverside в Катовице, 2015 г.'),
-        'Riverside в Катовице, 2015 г.',
+        'Riverside в Катовице, 2015 г.'
       )}
       ${figure(
         picture('5oDXQ4s', 'Дэвид Гилмор во Франции, 2016 г.'),
-        'Дэвид Гилмор во Франции, 2016 г.',
+        'Дэвид Гилмор во Франции, 2016 г.'
       )}
       ${figure(picture('pxy4Skj', 'Anathema в Кракове, 2017 г.'), 'Anathema в Кракове, 2017 г.')}
       ${figure(picture('FOuMsdO', 'Opeth в Варшаве, 2017 г.'), 'Opeth в Варшаве, 2017 г.')}
       ${figure(
         picture('zMy5wbq', 'Roger Waters в Кракове, 2018 г.'),
-        'Roger Waters в Кракове, 2018 г.',
+        'Roger Waters в Кракове, 2018 г.'
       )}
       ${figure(picture('mROYG5y', 'Nightwish в Кракове, 2018 г.'), 'Nightwish в Кракове, 2018 г.')}
       ${figure(picture('KhtC73G', 'RPWL в Варшаве, 2019 г.'), 'RPWL в Варшаве, 2019 г.')}
@@ -398,7 +398,7 @@ export const ru: TranslatedStrings = {
         Точные координаты:
         ${a(
           'https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D0%BF%D0%BE%D0%BB%D0%BE%D1%86%D0%BA',
-          '55°32′00″ с. ш. 28°40′00″ в. д.',
+          '55°32′00″ с. ш. 28°40′00″ в. д.'
         )}
       </p>
     `,
@@ -415,7 +415,7 @@ export const ru: TranslatedStrings = {
         В 2011 окончил ${link('PSU', 'Полоцкий Государственный Университет')} по специальности
         ${link(
           'Software Engineer',
-          '&laquo;Программное обеспечение информационных технологий&raquo;',
+          '&laquo;Программное обеспечение информационных технологий&raquo;'
         )}.
       </p>
       <p>
@@ -477,7 +477,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
         За время учёбы было написано много полезных и бесполезных программ и игрушек.
         ${a(
           'https://bitbucket.org/account/user/phts-home/projects/PSU',
-          'Некоторые из них я выложил',
+          'Некоторые из них я выложил'
         )} на ${link('BitBucket', 'Битбакет')}.
       </p>
       <p>
@@ -503,7 +503,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
   React: {
     name: 'Реакт',
     description: p(
-      `В данный момент специализируюсь именно ${a('https://reactjs.org/', 'на этой библиотеке')}.`,
+      `В данный момент специализируюсь именно ${a('https://reactjs.org/', 'на этой библиотеке')}.`
     ),
   },
   'Ritchie Blackmore': {
@@ -598,7 +598,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
         Периодически
         ${a(
           'https://github.com/phts?utf8=%e2%9C%93&tab=repositories&q=sublime&type=&language=',
-          'пишу плагины',
+          'пишу плагины'
         )} для него.
       </p>
     `,
@@ -648,7 +648,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
       </p>
       ${figure(
         picture('V5Pazkk', 'Ultramarined'),
-        'Последнее выступление Ultramarined в 2015 году',
+        'Последнее выступление Ultramarined в 2015 году'
       )}
       <p>
         Больше информации о группе доступно на
@@ -681,14 +681,14 @@ ${link('Krako\u0301w', 'Кракове')}.`),
         <li>${a('https://ru.wikipedia.org/wiki/Grand_Theft_Auto_(серия_игр)', 'GTA')}</li>
         <li>${a(
           'https://ru.wikipedia.org/wiki/Knights_and_Merchants:_The_Shattered_Kingdom',
-          'Война и Мир',
+          'Война и Мир'
         )}</li>
         <li>${a('https://ru.wikipedia.org/wiki/Portal', 'Portal')}</li>
         <li>${a('https://ru.wikipedia.org/wiki/Anno_1701', 'Anno 1701')}
           / ${a('https://ru.wikipedia.org/wiki/Anno_1404', '1404')}</li>
         <li>${a(
           'https://ru.wikipedia.org/wiki/Космические_рейнджеры',
-          'Космические рэйнджеры',
+          'Космические рэйнджеры'
         )}</li>
         <li>${a('https://ru.wikipedia.org/wiki/The_Talos_Principle', 'The Talos Principle')}</li>
       </ul>
@@ -698,7 +698,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
   Vinyl: {
     name: 'Винил',
     description: p(
-      'Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским.',
+      'Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским.'
     ),
   },
   VK: {
@@ -715,7 +715,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
       <p>
         Любимые игрушки: ${a(
           'https://spectrumcomputing.co.uk/index.php?cat=96&id=2323',
-          'Highway Encounter',
+          'Highway Encounter'
         )},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=461', 'Battle Ships')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=1686', 'Exolon')},
@@ -723,7 +723,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=639', 'Boulder Dash')},
         ${a(
           'https://spectrumcomputing.co.uk/index.php?cat=96&id=4784',
-          'Spy Hunter',
+          'Spy Hunter'
         )} и многие другие.
       </p>
     `,

@@ -5,7 +5,7 @@ import {AnyComponentClass, CommonElementProps} from 'helpers/types'
 import TooltipAsterisk from './TooltipAsterisk'
 
 export default function withTooltip<T extends CommonElementProps<HTMLElement>>(
-  C: AnyComponentClass<T>,
+  C: AnyComponentClass<T>
 ): React.FunctionComponent<T> {
   return props => {
     if (!props.title) {

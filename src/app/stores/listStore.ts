@@ -19,8 +19,8 @@ const sortFunc: {[index in Mode]: (x: List) => List} = {
   Asc: R.sortBy(
     R.compose(
       R.toLower,
-      R.prop('name'),
-    ),
+      R.prop('name')
+    )
   ),
   Categories: R.sortBy(R.prop('id')),
   Random: shuffle,
@@ -64,7 +64,7 @@ export class ListStore {
         [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map(p => {
           return R.filter(R.propEq('position', p), x) as List
         }),
-      x => [...x[0], ...sortFunc[this.mode](x[1]), ...x[2]],
+      x => [...x[0], ...sortFunc[this.mode](x[1]), ...x[2]]
     )(this.items.items)
   }
 
@@ -77,7 +77,7 @@ export class ListStore {
         CATEGORIES.map(cat => {
           return R.concat([this.items.items[cat]], R.filter(R.propEq('category', cat), x))
         }),
-      R.flatten,
+      R.flatten
     )(this.items.items)
   }
 }

@@ -3,7 +3,7 @@ import React from 'react'
 export type AnyComponentClass<P> = React.ComponentClass<P> | React.FunctionComponent<P>
 
 export type Hoc<WrappedComponentPropsType, ReturnComponentType> = (
-  WrappedComponent: AnyComponentClass<WrappedComponentPropsType>,
+  WrappedComponent: AnyComponentClass<WrappedComponentPropsType>
 ) => ReturnComponentType
 
 export type CommonElementProps<T> = React.HTMLAttributes<T>

@@ -84,7 +84,7 @@ export const en: TranslatedStrings = {
       <ul>
         <li>${a(
           'https://en.wikipedia.org/wiki/Evolution:_The_Origin_of_Species',
-          'Evolution: The Origin of Species',
+          'Evolution: The Origin of Species'
         )}</li>
         <li>${a('https://en.wikipedia.org/wiki/Hive_(game)', 'Hive')}</li>
         <li>${a('https://en.wikipedia.org/wiki/7_Wonders_(board_game)', '7 wonders')}</li>
@@ -182,7 +182,7 @@ export const en: TranslatedStrings = {
       <p>
         ${a(
           'https://github.com/topics/firefox-webextension?q=user%3Aphts&unscoped_q=user%3Aphts',
-          'Occasionally writing',
+          'Occasionally writing'
         )} simple addons for FF.
       </p>
     `,
@@ -216,7 +216,7 @@ export const en: TranslatedStrings = {
       <p>
         I like playing to ${a(
           'https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III',
-          'HoMM3',
+          'HoMM3'
         )}
         / ${a('http://h3hota.com/en/documentation', 'HotA')} when having free time.
       </p>
@@ -287,20 +287,20 @@ export const en: TranslatedStrings = {
       ${figure(picture('FykwSDm', 'Deep Purple in Minsk, 2011'), 'Deep Purple in Minsk, 2011')}
       ${figure(
         picture('qIIb0bR', 'God is an Astronaut in Saint Petersburg, 2012'),
-        'God is an Astronaut in Saint Petersburg, 2012',
+        'God is an Astronaut in Saint Petersburg, 2012'
       )}
       ${figure(
         picture('dPNRWdG', 'Australian Pink Floyd Show in Minsk, 2013'),
-        'Australian Pink Floyd Show in Minsk, 2013',
+        'Australian Pink Floyd Show in Minsk, 2013'
       )}
       ${figure(
         picture('tcyuP0Q', 'Dream Theater in Katowice, 2015'),
-        'Dream Theater in Katowice, 2015',
+        'Dream Theater in Katowice, 2015'
       )}
       ${figure(picture('yDFhHGF', 'Riverside in Katowice, 2015'), 'Riverside in Katowice, 2015')}
       ${figure(
         picture('5oDXQ4s', 'David Gilmour in France, 2016'),
-        'David Gilmour in France, 2016',
+        'David Gilmour in France, 2016'
       )}
       ${figure(picture('pxy4Skj', 'Anathema in Kraków, 2017'), 'Anathema in Kraków, 2017')}
       ${figure(picture('FOuMsdO', 'Opeth in Warsaw, 2017'), 'Opeth in Warsaw, 2017')}
@@ -323,7 +323,7 @@ export const en: TranslatedStrings = {
         Coordinates:
         ${a(
           'https://tools.wmflabs.org/geohack/geohack.php?pagename=Novopolotsk&params=55_32_N_28_39_E_region:BY_type:city',
-          '55°32′00″ N 28°40′00″ E',
+          '55°32′00″ N 28°40′00″ E'
         )}
       </p>
     `,
@@ -386,7 +386,7 @@ Collecting those which I really like.',
   Random: {},
   React: {
     description: p(
-      `At this moment I am specializing exactly ${a('https://reactjs.org/', 'on this library')}.`,
+      `At this moment I am specializing exactly ${a('https://reactjs.org/', 'on this library')}.`
     ),
   },
   'Ritchie Blackmore': {
@@ -425,7 +425,7 @@ Collecting those which I really like.',
         Occasionally I
         ${a(
           'https://github.com/phts?utf8=%e2%9C%93&tab=repositories&q=sublime&type=&language=',
-          'make plugins',
+          'make plugins'
         )} for it.
       </p>
     `,
@@ -484,7 +484,7 @@ Collecting those which I really like.',
         <li>${a('https://en.wikipedia.org/wiki/Grand_Theft_Auto', 'GTA')}</li>
         <li>${a(
           'https://en.wikipedia.org/wiki/Knights_and_Merchants:_The_Shattered_Kingdom',
-          'Knights and Merchants: The Shattered Kingdom',
+          'Knights and Merchants: The Shattered Kingdom'
         )}</li>
         <li>${a('https://en.wikipedia.org/wiki/Portal_(series)', 'Portal')}</li>
         <li>${a('https://en.wikipedia.org/wiki/Anno_1701', 'Anno 1701')}
@@ -497,7 +497,7 @@ Collecting those which I really like.',
   },
   Vinyl: {
     description: p(
-      'Audio-Technica AT-LP120USBHC + Yamaha A-S501 + Hand-made speakers by Andrzej Figarski.',
+      'Audio-Technica AT-LP120USBHC + Yamaha A-S501 + Hand-made speakers by Andrzej Figarski.'
     ),
   },
   VK: {
@@ -512,7 +512,7 @@ Collecting those which I really like.',
       <p>
         Most loved games: ${a(
           'https://spectrumcomputing.co.uk/index.php?cat=96&id=2323',
-          'Highway Encounter',
+          'Highway Encounter'
         )},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=461', 'Battle Ships')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=1686', 'Exolon')},
@@ -520,7 +520,7 @@ Collecting those which I really like.',
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=639', 'Boulder Dash')},
         ${a(
           'https://spectrumcomputing.co.uk/index.php?cat=96&id=4784',
-          'Spy Hunter',
+          'Spy Hunter'
         )} and many more.
       </p>
     `,
