@@ -11,6 +11,7 @@
     "deploy:prod": "node ./scripts/deploy-prod.js",
     "eslint": "eslint . --ext .js,.ts,.tsx",
     "fix": "npm run eslint -- --fix",
+    "format": "prettier --write '**/*.{js,ts,tsx,html,md,json}'",
     "lint": "run-p typelint eslint",
     "prebuild:dev": "npm run clean",
     "prebuild:prod": "npm run clean",
