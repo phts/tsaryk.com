@@ -64,7 +64,7 @@
     "file-loader": "^4.2.0",
     "gh-pages": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
-    "image-webpack-loader": "^5.0.0",
+    "image-webpack-loader": "^6.0.0",
     "jest": "^24.9.0",
     "jimp": "^0.6.4",
     "local-web-server": "^3.0.7",
