@@ -7,7 +7,6 @@ export enum Names {
   '+48534898187',
   About,
   Age,
-  Android,
   Ascending,
   'bash.org',
   Belarus,

@@ -31,7 +31,6 @@ const CATEGORY_MAP: {[index in CatigoryName]: KnownName[]} = {
   ],
   Contacts: ['+375292181503', '+48534898187', 'Email', 'Skype', 'Telegram'],
   Hobby: [
-    'Android',
     'Billiard',
     'Board games',
     'Cats',

@@ -56,10 +56,6 @@ export const ru: TranslatedStrings = {
       years: 'лет',
     },
   },
-  Android: {
-    name: 'Андройд',
-    description: p('Только андройд. Не люблю iOS.'),
-  },
   Ascending: {
     name: 'По порядку',
   },

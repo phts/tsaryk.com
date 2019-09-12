@@ -42,9 +42,6 @@ export const en: TranslatedStrings = {
       years: 'years',
     },
   },
-  Android: {
-    description: p("Only Android. I don't like iOS."),
-  },
   Ascending: {},
   'bash.org': {},
   Belarus: {
