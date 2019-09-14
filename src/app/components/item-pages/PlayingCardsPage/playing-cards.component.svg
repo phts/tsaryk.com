@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 1695">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 1927">
   <title>Playing cards collection</title>
   <style>
     @media (max-width: 480px) {
@@ -353,7 +353,7 @@
   <g>
     <a xlink:href="http://www.ukrcards.com.ua/product-737.html" target="_blank">
       <title>Рейнские</title>
-      <rect x="637" y="1445" width="170" height="248"/>
+      <rect x="637" y="1445" width="170" height="255"/>
     </a>
   </g>
   <g>
@@ -390,6 +390,13 @@
     <a xlink:href="http://www.ukrcards.com.ua/product-700.html" target="_blank">
       <title>Майа</title>
       <rect x="1835" y="1446" width="160" height="248"/>
+    </a>
+  </g>
+  <!-- Row #8 -->
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/mythology-and-fantasy/nizshie-dukhi-vostochnoslavyanskoy-mifologii-var-3/" target="_blank">
+      <title>Низшие духи восточнославянской мифологии</title>
+      <rect x="0" y="1677" width="160" height="248"/>
     </a>
   </g>
 </svg>
