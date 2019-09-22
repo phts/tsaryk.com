@@ -493,7 +493,8 @@ Collecting those which I really like.',
     `,
   },
   Vinyl: {
-    description: p(
+    description: figure(
+      picture('Mkb7mO9', 'Винил'),
       'Audio-Technica AT-LP120USBHC + Yamaha A-S501 + Hand-made speakers by Andrzej Figarski.'
     ),
   },

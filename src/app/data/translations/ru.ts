@@ -693,7 +693,8 @@ ${link('Krako\u0301w', 'Кракове')}.`),
   },
   Vinyl: {
     name: 'Винил',
-    description: p(
+    description: figure(
+      picture('Mkb7mO9', 'Винил'),
       'Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским.'
     ),
   },
