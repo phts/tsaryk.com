@@ -38,7 +38,7 @@
     "ramda": "^0.26.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-router-dom": "^5.0.1",
+    "react-router-dom": "^5.1.2",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "@types/ramda": "^0.26.28",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
-    "@types/react-router-dom": "^4.3.5",
+    "@types/react-router-dom": "^5.1.0",
     "@types/styled-components": "4.1.8",
     "@types/uglifyjs-webpack-plugin": "^1.1.0",
     "@types/webpack": "^4.39.0",
