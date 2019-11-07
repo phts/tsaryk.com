@@ -6,7 +6,7 @@ const util = require('util')
 const exec = util.promisify(require('child_process').exec)
 const shellescape = require('shell-escape')
 
-const DIST_FILES = 'dist/.'
+const DIST_FILES = 'dist'
 const SSH_HOST = process.env.SSH_HOST
 const SSH_PATH = process.env.SSH_PATH
 const SSH_SCRIPT = process.env.SSH_SCRIPT
