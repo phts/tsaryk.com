@@ -353,13 +353,13 @@
   <g>
     <a xlink:href="http://www.ukrcards.com.ua/product-737.html" target="_blank">
       <title>Рейнские</title>
-      <rect x="637" y="1445" width="170" height="255"/>
+      <rect x="637" y="1445" width="170" height="246"/>
     </a>
   </g>
   <g>
     <a xlink:href="https://wearmedicine.com/p/medicine-karty-do-gry-11788" target="_blank">
       <title>Kartу do gry Medicine</title>
-      <rect x="808" y="1453" width="160" height="242"/>
+      <rect x="808" y="1449" width="160" height="233"/>
     </a>
   </g>
   <g>
@@ -409,6 +409,18 @@
     <a xlink:href="http://www.dama-pik.com.ua/cards/classic/black-russian-1670/" target="_blank">
       <title>Black Russian</title>
       <rect x="333" y="1680" width="173" height="242"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="https://wearmedicine.com/p/medicine-karty-do-gry-16905" target="_blank">
+      <title>Kartу do gry Medicine</title>
+      <rect x="649" y="1690" width="160" height="238"/>
+    </a>
+  </g>
+  <g>
+    <a xlink:href="http://www.dama-pik.com.ua/cards/french-suit/luxury/" target="_blank">
+      <title>Luxury</title>
+      <rect x="810" y="1682" width="167" height="245"/>
     </a>
   </g>
 </svg>
