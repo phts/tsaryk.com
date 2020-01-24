@@ -87,26 +87,5 @@
     "webpack-dev-server": "^3.10.1",
     "webpack-merge": "^4.2.2",
     "webpack-replace-loader": "^1.3.0"
-  },
-  "jest": {
-    "transform": {
-      "^.+rambdax.cjs.js": "<rootDir>/config/jest-empty-preprocessor.js",
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "\\.test\\.tsx?$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json"
-    ],
-    "moduleDirectories": [
-      "app",
-      "node_modules"
-    ],
-    "transformIgnorePatterns": [
-      "node_modules/(?!(rambdax)/)"
-    ]
   }
 }
