@@ -51,8 +51,6 @@ const plugins = [
         coast: false,
         favicons: true,
         firefox: false,
-        opengraph: false,
-        twitter: false,
         yandex: false,
         windows: false,
       },
