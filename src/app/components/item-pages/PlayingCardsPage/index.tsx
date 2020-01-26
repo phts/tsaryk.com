@@ -229,7 +229,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               x={1008}
               y={485}
               width={170}
-              height={241}
+              height={240}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/mythology-and-fantasy/greek-mythology+2/"
@@ -326,41 +326,52 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               x={1116}
               y={729}
               width={155}
-              height={241}
+              height={240}
             />
+            <PlayingCard x={1270} y={734} width={246} height={284} />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-1503.html"
               title="Schafkopf Tarock"
-              x={1270}
-              y={732}
-              width={151}
-              height={275}
+              x={1523}
+              y={739}
+              width={150}
+              height={274}
             />
-            <PlayingCard x={1423} y={741} width={246} height={290} />
-
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-694.html"
               title="Рококо"
-              x={1668}
-              y={737}
+              x={1674}
+              y={738}
               width={127}
-              height={190}
+              height={191}
             />
+            <PlayingCard
+              href="http://nacekomie.ru/hachette/enciklopediya-taro-ashet-kollekciya.html"
+              title="Универсальное таро"
+              x={1815}
+              y={747}
+              width={184}
+              height={331}
+            />
+
+            {/* row #5 */}
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-137.html"
               title="Лубочные"
               x={0}
               y={973}
-              width={142}
+              width={141}
               height={222}
             />
+            <PlayingCard x={141} y={963} width={155} height={238} />
+            <PlayingCard x={295} y={962} width={156} height={238} />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-148.html"
               title="Времена года"
               x={455}
               y={962}
               width={154}
-              height={237}
+              height={234}
             />
             <PlayingCard x={611} y={969} width={159} height={239} />
             <PlayingCard
@@ -380,132 +391,138 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={160}
               height={245}
             />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/humor/gra-wstepna/"
-              title="Gra wstępna"
-              x={1268}
-              y={1184}
-              width={187}
-              height={270}
-            />
-            <PlayingCard title="Царик Филипп №1" x={1455} y={1088} width={204} height={280} />
+            <PlayingCard x={1269} y={1044} width={98} height={150} />
+            <PlayingCard x={1674} y={935} width={138} height={222} />
+
+            {/* row #6 */}
+            <PlayingCard x={1} y={1205} width={156} height={242} />
+            <PlayingCard x={157} y={1205} width={170} height={242} />
+            <PlayingCard x={327} y={1207} width={153} height={239} />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-155.html"
               title="Диана"
-              x={468}
-              y={1204}
+              x={480}
+              y={1208}
               width={160}
-              height={244}
+              height={247}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/international-style/international/"
               title="International"
-              x={627}
-              y={1208}
+              x={638}
+              y={1212}
               width={160}
-              height={237}
+              height={246}
             />
             <PlayingCard
               href="https://www.artlebedev.ru/mafia/"
               title="Mafia"
-              x={787}
-              y={1210}
-              width={157}
-              height={240}
+              x={796}
+              y={1212}
+              width={156}
+              height={246}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-690.html"
               title="Славянские"
-              x={944}
-              y={1211}
+              x={952}
+              y={1213}
               width={160}
               height={240}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/russian-motifs/igralnye-karty-vysshiy-sort-russkiy-stil/"
               title="Русский стиль"
-              x={1105}
-              y={1215}
-              width={160}
+              x={1112}
+              y={1217}
+              width={159}
               height={240}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-732.html"
-              title="Karty do gry № 410"
-              x={478}
-              y={1445}
-              width={159}
-              height={238}
+              href="http://www.dama-pik.com.ua/cards/humor/gra-wstepna/"
+              title="Gra wstępna"
+              x={1270}
+              y={1197}
+              width={187}
+              height={269}
+            />
+            <PlayingCard title="Царик Филипп №1" x={1454} y={1184} width={200} height={280} />
+            <PlayingCard x={1655} y={1185} width={344} height={521} />
+
+            {/* row #7 */}
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-700.html"
+              title="Майа"
+              x={3}
+              y={1454}
+              width={161}
+              height={250}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-737.html"
               title="Рейнские"
-              x={637}
-              y={1445}
-              width={170}
-              height={246}
+              x={165}
+              y={1446}
+              width={177}
+              height={256}
+            />
+            <PlayingCard x={342} y={1462} width={158} height={241} />
+            <PlayingCard x={501} y={1461} width={159} height={243} />
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-732.html"
+              title="Karty do gry № 410"
+              x={660}
+              y={1464}
+              width={161}
+              height={239}
             />
             <PlayingCard
               href="https://wearmedicine.com/p/medicine-karty-do-gry-11788"
               title="Kartу do gry Medicine"
-              x={808}
-              y={1449}
-              width={160}
-              height={233}
+              x={820}
+              y={1459}
+              width={159}
+              height={245}
             />
+            <PlayingCard x={979} y={1468} width={157} height={239} />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/otherm/brosmino-deck/"
               title="Bicycle: Brosmind"
-              x={1127}
-              y={1455}
-              width={173}
-              height={240}
+              x={1138}
+              y={1466}
+              width={172}
+              height={244}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/personality/jagellonskie/"
               title="Jagiellońskie"
-              x={1300}
-              y={1455}
-              width={162}
+              x={1310}
+              y={1470}
+              width={160}
               height={240}
-            />
-            <PlayingCard
-              href="http://nacekomie.ru/hachette/enciklopediya-taro-ashet-kollekciya.html"
-              title="Универсальное таро"
-              x={1462}
-              y={1366}
-              width={185}
-              height={328}
             />
             <PlayingCard
               href="https://www.kickstarter.com/projects/1495552219/ephemerid-playing-cards"
               title="Ephemerid"
-              x={1655}
-              y={1450}
+              x={1470}
+              y={1465}
               width={175}
-              height={244}
+              height={245}
             />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-700.html"
-              title="Майа"
-              x={1835}
-              y={1446}
-              width={160}
-              height={248}
-            />
+            {/* row #8 */}
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/mythology-and-fantasy/nizshie-dukhi-vostochnoslavyanskoy-mifologii-var-3/"
               title="Низшие духи восточнославянской мифологии"
               x={0}
-              y={1677}
-              width={160}
+              y={1705}
+              width={159}
               height={248}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/advertising/science-fiction-1659/"
               title="Sience-Fiction"
               x={160}
-              y={1680}
+              y={1708}
               width={173}
               height={242}
             />
@@ -513,25 +530,26 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               href="http://www.dama-pik.com.ua/cards/classic/black-russian-1670/"
               title="Black Russian"
               x={333}
-              y={1680}
+              y={1708}
               width={173}
-              height={242}
+              height={244}
             />
+            <PlayingCard x={506} y={1707} width={154} height={242} />
             <PlayingCard
               href="https://wearmedicine.com/p/medicine-karty-do-gry-16905"
               title="Kartу do gry Medicine"
-              x={649}
-              y={1690}
+              x={661}
+              y={1708}
               width={160}
-              height={238}
+              height={242}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/french-suit/luxury/"
               title="Luxury"
-              x={810}
-              y={1682}
-              width={167}
-              height={245}
+              x={820}
+              y={1704}
+              width={168}
+              height={253}
             />
           </Container>
           <figcaption>{(item.data as Data).imgTitle}</figcaption>
