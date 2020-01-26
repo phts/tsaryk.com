@@ -12,7 +12,7 @@ const staticImgDir = path.resolve(staticDir, 'img')
 const distDir = path.resolve(projectDir, 'dist')
 const svgDir = path.resolve(projectDir, 'svg')
 
-const outputImgPath = path.join('static', 'img')
+const outputImgPath = 'static/img'
 
 const heroes3AssetsDir = path.join(appDir, 'components', 'item-pages', 'Heroes3Page')
 const playingCardsAssetsDir = path.join(appDir, 'components', 'item-pages', 'PlayingCardsPage')
