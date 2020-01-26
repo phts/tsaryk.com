@@ -101,10 +101,22 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
         {
           test: /\.tsx?$/,
           exclude: /node_modules/,
-          loader: 'awesome-typescript-loader',
-          options: {
-            errorsAsWarnings: !prod,
-          },
+          use: [
+            {
+              loader: 'awesome-typescript-loader',
+              options: {
+                errorsAsWarnings: !prod,
+              },
+            },
+            {
+              loader: 'webpack-replace-loader',
+              options: {
+                attr: 'g',
+                search: '__PLAYING_CARDS_PNG_HASH__',
+                replace: playingCardsPngHash,
+              },
+            },
+          ],
         },
         {
           test: /\.svg$/,
@@ -148,14 +160,6 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
                     {removeTitle: false},
                   ],
                 },
-              },
-            },
-            {
-              loader: 'webpack-replace-loader',
-              options: {
-                attr: 'g',
-                search: '__PLAYING_CARDS_PNG_HASH__',
-                replace: playingCardsPngHash,
               },
             },
           ],
