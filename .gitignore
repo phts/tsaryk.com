@@ -4,6 +4,7 @@ node_modules/
 
 .DS_Store
 
+*.code-workspace
 *.log
 *.stackdump
 *.sublime-workspace
