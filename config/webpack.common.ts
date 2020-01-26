@@ -184,7 +184,7 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
               options: {
                 name: '[name]-[width].[ext]',
                 outputPath: outputImgPath,
-                sizes: [800, 1000, 1200],
+                sizes: [1000, 1200],
               },
             },
           ],
