@@ -335,15 +335,6 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={155}
               height={240}
             />
-            <PlayingCard title="Playing cards" x={1270} y={734} width={246} height={284} />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-1503.html"
-              title="Schafkopf Tarock"
-              x={1523}
-              y={739}
-              width={150}
-              height={274}
-            />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-694.html"
               title="Рококо"
@@ -351,14 +342,6 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={738}
               width={127}
               height={191}
-            />
-            <PlayingCard
-              href="http://nacekomie.ru/hachette/enciklopediya-taro-ashet-kollekciya.html"
-              title="Универсальное таро"
-              x={1815}
-              y={747}
-              width={184}
-              height={331}
             />
 
             {/* row #5 */}
@@ -457,16 +440,6 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={159}
               height={240}
             />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/humor/gra-wstepna/"
-              title="Gra wstępna"
-              x={1270}
-              y={1197}
-              width={187}
-              height={269}
-            />
-            <PlayingCard title="Царик Филипп №1" x={1454} y={1184} width={200} height={280} />
-            <PlayingCard title="Playing cards" x={1655} y={1185} width={344} height={521} />
 
             {/* row #7 */}
             <PlayingCard
@@ -576,6 +549,36 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={168}
               height={253}
             />
+
+            {/* rest */}
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/humor/gra-wstepna/"
+              title="Gra wstępna"
+              x={1270}
+              y={1197}
+              width={187}
+              height={269}
+            />
+            <PlayingCard title="Playing cards" x={1270} y={734} width={246} height={284} />
+            <PlayingCard title="Царик Филипп №1" x={1454} y={1184} width={200} height={280} />
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-1503.html"
+              title="Schafkopf Tarock"
+              x={1523}
+              y={739}
+              width={150}
+              height={274}
+            />
+            <PlayingCard
+              href="http://nacekomie.ru/hachette/enciklopediya-taro-ashet-kollekciya.html"
+              title="Универсальное таро"
+              x={1815}
+              y={747}
+              width={184}
+              height={331}
+            />
+
+            <PlayingCard title="Playing cards" x={1655} y={1185} width={344} height={521} />
           </Container>
           <figcaption>{(item.data as Data).imgTitle}</figcaption>
         </figure>
