@@ -62,9 +62,9 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={158}
               height={243}
             />
-            <PlayingCard x={686} y={0} width={169} height={242} />
-            <PlayingCard x={855} y={0} width={172} height={242} />
-            <PlayingCard x={1026} y={0} width={160} height={242} />
+            <PlayingCard title="Greek cats" x={686} y={0} width={169} height={242} />
+            <PlayingCard title="Nude playing cards" x={855} y={0} width={172} height={242} />
+            <PlayingCard title="Lattjo" x={1026} y={0} width={160} height={242} />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-667.html"
               title="Белый палех"
@@ -114,7 +114,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={170}
               height={240}
             />
-            <PlayingCard x={189} y={239} width={155} height={238} />
+            <PlayingCard title="Playing Cards Dollar" x={189} y={239} width={155} height={238} />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-637.html"
               title="Jacob's Bible Cards"
@@ -155,7 +155,14 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={170}
               height={241}
             />
-            <PlayingCard x={1176} y={248} width={157} height={237} />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/international-style/royal-dollar/"
+              title="Playing cards"
+              x={1176}
+              y={248}
+              width={157}
+              height={237}
+            />
             <PlayingCard
               href="https://www.artiphany.com/products/mermaid-playing-cards"
               title="Mermaid Queen Playing Cards"
@@ -214,7 +221,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={153}
               height={234}
             />
-            <PlayingCard x={679} y={486} width={168} height={237} />
+            <PlayingCard title="Portugal" x={679} y={486} width={168} height={237} />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-1341.html"
               title="Rosina Watchmeister"
@@ -295,7 +302,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={147}
               height={231}
             />
-            <PlayingCard x={484} y={725} width={156} height={235} />
+            <PlayingCard title="Spider-Man" x={484} y={725} width={156} height={235} />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/french-suit/vsya-vlast/"
               title="Вся власть"
@@ -328,7 +335,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={155}
               height={240}
             />
-            <PlayingCard x={1270} y={734} width={246} height={284} />
+            <PlayingCard title="Playing cards" x={1270} y={734} width={246} height={284} />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-1503.html"
               title="Schafkopf Tarock"
@@ -363,8 +370,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={141}
               height={222}
             />
-            <PlayingCard x={141} y={963} width={155} height={238} />
-            <PlayingCard x={295} y={962} width={156} height={238} />
+            <PlayingCard title="Xuebao No. 2000" x={141} y={963} width={155} height={238} />
+            <PlayingCard title="Wanshengda 9706" x={295} y={962} width={156} height={238} />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-148.html"
               title="Времена года"
@@ -373,7 +380,13 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={154}
               height={234}
             />
-            <PlayingCard x={611} y={969} width={159} height={239} />
+            <PlayingCard
+              title="Mad night powered by Tabasco sauce"
+              x={611}
+              y={969}
+              width={159}
+              height={239}
+            />
             <PlayingCard
               href="https://www.russcards.com/modern-style"
               title="Новый стиль"
@@ -382,7 +395,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={160}
               height={241}
             />
-            <PlayingCard x={930} y={972} width={173} height={237} />
+            <PlayingCard title="Playing cards" x={930} y={972} width={173} height={237} />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-692.html"
               title="Палех"
@@ -391,13 +404,19 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={160}
               height={245}
             />
-            <PlayingCard x={1269} y={1044} width={98} height={150} />
-            <PlayingCard x={1674} y={935} width={138} height={222} />
+            <PlayingCard title="Pokemon" x={1269} y={1044} width={98} height={150} />
+            <PlayingCard title="Русский стиль" x={1674} y={935} width={138} height={222} />
 
             {/* row #6 */}
-            <PlayingCard x={1} y={1205} width={156} height={242} />
-            <PlayingCard x={157} y={1205} width={170} height={242} />
-            <PlayingCard x={327} y={1207} width={153} height={239} />
+            <PlayingCard title="Karty do PLAYowania" x={1} y={1205} width={156} height={242} />
+            <PlayingCard
+              title="Glow-in-the-dark playing cards"
+              x={157}
+              y={1205}
+              width={170}
+              height={242}
+            />
+            <PlayingCard title="Playing cards" x={327} y={1207} width={153} height={239} />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-155.html"
               title="Диана"
@@ -447,7 +466,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={269}
             />
             <PlayingCard title="Царик Филипп №1" x={1454} y={1184} width={200} height={280} />
-            <PlayingCard x={1655} y={1185} width={344} height={521} />
+            <PlayingCard title="Playing cards" x={1655} y={1185} width={344} height={521} />
 
             {/* row #7 */}
             <PlayingCard
@@ -466,8 +485,14 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={177}
               height={256}
             />
-            <PlayingCard x={342} y={1462} width={158} height={241} />
-            <PlayingCard x={501} y={1461} width={159} height={243} />
+            <PlayingCard title="Dubai" x={342} y={1462} width={158} height={241} />
+            <PlayingCard
+              title="Карти за игра: 55 чудесни изгледа от България"
+              x={501}
+              y={1461}
+              width={159}
+              height={243}
+            />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-732.html"
               title="Karty do gry № 410"
@@ -484,7 +509,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={159}
               height={245}
             />
-            <PlayingCard x={979} y={1468} width={157} height={239} />
+            <PlayingCard title="Playing cards 777" x={979} y={1468} width={157} height={239} />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/otherm/brosmino-deck/"
               title="Bicycle: Brosmind"
@@ -534,7 +559,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={173}
               height={244}
             />
-            <PlayingCard x={506} y={1707} width={154} height={242} />
+            <PlayingCard title="Thingvellir" x={506} y={1707} width={154} height={242} />
             <PlayingCard
               href="https://wearmedicine.com/p/medicine-karty-do-gry-16905"
               title="Kartу do gry Medicine"

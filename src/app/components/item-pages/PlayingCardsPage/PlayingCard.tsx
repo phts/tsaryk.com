@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import playingCardsImgs from './playing-cards.png'
 
 interface RectangleProps {
-  title?: string
+  title: string
   height: number
   width: number
   x: number
