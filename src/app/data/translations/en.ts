@@ -352,7 +352,7 @@ export const en: TranslatedStrings = {
       p1: 'Collecting since my childhood.',
       p2:
         'There is no purpose to gather everything from everywhere, \
-so the collection is no so big and contains today more than 90 decks. \
+so the collection is not so big and contains around 90 decks today. \
 Collecting those which I really like.',
       imgTitle: 'One card from each deck (clickable). November 2019',
     },
