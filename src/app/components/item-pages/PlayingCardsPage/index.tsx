@@ -23,6 +23,7 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1em;
+  justify-content: center;
 `
 
 const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, item, onClose}) => {
