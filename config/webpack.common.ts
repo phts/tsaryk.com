@@ -12,7 +12,7 @@ const staticImgDir = path.resolve(staticDir, 'img')
 const distDir = path.resolve(projectDir, 'dist')
 const svgDir = path.resolve(projectDir, 'svg')
 
-const outputImgPath = path.join('static', 'img')
+const outputImgPath = 'static/img'
 
 const heroes3AssetsDir = path.join(appDir, 'components', 'item-pages', 'Heroes3Page')
 const playingCardsAssetsDir = path.join(appDir, 'components', 'item-pages', 'PlayingCardsPage')
@@ -101,10 +101,22 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
         {
           test: /\.tsx?$/,
           exclude: /node_modules/,
-          loader: 'awesome-typescript-loader',
-          options: {
-            errorsAsWarnings: !prod,
-          },
+          use: [
+            {
+              loader: 'awesome-typescript-loader',
+              options: {
+                errorsAsWarnings: !prod,
+              },
+            },
+            {
+              loader: 'webpack-replace-loader',
+              options: {
+                attr: 'g',
+                search: '__PLAYING_CARDS_PNG_HASH__',
+                replace: playingCardsPngHash,
+              },
+            },
+          ],
         },
         {
           test: /\.svg$/,
@@ -150,14 +162,6 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
                 },
               },
             },
-            {
-              loader: 'webpack-replace-loader',
-              options: {
-                attr: 'g',
-                search: '__PLAYING_CARDS_PNG_HASH__',
-                replace: playingCardsPngHash,
-              },
-            },
           ],
         },
         {
@@ -180,7 +184,7 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
               options: {
                 name: '[name]-[width].[ext]',
                 outputPath: outputImgPath,
-                sizes: [800, 1000, 1200],
+                sizes: [1000, 1200],
               },
             },
           ],
