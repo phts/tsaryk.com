@@ -16,12 +16,7 @@ export type ListItem = Item
 export type List = ListItem[]
 
 const sortFunc: {[index in Mode]: (x: List) => List} = {
-  Asc: R.sortBy(
-    R.compose(
-      R.toLower,
-      R.prop('name')
-    )
-  ),
+  Asc: R.sortBy(R.compose(R.toLower, R.prop('name'))),
   Categories: R.sortBy(R.prop('id')),
   Random: shuffle,
 }

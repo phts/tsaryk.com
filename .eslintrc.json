@@ -1,6 +1,7 @@
 {
   "extends": [
     "@phts",
+    "@phts/eslint-config/addons/configs",
     "@phts/eslint-config/addons/node",
     "@phts/eslint-config/addons/typescript",
     "@phts/eslint-config/addons/typescript/configs",
