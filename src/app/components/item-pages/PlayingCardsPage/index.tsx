@@ -176,7 +176,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               title="Державные"
               x={1513}
               y={250}
-              width={160}
+              width={157}
               height={245}
             />
             <PlayingCard
@@ -201,7 +201,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               title="Salon-Karte №66"
               x={18}
               y={480}
-              width={160}
+              width={159}
               height={235}
             />
             <PlayingCard
@@ -267,7 +267,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               title="Карты Лапиных"
               x={1674}
               y={495}
-              width={155}
+              width={152}
               height={240}
             />
             <PlayingCard
@@ -316,7 +316,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               title="Партия"
               x={798}
               y={731}
-              width={155}
+              width={153}
               height={235}
             />
             <PlayingCard
@@ -437,7 +437,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               title="Русский стиль"
               x={1112}
               y={1217}
-              width={159}
+              width={158}
               height={240}
             />
 
@@ -514,7 +514,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               x={0}
               y={1705}
               width={159}
-              height={248}
+              height={250}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/advertising/science-fiction-1659/"
@@ -577,8 +577,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={184}
               height={331}
             />
-
-            <PlayingCard title="Playing cards" x={1655} y={1185} width={344} height={521} />
+            <PlayingCard title="Playing cards" x={1655} y={1185} width={344} height={522} />
           </Container>
           <figcaption>{(item.data as Data).imgTitle}</figcaption>
         </figure>
