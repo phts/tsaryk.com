@@ -550,6 +550,13 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={168}
               height={253}
             />
+            <PlayingCard
+              title="Muzeum Powstania Warszawskiego"
+              x={990}
+              y={1713}
+              width={155}
+              height={241}
+            />
 
             {/* rest */}
             <PlayingCard
