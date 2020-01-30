@@ -368,6 +368,7 @@ Collecting those which I really like.',
       <ul>
         <li>Airbnb: ${a('https://www.airbnb.ru/c/philt68?currency=PLN', 'philt68')}</li>
         <li>Allegro: ${a('https://allegro.pl/aplikacja/polecam/pilip782627', 'pilip782627')}</li>
+        <li>atlasbus.by: ${a('https://atlasbus.by/share/app/GPMQHV', 'GPMQHV')}</li>
         <li>Bank Millennium:
           ${a('https://www.bankmillennium.pl/lubietopolecam?id=24586296', '24586296')}</li>
         <li>Bolt (Taxify): S5S8K8</li>
