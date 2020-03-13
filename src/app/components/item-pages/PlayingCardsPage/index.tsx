@@ -1,5 +1,3 @@
-import './playing-cards.png'
-
 import React from 'react'
 import styled from 'styled-components'
 

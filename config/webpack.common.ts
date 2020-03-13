@@ -143,26 +143,6 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
           ],
         },
         {
-          test: /\.svg$/,
-          include: playingCardsAssetsDir,
-          use: [
-            'svg-react-loader',
-            {
-              loader: 'image-webpack-loader',
-              options: {
-                svgo: {
-                  enabled: true,
-                  plugins: [
-                    {convertShapeToPath: false},
-                    {inlineStyles: false},
-                    {removeTitle: false},
-                  ],
-                },
-              },
-            },
-          ],
-        },
-        {
           test: /\.png$/,
           include: heroes3AssetsDir,
           exclude: /node_modules/,
