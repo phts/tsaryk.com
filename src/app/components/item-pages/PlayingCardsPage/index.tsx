@@ -555,6 +555,14 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={155}
               height={241}
             />
+            <PlayingCard
+              href="http://dama-pik.com.ua/cards/classic/el-al-airlines/"
+              title="EL AL Air Lines"
+              x={1146}
+              y={1713}
+              width={162}
+              height={241}
+            />
 
             {/* rest */}
             <PlayingCard
