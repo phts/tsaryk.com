@@ -563,6 +563,14 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={162}
               height={241}
             />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/drawings/romikartya-3/"
+              title="Romikartya 3"
+              x={1307}
+              y={1712}
+              width={157}
+              height={243}
+            />
 
             {/* rest */}
             <PlayingCard
