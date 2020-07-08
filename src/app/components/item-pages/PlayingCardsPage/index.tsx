@@ -571,6 +571,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={157}
               height={243}
             />
+            <PlayingCard title="Zamki w Polsce" x={1465} y={1714} width={155} height={239} />
 
             {/* rest */}
             <PlayingCard
