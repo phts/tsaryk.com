@@ -102,6 +102,9 @@ export const metaPropsMap: MetaPropsMap = {
   Drums: {
     size: ItemSize.XL,
   },
+  Electronics: {
+    size: ItemSize.L,
+  },
   GitHub: {
     size: ItemSize.L,
   },

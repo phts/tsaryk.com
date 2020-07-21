@@ -171,6 +171,28 @@ export const ru: TranslatedStrings = {
       </ul>
     `,
   },
+  Electronics: {
+    name: 'Электроника',
+    description: `
+      <p>В свободное время люблю что-нибудь попаять.</p>
+      <p>
+        Помимо починки всяких крупных и мелких домашних девайсов
+        я сделал несколько крутых штук под маркой PHTS, которые
+        используются дома каждый день:
+      </p>
+      <ul>
+        <li>${a(
+          'https://habr.com/ru/post/453474/',
+          'arduino-pc-remote-control aka PHTS RC-01'
+        )}</li>
+        <li>${a('https://github.com/phts/arduino-pc-remote-control', 'PHTS RC-02')}</li>
+        <li>${a('https://easyeda.com/phts/vu-01', 'PHTS VU-01')}</li>
+      </ul>
+      <p>
+        ${figure(picture('VWdIfrE', 'PHTS VU-01'), '')}
+      </p>
+    `,
+  },
   Email: {
     name: 'Имейл',
     description: p(`Мой имейл: ${mailto(EMAIL)}.`),

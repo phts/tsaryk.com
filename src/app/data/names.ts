@@ -20,6 +20,7 @@ export enum Names {
   'Curriculum vitae',
   Debian,
   Drums,
+  Electronics,
   Email,
   Epam,
   Facebook,

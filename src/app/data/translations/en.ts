@@ -141,6 +141,26 @@ export const en: TranslatedStrings = {
       </ul>
     `,
   },
+  Electronics: {
+    description: `
+      <p>I like to solder something in my free time.</p>
+      <p>
+        Besides fixing numerous devices I have created a few cool
+        devices under a brand PHTS which are used at home every day:
+      </p>
+      <ul>
+        <li>${a(
+          'https://habr.com/ru/post/453474/',
+          'arduino-pc-remote-control aka PHTS RC-01'
+        )}</li>
+        <li>${a('https://github.com/phts/arduino-pc-remote-control', 'PHTS RC-02')}</li>
+        <li>${a('https://easyeda.com/phts/vu-01', 'PHTS VU-01')}</li>
+      </ul>
+      <p>
+        ${figure(picture('VWdIfrE', 'PHTS VU-01'), '')}
+      </p>
+    `,
+  },
   Email: {
     description: p(`My email: ${mailto(EMAIL)}.`),
   },

@@ -35,6 +35,7 @@ const CATEGORY_MAP: {[index in CatigoryName]: KnownName[]} = {
     'Board games',
     'Cats',
     'Drums',
+    'Electronics',
     'Heroes of Might and Magic 3',
     'Joy in Time',
     'Last.fm',
