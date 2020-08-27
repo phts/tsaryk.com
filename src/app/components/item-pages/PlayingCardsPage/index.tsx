@@ -572,6 +572,14 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={243}
             />
             <PlayingCard title="Zamki w Polsce" x={1465} y={1714} width={155} height={239} />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/ethnography/polska-sztuka-ludowa/"
+              title="Polska Sztuka Ludowa"
+              x={1620}
+              y={1714}
+              width={158}
+              height={242}
+            />
 
             {/* rest */}
             <PlayingCard
