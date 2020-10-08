@@ -374,7 +374,7 @@ export const en: TranslatedStrings = {
         'There is no purpose to gather everything from everywhere, \
 so the collection is not so big and contains around 90 decks today. \
 Collecting those which I really like.',
-      imgTitle: 'One card from each deck (clickable). August 2020',
+      imgTitle: 'One card from each deck (clickable). October 2020',
     },
   },
   Poland: {

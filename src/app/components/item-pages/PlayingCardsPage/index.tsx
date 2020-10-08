@@ -580,6 +580,14 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={158}
               height={242}
             />
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-1618.html"
+              title="Grzyby Polski"
+              x={1778}
+              y={1711}
+              width={158}
+              height={245}
+            />
 
             {/* rest */}
             <PlayingCard
