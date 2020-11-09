@@ -16,7 +16,7 @@ const outputImgPath = 'static/img'
 
 const heroes3AssetsDir = path.join(appDir, 'components', 'item-pages', 'Heroes3Page')
 const playingCardsAssetsDir = path.join(appDir, 'components', 'item-pages', 'PlayingCardsPage')
-const playingCardsPng = path.join(playingCardsAssetsDir, 'playing-cards.png')
+const playingCardsPng = path.join(playingCardsAssetsDir, 'playing-cards-row1.png')
 const playingCardsPngHash = md5.sync(playingCardsPng).substring(0, 4)
 
 export interface Options {

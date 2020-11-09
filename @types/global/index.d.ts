@@ -1,4 +1,4 @@
-declare module '*/playing-cards.png' {
+declare module './playing-cards-*.png' {
   interface ResponsiveRecord {
     height: number
     images: Array<{height: number; path: string; width: number}>

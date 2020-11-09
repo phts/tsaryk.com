@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import playingCardsImgs from './playing-cards.png'
-
 interface RectangleProps {
+  imgDesktop?: string
+  imgMobile?: string
   title: string
   height: number
   width: number
@@ -17,23 +17,22 @@ type LinkProps = RectangleProps & {
 
 type Props = Partial<LinkProps> & RectangleProps
 
-const RATIO_720 = 1200 / 2000
 const RATIO_480 = 1000 / 2000
 
 const PlayingCardAsRect = styled.div<RectangleProps>`
   @media (max-width: 720px) {
-    background-image: url(${playingCardsImgs.images[0].path}?__PLAYING_CARDS_PNG_HASH__);
+    background-image: ${props => `url(${props.imgMobile}?__PLAYING_CARDS_PNG_HASH__)`};
     background-position-x: ${props => -(props.x * RATIO_480)}px;
     background-position-y: ${props => -(props.y * RATIO_480)}px;
     height: ${props => props.height * RATIO_480}px;
     width: ${props => props.width * RATIO_480}px;
   }
   @media (min-width: 720px) {
-    background-image: url(${playingCardsImgs.images[1].path}?__PLAYING_CARDS_PNG_HASH__);
-    background-position-x: ${props => -(props.x * RATIO_720)}px;
-    background-position-y: ${props => -(props.y * RATIO_720)}px;
-    height: ${props => props.height * RATIO_720}px;
-    width: ${props => props.width * RATIO_720}px;
+    background-image: ${props => `url(${props.imgDesktop}?__PLAYING_CARDS_PNG_HASH__)`};
+    background-position-x: ${props => -props.x}px;
+    background-position-y: ${props => -props.y}px;
+    height: ${props => props.height}px;
+    width: ${props => props.width}px;
   }
   border-radius: 0.5em;
 `
