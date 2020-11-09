@@ -123,7 +123,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={238}
             />
             <PlayingCard
-              href="https://symbal.by/t/1286-karty-bnr/"
+              href="http://www.ukrcards.com.ua/product-1607.html"
               title="100 гадоў БНР"
               x={522}
               y={244}
