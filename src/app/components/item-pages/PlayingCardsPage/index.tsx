@@ -29,6 +29,17 @@ const Container = styled.div`
   justify-content: center;
 `
 
+const img1Desktop = playingCards1Imgs.images[1].path
+const img1Mobile = playingCards1Imgs.images[0].path
+const img4Desktop = playingCards4Imgs.images[1].path
+const img4Mobile = playingCards4Imgs.images[0].path
+const img5Desktop = playingCards5Imgs.images[1].path
+const img5Mobile = playingCards5Imgs.images[0].path
+const img6Desktop = playingCards6Imgs.images[1].path
+const img6Mobile = playingCards6Imgs.images[0].path
+const img7Desktop = playingCards7Imgs.images[1].path
+const img7Mobile = playingCards7Imgs.images[0].path
+
 const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, item, onClose}) => {
   const {i18nStore} = useStores()
   return (
@@ -48,8 +59,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={105}
               height={142}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               title="Царик Филипп №2"
@@ -57,8 +68,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={101}
               height={145}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/otherm/opernye-teatralnye-reprint-1974g-/"
@@ -67,8 +78,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={99}
               height={146}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/french-suit/classic-470/"
@@ -77,8 +88,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={96}
               height={147}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               title="Greek cats"
@@ -86,8 +97,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={101}
               height={146}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               title="Nude playing cards"
@@ -95,8 +106,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={103}
               height={146}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               title="Lattjo"
@@ -104,8 +115,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={94}
               height={146}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-667.html"
@@ -114,8 +125,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={93}
               height={149}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-154.html"
@@ -124,8 +135,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={96}
               height={149}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-701.html"
@@ -134,8 +145,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={93}
               height={150}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-133.html"
@@ -144,8 +155,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={96}
               height={150}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-152.html"
@@ -154,8 +165,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={97}
               height={150}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
 
             <PlayingCard
@@ -165,8 +176,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={143}
               width={105}
               height={144}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               title="Playing Cards Dollar"
@@ -174,8 +185,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={145}
               width={93}
               height={142}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-637.html"
@@ -184,8 +195,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={143}
               width={104}
               height={141}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-1607.html"
@@ -194,8 +205,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={147}
               width={105}
               height={146}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/otherm/abraxas/"
@@ -204,8 +215,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={145}
               width={95}
               height={146}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="https://www.behance.net/gallery/16822663/Hidden-part"
@@ -214,8 +225,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={147}
               width={89}
               height={140}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="https://www.artiphany.com/products/kitten-club"
@@ -224,8 +235,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={147}
               width={104}
               height={144}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/international-style/royal-dollar/"
@@ -234,8 +245,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={149}
               width={94}
               height={142}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="https://www.artiphany.com/products/mermaid-playing-cards"
@@ -244,8 +255,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={148}
               width={102}
               height={143}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-151.html"
@@ -254,8 +265,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={149}
               width={96}
               height={149}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-693.html"
@@ -264,8 +275,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={150}
               width={97}
               height={148}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.a.trionfi.eu/WWPCM/decks06/d04208/d04208.htm"
@@ -274,8 +285,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={149}
               width={94}
               height={145}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
 
             <PlayingCard
@@ -285,8 +296,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={287}
               width={96}
               height={144}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/computer-games/pixel-art/"
@@ -295,8 +306,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={287}
               width={105}
               height={146}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               title="Царик Филипп №3"
@@ -304,8 +315,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={287}
               width={101}
               height={148}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.a.trionfi.eu/WWPCM/decks04/d03409/d03409.htm"
@@ -314,8 +325,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={292}
               width={94}
               height={143}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               title="Portugal"
@@ -323,8 +334,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={291}
               width={101}
               height={144}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-1341.html"
@@ -333,8 +344,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={289}
               width={96}
               height={145}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-1119.html"
@@ -343,8 +354,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={291}
               width={106}
               height={146}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/mythology-and-fantasy/greek-mythology+2/"
@@ -353,8 +364,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={291}
               width={103}
               height={146}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/russian-motifs/atlasnye2/"
@@ -363,8 +374,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={292}
               width={96}
               height={149}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.a.trionfi.eu/WWPCM/WWPCM/Turkey0.htm"
@@ -373,8 +384,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={298}
               width={94}
               height={144}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="https://www.russcards.com/lapin-cards"
@@ -383,8 +394,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={298}
               width={94}
               height={144}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-445.html"
@@ -393,10 +404,11 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={294}
               width={97}
               height={149}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
 
+            {/* Row #4 */}
             <PlayingCard
               href="http://www.a.trionfi.eu/WWPCM/decks/d00150/d00150.htm"
               title="Петергоф"
@@ -404,8 +416,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={95}
               height={150}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
             <PlayingCard
               href="https://unitedcardists.com/viewtopic.php?f=8&t=5424"
@@ -414,8 +426,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={106}
               height={146}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-272.html"
@@ -424,8 +436,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={89}
               height={142}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
             <PlayingCard
               title="Spider-Man"
@@ -433,8 +445,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={93}
               height={144}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/french-suit/vsya-vlast/"
@@ -443,8 +455,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={97}
               height={147}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-282.html"
@@ -453,8 +465,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={92}
               height={144}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-153.html"
@@ -463,8 +475,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={96}
               height={150}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
             <PlayingCard
               href="https://www.artlebedev.ru/space-invaders/"
@@ -473,8 +485,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={93}
               height={147}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
             <PlayingCard
               href="https://www.kickstarter.com/projects/1495552219/ephemerid-playing-cards"
@@ -483,8 +495,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={105}
               height={147}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
             <PlayingCard
               title="Karty do PLAYowania"
@@ -492,8 +504,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={95}
               height={146}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
             <PlayingCard
               title="Glow-in-the-dark playing cards"
@@ -501,8 +513,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={103}
               height={145}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-692.html"
@@ -511,11 +523,356 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={97}
               height={150}
-              imgDesktop={playingCards4Imgs.images[1].path}
-              imgMobile={playingCards4Imgs.images[0].path}
+              imgDesktop={img4Desktop}
+              imgMobile={img4Mobile}
             />
 
             {/* row #5 */}
+            <PlayingCard
+              title="Xuebao No. 2000"
+              x={0}
+              y={0}
+              width={93}
+              height={144}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+            <PlayingCard
+              title="Wanshengda 9706"
+              x={93}
+              y={0}
+              width={94}
+              height={144}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-148.html"
+              title="Времена года"
+              x={188}
+              y={0}
+              width={93}
+              height={143}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+            <PlayingCard
+              title="Mad night powered by Tabasco sauce"
+              x={281}
+              y={0}
+              width={96}
+              height={146}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+            <PlayingCard
+              href="https://www.russcards.com/modern-style"
+              title="Новый стиль"
+              x={376}
+              y={0}
+              width={96}
+              height={147}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+            <PlayingCard
+              title="Playing cards"
+              x={472}
+              y={0}
+              width={104}
+              height={145}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-690.html"
+              title="Славянские"
+              x={576}
+              y={0}
+              width={96}
+              height={149}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-155.html"
+              title="Диана"
+              x={672}
+              y={0}
+              width={95}
+              height={149}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+            <PlayingCard
+              title="Русский стиль"
+              x={767}
+              y={0}
+              width={95}
+              height={148}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+            <PlayingCard
+              title="Playing cards"
+              x={863}
+              y={0}
+              width={93}
+              height={143}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+            <PlayingCard
+              title="Карти за игра: 55 чудесни изгледа от България"
+              x={956}
+              y={0}
+              width={95}
+              height={147}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/international-style/international/"
+              title="International"
+              x={1051}
+              y={0}
+              width={96}
+              height={149}
+              imgDesktop={img5Desktop}
+              imgMobile={img5Mobile}
+            />
+
+            {/* row #6 */}
+            <PlayingCard
+              href="https://www.artlebedev.ru/mafia/"
+              title="Mafia"
+              x={0}
+              y={0}
+              width={94}
+              height={149}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-700.html"
+              title="Майа"
+              x={94}
+              y={0}
+              width={96}
+              height={150}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-737.html"
+              title="Рейнские"
+              x={190}
+              y={0}
+              width={106}
+              height={156}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+            <PlayingCard
+              title="Dubai"
+              x={296}
+              y={0}
+              width={95}
+              height={146}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+            <PlayingCard
+              href="https://wearmedicine.com/p/medicine-karty-do-gry-11788"
+              title="Kartу do gry Medicine"
+              x={391}
+              y={0}
+              width={96}
+              height={150}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-732.html"
+              title="Karty do gry № 410"
+              x={487}
+              y={0}
+              width={96}
+              height={145}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+            <PlayingCard
+              title="Playing cards 777"
+              x={583}
+              y={0}
+              width={96}
+              height={146}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/otherm/brosmino-deck/"
+              title="Bicycle: Brosmind"
+              x={679}
+              y={0}
+              width={104}
+              height={148}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/personality/jagellonskie/"
+              title="Jagiellońskie"
+              x={783}
+              y={0}
+              width={96}
+              height={145}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/mythology-and-fantasy/nizshie-dukhi-vostochnoslavyanskoy-mifologii-var-3/"
+              title="Низшие духи восточнославянской мифологии"
+              x={879}
+              y={0}
+              width={93}
+              height={150}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/advertising/science-fiction-1659/"
+              title="Sience-Fiction"
+              x={972}
+              y={0}
+              width={105}
+              height={147}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/classic/black-russian-1670/"
+              title="Black Russian"
+              x={1077}
+              y={0}
+              width={105}
+              height={148}
+              imgDesktop={img6Desktop}
+              imgMobile={img6Mobile}
+            />
+
+            {/* row #7 */}
+            <PlayingCard
+              title="Thingvellir"
+              x={0}
+              y={0}
+              width={94}
+              height={147}
+              imgDesktop={img7Desktop}
+              imgMobile={img7Mobile}
+            />
+            <PlayingCard
+              href="https://wearmedicine.com/p/medicine-karty-do-gry-16905"
+              title="Kartу do gry Medicine"
+              x={94}
+              y={0}
+              width={96}
+              height={148}
+              imgDesktop={img7Desktop}
+              imgMobile={img7Mobile}
+            />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/french-suit/luxury/"
+              title="Luxury"
+              x={189}
+              y={0}
+              width={101}
+              height={154}
+              imgDesktop={img7Desktop}
+              imgMobile={img7Mobile}
+            />
+            <PlayingCard
+              title="Muzeum Powstania Warszawskiego"
+              x={291}
+              y={0}
+              width={93}
+              height={147}
+              imgDesktop={img7Desktop}
+              imgMobile={img7Mobile}
+            />
+            <PlayingCard
+              href="http://dama-pik.com.ua/cards/classic/el-al-airlines/"
+              title="EL AL Air Lines"
+              x={384}
+              y={0}
+              width={97}
+              height={149}
+              imgDesktop={img7Desktop}
+              imgMobile={img7Mobile}
+            />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/drawings/romikartya-3/"
+              title="Romikartya 3"
+              x={481}
+              y={0}
+              width={94}
+              height={147}
+              imgDesktop={img7Desktop}
+              imgMobile={img7Mobile}
+            />
+            <PlayingCard
+              title="Zamki w Polsce"
+              x={575}
+              y={0}
+              width={91}
+              height={142}
+              imgDesktop={img7Desktop}
+              imgMobile={img7Mobile}
+            />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/ethnography/polska-sztuka-ludowa/"
+              title="Polska Sztuka Ludowa"
+              x={666}
+              y={0}
+              width={93}
+              height={146}
+              imgDesktop={img7Desktop}
+              imgMobile={img7Mobile}
+            />
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-1618.html"
+              title="Grzyby Polski"
+              x={759}
+              y={0}
+              width={95}
+              height={147}
+              imgDesktop={img7Desktop}
+              imgMobile={img7Mobile}
+            />
+            <PlayingCard
+              href="http://dama-pik.com.ua/cards/mythology-and-fantasy/marry-christmas/"
+              title="Merry Christmas Playing Cards"
+              x={854}
+              y={0}
+              width={96}
+              height={147}
+              imgDesktop={img7Desktop}
+              imgMobile={img7Mobile}
+            />
+
+            {/* rest */}
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/russian-motifs/igralnye-karty-vysshiy-sort-russkiy-stil/"
+              title="Русский стиль"
+              x={1112}
+              y={0}
+              width={158}
+              height={240}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
+            />
+            <PlayingCard title="Pokemon" x={1269} y={0} width={98} height={150} />
             <PlayingCard
               href="http://www.ukrcards.com.ua/product-137.html"
               title="Лубочные"
@@ -523,276 +880,9 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={0}
               width={141}
               height={222}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
-            <PlayingCard title="Xuebao No. 2000" x={141} y={0} width={155} height={238} />
-            <PlayingCard title="Wanshengda 9706" x={295} y={0} width={156} height={238} />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-148.html"
-              title="Времена года"
-              x={455}
-              y={0}
-              width={154}
-              height={234}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              title="Mad night powered by Tabasco sauce"
-              x={611}
-              y={0}
-              width={159}
-              height={239}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="https://www.russcards.com/modern-style"
-              title="Новый стиль"
-              x={770}
-              y={0}
-              width={160}
-              height={241}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard title="Playing cards" x={930} y={0} width={173} height={237} />
-
-            <PlayingCard title="Pokemon" x={1269} y={0} width={98} height={150} />
-            <PlayingCard title="Русский стиль" x={1674} y={0} width={138} height={222} />
-
-            {/* row #6 */}
-
-            <PlayingCard title="Playing cards" x={327} y={1207} width={153} height={239} />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-155.html"
-              title="Диана"
-              x={480}
-              y={1208}
-              width={160}
-              height={247}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/international-style/international/"
-              title="International"
-              x={638}
-              y={1212}
-              width={160}
-              height={246}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="https://www.artlebedev.ru/mafia/"
-              title="Mafia"
-              x={796}
-              y={1212}
-              width={156}
-              height={246}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-690.html"
-              title="Славянские"
-              x={952}
-              y={1213}
-              width={160}
-              height={240}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/russian-motifs/igralnye-karty-vysshiy-sort-russkiy-stil/"
-              title="Русский стиль"
-              x={1112}
-              y={1217}
-              width={158}
-              height={240}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-
-            {/* row #7 */}
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-700.html"
-              title="Майа"
-              x={3}
-              y={1454}
-              width={161}
-              height={250}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-737.html"
-              title="Рейнские"
-              x={165}
-              y={1446}
-              width={177}
-              height={256}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard title="Dubai" x={342} y={1462} width={158} height={241} />
-            <PlayingCard
-              title="Карти за игра: 55 чудесни изгледа от България"
-              x={501}
-              y={1461}
-              width={159}
-              height={243}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-732.html"
-              title="Karty do gry № 410"
-              x={660}
-              y={1464}
-              width={161}
-              height={239}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="https://wearmedicine.com/p/medicine-karty-do-gry-11788"
-              title="Kartу do gry Medicine"
-              x={820}
-              y={1459}
-              width={159}
-              height={245}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard title="Playing cards 777" x={979} y={1468} width={157} height={239} />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/otherm/brosmino-deck/"
-              title="Bicycle: Brosmind"
-              x={1138}
-              y={1466}
-              width={172}
-              height={244}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/personality/jagellonskie/"
-              title="Jagiellońskie"
-              x={1310}
-              y={1470}
-              width={160}
-              height={240}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-
-            {/* row #8 */}
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/mythology-and-fantasy/nizshie-dukhi-vostochnoslavyanskoy-mifologii-var-3/"
-              title="Низшие духи восточнославянской мифологии"
-              x={0}
-              y={1705}
-              width={159}
-              height={250}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/advertising/science-fiction-1659/"
-              title="Sience-Fiction"
-              x={160}
-              y={1708}
-              width={173}
-              height={242}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/classic/black-russian-1670/"
-              title="Black Russian"
-              x={333}
-              y={1708}
-              width={173}
-              height={244}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard title="Thingvellir" x={506} y={1707} width={154} height={242} />
-            <PlayingCard
-              href="https://wearmedicine.com/p/medicine-karty-do-gry-16905"
-              title="Kartу do gry Medicine"
-              x={661}
-              y={1708}
-              width={160}
-              height={242}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/french-suit/luxury/"
-              title="Luxury"
-              x={820}
-              y={1704}
-              width={168}
-              height={253}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              title="Muzeum Powstania Warszawskiego"
-              x={990}
-              y={1713}
-              width={155}
-              height={241}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://dama-pik.com.ua/cards/classic/el-al-airlines/"
-              title="EL AL Air Lines"
-              x={1146}
-              y={1713}
-              width={162}
-              height={241}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/drawings/romikartya-3/"
-              title="Romikartya 3"
-              x={1307}
-              y={1712}
-              width={157}
-              height={243}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard title="Zamki w Polsce" x={1465} y={1714} width={155} height={239} />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/ethnography/polska-sztuka-ludowa/"
-              title="Polska Sztuka Ludowa"
-              x={1620}
-              y={1714}
-              width={158}
-              height={242}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-1618.html"
-              title="Grzyby Polski"
-              x={1778}
-              y={1711}
-              width={158}
-              height={245}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
-            />
-
-            {/* rest */}
             <PlayingCard
               href="http://www.dama-pik.com.ua/cards/humor/gra-wstepna/"
               title="Gra wstępna"
@@ -800,8 +890,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               y={1197}
               width={187}
               height={269}
-              imgDesktop={playingCards1Imgs.images[1].path}
-              imgMobile={playingCards1Imgs.images[0].path}
+              imgDesktop={img1Desktop}
+              imgMobile={img1Mobile}
             />
             <PlayingCard title="Playing cards" x={1270} y={734} width={246} height={284} />
             <PlayingCard title="Царик Филипп №1" x={1454} y={1184} width={200} height={280} />
