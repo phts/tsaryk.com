@@ -2,8 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 interface RectangleProps {
-  imgDesktop?: string
-  imgMobile?: string
+  imgs: {images: Array<{path: string; width: number}>}
   title: string
   height: number
   width: number
@@ -17,18 +16,28 @@ type LinkProps = RectangleProps & {
 
 type Props = Partial<LinkProps> & RectangleProps
 
-const RATIO_480 = 1000 / 2000
-
 const PlayingCardAsRect = styled.div<RectangleProps>`
   @media (max-width: 720px) {
-    background-image: ${props => `url(${props.imgMobile})`};
-    background-position-x: ${props => -(props.x * RATIO_480)}px;
-    background-position-y: ${props => -(props.y * RATIO_480)}px;
-    height: ${props => props.height * RATIO_480}px;
-    width: ${props => props.width * RATIO_480}px;
+    background-image: url(${props => `${props.imgs.images[props.imgs.images.length - 1].path}`});
+    background-position-x: ${props =>
+      -(
+        (props.x * props.imgs.images[props.imgs.images.length - 1].width) /
+        props.imgs.images[0].width
+      )}px;
+    background-position-y: ${props =>
+      -(
+        (props.y * props.imgs.images[props.imgs.images.length - 1].width) /
+        props.imgs.images[0].width
+      )}px;
+    height: ${props =>
+      (props.height * props.imgs.images[props.imgs.images.length - 1].width) /
+      props.imgs.images[0].width}px;
+    width: ${props =>
+      (props.width * props.imgs.images[props.imgs.images.length - 1].width) /
+      props.imgs.images[0].width}px;
   }
   @media (min-width: 720px) {
-    background-image: ${props => `url(${props.imgDesktop})`};
+    background-image: url(${props => `${props.imgs.images[0].path}`});
     background-position-x: ${props => -props.x}px;
     background-position-y: ${props => -props.y}px;
     height: ${props => props.height}px;

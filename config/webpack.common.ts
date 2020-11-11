@@ -151,7 +151,7 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
               options: {
                 name: '[name]-[width].[hash:4].[ext]',
                 outputPath: outputImgPath,
-                sizes: [1000, 1200],
+                sizes: [1200, 1000],
               },
             },
           ],
@@ -160,7 +160,7 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
     },
     plugins,
     stats: {
-      warningsFilter: /\/mobx-react\//,
+      warningsFilter: /Ambient module declaration cannot specify relative module name/,
     },
   }
 }
