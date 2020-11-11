@@ -1,7 +1,6 @@
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
-import * as md5 from 'md5-file'
 import {Configuration} from 'webpack'
 
 const projectDir = path.resolve(__dirname, '..')
@@ -16,8 +15,6 @@ const outputImgPath = 'static/img'
 
 const heroes3AssetsDir = path.join(appDir, 'components', 'item-pages', 'Heroes3Page')
 const playingCardsAssetsDir = path.join(appDir, 'components', 'item-pages', 'PlayingCardsPage')
-const playingCardsPng = path.join(playingCardsAssetsDir, 'playing-cards.png')
-const playingCardsPngHash = md5.sync(playingCardsPng).substring(0, 4)
 
 export interface Options {
   analyzer?: boolean
@@ -106,14 +103,6 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
                 errorsAsWarnings: !prod,
               },
             },
-            {
-              loader: 'webpack-replace-loader',
-              options: {
-                attr: 'g',
-                search: '__PLAYING_CARDS_PNG_HASH__',
-                replace: playingCardsPngHash,
-              },
-            },
           ],
         },
         {
@@ -160,7 +149,7 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
             {
               loader: 'responsive-loader',
               options: {
-                name: '[name]-[width].[ext]',
+                name: '[name]-[width].[hash:4].[ext]',
                 outputPath: outputImgPath,
                 sizes: [1000, 1200],
               },

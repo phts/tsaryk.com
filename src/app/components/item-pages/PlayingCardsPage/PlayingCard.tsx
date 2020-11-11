@@ -22,14 +22,14 @@ const RATIO_480 = 1000 / 2000
 
 const PlayingCardAsRect = styled.div<RectangleProps>`
   @media (max-width: 720px) {
-    background-image: url(${playingCardsImgs.images[0].path}?__PLAYING_CARDS_PNG_HASH__);
+    background-image: url(${playingCardsImgs.images[0].path});
     background-position-x: ${props => -(props.x * RATIO_480)}px;
     background-position-y: ${props => -(props.y * RATIO_480)}px;
     height: ${props => props.height * RATIO_480}px;
     width: ${props => props.width * RATIO_480}px;
   }
   @media (min-width: 720px) {
-    background-image: url(${playingCardsImgs.images[1].path}?__PLAYING_CARDS_PNG_HASH__);
+    background-image: url(${playingCardsImgs.images[1].path});
     background-position-x: ${props => -(props.x * RATIO_720)}px;
     background-position-y: ${props => -(props.y * RATIO_720)}px;
     height: ${props => props.height * RATIO_720}px;
