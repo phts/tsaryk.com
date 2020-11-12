@@ -24,10 +24,11 @@ interface Data {
 }
 
 const Container = styled.div`
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 1em;
   justify-content: center;
+  margin-bottom: 1em;
 `
 
 const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, item, onClose}) => {
