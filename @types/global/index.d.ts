@@ -1,3 +1,4 @@
+// @ts-ignore
 declare module './playing-cards-*.png' {
   interface ResponsiveRecord {
     height: number

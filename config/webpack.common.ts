@@ -160,7 +160,7 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
     },
     plugins,
     stats: {
-      warningsFilter: /Ambient module declaration cannot specify relative module name/,
+      warningsFilter: /static\/img\/playing-cards/,
     },
   }
 }
