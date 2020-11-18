@@ -759,6 +759,24 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={147}
               imgs={playingCards7Imgs}
             />
+            <PlayingCard
+              href="http://dama-pik.com.ua/cards/mythology-and-fantasy/marry-christmas/"
+              title="Merry Christmas Playing Cards"
+              x={854}
+              y={0}
+              width={96}
+              height={147}
+              imgs={playingCards7Imgs}
+            />
+            <PlayingCard
+              href="http://www.ukrcards.com.ua/product-397.html"
+              title="Warka"
+              x={950}
+              y={0}
+              width={96}
+              height={148}
+              imgs={playingCards7Imgs}
+            />
 
             {/* rest */}
             <PlayingCard
