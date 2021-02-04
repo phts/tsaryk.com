@@ -15,6 +15,7 @@ import playingCards4Imgs from './playing-cards-row4.png'
 import playingCards5Imgs from './playing-cards-row5.png'
 import playingCards6Imgs from './playing-cards-row6.png'
 import playingCards7Imgs from './playing-cards-row7.png'
+import playingCards8Imgs from './playing-cards-row8.png'
 import playingCardsXImgs from './playing-cards-unusual.png'
 
 interface Data {
@@ -777,6 +778,34 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={96}
               height={148}
               imgs={playingCards7Imgs}
+            />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/french-suit/rois-de-france/"
+              title="Rois de France"
+              x={1047}
+              y={0}
+              width={104}
+              height={148}
+              imgs={playingCards7Imgs}
+            />
+
+            {/* row #8 */}
+            <PlayingCard
+              title="Roma"
+              x={0}
+              y={0}
+              width={94}
+              height={147}
+              imgs={playingCards8Imgs}
+            />
+            <PlayingCard
+              href="http://www.dama-pik.com.ua/cards/music/pink-floyd-i/"
+              title="Pink Floyd"
+              x={95}
+              y={0}
+              width={103}
+              height={147}
+              imgs={playingCards8Imgs}
             />
 
             {/* rest */}
