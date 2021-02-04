@@ -705,7 +705,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               x={189}
               y={0}
               width={101}
-              height={154}
+              height={153}
               imgs={playingCards7Imgs}
             />
             <PlayingCard
@@ -829,7 +829,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               x={208}
               y={0}
               width={150}
-              height={172}
+              height={171}
               imgs={playingCardsXImgs}
             />
             <PlayingCard
