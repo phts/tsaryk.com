@@ -189,7 +189,7 @@ export const ru: TranslatedStrings = {
         <li>${a('https://easyeda.com/phts/vu-01', 'PHTS VU-01')}</li>
       </ul>
       <p>
-        ${figure(picture('VWdIfrE', 'PHTS VU-01'), '')}
+        ${figure('<img src="https://i.imgur.com/VWdIfrE.jpg" alt="PHTS VU-01">', '')}
       </p>
     `,
   },
