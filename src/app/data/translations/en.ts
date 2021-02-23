@@ -516,7 +516,10 @@ Collecting those which I really like.',
   Vinyl: {
     description: figure(
       picture('Mkb7mO9', 'Винил'),
-      'Audio-Technica AT-LP120USBHC + Yamaha A-S501 + Hand-made speakers by Andrzej Figarski.'
+      `Audio-Technica AT-LP120USBHC + Yamaha A-S501 + Hand-made speakers by Andrzej Figarski. ${a(
+        'https://www.discogs.com/user/phts/collection',
+        'Playing Lunatic Soul - Lunatic Soul II'
+      )}`
     ),
   },
   VK: {

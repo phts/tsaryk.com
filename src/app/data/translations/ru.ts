@@ -722,7 +722,10 @@ ${link('Krako\u0301w', 'Кракове')}.`),
     name: 'Винил',
     description: figure(
       picture('Mkb7mO9', 'Винил'),
-      'Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским.'
+      `Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским. ${a(
+        'https://www.discogs.com/user/phts/collection',
+        'Играет Lunatic Soul - Lunatic Soul II'
+      )}`
     ),
   },
   VK: {
