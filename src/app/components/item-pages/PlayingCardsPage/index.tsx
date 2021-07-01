@@ -807,6 +807,41 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={147}
               imgs={playingCards8Imgs}
             />
+            <PlayingCard
+              title="Królewskie"
+              x={197}
+              y={0}
+              width={95}
+              height={147}
+              imgs={playingCards8Imgs}
+            />
+            <PlayingCard
+              href="https://www.kickstarter.com/projects/sunishchabba/bosch-playing-cards-0"
+              title="Bosch"
+              x={292}
+              y={0}
+              width={104}
+              height={147}
+              imgs={playingCards8Imgs}
+            />
+            <PlayingCard
+              href="https://www.kickstarter.com/projects/sunishchabba/a-motley-pack-transformation-playing-cards"
+              title="A Motley Pack"
+              x={397}
+              y={0}
+              width={105}
+              height={147}
+              imgs={playingCards8Imgs}
+            />
+            <PlayingCard
+              href="https://www.kickstarter.com/projects/fallisdesign/broken-crowns-playing-cards"
+              title="Broken crowns"
+              x={502}
+              y={0}
+              width={104}
+              height={147}
+              imgs={playingCards8Imgs}
+            />
 
             {/* rest */}
             <PlayingCard
