@@ -166,7 +166,10 @@ export const ru: TranslatedStrings = {
       <ul>
         <li>${link('Space Resonance')}</li>
         <li>${link('Joy in Time', 'Радость во времени')}</li>
-        <li>Mission: Jupiter</li>
+        <li>${a(
+          'https://mytoucheblog.com/portfolio/jupiter-is-the-most-powerful-beautiful-and-entrancing-planet-in-our-solar-system-interview-with-mission-jupiter/',
+          'Mission: Jupiter'
+        )}</li>
         <li>${link('Ultramarined')}</li>
       </ul>
     `,
