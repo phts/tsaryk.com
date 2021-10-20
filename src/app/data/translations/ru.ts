@@ -188,7 +188,7 @@ export const ru: TranslatedStrings = {
           'https://habr.com/ru/post/453474/',
           'arduino-pc-remote-control aka PHTS RC-01'
         )}</li>
-        <li>${a('https://github.com/phts/arduino-pc-remote-control', 'PHTS RC-02')}</li>
+        <li>${a('https://github.com/phts/RC', 'PHTS RC-02')}</li>
         <li>${a('https://easyeda.com/phts/vu-01', 'PHTS VU-01')}</li>
       </ul>
       <p>
