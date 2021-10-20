@@ -9,7 +9,7 @@ export enum Lang {
 
 export interface Translatable {
   data?: {}
-  description?: string
+  description?: string | string[]
   name?: string
   tooltip?: string
 }

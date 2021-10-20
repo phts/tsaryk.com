@@ -40,8 +40,8 @@ function toItem(
   strings: TranslatedStrings,
   fallback: TranslatedStrings
 ): (defaultItem: Item, id: ItemId) => Item {
-  return (defaultItem: Item, id: ItemId) =>
-    Object.assign(
+  return (defaultItem: Item, id: ItemId) => {
+    const item = Object.assign(
       {},
       defaultItem,
       metaPropsMap[id] || {},
@@ -49,6 +49,11 @@ function toItem(
       R.pick(['description'], fallback[id]),
       R.pick(['name', 'description', 'data', 'tooltip'], strings[id])
     )
+    if (Array.isArray(item.description)) {
+      item.description = item.description.join('')
+    }
+    return item
+  }
 }
 
 function toItems(itemNamesMap: ItemNamesMap, strings: TranslatedStrings): Items {
