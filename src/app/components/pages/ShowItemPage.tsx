@@ -69,7 +69,7 @@ export default withRouter(styled(ShowItemPage)`
     background-color: #333;
     color: white;
     padding: 0 3px;
-    text-weight: bold;
+    font-weight: bold;
   }
 
   img {
