@@ -1,4 +1,5 @@
 import {KnownName} from 'data/names'
+import {style} from '../components/Phts'
 
 function aTag(href: string, text: string, attrs: string[] = []) {
   const attributes = [`href="${href}"`, ...attrs].join(' ')
@@ -63,4 +64,8 @@ export function youtube(id: string) {
       allowfullscreen>
     </iframe>
   `
+}
+
+export function phts(model?: string) {
+  return `<span style="${style}">PHTS</span>` + (model ? ` ${model}` : '')
 }

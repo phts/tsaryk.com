@@ -15,6 +15,7 @@ import LangBtn from 'components/buttons/LangBtn'
 import ModeBtn from 'components/buttons/ModeBtn'
 import TextBtn from 'components/buttons/TextBtn'
 import TitleBtn from 'components/buttons/TitleBtn'
+import PhtsBtn from 'components/buttons/PhtsBtn'
 
 type KnownBtnMap = {
   [index in ItemId]?: BtnClass
@@ -37,6 +38,7 @@ const knownBtns: KnownBtnMap = {
   Random: ModeBtn(Mode.Random),
   Title: TitleBtn,
   RU: LangBtn(Lang.RU),
+  PHTS: PhtsBtn,
   /* eslint-enable new-cap */
 }
 

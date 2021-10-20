@@ -41,6 +41,7 @@ const CATEGORY_MAP: {[index in CatigoryName]: KnownName[]} = {
     'Last.fm',
     'Music',
     'Playing cards',
+    'PHTS',
     'Promo codes',
     'Ritchie Blackmore',
     'Space Resonance',

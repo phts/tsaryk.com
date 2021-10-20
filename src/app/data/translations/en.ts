@@ -1,4 +1,4 @@
-import {a, mailto, link, p, tel, youtube, figure} from 'helpers/html'
+import {a, mailto, link, p, tel, youtube, figure, phts} from 'helpers/html'
 import {picture} from 'helpers/imgur'
 import {EMAIL, LASTFM_URL, LINKEDIN_URL} from 'config'
 import {TranslatedStrings} from './index'
@@ -148,16 +148,17 @@ export const en: TranslatedStrings = {
     description: `
       <p>I like to solder something in my free time.</p>
       <p>
-        Besides fixing numerous devices I have created a few cool
-        devices under a brand PHTS which are used at home every day:
+      Besides fixing numerous devices I have created a few cool
+      devices under a brand ${link('PHTS', phts())} which are used at home every day.
       </p>
+      <p>For example:</p>
       <ul>
         <li>${a(
           'https://habr.com/ru/post/453474/',
-          'arduino-pc-remote-control aka PHTS RC-01'
+          `arduino-pc-remote-control aka ${phts('RC-01')}`
         )}</li>
-        <li>${a('https://github.com/phts/RC', 'PHTS RC-02')}</li>
-        <li>${a('https://easyeda.com/phts/vu-01', 'PHTS VU-01')}</li>
+        <li>${a('https://github.com/phts/RC', phts('RC-02'))}</li>
+        <li>${a('https://easyeda.com/phts/vu-01', phts('VU-01'))}</li>
       </ul>
       <p>
         ${figure('<img src="https://i.imgur.com/VWdIfrE.jpg" alt="PHTS VU-01">', '')}
@@ -363,6 +364,21 @@ export const en: TranslatedStrings = {
         ${link('JavaScript', 'a frontend developer')} in ${link('Grand Parade')}.
       </p>
     `,
+  },
+  PHTS: {
+    description: [
+      p(`Brand for useful and useless ${link('Electronics', 'electronic devices')} made by me.`),
+      figure(
+        picture('pUbuzOo', 'PHTS CLK-01'),
+        `${a('https://oshwlab.com/phts/CLK-01', phts('CLK-01'))} (still in progress)`
+      ),
+      figure(picture('BXikwKy', 'PHTS VU-01'), a('https://easyeda.com/phts/vu-01', phts('VU-01'))),
+      figure(picture('nXCSHXf', 'PHTS USP-01'), phts('USP-01')),
+      figure(picture('uPRy2Mu', 'PHTS BB-01'), phts('BB-01')),
+      figure(picture('BzSJRpf', 'PHTS BB-01s'), phts('BB-01s')),
+      figure(picture('cpv9dk4', 'PHTS FL-01'), phts('FL-01')),
+      figure(picture('c3EMslv', 'PHTS RC-02'), a('https://github.com/phts/RC', phts('RC-02'))),
+    ],
   },
   'Pilip Tsaryk': {
     description: `

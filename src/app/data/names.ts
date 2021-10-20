@@ -42,6 +42,7 @@ export enum Names {
   Music,
   Novopolotsk,
   'Phil Tsaryk',
+  PHTS,
   'Pilip Tsaryk',
   'Playing cards',
   Poland,

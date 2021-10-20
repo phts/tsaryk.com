@@ -12,6 +12,7 @@ const distDir = path.resolve(projectDir, 'dist')
 const svgDir = path.resolve(projectDir, 'svg')
 
 const outputImgPath = 'static/img'
+const outputFontsPath = 'static/fonts'
 
 const heroes3AssetsDir = path.join(appDir, 'components', 'item-pages', 'Heroes3Page')
 const playingCardsAssetsDir = path.join(appDir, 'components', 'item-pages', 'PlayingCardsPage')
@@ -145,16 +146,21 @@ const config: (opts: Options) => Configuration = ({prod = false, analyzer = fals
           test: /\.png$/,
           include: playingCardsAssetsDir,
           exclude: /node_modules/,
-          use: [
-            {
-              loader: 'responsive-loader',
-              options: {
-                name: '[name]-[width].[hash:4].[ext]',
-                outputPath: outputImgPath,
-                sizes: [1200, 1000],
-              },
-            },
-          ],
+          loader: 'responsive-loader',
+          options: {
+            name: '[name]-[width].[hash:4].[ext]',
+            outputPath: outputImgPath,
+            sizes: [1200, 1000],
+          },
+        },
+        {
+          test: /\.otf$/,
+          exclude: /node_modules/,
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash:4].[ext]',
+            outputPath: outputFontsPath,
+          },
         },
       ],
     },

@@ -1,4 +1,4 @@
-import {a, figure, img, link, mailto, p, tel, youtube} from 'helpers/html'
+import {a, figure, img, link, mailto, p, tel, youtube, phts} from 'helpers/html'
 import {picture} from 'helpers/imgur'
 import {EMAIL, LASTFM_URL, LINKEDIN_URL} from 'config'
 import {TranslatedStrings} from './index'
@@ -180,16 +180,16 @@ export const ru: TranslatedStrings = {
       <p>В свободное время люблю что-нибудь попаять.</p>
       <p>
         Помимо починки всяких крупных и мелких домашних девайсов
-        я сделал несколько крутых штук под маркой PHTS, которые
+        я сделал несколько крутых штук под брендом ${link('PHTS', phts())}, которые
         используются дома каждый день:
       </p>
       <ul>
         <li>${a(
           'https://habr.com/ru/post/453474/',
-          'arduino-pc-remote-control aka PHTS RC-01'
+          `arduino-pc-remote-control aka ${phts('RC-01')}`
         )}</li>
-        <li>${a('https://github.com/phts/RC', 'PHTS RC-02')}</li>
-        <li>${a('https://easyeda.com/phts/vu-01', 'PHTS VU-01')}</li>
+        <li>${a('https://github.com/phts/RC', phts('RC-02'))}</li>
+        <li>${a('https://easyeda.com/phts/vu-01', phts('VU-01'))}</li>
       </ul>
       <p>
         ${figure('<img src="https://i.imgur.com/VWdIfrE.jpg" alt="PHTS VU-01">', '')}
@@ -448,6 +448,26 @@ export const ru: TranslatedStrings = {
         ${link('JavaScript', 'фронтэнд разработчиком')}.
       </p>
     `,
+  },
+  PHTS: {
+    description: [
+      p(
+        `Бренд для полезных и бесполезных ${link(
+          'Electronics',
+          'электронных девайсов'
+        )}, сделанных мною.`
+      ),
+      figure(
+        picture('pUbuzOo', 'PHTS CLK-01'),
+        `${a('https://oshwlab.com/phts/CLK-01', phts('CLK-01'))} (всё ещё в разработке)`
+      ),
+      figure(picture('BXikwKy', 'PHTS VU-01'), a('https://easyeda.com/phts/vu-01', phts('VU-01'))),
+      figure(picture('nXCSHXf', 'PHTS USP-01'), phts('USP-01')),
+      figure(picture('uPRy2Mu', 'PHTS BB-01'), phts('BB-01')),
+      figure(picture('BzSJRpf', 'PHTS BB-01s'), phts('BB-01s')),
+      figure(picture('cpv9dk4', 'PHTS FL-01'), phts('FL-01')),
+      figure(picture('c3EMslv', 'PHTS RC-02'), a('https://github.com/phts/RC', phts('RC-02'))),
+    ],
   },
   'Pilip Tsaryk': {
     name: 'Пiлiп Царык',
