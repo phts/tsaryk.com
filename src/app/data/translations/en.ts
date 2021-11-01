@@ -448,12 +448,19 @@ Collecting those which I really like.',
   },
   'Space Resonance': {},
   'Stack Overflow': {
-    description: `
-      <p>
-        Sometimes I ${a('https://stackoverflow.com/users/2462524/phts', 'ask and answer')} questions
-        on ${a('https://stackoverflow.com/', 'Stack Overflow')}.
-      </p>
-    `,
+    description: [
+      p(`<a href="https://stackoverflow.com/users/2462524/phts">
+        <img src="https://stackoverflow.com/users/flair/2462524.png" width="208" height="58"
+        alt="profile for phts at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
+        title="profile for phts at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+        </a>`),
+      p(
+        `Sometimes I ${a(
+          'https://stackoverflow.com/users/2462524/phts',
+          'ask and answer'
+        )} questions on ${a('https://stackoverflow.com/', 'Stack Overflow')}.`
+      ),
+    ],
   },
   'Sublime Text': {
     description: `

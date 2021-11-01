@@ -629,12 +629,19 @@ ${link('Krako\u0301w', 'Кракове')}.`),
   },
   'Stack Overflow': {
     name: 'Стак Оверфлоу',
-    description: `
-      <p>
-        Иногда ${a('https://stackoverflow.com/users/2462524/phts', 'задаю и отвечаю')} на вопросы
-        на ${a('https://stackoverflow.com/', 'Стак Оверфлоу')}.
-      </p>
-    `,
+    description: [
+      p(`<a href="https://stackoverflow.com/users/2462524/phts">
+        <img src="https://stackoverflow.com/users/flair/2462524.png" width="208" height="58"
+        alt="profile for phts at Stack Overflow, Q&amp;A for professional and enthusiast programmers"
+        title="profile for phts at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+        </a>`),
+      p(
+        `Иногда ${a(
+          'https://stackoverflow.com/users/2462524/phts',
+          'задаю и отвечаю'
+        )} на вопросы на ${a('https://stackoverflow.com/', 'Стак Оверфлоу')}.`
+      ),
+    ],
   },
   'Sublime Text': {
     name: 'Саблайм Текст',
