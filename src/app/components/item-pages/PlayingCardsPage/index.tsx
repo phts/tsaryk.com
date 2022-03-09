@@ -851,6 +851,24 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={147}
               imgs={playingCards8Imgs}
             />
+            <PlayingCard
+              href="https://www.wopc.co.uk/germany/ass/cherie-7022"
+              title="Chérie"
+              x={700}
+              y={0}
+              width={94}
+              height={147}
+              imgs={playingCards8Imgs}
+            />
+            <PlayingCard
+              href="https://www.wopc.co.uk/germany/altenburger-spielkartenfabrik/angler-skat"
+              title="Angler Skat"
+              x={795}
+              y={0}
+              width={94}
+              height={147}
+              imgs={playingCards8Imgs}
+            />
 
             {/* rest */}
             <PlayingCard
