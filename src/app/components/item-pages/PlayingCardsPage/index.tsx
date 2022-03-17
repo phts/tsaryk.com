@@ -870,7 +870,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards8Imgs}
             />
 
-            {/* rest */}
+            {/* unusual */}
             <PlayingCard
               title="Pokemon"
               x={588}
@@ -941,12 +941,20 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCardsXImgs}
             />
             <PlayingCard
+              title="Tarot De Luxe"
+              x={0}
+              y={312}
+              width={102}
+              height={183}
+              imgs={playingCardsXImgs}
+            />
+            <PlayingCard
               href="http://nacekomie.ru/hachette/enciklopediya-taro-ashet-kollekciya.html"
               title="Универсальное таро"
               x={478}
               y={0}
               width={110}
-              height={201}
+              height={200}
               imgs={playingCardsXImgs}
             />
             <PlayingCard
@@ -954,7 +962,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               x={0}
               y={0}
               width={206}
-              height={313}
+              height={311}
               imgs={playingCardsXImgs}
             />
           </Container>
