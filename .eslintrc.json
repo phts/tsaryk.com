@@ -10,6 +10,15 @@
     "@phts/eslint-config/addons/prettier"
   ],
 
+  "rules": {
+    "jest/expect-expect": [
+      "error",
+      {
+        "assertFunctionNames": ["expect", "expect*"]
+      }
+    ]
+  },
+
   "overrides": [
     {
       "files": "webpack.*.ts",

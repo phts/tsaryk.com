@@ -13,6 +13,14 @@ import useStores from 'hooks/useStores'
 import cursorDefaultPng from './h3-default.png'
 import cursorPointerPng from './h3-pointer.png'
 
+const PaddingWithCursor = styled(Padding)`
+  cursor: url(${cursorDefaultPng}) 16 16, default;
+
+  button {
+    cursor: url(${cursorPointerPng}) 16 16, pointer;
+  }
+`
+
 const Heroes3Page: React.FunctionComponent<ItemPageProps> = ({className, item, onClose}) => {
   const {i18nStore} = useStores()
   return (
@@ -27,13 +35,5 @@ const Heroes3Page: React.FunctionComponent<ItemPageProps> = ({className, item, o
     </PaddingWithCursor>
   )
 }
-
-const PaddingWithCursor = styled(Padding)`
-  cursor: url(${cursorDefaultPng}) 16 16, default;
-
-  button {
-    cursor: url(${cursorPointerPng}) 16 16, pointer;
-  }
-`
 
 export default Heroes3Page

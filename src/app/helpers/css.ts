@@ -20,6 +20,7 @@ interface Medias {
 export const media = (Object.keys(breakpoints) as BreakpointKeys).reduce(
   (acc: Medias, val: BreakpointsLabel) => {
     acc.min = acc.min || {}
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     acc.min[val] = (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]) => css`
       @media (min-width: ${breakpoints[val]}px) {
@@ -27,6 +28,7 @@ export const media = (Object.keys(breakpoints) as BreakpointKeys).reduce(
       }
     `
     acc.max = acc.max || {}
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     acc.max[val] = (strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]) => css`
       @media (max-width: ${breakpoints[val]}px) {
@@ -35,7 +37,7 @@ export const media = (Object.keys(breakpoints) as BreakpointKeys).reduce(
     `
     return acc
   },
-  ({} as unknown) as Medias
+  {} as unknown as Medias
 ) as Medias
 
 export function getRandomColorComponent(): number {

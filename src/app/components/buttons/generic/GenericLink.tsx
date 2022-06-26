@@ -15,8 +15,8 @@ const PureLink: React.FunctionComponent<Props> = ({buttonType, fontSize, ...prop
 )
 
 export default styled(PureLink)<Props>`
-  border-bottom: ${props => getBorder(props.buttonType)};
+  border-bottom: ${(props) => getBorder(props.buttonType)};
   color: inherit;
-  font-size: ${props => props.fontSize};
+  font-size: ${(props) => props.fontSize};
   text-decoration: none;
 `

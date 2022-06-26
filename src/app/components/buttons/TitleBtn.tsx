@@ -7,14 +7,14 @@ import asBtn, {BtnProps} from './asBtn'
 const TITLE = 'tsaryk.com'
 const URL = 'http://tsaryk.com/'
 
+const A = styled.a`
+  color: inherit;
+`
+
 const TitleBtn: React.FunctionComponent<BtnProps> = ({flexBasis, flexible}) => (
   <GenericLi flexBasis={flexBasis} flexible={flexible}>
     <A href={URL}>{TITLE}</A>
   </GenericLi>
 )
-
-const A = styled.a`
-  color: inherit;
-`
 
 export default asBtn(TitleBtn)

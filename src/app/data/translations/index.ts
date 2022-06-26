@@ -8,7 +8,7 @@ export enum Lang {
 }
 
 export interface Translatable {
-  data?: {}
+  data?: {} // eslint-disable-line @typescript-eslint/ban-types
   description?: string | string[]
   name?: string
   tooltip?: string

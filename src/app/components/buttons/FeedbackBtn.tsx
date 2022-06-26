@@ -9,7 +9,7 @@ interface FeedbackItemData {
   sayHello: string
 }
 
-const FeedbackBtn: React.FunctionComponent<BtnProps> = props => {
+const FeedbackBtn: React.FunctionComponent<BtnProps> = (props) => {
   const [isOpen, setOpen] = useState(false)
 
   const onClick = useCallback(() => {

@@ -91,9 +91,9 @@ const CATEGORY_MAP: {[index in CatigoryName]: KnownName[]} = {
   ],
 }
 
-const calculatedCategoryProps: CategoryPropsMap = ({} as unknown) as CategoryPropsMap
+const calculatedCategoryProps: CategoryPropsMap = {} as unknown as CategoryPropsMap
 R.forEachObjIndexed((its, cat) => {
-  R.forEach(it => {
+  R.forEach((it) => {
     calculatedCategoryProps[it] = {category: cat}
   }, its)
 }, CATEGORY_MAP)

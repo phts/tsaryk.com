@@ -7,7 +7,7 @@ interface Props extends CommonElementProps<HTMLLIElement> {
   flexible: boolean
 }
 
-export default styled.li.attrs<Props>(props => ({
+export default styled.li.attrs<Props>((props) => ({
   style: {
     flexBasis: `${props.flexBasis}vw`,
   },

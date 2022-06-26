@@ -7,7 +7,7 @@ import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
 
 export default function ModeBtn(mode: Mode) {
-  const AnyModeBtn: React.FunctionComponent<BtnProps> = props => {
+  const AnyModeBtn: React.FunctionComponent<BtnProps> = (props) => {
     const {listStore, widthsStore} = useStores()
 
     const onClick = useCallback(() => {

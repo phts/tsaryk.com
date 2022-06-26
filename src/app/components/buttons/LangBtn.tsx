@@ -7,7 +7,7 @@ import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
 
 export default function LangBtn(lang: Lang) {
-  const AnyLangBtn: React.FunctionComponent<BtnProps> = props => {
+  const AnyLangBtn: React.FunctionComponent<BtnProps> = (props) => {
     const {langStore} = useStores()
 
     const onClick = useCallback(() => {

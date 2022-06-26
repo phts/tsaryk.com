@@ -17,7 +17,7 @@ const includedItemNames: KnownNames = R.compose<
 const names: string[] = enumToArray(Names) as string[]
 
 describe('categoryPropsMap', () => {
-  R.forEach(name => {
+  R.forEach((name) => {
     it(`contains "${name}"`, () => {
       expect(includedItemNames).toContain(name)
     })

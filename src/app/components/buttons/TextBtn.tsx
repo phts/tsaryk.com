@@ -5,7 +5,7 @@ import asBtn, {BtnProps} from './asBtn'
 import GenericLi from './generic/GenericLi'
 import GenericLink from './generic/GenericLink'
 
-const TextBtn: React.FunctionComponent<BtnProps> = props => {
+const TextBtn: React.FunctionComponent<BtnProps> = (props) => {
   if (!props.description && !props.data) {
     return (
       <GenericLi flexBasis={props.flexBasis} flexible={props.flexible}>

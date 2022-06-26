@@ -22,5 +22,5 @@ export default styled.ol`
   list-style: none;
   margin: 0;
   padding: 0;
-  ${props => liCss(React.Children.toArray(props.children).length)}
+  ${(props) => liCss(React.Children.toArray(props.children).length)}
 `

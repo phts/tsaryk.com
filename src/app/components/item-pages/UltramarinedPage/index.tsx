@@ -22,7 +22,7 @@ interface UltramarinedItemData {
   unultrimarine: string
 }
 
-const UltramarinedPage: React.FunctionComponent<ItemPageProps> = props => {
+const UltramarinedPage: React.FunctionComponent<ItemPageProps> = (props) => {
   const {i18nStore} = useStores()
   const [isUltramarined, setUltramarined] = useState(false)
 
