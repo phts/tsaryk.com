@@ -1,16 +1,9 @@
 import webpack from 'webpack'
 import merge from 'webpack-merge'
-import common, {Options} from './webpack.common'
+import common from './webpack.common'
 
-export default (env: Options = {}) =>
-  merge(common(env), {
-    mode: 'development',
-    devtool: 'cheap-module-source-map',
-    devServer: {
-      hot: true,
-      stats: {
-        warningsFilter: /\/mobx-react\//,
-      },
-    },
-    plugins: [new webpack.HotModuleReplacementPlugin()],
-  })
+export default merge(common, {
+  mode: 'development',
+  devtool: 'cheap-module-source-map',
+  plugins: [new webpack.HotModuleReplacementPlugin()],
+})

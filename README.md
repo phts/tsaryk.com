@@ -19,11 +19,3 @@ My home page. And a playground for experiments.
 ## Services
 
 - [emailjs.com](http://www.emailjs.com/) - Sending emails via JavaScript
-
-## npm scripts
-
-### Run build with [Webpack Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer):
-
-```
-npm run build[:anything] -- --env.analyzer
-```

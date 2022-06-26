@@ -1,7 +1,7 @@
 import * as R from 'ramda'
 import {KnownName} from './names'
 
-export type ItemCategory = KnownName | null
+export type ItemCategory = KnownName
 
 export interface CategoryProps {
   category: ItemCategory
@@ -10,7 +10,7 @@ export interface CategoryProps {
 export type CategoryPropsMap = {[index in KnownName]: CategoryProps}
 
 export const DEFAULT_CATEGORY_PROPS: CategoryProps = {
-  category: null,
+  category: 'About',
 }
 
 type CatigoryName = 'About' | 'Contacts' | 'Hobby' | 'Meta' | 'Work'

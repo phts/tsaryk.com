@@ -1,20 +1,18 @@
 import webpack, {Configuration} from 'webpack'
 import merge from 'webpack-merge'
-import common, {Options} from './webpack.common'
+import common from './webpack.common'
 
-export default (env: Options = {}) => {
-  const output: Configuration['output'] = {
-    filename: '[name].[contenthash:4].js',
-  }
-
-  if (env.relative) {
-    output.publicPath = ''
-  }
-
-  return merge(common({...env, prod: true}), {
-    mode: 'production',
-    devtool: 'source-map',
-    output,
-    plugins: [new webpack.HashedModuleIdsPlugin()],
-  })
+const output: Configuration['output'] = {
+  filename: '[name].[contenthash:4].js',
 }
+
+if (process.env.BUILD_RELATIVE === 'true') {
+  output.publicPath = ''
+}
+
+export default merge(common, {
+  mode: 'production',
+  devtool: 'source-map',
+  output,
+  plugins: [new webpack.ids.HashedModuleIdsPlugin()],
+})

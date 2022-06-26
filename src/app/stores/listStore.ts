@@ -57,7 +57,7 @@ export class ListStore {
       R.reject(R.propEq('type', ItemType.Category)),
       (x) =>
         [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map((p) => {
-          return R.filter(R.propEq('position', p), x) as List
+          return R.filter(R.propEq('position', p), x)
         }),
       (x) => [...x[0], ...sortFunc[this.mode](x[1]), ...x[2]]
     )(this.items.items)
