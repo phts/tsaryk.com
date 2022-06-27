@@ -55,6 +55,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.25",
     "@types/webpack": "^5.28.0",
+    "copy-webpack-plugin": "^11.0.0",
     "eslint": "^8.18.0",
     "favicons-webpack-plugin": "^5.0.2",
     "file-loader": "^6.2.0",

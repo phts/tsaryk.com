@@ -1,6 +1,7 @@
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
+import CopyPlugin from 'copy-webpack-plugin'
 import {Configuration, WebpackPluginInstance} from 'webpack'
 
 const projectDir = path.resolve(__dirname, '..')
@@ -8,6 +9,7 @@ const srcDir = path.resolve(projectDir, 'src')
 const appDir = path.resolve(srcDir, 'app')
 const staticDir = path.resolve(srcDir, 'static')
 const staticImgDir = path.resolve(staticDir, 'img')
+const staticPagesDir = path.resolve(staticDir, 'pages')
 const distDir = path.resolve(projectDir, 'dist')
 const svgDir = path.resolve(projectDir, 'svg')
 
@@ -55,6 +57,9 @@ const plugins: WebpackPluginInstance[] = [
     },
     logo: path.join(svgDir, 'favicon.svg'),
     prefix: 'static/icons-[contenthash:4]/',
+  }),
+  new CopyPlugin({
+    patterns: [{from: staticPagesDir, to: distDir}],
   }),
 ]
 
