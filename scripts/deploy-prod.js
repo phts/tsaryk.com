@@ -7,10 +7,7 @@ const exec = util.promisify(require('child_process').exec)
 const shellescape = require('shell-escape')
 
 const DIST_FILES = 'dist'
-const SSH_HOST = process.env.SSH_HOST
-const SSH_PATH = process.env.SSH_PATH
-const SSH_SCRIPT = process.env.SSH_SCRIPT
-const SSH_USER = process.env.SSH_USER
+const {SSH_HOST, SSH_PATH, SSH_SCRIPT, SSH_USER} = process.env
 
 function printResult(result) {
   if (result.stdout) {
