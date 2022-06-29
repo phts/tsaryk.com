@@ -389,8 +389,7 @@ export const en: TranslatedStrings = {
   'Playing cards': {
     data: {
       p1: 'Collecting since my childhood.',
-      p2:
-        'There is no purpose to gather everything from everywhere, \
+      p2: 'There is no purpose to gather everything from everywhere, \
 so the collection is not so big and contains around 100 decks today. \
 Collecting those which I really like.',
       imgTitle: 'One card from each deck (clickable). March 2022',

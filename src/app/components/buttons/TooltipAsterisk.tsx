@@ -5,11 +5,11 @@ import {CommonElementProps} from 'helpers/types'
 
 type Props = CommonElementProps<HTMLSpanElement>
 
-export default (props => <Asterisk {...props}>*</Asterisk>) as React.FunctionComponent<Props>
-
 const Asterisk = styled.span`
   color: #aa0000;
   cursor: help;
   font-size: 1.3rem;
   opacity: 0.5;
 `
+
+export default ((props) => <Asterisk {...props}>*</Asterisk>) as React.FunctionComponent<Props>

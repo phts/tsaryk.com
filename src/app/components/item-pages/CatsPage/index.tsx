@@ -10,6 +10,10 @@ import ActionButton from 'components/ActionButton'
 import useStores from 'hooks/useStores'
 import CatsList, {CatsItemsData} from './CatsList'
 
+const CatsFooter = styled(Footer)`
+  padding-left: 4.5rem;
+`
+
 const CatsPage: React.FunctionComponent<ItemPageProps> = ({className, item, onClose}) => {
   const {i18nStore} = useStores()
   const items = prepend({icon: '&#x1F408;', text: item.name})(item.data as CatsItemsData)
@@ -24,9 +28,5 @@ const CatsPage: React.FunctionComponent<ItemPageProps> = ({className, item, onCl
     </Padding>
   )
 }
-
-const CatsFooter = styled(Footer)`
-  padding-left: 4.5rem;
-`
 
 export default CatsPage

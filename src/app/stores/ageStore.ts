@@ -62,6 +62,7 @@ export class AgeStore {
   @observable age: Age
 
   private initialTime: Date
+  private intervalId: number
 
   constructor(initialTime?: Date) {
     this.initialTime = initialTime || new Date()
@@ -76,9 +77,13 @@ export class AgeStore {
     ])
     this.age = age
 
-    setInterval(() => {
+    this.intervalId = setInterval(() => {
       this.inc()
-    }, 1000)
+    }, 1000) as unknown as number
+  }
+
+  stop() {
+    clearInterval(this.intervalId)
   }
 
   private reduceDate(date: Date, parts: AgePart[]): [Age, Date] {

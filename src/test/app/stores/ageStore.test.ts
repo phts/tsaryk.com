@@ -1,5 +1,7 @@
 import * as MockDate from 'mockdate'
-import {AgeStore, AgePart, Age} from 'stores/ageStore'
+import ageStoreInstance, {AgeStore, AgePart, Age} from 'stores/ageStore'
+
+ageStoreInstance.stop()
 
 jest.mock('config', () => {
   return {
@@ -34,7 +36,7 @@ describe('AgeStore', () => {
   let ageStore: AgeStore
 
   beforeEach(() => {
-    jest.useFakeTimers()
+    jest.useFakeTimers({legacyFakeTimers: true})
   })
 
   describe('when current date equals to date of birth', () => {

@@ -8,7 +8,7 @@ type Width = number
 type Widths = Record<ItemId, number>
 
 export class WidthsStore {
-  @observable widths: Widths = ({} as unknown) as Widths
+  @observable widths: Widths = {} as unknown as Widths
 
   @action
   randomize(list: Item[]): void {

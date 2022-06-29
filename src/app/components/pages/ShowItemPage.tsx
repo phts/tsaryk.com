@@ -56,13 +56,13 @@ export default withRouter(styled(ShowItemPage)`
     color: inherit;
   }
 
-  a[href^="callto"],
-  a[href^="mailto"],
-  a[href^="tel"] {
+  a[href^='callto'],
+  a[href^='mailto'],
+  a[href^='tel'] {
     white-space: nowrap;
   }
 
-  a[href^="#/"] {
+  a[href^='#/'] {
     border-bottom: ${getBorder(BUTTON_TYPE.Default)};
     text-decoration: none;
   }

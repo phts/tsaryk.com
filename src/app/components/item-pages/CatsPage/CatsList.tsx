@@ -9,9 +9,17 @@ interface Props {
   items: CatsItemsData
 }
 
+const EmojiIcon = styled.span`
+  cursor: ${(props) => (props.title ? 'help' : 'default')};
+  display: inline-block;
+  margin-right: 0.5rem;
+  text-align: right;
+  width: 4rem;
+`
+
 export default (({items}) => (
   <OrderedListWithItemHeight>
-    {items.map(x => (
+    {items.map((x) => (
       <li key={x.icon}>
         <EmojiIcon dangerouslySetInnerHTML={{__html: x.icon}} title={x.tooltip} />
         {x.text}
@@ -19,11 +27,3 @@ export default (({items}) => (
     ))}
   </OrderedListWithItemHeight>
 )) as React.FunctionComponent<Props>
-
-const EmojiIcon = styled.span`
-  cursor: ${props => (props.title ? 'help' : 'default')};
-  display: inline-block;
-  margin-right: 0.5rem;
-  text-align: right;
-  width: 4rem;
-`

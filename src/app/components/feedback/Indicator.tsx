@@ -15,6 +15,10 @@ interface Props {
   state: IndicatorState
 }
 
+const Span = styled.span`
+  font-family: monospace;
+`
+
 const Indicator: React.FunctionComponent<Props> = ({state}) => (
   <Span>
     {state === IndicatorState.Processing ? <Spinner /> : ''}
@@ -22,9 +26,5 @@ const Indicator: React.FunctionComponent<Props> = ({state}) => (
     {state === IndicatorState.Failed ? <FailedSymbol /> : ''}
   </Span>
 )
-
-const Span = styled.span`
-  font-family: monospace;
-`
 
 export default Indicator

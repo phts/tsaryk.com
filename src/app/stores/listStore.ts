@@ -37,7 +37,7 @@ export class ListStore {
   setMode(mode: Mode): void {
     const forceRefresh = mode === Mode.Random && this.mode === mode
     if (forceRefresh) {
-      this.mode = (null as unknown) as Mode
+      this.mode = null as unknown as Mode
     }
 
     this.mode = mode
@@ -55,11 +55,11 @@ export class ListStore {
     this.list = R.pipe<Items, List, List, List[], List>(
       R.values,
       R.reject(R.propEq('type', ItemType.Category)),
-      x =>
-        [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map(p => {
-          return R.filter(R.propEq('position', p), x) as List
+      (x) =>
+        [ItemPosition.Head, ItemPosition.Middle, ItemPosition.Tail].map((p) => {
+          return R.filter(R.propEq('position', p), x)
         }),
-      x => [...x[0], ...sortFunc[this.mode](x[1]), ...x[2]]
+      (x) => [...x[0], ...sortFunc[this.mode](x[1]), ...x[2]]
     )(this.items.items)
   }
 
@@ -68,8 +68,8 @@ export class ListStore {
       R.values,
       R.reject(R.propEq('type', ItemType.Category)),
       sortFunc[Mode.Asc],
-      x =>
-        CATEGORIES.map(cat => {
+      (x) =>
+        CATEGORIES.map((cat) => {
           return R.concat([this.items.items[cat]], R.filter(R.propEq('category', cat), x))
         }),
       R.flatten

@@ -21,7 +21,7 @@ function printResult(result) {
   }
 }
 
-;(async function() {
+;(async function () {
   try {
     const commands = [
       [

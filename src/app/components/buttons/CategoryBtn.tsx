@@ -3,8 +3,6 @@ import styled from 'styled-components'
 
 import asBtn, {BtnProps} from './asBtn'
 
-const CategoryBtn: React.FunctionComponent<BtnProps> = ({text}) => <Li># {text}</Li>
-
 const Li = styled.li`
   align-items: center;
   display: flex;
@@ -19,5 +17,7 @@ const Li = styled.li`
     margin-top: 0;
   }
 `
+
+const CategoryBtn: React.FunctionComponent<BtnProps> = ({text}) => <Li># {text}</Li>
 
 export default asBtn(CategoryBtn)

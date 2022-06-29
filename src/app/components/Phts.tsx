@@ -12,6 +12,6 @@ const Span = styled.span`
 
 export const style = phtsCss.toString()
 
-export default (props => <Span {...props}>PHTS</Span>) as React.FunctionComponent<
+export default ((props) => <Span {...props}>PHTS</Span>) as React.FunctionComponent<
   React.HTMLAttributes<HTMLSpanElement>
 >

@@ -2,17 +2,8 @@ import React from 'react'
 import styled, {css} from 'styled-components'
 import {media} from 'helpers/css'
 
-const ZxBorder: React.FunctionComponent = ({children}) => (
-  <Border>
-    <PreloadingStep />
-    <StartingStep />
-    <LoadingStep />
-    <Content>{children}</Content>
-  </Border>
-)
-
 const Content = styled.div`
-  background-color: ${props => props.theme.backgroundColor};
+  background-color: ${(props) => props.theme.backgroundColor};
   min-height: calc(100% - 10rem);
   width: calc(100% - 10rem);
   z-index: 1;
@@ -225,5 +216,14 @@ const LoadingStep = styled.div`
     }
   }
 `
+
+const ZxBorder: React.FunctionComponent = ({children}) => (
+  <Border>
+    <PreloadingStep />
+    <StartingStep />
+    <LoadingStep />
+    <Content>{children}</Content>
+  </Border>
+)
 
 export default ZxBorder

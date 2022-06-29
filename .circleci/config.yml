@@ -1,15 +1,10 @@
-.upgrade_npm_step: &upgrade_npm_step
-  name: Upgrade npm
-  command: sudo npm i --no-progress -g npm@8.11.0
-
 version: 2
 jobs:
   test:
     docker:
-      - image: circleci/node:10.15.3
+      - image: cimg/node:16.15.1
     working_directory: ~/repo
     steps:
-      - run: *upgrade_npm_step
       - checkout
       - run: npm ci
       - run: npm run lint
@@ -17,10 +12,9 @@ jobs:
 
   deploy-dev:
     docker:
-      - image: circleci/node:10.15.3
+      - image: cimg/node:16.15.1
     working_directory: ~/repo
     steps:
-      - run: *upgrade_npm_step
       - checkout
       - run: npm ci
       - run: npm run build:prod:relative
@@ -32,10 +26,9 @@ jobs:
 
   deploy-prod:
     docker:
-      - image: circleci/node:10.15.3
+      - image: cimg/node:16.15.1
     working_directory: ~/repo
     steps:
-      - run: *upgrade_npm_step
       - checkout
       - run: npm ci
       - run: npm run build:prod

@@ -8,7 +8,7 @@ const Spinner: React.FunctionComponent = () => {
 
   useEffect(() => {
     const interval = window.setInterval(() => {
-      setSymbolIndex(x => (x + 1) % SYMBOL_COUNT)
+      setSymbolIndex((x) => (x + 1) % SYMBOL_COUNT)
     }, 100)
 
     return () => clearInterval(interval)

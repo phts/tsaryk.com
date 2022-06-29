@@ -1,7 +1,7 @@
 import * as R from 'ramda'
 import {KnownName} from './names'
 
-export type ItemCategory = KnownName | null
+export type ItemCategory = KnownName
 
 export interface CategoryProps {
   category: ItemCategory
@@ -10,7 +10,7 @@ export interface CategoryProps {
 export type CategoryPropsMap = {[index in KnownName]: CategoryProps}
 
 export const DEFAULT_CATEGORY_PROPS: CategoryProps = {
-  category: null,
+  category: 'About',
 }
 
 type CatigoryName = 'About' | 'Contacts' | 'Hobby' | 'Meta' | 'Work'
@@ -91,9 +91,9 @@ const CATEGORY_MAP: {[index in CatigoryName]: KnownName[]} = {
   ],
 }
 
-const calculatedCategoryProps: CategoryPropsMap = ({} as unknown) as CategoryPropsMap
+const calculatedCategoryProps: CategoryPropsMap = {} as unknown as CategoryPropsMap
 R.forEachObjIndexed((its, cat) => {
-  R.forEach(it => {
+  R.forEach((it) => {
     calculatedCategoryProps[it] = {category: cat}
   }, its)
 }, CATEGORY_MAP)
