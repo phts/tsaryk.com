@@ -217,7 +217,11 @@ const LoadingStep = styled.div`
   }
 `
 
-const ZxBorder: React.FunctionComponent = ({children}) => (
+interface Props {
+  children: React.ReactNode
+}
+
+const ZxBorder: React.FunctionComponent<Props> = ({children}) => (
   <Border>
     <PreloadingStep />
     <StartingStep />

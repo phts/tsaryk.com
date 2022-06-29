@@ -1,5 +1,5 @@
 import React from 'react'
-import {HashRouter as Router, Route, Switch} from 'react-router-dom'
+import {HashRouter as Router, Route, Routes} from 'react-router-dom'
 
 import routes from 'routes'
 import BtnListPage from './BtnListPage'
@@ -8,11 +8,11 @@ import Viewport from './Viewport'
 
 export default () => (
   <Router>
-    <Switch>
+    <Routes>
       <Viewport>
-        <Route exact path={routes.index} component={BtnListPage} />
-        <Route path={routes.showItem} component={ShowItemPage} />
+        <Route path={routes.index} element={<BtnListPage />} />
+        <Route path={routes.showItem} element={<ShowItemPage />} />
       </Viewport>
-    </Switch>
+    </Routes>
   </Router>
 )

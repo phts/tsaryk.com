@@ -7,7 +7,11 @@ import dynamicTheme from 'themes/dynamicTheme'
 import FlexContainerWrapper from 'components/FlexContainerWrapper'
 import FlexContainer from 'components/FlexContainer'
 
-const Viewport: React.FunctionComponent = ({children}) => {
+interface Props {
+  children: React.ReactNode
+}
+
+const Viewport: React.FunctionComponent<Props> = ({children}) => {
   const {uiStore} = useStores()
 
   return (

@@ -1,12 +1,11 @@
 import React, {useCallback} from 'react'
-import {withRouter, RouteComponentProps, Redirect} from 'react-router-dom'
+import {useNavigate, useMatch} from 'react-router-dom'
 import styled from 'styled-components'
 
 import {media} from 'helpers/css'
 import {ItemId} from 'stores/itemsStore'
-import {openIndex} from 'helpers/routes'
 import {BUTTON_TYPE, getBorder} from 'helpers/buttons'
-import routes, {ShowItemPageMatch} from 'routes'
+import routes from 'routes'
 import {ItemPageComponentClass} from 'components/item-pages/types'
 import SimpleItemPage from 'components/item-pages/SimpleItemPage'
 import CatsPage from 'components/item-pages/CatsPage'
@@ -18,9 +17,8 @@ import PhtsPage from 'components/item-pages/PhtsPage'
 import useScrollToTopOnMount from 'hooks/useScrollToTopOnMount'
 import useStores from 'hooks/useStores'
 
-interface Props extends RouteComponentProps<ShowItemPageMatch> {
-  className: string
-  itemId: ItemId
+interface Props {
+  className?: string
 }
 
 type KnownItemPagesMap = {
@@ -36,22 +34,30 @@ const knownItemPages: KnownItemPagesMap = {
   'ZX Spectrum': ZxSpectrumPage,
 }
 
-const ShowItemPage: React.FunctionComponent<Props> = ({match, className, history}) => {
+const ShowItemPage: React.FunctionComponent<Props> = ({className}) => {
   const {itemsStore} = useStores()
+  const navigate = useNavigate()
+  const match = useMatch(routes.showItem)
   const onClose = useCallback(() => {
-    openIndex(history)
-  }, [])
+    navigate(routes.index)
+  }, [navigate])
   useScrollToTopOnMount()
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const item = itemsStore.items[match.params.id]
   if (!item) {
-    return <Redirect to={routes.index} />
+    navigate(routes.index)
+    return null
   }
+
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const ItemPageComponent: ItemPageComponentClass = knownItemPages[item.id] || SimpleItemPage
-  return <ItemPageComponent item={item} onClose={onClose} className={className} />
+  return <ItemPageComponent item={item} onClose={onClose} className={className!} />
 }
 
-export default withRouter(styled(ShowItemPage)`
+export default styled(ShowItemPage)`
   a {
     color: inherit;
   }
@@ -110,4 +116,4 @@ export default withRouter(styled(ShowItemPage)`
       width: calc(100vw - 2rem);
     `}
   }
-`)
+`
