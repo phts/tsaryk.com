@@ -1,0 +1,85 @@
+name: Test and deploy (prod)
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.15.1'
+      - uses: actions/checkout@v3
+      - name: Cache node_modules
+        id: node-modules-cache
+        uses: actions/cache@v3
+        with:
+          path: 'node_modules'
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
+      - if: ${{ steps.node-modules-cache.outputs.cache-hit == 'false' }}
+        name: Fresh install
+        run: npm ci
+
+  lint:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.15.1'
+      - uses: actions/checkout@v3
+      - name: Load node_modules
+        id: node-modules-cache
+        uses: actions/cache@v3
+        with:
+          path: 'node_modules'
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Lint
+        run: npm run lint
+
+  test:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.15.1'
+      - uses: actions/checkout@v3
+      - name: Load node_modules
+        id: node-modules-cache
+        uses: actions/cache@v3
+        with:
+          path: 'node_modules'
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Test
+        run: npm test
+
+  deploy:
+    needs: [install, lint, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.15.1'
+      - uses: actions/checkout@v3
+      - name: Load node_modules
+        id: node-modules-cache
+        uses: actions/cache@v3
+        with:
+          path: 'node_modules'
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
+      - name: Build
+        run: npm run build:prod
+      - uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Deploy
+        run: npm run deploy:prod
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PATH: ${{ secrets.SSH_PATH }}
+          SSH_SCRIPT: ${{ secrets.SSH_SCRIPT }}
+          SSH_USER: ${{ secrets.SSH_USER }}
