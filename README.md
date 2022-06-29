@@ -1,7 +1,7 @@
 # tsaryk.com
 
 [![Last commit (master)](https://img.shields.io/github/last-commit/phts/tsaryk.com/master.svg)](https://github.com/phts/tsaryk.com)
-[![Actions Status](https://github.com/phts/tsaryk.com/workflows/test-and-deploy/badge.svg)](https://github.com/phts/tsaryk.com/actions)
+[![Actions Status](https://github.com/phts/tsaryk.com/workflows/deploy-prod/badge.svg)](https://github.com/phts/tsaryk.com/actions)
 
 My home page. And a playground for experiments.
 
