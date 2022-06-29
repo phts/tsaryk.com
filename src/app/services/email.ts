@@ -1,4 +1,4 @@
-import * as emailjs from 'emailjs-com'
+import {init, send} from '@emailjs/browser'
 import browserLocale from 'browser-locale'
 
 import langStore from 'stores/langStore'
@@ -6,9 +6,10 @@ import langStore from 'stores/langStore'
 const SERVICE_ID = 'feedback_tsaryk_com'
 const TEMPLATE_ID = 'tsaryk_com'
 
-emailjs.init('user_C3T41f8F0pv1ekwT39nYw')
+init('user_C3T41f8F0pv1ekwT39nYw')
 
-interface TemplateParams {
+// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+type TemplateParams = {
   appLang: string
   innerHeight: number
   innerWidth: number
@@ -35,7 +36,7 @@ class EmailService {
       text,
       userAgent: navigator.userAgent,
     }
-    return emailjs.send(SERVICE_ID, TEMPLATE_ID, params)
+    return send(SERVICE_ID, TEMPLATE_ID, params)
   }
 }
 
