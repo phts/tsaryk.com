@@ -59,7 +59,7 @@ jobs:
         run: npm test
 
   deploy:
-    needs: [install, lint, test]
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v3
