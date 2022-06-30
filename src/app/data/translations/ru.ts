@@ -1,4 +1,4 @@
-import {a, figure, img, link, mailto, p, tel, youtube, phts} from 'helpers/html'
+import {a, figure, img, link, mailto, p, tel, youtube, phts, abbr} from 'helpers/html'
 import {picture} from 'helpers/imgur'
 import {EMAIL, LASTFM_URL, LINKEDIN_URL} from 'config'
 import {TranslatedStrings} from './index'
@@ -22,6 +22,7 @@ export const ru: TranslatedStrings = {
         <li>TypeScript</li>
       </ul>
       <p>Исходный код сайта выложен ${a('https://github.com/phts/tsaryk.com', 'на Гитхабе')}.</p>
+      <p>Версия: <code>${process.env.VERSION}</code></p>
     `,
   },
   About: {
@@ -310,6 +311,43 @@ export const ru: TranslatedStrings = {
       </p>
     `,
   },
+  'Hi-Fi': {
+    description: `
+      ${figure(picture('7AFNDT7', 'Моя коллекция аудио-техники'), 'Моя коллекция аудио-техники')}
+      <p>
+        <ul>
+          <li>${a(
+            'https://www.vinylengine.com/library/audio-technica/at-lp120-usb.shtml',
+            'Audio Technica AT-LP120-USB'
+          )}</li>
+          <li>${a(
+            'https://www.hifiengine.com/manual_library/akai/gx-f37.shtml',
+            'Akai GX-F37'
+          )}</li>
+          <li>${a(
+            'https://www.hifiengine.com/manual_library/technics/sh-8055.shtml',
+            'Technics SH-8055'
+          )}</li>
+          <li>${link('PHTS', 'PHTS VU-01')}</li>
+          <li>${a(
+            'https://www.hifiengine.com/manual_library/yamaha/a-s501.shtml',
+            'Yamaha A-S501'
+          )}</li>
+          <li>${a(
+            'https://www.hifiengine.com/manual_library/akai/dt-100.shtml',
+            'Akai DT-100'
+          )}</li>
+          <li>${a(
+            'https://www.hifiengine.com/manual_library/yamaha/cdx-750.shtml',
+            'Yamaha CDX-750E'
+          )}</li>
+          <li>${a('https://www.hifi-wiki.de/index.php/Yamaha_CT-710', 'Yamaha CT-710')}</li>
+          <li>${a('http://www.rw6ase.narod.ru/00/cmu/gamma.html', 'Гамма')}</li>
+          <li>Акустика, сделанная Анжеем Фигарским</li>
+        </ul>
+      </p>
+    `,
+  },
   JavaScript: {
     name: 'Джаваскрипт',
     description: `
@@ -334,7 +372,12 @@ export const ru: TranslatedStrings = {
   },
   Kraków: {
     name: 'Краков',
-    description: p(`Живём тут с ${link('Family', 'семьёй')} уже более трёх лет.`),
+    description: p(
+      `Живём тут с ${link('Family', 'семьёй')} около ${abbr(
+        String(new Date().getFullYear() - 2015),
+        `${new Date().getFullYear()} минус 2015`
+      )} лет.`
+    ),
   },
   'Last.fm': {
     name: 'Ласт.фм',
@@ -349,7 +392,7 @@ export const ru: TranslatedStrings = {
     description: `
       <p>Одна из важнейших частей моей жизни.</p>
       <h3>Слушаю</h3>
-      <p>Мой топ на данный момент:<p>
+      <p>Что?:<p>
       <ul>
         <li>Pink Floyd</li>
         <li>Lunatic Soul</li>
@@ -360,9 +403,12 @@ export const ru: TranslatedStrings = {
         <li>Led Zeppelin</li>
         <li>God Is An Astronaut</li>
         <li>Anathema</li>
+        <li>${link('Last.fm', 'и многих других...')}</li>
       </ul>
-      <p>Также я есть на ${link('Last.fm', 'Ластфм')}.</p>
-      <p>Часто слушаю музыку ${link('Vinyl', 'на виниле')}.</p>
+      <p>На чём?: ${link('Vinyl', 'винил')}, ${link('Tidal', 'Тайдл')} и ${link(
+      'foobar2000',
+      'фубар2000'
+    )}.</p>
       <h3>Играю</h3>
       <p>...на ${link('Drums', 'барабанах')}.<p>
       <p>Участвовал в группах:<p>
@@ -407,11 +453,11 @@ export const ru: TranslatedStrings = {
       ${figure(picture('mROYG5y', 'Nightwish в Кракове, 2018 г.'), 'Nightwish в Кракове, 2018 г.')}
       ${figure(picture('KhtC73G', 'RPWL в Варшаве, 2019 г.'), 'RPWL в Варшаве, 2019 г.')}
       ${figure(picture('x7kkpYK', 'Pink в Варшаве, 2019 г.'), 'Pink в Варшаве, 2019 г.')}
+      ${figure(picture('hhNGIKB', 'Tool в Кракове, 2022'), 'Tool в Кракове, 2022')}
       <p>Осталось:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>
       <li>The Gathering</li>
-      <li>The Morningside</li>
       </ul>
     `,
   },
@@ -659,6 +705,10 @@ ${link('Krako\u0301w', 'Кракове')}.`),
     name: 'Телеграм',
     description: p(`Моё имя в Телеграме: ${a('https://t.me/ptsaryk', '@ptsaryk')}`),
   },
+  Tidal: {
+    name: 'Тайдл',
+    description: p('Больше нравится Тайдл, чем Спотифай.'),
+  },
   Title: {},
   'The Netherlands': {
     name: 'Нидерланды',
@@ -749,13 +799,15 @@ ${link('Krako\u0301w', 'Кракове')}.`),
   },
   Vinyl: {
     name: 'Винил',
-    description: figure(
-      picture('Mkb7mO9', 'Винил'),
-      `Audio-Technica AT-LP120USBHC + Yamaha A-S501 + акустика, сделанная Анжеем Фигарским. ${a(
-        'https://www.discogs.com/user/phts/collection',
-        'Играет Lunatic Soul - Lunatic Soul II'
-      )}`
-    ),
+    description: `
+      ${figure(
+        picture('Mkb7mO9', 'Винил'),
+        link('Hi-Fi', 'Audio Technica AT-LP120-USB + Yamaha A-S501')
+      )}
+      <p>
+        Моя коллекция на ${a('https://www.discogs.com/user/phts/collection', 'Дискогсе')}.
+      </p>
+    `,
   },
   VK: {
     name: 'ВК',

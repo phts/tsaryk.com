@@ -2,7 +2,8 @@ import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
-import {Configuration, WebpackPluginInstance} from 'webpack'
+import webpack, {Configuration, WebpackPluginInstance} from 'webpack'
+import {getCommitHash} from './getCommitHash'
 
 const projectDir = path.resolve(__dirname, '..')
 const srcDir = path.resolve(projectDir, 'src')
@@ -60,6 +61,9 @@ const plugins: WebpackPluginInstance[] = [
   }),
   new CopyPlugin({
     patterns: [{from: staticPagesDir, to: distDir}],
+  }),
+  new webpack.DefinePlugin({
+    'process.env.VERSION': JSON.stringify(getCommitHash()),
   }),
 ]
 

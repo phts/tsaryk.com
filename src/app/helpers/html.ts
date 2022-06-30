@@ -69,3 +69,7 @@ export function youtube(id: string) {
 export function phts(model?: string) {
   return `<span style="${style}">PHTS</span>` + (model ? ` ${model}` : '')
 }
+
+export function abbr(text: string, title: string) {
+  return `<abbr style="cursor: help" title="${title}">${text}</abbr>`
+}
