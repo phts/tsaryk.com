@@ -15,5 +15,5 @@
     "target": "es6",
     "typeRoots": ["./node_modules/@types", "./@types"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "@types/global/*.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "@types/**.ts"]
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import {HashRouter as Router, Route, Routes} from 'react-router-dom'
+import {HashRouter, Route, Routes} from 'react-router-dom'
 
 import routes from 'routes'
 import BtnListPage from './BtnListPage'
@@ -7,12 +7,25 @@ import ShowItemPage from './ShowItemPage'
 import Viewport from './Viewport'
 
 export default () => (
-  <Router>
+  <HashRouter>
     <Routes>
-      <Viewport>
-        <Route path={routes.index} element={<BtnListPage />} />
-        <Route path={routes.showItem} element={<ShowItemPage />} />
-      </Viewport>
+      <Route
+        path={routes.index}
+        element={
+          <>
+            <BtnListPage />
+          </>
+        }
+      >
+        <Route
+          path=":id"
+          element={
+            <>
+              <ShowItemPage />
+            </>
+          }
+        />
+      </Route>
     </Routes>
-  </Router>
+  </HashRouter>
 )

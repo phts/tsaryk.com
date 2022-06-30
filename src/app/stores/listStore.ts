@@ -1,6 +1,6 @@
 import {observable, action, autorun} from 'mobx'
 import * as R from 'ramda'
-import {shuffle} from '/node_modules/rambdax/src/shuffle'
+import {shuffle} from 'rambdax'
 
 import {ItemPosition, ItemSize, ItemType} from 'data/metaProps'
 import itemsStore, {Item, ItemData, ItemId, ItemsStore, Items} from './itemsStore'
