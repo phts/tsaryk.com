@@ -8,24 +8,11 @@ import Viewport from './Viewport'
 
 export default () => (
   <HashRouter>
-    <Routes>
-      <Route
-        path={routes.index}
-        element={
-          <>
-            <BtnListPage />
-          </>
-        }
-      >
-        <Route
-          path=":id"
-          element={
-            <>
-              <ShowItemPage />
-            </>
-          }
-        />
-      </Route>
-    </Routes>
+    <Viewport>
+      <Routes>
+        <Route path={routes.index} element={<BtnListPage />}></Route>
+        <Route path={routes.showItem} element={<ShowItemPage />} />
+      </Routes>
+    </Viewport>
   </HashRouter>
 )
