@@ -869,6 +869,33 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={147}
               imgs={playingCards8Imgs}
             />
+            <PlayingCard
+              href="https://flyingtiger.com/products/playing-cards-3033003"
+              title="Playing cards"
+              x={889}
+              y={0}
+              width={94}
+              height={147}
+              imgs={playingCards8Imgs}
+            />
+            <PlayingCard
+              href="https://s13.ru/archives/oz-14"
+              title="ВКЛ 2"
+              x={983}
+              y={0}
+              width={94}
+              height={147}
+              imgs={playingCards8Imgs}
+            />
+            <PlayingCard
+              href="https://www.sklep.mleczko.pl/pl/p/Karty-Gra-w-Pana/1612"
+              title="Gra w Pana"
+              x={1077}
+              y={0}
+              width={103}
+              height={147}
+              imgs={playingCards8Imgs}
+            />
 
             {/* unusual */}
             <PlayingCard
