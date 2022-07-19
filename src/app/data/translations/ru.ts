@@ -550,7 +550,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
         <li>Booking.com: ${a('https://www.booking.com/s/18_6/pilip212', 'pilip212')}</li>
         <li>Hulaj: zDNRAA</li>
         <li>Maxim: 9D06F7E7</li>
-        <li>Revolut: ${a('https://revolut.com/r/pilip1ip', 'pilip1ip')}</li>
+        <li>Revolut: ${a('https://revolut.com/referral/pilip1ip', 'pilip1ip')}</li>
         <li>Uber: ${a('https://www.uber.com/invite/3daguge8ue', '3daguge8ue')}</li>
       </ul>
     `,
