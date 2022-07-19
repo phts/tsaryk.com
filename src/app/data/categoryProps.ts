@@ -27,6 +27,7 @@ const CATEGORY_MAP: {[index in CatigoryName]: KnownName[]} = {
     'Phil Tsaryk',
     'Pilip Tsaryk',
     'Poland',
+    'Revolut',
     'VK',
   ],
   Contacts: ['+375292181503', '+48534898187', 'Email', 'Skype', 'Telegram'],

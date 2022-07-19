@@ -597,6 +597,13 @@ ${link('Krako\u0301w', 'Кракове')}.`),
       `В данный момент специализируюсь именно ${a('https://reactjs.org/', 'на этой библиотеке')}.`
     ),
   },
+  Revolut: {
+    name: 'Револют',
+    description: figure(
+      '<center><img src="https://i.imgur.com/U3fAHWY.jpg" alt="Револют" style="max-width:200px"></center>',
+      a('https://revolut.me/phts', 'revolut.me/phts')
+    ),
+  },
   'Ritchie Blackmore': {
     name: 'Ричи Блэкмор',
     description: p('Лучший гитарист, по моему мнению.'),

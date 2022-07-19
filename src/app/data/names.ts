@@ -51,6 +51,7 @@ export enum Names {
   PSU,
   Random,
   React,
+  Revolut,
   'Ritchie Blackmore',
   Ruby,
   'SaM Solutions',

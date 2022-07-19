@@ -468,6 +468,12 @@ Collecting those which I really like.',
       `At this moment I am specializing exactly ${a('https://reactjs.org/', 'on this library')}.`
     ),
   },
+  Revolut: {
+    description: figure(
+      '<center><img src="https://i.imgur.com/U3fAHWY.jpg" alt="Revolut" style="max-width:200px"></center>',
+      a('https://revolut.me/phts', 'revolut.me/phts')
+    ),
+  },
   'Ritchie Blackmore': {
     description: p('In my opinion the best guitarist ever.'),
   },
