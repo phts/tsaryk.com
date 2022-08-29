@@ -250,7 +250,7 @@ export const en: TranslatedStrings = {
   },
   'Hi-Fi': {
     description: `
-      ${figure(picture('7AFNDT7', 'My Hi-Fi collection'), 'My Hi-Fi collection')}
+      ${figure(picture('VZQbl55', 'My rack with Hi-Fi'), 'My rack with Hi-Fi')}
       <p>
         <ul>
           <li>${a(
@@ -275,8 +275,8 @@ export const en: TranslatedStrings = {
             'Akai DT-100'
           )}</li>
           <li>${a(
-            'https://www.hifiengine.com/manual_library/yamaha/cdx-750.shtml',
-            'Yamaha CDX-750E'
+            'https://www.hifiengine.com/manual_library/yamaha/cdx-810.shtml',
+            'Yamaha CDX-810'
           )}</li>
           <li>${a('https://www.hifi-wiki.de/index.php/Yamaha_CT-710', 'Yamaha CT-710')}</li>
           <li>${a('http://www.rw6ase.narod.ru/00/cmu/gamma.html', 'Гамма')}</li>
