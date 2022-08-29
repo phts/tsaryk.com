@@ -52,6 +52,32 @@ export function figure(imgEl: string, text: string) {
   `
 }
 
+export function figureWithImageMap(
+  imgEl: string,
+  text: string,
+  mapItems: Array<{
+    href: string
+    title: string
+    left: number
+    top: number
+    width: number
+    height: number
+  }>
+) {
+  return `
+    <figure style="position:relative">
+      ${imgEl}
+      <figcaption>${text}</figcaption>
+      ${mapItems
+        .map(
+          (it) => `<a href="${it.href}" title="${it.title}" target="_blank">
+        <div style="position:absolute;height:${it.height}%;left:${it.left}%;top:${it.top}%;width:${it.width}%"></div></a>`
+        )
+        .join('')}
+    </figure>
+  `
+}
+
 export function youtube(id: string) {
   return `
     <iframe

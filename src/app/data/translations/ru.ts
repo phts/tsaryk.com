@@ -1,4 +1,16 @@
-import {a, figure, img, link, mailto, p, tel, youtube, phts, abbr} from 'helpers/html'
+import {
+  a,
+  figure,
+  img,
+  link,
+  mailto,
+  p,
+  tel,
+  youtube,
+  phts,
+  abbr,
+  figureWithImageMap,
+} from 'helpers/html'
 import {picture} from 'helpers/imgur'
 import {EMAIL, LASTFM_URL, LINKEDIN_URL} from 'config'
 import {TranslatedStrings} from './index'
@@ -150,6 +162,16 @@ export const ru: TranslatedStrings = {
   Debian: {
     name: 'Дебиан',
     description: p('Работаю на Debian.'),
+  },
+
+  Discogs: {
+    name: 'Дискогс',
+    description: p(
+      `Моя ${a('https://www.discogs.com/user/phts/collection', 'коллекция')} и мой ${a(
+        'https://www.discogs.com/wantlist?user=phts',
+        'вишлист'
+      )} (в случае дней рождений 😸) на Дискогсе.`
+    ),
   },
   Drums: {
     name: 'Барабаны',
@@ -313,7 +335,108 @@ export const ru: TranslatedStrings = {
   },
   'Hi-Fi': {
     description: `
-      ${figure(picture('VZQbl55', 'Моя стойка с аудио-техникой'), 'Моя стойка с аудио-техникой')}
+      ${figureWithImageMap(
+        picture('VZQbl55', 'Моя стойка с аудио-техникой'),
+        'Моя стойка с аудио-техникой',
+        [
+          {
+            height: 11,
+            href: 'https://www.vinylengine.com/library/audio-technica/at-lp120-usb.shtml',
+            left: 42,
+            title: 'Audio Technica AT-LP120-USB',
+            top: 7,
+            width: 48,
+          },
+          {
+            height: 8,
+            href: 'https://www.hifiengine.com/manual_library/akai/gx-f37.shtml',
+            left: 42,
+            title: 'Akai GX-F37',
+            top: 20,
+            width: 48,
+          },
+          {
+            height: 7,
+            href: 'https://www.hifiengine.com/manual_library/technics/sh-8055.shtml',
+            left: 42,
+            title: 'Technics SH-8055',
+            top: 28,
+            width: 48,
+          },
+          {
+            height: 6,
+            href: 'https://tsaryk.com/VU-01',
+            left: 42,
+            title: 'PHTS VU-01',
+            top: 36,
+            width: 48,
+          },
+          {
+            height: 8,
+            href: 'https://www.hifiengine.com/manual_library/yamaha/a-s501.shtml',
+            left: 42,
+            title: 'Yamaha A-S501',
+            top: 42,
+            width: 48,
+          },
+          {
+            height: 5,
+            href: 'https://www.hifiengine.com/manual_library/akai/dt-100.shtml',
+            left: 42,
+            title: 'Akai DT-100',
+            top: 58,
+            width: 48,
+          },
+          {
+            height: 6,
+            href: 'https://www.hifiengine.com/manual_library/yamaha/cdx-810.shtml',
+            left: 42,
+            title: 'Yamaha CDX-810',
+            top: 63,
+            width: 48,
+          },
+          {
+            height: 9,
+            href: 'https://www.hifi-wiki.de/index.php/Yamaha_CT-710',
+            left: 42,
+            title: 'Yamaha CT-710',
+            top: 70,
+            width: 48,
+          },
+          {
+            height: 6,
+            href: 'http://www.rw6ase.narod.ru/00/cmu/gamma.html',
+            left: 42,
+            title: 'Гамма',
+            top: 79,
+            width: 48,
+          },
+          {
+            height: 10,
+            href: 'https://tsaryk.com/CLK-01',
+            left: 14,
+            title: 'PHTS CLK-01',
+            top: 24,
+            width: 24,
+          },
+          {
+            height: 7,
+            href: 'https://www.discogs.com/user/phts/collection',
+            left: 42,
+            title: 'Collection',
+            top: 51,
+            width: 48,
+          },
+          {
+            height: 56,
+            href: 'https://www.discogs.com/user/phts/collection',
+            left: 9,
+            title: 'Collection',
+            top: 35,
+            width: 33,
+          },
+        ]
+      )}
       <p>
         <ul>
           <li>${a(
