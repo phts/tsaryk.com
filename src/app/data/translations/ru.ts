@@ -199,7 +199,7 @@ export const ru: TranslatedStrings = {
           `arduino-pc-remote-control aka ${phts('RC-01')}`
         )}</li>
         <li>${a('https://github.com/phts/RC', phts('RC-02'))}</li>
-        <li>${a('https://easyeda.com/phts/vu-01', phts('VU-01'))}</li>
+        <li>${a('https://tsaryk.com/VU-01', phts('VU-01'))}</li>
       </ul>
       <p>
         ${figure('<img src="https://i.imgur.com/VWdIfrE.jpg" alt="PHTS VU-01">', '')}
@@ -519,7 +519,7 @@ export const ru: TranslatedStrings = {
         picture('pUbuzOo', 'PHTS CLK-01'),
         `${a('https://oshwlab.com/phts/CLK-01', phts('CLK-01'))} (всё ещё в разработке)`
       ),
-      figure(picture('BXikwKy', 'PHTS VU-01'), a('https://easyeda.com/phts/vu-01', phts('VU-01'))),
+      figure(picture('BXikwKy', 'PHTS VU-01'), a('https://tsaryk.com/VU-01', phts('VU-01'))),
       figure(picture('nXCSHXf', 'PHTS USP-01'), phts('USP-01')),
       figure(picture('uPRy2Mu', 'PHTS BB-01'), phts('BB-01')),
       figure(picture('BzSJRpf', 'PHTS BB-01s'), phts('BB-01s')),
