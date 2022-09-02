@@ -122,6 +122,14 @@ export const en: TranslatedStrings = {
   Debian: {
     description: p('Working in Debian.'),
   },
+  Discogs: {
+    description: p(
+      `My ${a('https://www.discogs.com/user/phts/collection', 'collection')} and my ${a(
+        'https://www.discogs.com/wantlist?user=phts',
+        'wishlist'
+      )} (in case of birthdays 😸) at Discogs.`
+    ),
+  },
   Drums: {
     description: `
       <p>My set:</p>
@@ -335,7 +343,10 @@ export const en: TranslatedStrings = {
         <li>Anathema</li>
         <li>${link('Last.fm', 'many more...')}</li>
       </ul>
-      <p>On: ${link('Vinyl', 'vinyl')}, ${link('Tidal')} and ${link('foobar2000')}.</p>
+      <p>On: ${link('Discogs', 'vinyl, compact cassettes, CD')}, ${link(
+      'Tidal',
+      'Tidal <s>Spotify</s>'
+    )} and ${link('foobar2000')}.</p>
       <p>To:<p>
       <h3>Playing</h3>
       <p>...${link('Drums', 'drums')}.<p>
@@ -343,7 +354,10 @@ export const en: TranslatedStrings = {
       <ul>
         <li>${link('Space Resonance')}</li>
         <li>${link('Joy in Time')}</li>
-        <li>Mission: Jupiter</li>
+        <li>${a(
+          'https://mytoucheblog.com/portfolio/jupiter-is-the-most-powerful-beautiful-and-entrancing-planet-in-our-solar-system-interview-with-mission-jupiter/',
+          'Mission: Jupiter'
+        )}</li>
         <li>${link('Ultramarined')}</li>
       </ul>
       <h3>Going to concerts</h3>
@@ -594,7 +608,7 @@ Collecting those which I really like.',
         link('Hi-Fi', 'Audio Technica AT-LP120-USB + Yamaha A-S501')
       )}
       <p>
-        My collection on ${a('https://www.discogs.com/user/phts/collection', 'Discogs')}.
+        Just lovin' it.
       </p>
     `,
   },

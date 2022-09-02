@@ -151,6 +151,15 @@ export const ru: TranslatedStrings = {
     name: 'Дебиан',
     description: p('Работаю на Debian.'),
   },
+  Discogs: {
+    name: 'Дискогс',
+    description: p(
+      `Моя ${a('https://www.discogs.com/user/phts/collection', 'коллекция')} и мой ${a(
+        'https://www.discogs.com/wantlist?user=phts',
+        'вишлист'
+      )} (в случае дней рождений 😸) на Дискогсе.`
+    ),
+  },
   Drums: {
     name: 'Барабаны',
     description: `
@@ -405,17 +414,20 @@ export const ru: TranslatedStrings = {
         <li>Anathema</li>
         <li>${link('Last.fm', 'и многих других...')}</li>
       </ul>
-      <p>На чём?: ${link('Vinyl', 'винил')}, ${link('Tidal', 'Тайдл')} и ${link(
-      'foobar2000',
-      'фубар2000'
-    )}.</p>
+      <p>На чём?: ${link('Discogs', 'винил, компакт-кассетах, CD')}, ${link(
+      'Tidal',
+      'Тайдл <s>Спотифай</s>'
+    )} и ${link('foobar2000', 'фубар2000')}.</p>
       <h3>Играю</h3>
       <p>...на ${link('Drums', 'барабанах')}.<p>
       <p>Участвовал в группах:<p>
       <ul>
         <li>${link('Space Resonance')}</li>
         <li>${link('Joy in Time', 'Радость во времени')}</li>
-        <li>Mission: Jupiter</li>
+        <li>${a(
+          'https://mytoucheblog.com/portfolio/jupiter-is-the-most-powerful-beautiful-and-entrancing-planet-in-our-solar-system-interview-with-mission-jupiter/',
+          'Mission: Jupiter'
+        )}</li>
         <li>${link('Ultramarined')}</li>
       </ul>
       <h3>Хожу на концерты</h3>
@@ -812,7 +824,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
         link('Hi-Fi', 'Audio Technica AT-LP120-USB + Yamaha A-S501')
       )}
       <p>
-        Моя коллекция на ${a('https://www.discogs.com/user/phts/collection', 'Дискогсе')}.
+        Просто нравится.
       </p>
     `,
   },

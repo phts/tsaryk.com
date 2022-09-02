@@ -19,6 +19,7 @@ export enum Names {
   Contacts,
   'Curriculum vitae',
   Debian,
+  Discogs,
   Drums,
   Electronics,
   Email,
