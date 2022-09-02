@@ -43,11 +43,31 @@ export function img(src: string, alt: string) {
   `
 }
 
-export function figure(imgEl: string, text: string) {
+export function figure(
+  imgEl: string,
+  text: string,
+  imageMap?: Array<{
+    href: string
+    title: string
+    left: number
+    top: number
+    width: number
+    height: number
+  }>
+) {
+  const figureAttrs = imageMap ? ' style="position:relative"' : ''
+  const mapHtml = imageMap
+    ? imageMap
+        .map(
+          (it) => `<a href="${it.href}" title="${it.title}" target="_blank">
+<div style="position:absolute;height:${it.height}%;left:${it.left}%;top:${it.top}%;width:${it.width}%"></div></a>`
+        )
+        .join('')
+    : ''
   return `
-    <figure>
+    <figure${figureAttrs}>
       ${imgEl}
-      <figcaption>${text}</figcaption>
+      <figcaption>${text}</figcaption>${mapHtml}
     </figure>
   `
 }
