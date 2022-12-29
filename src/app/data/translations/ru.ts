@@ -563,6 +563,10 @@ export const ru: TranslatedStrings = {
       ${figure(picture('KhtC73G', 'RPWL в Варшаве, 2019 г.'), 'RPWL в Варшаве, 2019 г.')}
       ${figure(picture('x7kkpYK', 'Pink в Варшаве, 2019 г.'), 'Pink в Варшаве, 2019 г.')}
       ${figure(picture('hhNGIKB', 'Tool в Кракове, 2022'), 'Tool в Кракове, 2022')}
+      ${figure(
+        picture('BvGdVhY', 'Evanescence и Within Temptation в Гливице, 2022'),
+        '<s>Evanescence и</s> Within Temptation в Гливице, 2022'
+      )}
       <p>Осталось:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>

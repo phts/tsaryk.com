@@ -484,6 +484,10 @@ export const en: TranslatedStrings = {
       ${figure(picture('KhtC73G', 'RPWL in Warsaw, 2019'), 'RPWL in Warsaw, 2019')}
       ${figure(picture('x7kkpYK', 'Pink in Warsaw, 2019'), 'Pink in Warsaw, 2019')}
       ${figure(picture('hhNGIKB', 'Tool in Kraków, 2022'), 'Tool in Kraków, 2022')}
+      ${figure(
+        picture('BvGdVhY', 'Evanescence and Within Temptation in Gliwice, 2022'),
+        '<s>Evanescence and</s> Within Temptation in Gliwice, 2022'
+      )}
       <p>Remaining:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow or Ritchie Blackmore's Night")}</li>
