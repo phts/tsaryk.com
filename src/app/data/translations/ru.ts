@@ -819,7 +819,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
   },
   Telegram: {
     name: 'Телеграм',
-    description: p(`Моё имя в Телеграме: ${a('https://t.me/ptsaryk', '@ptsaryk')}`),
+    description: p(`Моё имя в Телеграме: ${a('https://t.me/p_h_t_s', '@p_h_t_s')}`),
   },
   Tidal: {
     name: 'Тайдл',

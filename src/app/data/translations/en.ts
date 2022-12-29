@@ -631,7 +631,7 @@ Collecting those which I really like.',
     `,
   },
   Telegram: {
-    description: p(`My username in Telegram: ${a('https://t.me/ptsaryk', '@ptsaryk')}`),
+    description: p(`My username in Telegram: ${a('https://t.me/p_h_t_s', '@p_h_t_s')}`),
   },
   Tidal: {
     description: p('I prefer Tidal to Spotify.'),
