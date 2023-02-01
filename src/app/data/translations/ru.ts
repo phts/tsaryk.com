@@ -12,7 +12,7 @@ export const ru: TranslatedStrings = {
     name: 'РУС',
   },
   '©': {
-    name: '© Филипп Царик, 2022',
+    name: '© Филипп Царик, 2023',
     description: `
       <p>Этот сайт создавался и поддерживается ${link('Phil Tsaryk', 'мной')} в свободное время.</p>
       <p>Основные используемые технологии:</p>
@@ -615,6 +615,10 @@ export const ru: TranslatedStrings = {
           'Electronics',
           'электронных девайсов'
         )}, сделанных мною.`
+      ),
+      figure(
+        picture('XbNvKKn', 'PHTS NP-01 (В разработке)'),
+        a('https://tsaryk.com/NP-01', phts('NP-01')) + ' (В разработке)'
       ),
       figure(
         picture('MovLiPL', 'PHTS CLK-01'),

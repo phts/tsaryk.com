@@ -9,7 +9,7 @@ export const en: TranslatedStrings = {
   },
   RU: {},
   '©': {
-    name: '© Phil Tsaryk, 2022',
+    name: '© Phil Tsaryk, 2023',
     description: `
       <p>This site was created and being supported by ${link('Phil Tsaryk', 'me')} in free time.</p>
       <p>Main technologies:</p>
@@ -526,6 +526,10 @@ export const en: TranslatedStrings = {
   PHTS: {
     description: [
       p(`Brand for useful and useless ${link('Electronics', 'electronic devices')} made by me.`),
+      figure(
+        picture('XbNvKKn', 'PHTS NP-01 (Still in progress)'),
+        a('https://tsaryk.com/NP-01', phts('NP-01')) + ' (Still in progress)'
+      ),
       figure(picture('MovLiPL', 'PHTS CLK-01'), a('https://tsaryk.com/CLK-01', phts('CLK-01'))),
       figure(picture('BXikwKy', 'PHTS VU-01'), a('https://tsaryk.com/VU-01', phts('VU-01'))),
       figure(picture('nXCSHXf', 'PHTS USP-01'), phts('USP-01')),
