@@ -617,8 +617,8 @@ export const ru: TranslatedStrings = {
         )}, сделанных мною.`
       ),
       figure(
-        picture('pUbuzOo', 'PHTS CLK-01'),
-        `${a('https://oshwlab.com/phts/CLK-01', phts('CLK-01'))} (всё ещё в разработке)`
+        picture('MovLiPL', 'PHTS CLK-01'),
+        a('https://oshwlab.com/phts/CLK-01', phts('CLK-01'))
       ),
       figure(picture('BXikwKy', 'PHTS VU-01'), a('https://tsaryk.com/VU-01', phts('VU-01'))),
       figure(picture('nXCSHXf', 'PHTS USP-01'), phts('USP-01')),
