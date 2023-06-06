@@ -15,3 +15,9 @@ export function picture(id: string, alt: string) {
     </picture>
   `
 }
+
+export function video(id: string) {
+  return `<video poster="//i.imgur.com/${id}h.jpg" preload="auto" autoplay="autoplay" muted="muted" loop="loop" webkit-playsinline="">
+  <source src="//i.imgur.com/${id}.mp4" type="video/mp4">
+</video>`
+}

@@ -1,5 +1,5 @@
 import {a, figure, img, link, mailto, p, tel, youtube, phts, abbr} from 'helpers/html'
-import {picture} from 'helpers/imgur'
+import {picture, video} from 'helpers/imgur'
 import {EMAIL, LASTFM_URL, LINKEDIN_URL} from 'config'
 import {TranslatedStrings} from './index'
 
@@ -575,6 +575,7 @@ export const ru: TranslatedStrings = {
         picture('BvGdVhY', 'Evanescence и Within Temptation в Гливице, 2022'),
         '<s>Evanescence и</s> Within Temptation в Гливице, 2022'
       )}
+      ${figure(video('33U5RWo'), 'Evanescence в Варшаве, 2023')}
       <p>Осталось:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>

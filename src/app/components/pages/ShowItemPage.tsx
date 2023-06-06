@@ -110,4 +110,8 @@ export default withRouter(styled(ShowItemPage)`
       width: calc(100vw - 2rem);
     `}
   }
+
+  video {
+    width: 100%;
+  }
 `)
