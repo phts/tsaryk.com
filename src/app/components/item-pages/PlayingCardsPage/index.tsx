@@ -16,6 +16,7 @@ import playingCards5Imgs from './playing-cards-row5.png'
 import playingCards6Imgs from './playing-cards-row6.png'
 import playingCards7Imgs from './playing-cards-row7.png'
 import playingCards8Imgs from './playing-cards-row8.png'
+import playingCards9Imgs from './playing-cards-row9.png'
 import playingCardsXImgs from './playing-cards-unusual.png'
 
 interface Data {
@@ -895,6 +896,26 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               width={103}
               height={147}
               imgs={playingCards8Imgs}
+            />
+
+            {/* row #9 */}
+            <PlayingCard
+              href="https://wearmedicine.com/p/karty-do-gry-z-grafikami-kolor-multicolor-1020329"
+              title="Medicine"
+              x={0}
+              y={0}
+              width={98}
+              height={149}
+              imgs={playingCards9Imgs}
+            />
+            <PlayingCard
+              href="https://shop.ootb.de/en/love/erotic-items-/playing-cards-kamasutra-comic-ii-61-2748"
+              title="Kamasutra Comic II"
+              x={99}
+              y={0}
+              width={101}
+              height={149}
+              imgs={playingCards9Imgs}
             />
 
             {/* unusual */}
