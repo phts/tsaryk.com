@@ -16,6 +16,7 @@ import cursorPointerPng from './h3-pointer.png'
 const PaddingWithCursor = styled(Padding)`
   cursor: url(${cursorDefaultPng}) 16 16, default;
 
+  a,
   button {
     cursor: url(${cursorPointerPng}) 16 16, pointer;
   }
