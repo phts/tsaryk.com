@@ -3,6 +3,7 @@ dist/
 node_modules/
 src/static/pages/
 
+.env
 .DS_Store
 
 *.code-workspace
