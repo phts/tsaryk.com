@@ -405,7 +405,7 @@ export const ru: TranslatedStrings = {
         },
         {
           height: 5,
-          href: 'http://www.rw6ase.narod.ru/00/cmu/gamma.html',
+          href: 'https://colormusic.ru/museum.html#gamma-cmu',
           left: 43,
           title: 'Гамма',
           top: 88,
@@ -457,7 +457,7 @@ export const ru: TranslatedStrings = {
             'https://www.hifiengine.com/manual_library/akai/dt-100.shtml',
             'Akai DT-100'
           )}</li>
-          <li>${a('http://www.rw6ase.narod.ru/00/cmu/gamma.html', 'Гамма')}</li>
+          <li>${a('https://colormusic.ru/museum.html#gamma-cmu', 'Гамма')}</li>
         </ul>
       </p>
     `,
