@@ -917,6 +917,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={149}
               imgs={playingCards9Imgs}
             />
+            <PlayingCard
+              href="https://www.piatnik.com/en/games/playing-cards/design-and-gift/picasso"
+              title="Picasso"
+              x={200}
+              y={0}
+              width={97}
+              height={149}
+              imgs={playingCards9Imgs}
+            />
 
             {/* unusual */}
             <PlayingCard
