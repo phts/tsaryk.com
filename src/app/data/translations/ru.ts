@@ -576,6 +576,8 @@ export const ru: TranslatedStrings = {
         '<s>Evanescence и</s> Within Temptation в Гливице, 2022'
       )}
       ${figure(video('33U5RWo'), 'Evanescence в Варшаве, 2023')}
+      ${figure(video('PiKX3P1'), 'Noize MC в Варшаве, 2024')}
+      ${figure(video('rL2zOtG'), 'Монеточка в Варшаве, 2024')}
       <p>Осталось:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>

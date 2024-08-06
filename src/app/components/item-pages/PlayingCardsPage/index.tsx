@@ -926,6 +926,24 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={149}
               imgs={playingCards9Imgs}
             />
+            <PlayingCard
+              href="https://cardbureau.ru/shop/hi-fi-ciao-2023"
+              title="Hi-Fi"
+              x={295}
+              y={0}
+              width={104}
+              height={145}
+              imgs={playingCards9Imgs}
+            />
+            <PlayingCard
+              href="https://cardbureau.ru/shop/popkart01"
+              title="Попкарт"
+              x={399}
+              y={0}
+              width={105}
+              height={147}
+              imgs={playingCards9Imgs}
+            />
 
             {/* unusual */}
             <PlayingCard
