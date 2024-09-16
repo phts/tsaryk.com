@@ -11,7 +11,7 @@ type LabelsMap = {[lng in Lang]: TranslatedLabelsMap}
 
 const labelsMap: LabelsMap = {
   EN: {
-    close: 'Сlose',
+    close: 'Close',
   },
   RU: {
     close: 'Закрыть',
