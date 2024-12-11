@@ -545,6 +545,10 @@ export const en: TranslatedStrings = {
       figure(picture('BzSJRpf', 'PHTS BB-01s'), phts('BB-01s')),
       figure(picture('cpv9dk4', 'PHTS FL-01'), phts('FL-01')),
       figure(picture('c3EMslv', 'PHTS RC-02'), a('https://github.com/phts/RC', phts('RC-02'))),
+      figure(
+        picture('gHbamMF', 'PHTS TREE-1'),
+        a('https://oshwlab.com/phts/tree-1', phts('TREE-1'))
+      ),
     ],
   },
   'Pilip Tsaryk': {
