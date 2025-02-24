@@ -23,6 +23,7 @@ function printResult(result) {
     const commands = [
       [
         'scp',
+        '-O',
         '-r',
         '-o',
         'StrictHostKeyChecking=no',
