@@ -20,21 +20,13 @@ const PlayingCardAsRect = styled.div<RectangleProps>`
   @media (max-width: 720px) {
     background-image: url(${(props) => `${props.imgs.images[props.imgs.images.length - 1].path}`});
     background-position-x: ${(props) =>
-      -(
-        (props.x * props.imgs.images[props.imgs.images.length - 1].width) /
-        props.imgs.images[0].width
-      )}px;
+      -((props.x * props.imgs.images[props.imgs.images.length - 1].width) / props.imgs.images[0].width)}px;
     background-position-y: ${(props) =>
-      -(
-        (props.y * props.imgs.images[props.imgs.images.length - 1].width) /
-        props.imgs.images[0].width
-      )}px;
+      -((props.y * props.imgs.images[props.imgs.images.length - 1].width) / props.imgs.images[0].width)}px;
     height: ${(props) =>
-      (props.height * props.imgs.images[props.imgs.images.length - 1].width) /
-      props.imgs.images[0].width}px;
+      (props.height * props.imgs.images[props.imgs.images.length - 1].width) / props.imgs.images[0].width}px;
     width: ${(props) =>
-      (props.width * props.imgs.images[props.imgs.images.length - 1].width) /
-      props.imgs.images[0].width}px;
+      (props.width * props.imgs.images[props.imgs.images.length - 1].width) / props.imgs.images[0].width}px;
   }
   @media (min-width: 720px) {
     background-image: url(${(props) => `${props.imgs.images[0].path}`});

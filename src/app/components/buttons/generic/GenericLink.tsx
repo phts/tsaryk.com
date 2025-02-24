@@ -10,9 +10,7 @@ interface Props extends LinkProps {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const PureLink: React.FunctionComponent<Props> = ({buttonType, fontSize, ...props}) => (
-  <Link {...props} />
-)
+const PureLink: React.FunctionComponent<Props> = ({buttonType, fontSize, ...props}) => <Link {...props} />
 
 export default styled(PureLink)<Props>`
   border-bottom: ${(props) => getBorder(props.buttonType)};

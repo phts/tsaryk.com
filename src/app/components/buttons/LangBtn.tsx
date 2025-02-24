@@ -16,12 +16,7 @@ export default function LangBtn(lang: Lang) {
 
     return (
       <GenericLi flexBasis={props.flexBasis} flexible={props.flexible}>
-        <GenericBtn
-          buttonType={props.buttonType}
-          fontSize={props.fontSize}
-          onClick={onClick}
-          title={props.tooltip}
-        >
+        <GenericBtn buttonType={props.buttonType} fontSize={props.fontSize} onClick={onClick} title={props.tooltip}>
           {props.text}
         </GenericBtn>
       </GenericLi>

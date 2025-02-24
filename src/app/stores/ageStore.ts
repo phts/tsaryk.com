@@ -67,14 +67,7 @@ export class AgeStore {
   constructor(initialTime?: Date) {
     this.initialTime = initialTime || new Date()
 
-    const [age] = this.reduceDate(DATE_OF_BIRTH, [
-      'years',
-      'months',
-      'days',
-      'hours',
-      'minutes',
-      'seconds',
-    ])
+    const [age] = this.reduceDate(DATE_OF_BIRTH, ['years', 'months', 'days', 'hours', 'minutes', 'seconds'])
     this.age = age
 
     this.intervalId = setInterval(() => {

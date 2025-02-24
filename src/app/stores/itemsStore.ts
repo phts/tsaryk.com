@@ -36,10 +36,7 @@ function toDefaultItem(id: ItemId): Item {
   return Object.assign({}, DEFAULT_META_PROPS, DEFAULT_CATEGORY_PROPS, {id, name: id})
 }
 
-function toItem(
-  strings: TranslatedStrings,
-  fallback: TranslatedStrings
-): (defaultItem: Item, id: ItemId) => Item {
+function toItem(strings: TranslatedStrings, fallback: TranslatedStrings): (defaultItem: Item, id: ItemId) => Item {
   return (defaultItem: Item, id: ItemId) => {
     const item = Object.assign(
       {},

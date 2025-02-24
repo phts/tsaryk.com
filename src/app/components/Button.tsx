@@ -8,9 +8,7 @@ interface Props extends ButtonElementProps {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const Button: React.FunctionComponent<Props> = ({border, fontSize, ...props}) => (
-  <button {...props} />
-)
+const Button: React.FunctionComponent<Props> = ({border, fontSize, ...props}) => <button {...props} />
 
 export default styled(Button)<Props>`
   background: none;

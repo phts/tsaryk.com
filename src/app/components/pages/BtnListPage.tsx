@@ -56,15 +56,7 @@ const BtnListPage: React.FunctionComponent = () => {
   const els = R.map((it: ListItem) => {
     const width = flexible ? widthsStore.getWidth(it.id) : 0
     const BtnComponent: BtnClass = knownBtns[it.id] || TextBtn
-    return (
-      <BtnComponent
-        flexible={flexible}
-        item={it}
-        key={it.id}
-        onNavigate={onNavigate}
-        width={width}
-      />
-    )
+    return <BtnComponent flexible={flexible} item={it} key={it.id} onNavigate={onNavigate} width={width} />
   })(listStore.list)
   return <BtnList flexible={flexible}>{els}</BtnList>
 }

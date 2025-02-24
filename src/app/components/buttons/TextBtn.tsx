@@ -16,12 +16,7 @@ const TextBtn: React.FunctionComponent<BtnProps> = (props) => {
 
   return (
     <GenericLi flexBasis={props.flexBasis} flexible={props.flexible}>
-      <GenericLink
-        buttonType={props.buttonType}
-        fontSize={props.fontSize}
-        onClick={props.onNavigate}
-        to={props.itemId}
-      >
+      <GenericLink buttonType={props.buttonType} fontSize={props.fontSize} onClick={props.onNavigate} to={props.itemId}>
         {props.text}
       </GenericLink>
     </GenericLi>

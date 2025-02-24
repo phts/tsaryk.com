@@ -7,12 +7,7 @@ import GenericLink from './generic/GenericLink'
 
 const PhtsBtn: React.FunctionComponent<BtnProps> = (props) => (
   <GenericLi flexBasis={props.flexBasis} flexible={props.flexible}>
-    <GenericLink
-      buttonType={props.buttonType}
-      fontSize={props.fontSize}
-      onClick={props.onNavigate}
-      to={props.itemId}
-    >
+    <GenericLink buttonType={props.buttonType} fontSize={props.fontSize} onClick={props.onNavigate} to={props.itemId}>
       <Phts />
     </GenericLink>
   </GenericLi>

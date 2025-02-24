@@ -41,20 +41,19 @@ export type BtnClass = React.FunctionComponent<BaseBtnProps>
 
 const asBtn: Hoc<BtnProps, BtnClass> =
   (WrappedComponent) =>
-  ({flexible, item, onNavigate, width}) =>
-    (
-      <WrappedComponent
-        buttonType={BUTTON_TYPES[item.type]}
-        data={item.data}
-        description={item.description}
-        flexBasis={width}
-        flexible={flexible}
-        fontSize={FONT_SIZES[item.size]}
-        itemId={item.id}
-        onNavigate={onNavigate}
-        text={item.name}
-        tooltip={item.tooltip}
-      />
-    )
+  ({flexible, item, onNavigate, width}) => (
+    <WrappedComponent
+      buttonType={BUTTON_TYPES[item.type]}
+      data={item.data}
+      description={item.description}
+      flexBasis={width}
+      flexible={flexible}
+      fontSize={FONT_SIZES[item.size]}
+      itemId={item.id}
+      onNavigate={onNavigate}
+      text={item.name}
+      tooltip={item.tooltip}
+    />
+  )
 
 export default asBtn

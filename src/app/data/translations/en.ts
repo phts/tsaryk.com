@@ -162,10 +162,7 @@ export const en: TranslatedStrings = {
       </p>
       <p>For example:</p>
       <ul>
-        <li>${a(
-          'https://habr.com/ru/post/453474/',
-          `arduino-pc-remote-control aka ${phts('RC-01')}`
-        )}</li>
+        <li>${a('https://habr.com/ru/post/453474/', `arduino-pc-remote-control aka ${phts('RC-01')}`)}</li>
         <li>${a('https://github.com/phts/RC', phts('RC-02'))}</li>
         <li>${a('https://tsaryk.com/VU-01', phts('VU-01'))}</li>
       </ul>
@@ -244,10 +241,7 @@ export const en: TranslatedStrings = {
   'Heroes of Might and Magic 3': {
     description: `
       <p>
-        I like playing to ${a(
-          'https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III',
-          'HoMM3'
-        )}
+        I like playing to ${a('https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III', 'HoMM3')}
         / ${a('http://h3hota.com/en/documentation', 'HotA')} when having free time.
       </p>
       <p>
@@ -371,28 +365,13 @@ export const en: TranslatedStrings = {
             'Audio Technica AT-LP120-USB'
           )}</li>
           <li>${a('https://tsaryk.com/NP-01', phts('NP-01'))}</li>
-          <li>${a(
-            'https://www.hifiengine.com/manual_library/yamaha/cdx-810.shtml',
-            'Yamaha CDX-810'
-          )}</li>
+          <li>${a('https://www.hifiengine.com/manual_library/yamaha/cdx-810.shtml', 'Yamaha CDX-810')}</li>
           <li>${a('https://tsaryk.com/VU-01', phts('VU-01'))}</li>
-          <li>${a(
-            'https://www.hifiengine.com/manual_library/yamaha/a-s501.shtml',
-            'Yamaha A-S501'
-          )}</li>
-          <li>${a(
-            'https://www.hifiengine.com/manual_library/akai/gx-f37.shtml',
-            'Akai GX-F37'
-          )}</li>
-          <li>${a(
-            'https://www.hifiengine.com/manual_library/technics/sh-8055.shtml',
-            'Technics SH-8055'
-          )}</li>
+          <li>${a('https://www.hifiengine.com/manual_library/yamaha/a-s501.shtml', 'Yamaha A-S501')}</li>
+          <li>${a('https://www.hifiengine.com/manual_library/akai/gx-f37.shtml', 'Akai GX-F37')}</li>
+          <li>${a('https://www.hifiengine.com/manual_library/technics/sh-8055.shtml', 'Technics SH-8055')}</li>
           <li>${a('https://www.hifi-wiki.de/index.php/Yamaha_CT-710', 'Yamaha CT-710')}</li>
-          <li>${a(
-            'https://www.hifiengine.com/manual_library/akai/dt-100.shtml',
-            'Akai DT-100'
-          )}</li>
+          <li>${a('https://www.hifiengine.com/manual_library/akai/dt-100.shtml', 'Akai DT-100')}</li>
           <li>${a('https://colormusic.ru/museum.html#gamma-cmu', 'Гамма')}</li>
         </ul>
       </p>
@@ -449,9 +428,9 @@ export const en: TranslatedStrings = {
         <li>${link('Last.fm', 'many more...')}</li>
       </ul>
       <p>On: ${link('Discogs', 'vinyl, compact cassettes, CD')}, ${link(
-      'Tidal',
-      'Tidal <s>Spotify</s>'
-    )} and ${link('foobar2000')}.</p>
+        'Tidal',
+        'Tidal <s>Spotify</s>'
+      )} and ${link('foobar2000')}.</p>
       <p>To:<p>
       <h3>Playing</h3>
       <p>...${link('Drums', 'drums')}.<p>
@@ -476,15 +455,9 @@ export const en: TranslatedStrings = {
         picture('dPNRWdG', 'Australian Pink Floyd Show in Minsk, 2013'),
         'Australian Pink Floyd Show in Minsk, 2013'
       )}
-      ${figure(
-        picture('tcyuP0Q', 'Dream Theater in Katowice, 2015'),
-        'Dream Theater in Katowice, 2015'
-      )}
+      ${figure(picture('tcyuP0Q', 'Dream Theater in Katowice, 2015'), 'Dream Theater in Katowice, 2015')}
       ${figure(picture('yDFhHGF', 'Riverside in Katowice, 2015'), 'Riverside in Katowice, 2015')}
-      ${figure(
-        picture('5oDXQ4s', 'David Gilmour in France, 2016'),
-        'David Gilmour in France, 2016'
-      )}
+      ${figure(picture('5oDXQ4s', 'David Gilmour in France, 2016'), 'David Gilmour in France, 2016')}
       ${figure(picture('pxy4Skj', 'Anathema in Kraków, 2017'), 'Anathema in Kraków, 2017')}
       ${figure(picture('FOuMsdO', 'Opeth in Warsaw, 2017'), 'Opeth in Warsaw, 2017')}
       ${figure(picture('zMy5wbq', 'Roger Waters in Kraków, 2018'), 'Roger Waters in Kraków, 2018')}
@@ -545,10 +518,7 @@ export const en: TranslatedStrings = {
       figure(picture('BzSJRpf', 'PHTS BB-01s'), phts('BB-01s')),
       figure(picture('cpv9dk4', 'PHTS FL-01'), phts('FL-01')),
       figure(picture('c3EMslv', 'PHTS RC-02'), a('https://github.com/phts/RC', phts('RC-02'))),
-      figure(
-        picture('gHbamMF', 'PHTS TREE-1'),
-        a('https://oshwlab.com/phts/tree-1', phts('TREE-1'))
-      ),
+      figure(picture('gHbamMF', 'PHTS TREE-1'), a('https://oshwlab.com/phts/tree-1', phts('TREE-1'))),
     ],
   },
   'Pilip Tsaryk': {
@@ -592,9 +562,7 @@ Collecting those which I really like.',
   PSU: {},
   Random: {},
   React: {
-    description: p(
-      `At this moment I am specializing exactly ${a('https://reactjs.org/', 'on this library')}.`
-    ),
+    description: p(`At this moment I am specializing exactly ${a('https://reactjs.org/', 'on this library')}.`),
   },
   Revolut: {
     description: figure(
@@ -720,10 +688,7 @@ Collecting those which I really like.',
   },
   Vinyl: {
     description: `
-      ${figure(
-        picture('Mkb7mO9', 'Vinyl'),
-        link('Hi-Fi', 'Audio Technica AT-LP120-USB + Yamaha A-S501')
-      )}
+      ${figure(picture('Mkb7mO9', 'Vinyl'), link('Hi-Fi', 'Audio Technica AT-LP120-USB + Yamaha A-S501'))}
       <p>
         Just lovin' it.
       </p>
@@ -739,18 +704,12 @@ Collecting those which I really like.',
         &mdash; to load game from сassette tape.
       </p>
       <p>
-        Most loved games: ${a(
-          'https://spectrumcomputing.co.uk/index.php?cat=96&id=2323',
-          'Highway Encounter'
-        )},
+        Most loved games: ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=2323', 'Highway Encounter')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=461', 'Battle Ships')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=1686', 'Exolon')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=5448', 'Tujad')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=639', 'Boulder Dash')},
-        ${a(
-          'https://spectrumcomputing.co.uk/index.php?cat=96&id=4784',
-          'Spy Hunter'
-        )} and many more.
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=4784', 'Spy Hunter')} and many more.
       </p>
     `,
   },

@@ -10,11 +10,9 @@ jest.mock('config', () => {
 })
 
 function expectAgeToEqual(age: Age, values: number[]) {
-  ;(['years', 'months', 'days', 'hours', 'minutes', 'seconds'] as AgePart[]).forEach(
-    (m: AgePart, i) => {
-      expect(age[m] === 0 ? +0 : age[m]).toEqual(values[i])
-    }
-  )
+  ;(['years', 'months', 'days', 'hours', 'minutes', 'seconds'] as AgePart[]).forEach((m: AgePart, i) => {
+    expect(age[m] === 0 ? +0 : age[m]).toEqual(values[i])
+  })
 }
 
 const daysInMonthsOf1988: {[index: number]: number} = {

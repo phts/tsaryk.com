@@ -194,10 +194,7 @@ export const ru: TranslatedStrings = {
         используются дома каждый день:
       </p>
       <ul>
-        <li>${a(
-          'https://habr.com/ru/post/453474/',
-          `arduino-pc-remote-control aka ${phts('RC-01')}`
-        )}</li>
+        <li>${a('https://habr.com/ru/post/453474/', `arduino-pc-remote-control aka ${phts('RC-01')}`)}</li>
         <li>${a('https://github.com/phts/RC', phts('RC-02'))}</li>
         <li>${a('https://tsaryk.com/VU-01', phts('VU-01'))}</li>
       </ul>
@@ -308,10 +305,7 @@ export const ru: TranslatedStrings = {
       <p>
         До сих пор играю в
         ${a('https://ru.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III', 'HoMM3')}
-        / ${a(
-          'https://ru.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_Horn_of_the_Abyss',
-          'HotA'
-        )},
+        / ${a('https://ru.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_Horn_of_the_Abyss', 'HotA')},
         если появляется свободное время.
       </p>
       <p>
@@ -435,28 +429,13 @@ export const ru: TranslatedStrings = {
             'Audio Technica AT-LP120-USB'
           )}</li>
           <li>${a('https://tsaryk.com/NP-01', phts('NP-01'))}</li>
-          <li>${a(
-            'https://www.hifiengine.com/manual_library/yamaha/cdx-810.shtml',
-            'Yamaha CDX-810'
-          )}</li>
+          <li>${a('https://www.hifiengine.com/manual_library/yamaha/cdx-810.shtml', 'Yamaha CDX-810')}</li>
           <li>${a('https://tsaryk.com/VU-01', phts('VU-01'))}</li>
-          <li>${a(
-            'https://www.hifiengine.com/manual_library/yamaha/a-s501.shtml',
-            'Yamaha A-S501'
-          )}</li>
-          <li>${a(
-            'https://www.hifiengine.com/manual_library/akai/gx-f37.shtml',
-            'Akai GX-F37'
-          )}</li>
-          <li>${a(
-            'https://www.hifiengine.com/manual_library/technics/sh-8055.shtml',
-            'Technics SH-8055'
-          )}</li>
+          <li>${a('https://www.hifiengine.com/manual_library/yamaha/a-s501.shtml', 'Yamaha A-S501')}</li>
+          <li>${a('https://www.hifiengine.com/manual_library/akai/gx-f37.shtml', 'Akai GX-F37')}</li>
+          <li>${a('https://www.hifiengine.com/manual_library/technics/sh-8055.shtml', 'Technics SH-8055')}</li>
           <li>${a('https://www.hifi-wiki.de/index.php/Yamaha_CT-710', 'Yamaha CT-710')}</li>
-          <li>${a(
-            'https://www.hifiengine.com/manual_library/akai/dt-100.shtml',
-            'Akai DT-100'
-          )}</li>
+          <li>${a('https://www.hifiengine.com/manual_library/akai/dt-100.shtml', 'Akai DT-100')}</li>
           <li>${a('https://colormusic.ru/museum.html#gamma-cmu', 'Гамма')}</li>
         </ul>
       </p>
@@ -520,9 +499,9 @@ export const ru: TranslatedStrings = {
         <li>${link('Last.fm', 'и многих других...')}</li>
       </ul>
       <p>На чём?: ${link('Discogs', 'винил, компакт-кассетах, CD')}, ${link(
-      'Tidal',
-      'Тайдл <s>Спотифай</s>'
-    )} и ${link('foobar2000', 'фубар2000')}.</p>
+        'Tidal',
+        'Тайдл <s>Спотифай</s>'
+      )} и ${link('foobar2000', 'фубар2000')}.</p>
       <h3>Играю</h3>
       <p>...на ${link('Drums', 'барабанах')}.<p>
       <p>Участвовал в группах:<p>
@@ -537,10 +516,7 @@ export const ru: TranslatedStrings = {
       </ul>
       <h3>Хожу на концерты</h3>
       <p>Из своего маст-хэв списка уже побывал:</p>
-      ${figure(
-        picture('FykwSDm', 'Deep Purple в Минске, 2011 г.'),
-        'Deep Purple в Минске, 2011 г.'
-      )}
+      ${figure(picture('FykwSDm', 'Deep Purple в Минске, 2011 г.'), 'Deep Purple в Минске, 2011 г.')}
       ${figure(
         picture('qIIb0bR', 'God is an Astronaut в Санкт-Петербурге, 2012 г.'),
         'God is an Astronaut в Санкт-Петербурге, 2012 г.'
@@ -549,24 +525,12 @@ export const ru: TranslatedStrings = {
         picture('dPNRWdG', 'Australian Pink Floyd Show в Минске, 2013 г.'),
         'Australian Pink Floyd Show в Минске, 2013 г.'
       )}
-      ${figure(
-        picture('tcyuP0Q', 'Dream Theater в Катовице, 2015 г.'),
-        'Dream Theater в Катовице, 2015 г.'
-      )}
-      ${figure(
-        picture('yDFhHGF', 'Riverside в Катовице, 2015 г.'),
-        'Riverside в Катовице, 2015 г.'
-      )}
-      ${figure(
-        picture('5oDXQ4s', 'Дэвид Гилмор во Франции, 2016 г.'),
-        'Дэвид Гилмор во Франции, 2016 г.'
-      )}
+      ${figure(picture('tcyuP0Q', 'Dream Theater в Катовице, 2015 г.'), 'Dream Theater в Катовице, 2015 г.')}
+      ${figure(picture('yDFhHGF', 'Riverside в Катовице, 2015 г.'), 'Riverside в Катовице, 2015 г.')}
+      ${figure(picture('5oDXQ4s', 'Дэвид Гилмор во Франции, 2016 г.'), 'Дэвид Гилмор во Франции, 2016 г.')}
       ${figure(picture('pxy4Skj', 'Anathema в Кракове, 2017 г.'), 'Anathema в Кракове, 2017 г.')}
       ${figure(picture('FOuMsdO', 'Opeth в Варшаве, 2017 г.'), 'Opeth в Варшаве, 2017 г.')}
-      ${figure(
-        picture('zMy5wbq', 'Roger Waters в Кракове, 2018 г.'),
-        'Roger Waters в Кракове, 2018 г.'
-      )}
+      ${figure(picture('zMy5wbq', 'Roger Waters в Кракове, 2018 г.'), 'Roger Waters в Кракове, 2018 г.')}
       ${figure(picture('mROYG5y', 'Nightwish в Кракове, 2018 г.'), 'Nightwish в Кракове, 2018 г.')}
       ${figure(picture('KhtC73G', 'RPWL в Варшаве, 2019 г.'), 'RPWL в Варшаве, 2019 г.')}
       ${figure(picture('x7kkpYK', 'Pink в Варшаве, 2019 г.'), 'Pink в Варшаве, 2019 г.')}
@@ -608,10 +572,7 @@ export const ru: TranslatedStrings = {
       </p>
       <p>
         В 2011 окончил ${link('PSU', 'Полоцкий Государственный Университет')} по специальности
-        ${link(
-          'Software Engineer',
-          '&laquo;Программное обеспечение информационных технологий&raquo;'
-        )}.
+        ${link('Software Engineer', '&laquo;Программное обеспечение информационных технологий&raquo;')}.
       </p>
       <p>
         Сейчас проживаю в ${link('Kraków', 'Кракове')} и работаю в компании ${link('Grand Parade')}
@@ -621,12 +582,7 @@ export const ru: TranslatedStrings = {
   },
   PHTS: {
     description: [
-      p(
-        `Бренд для полезных и бесполезных ${link(
-          'Electronics',
-          'электронных девайсов'
-        )}, сделанных мною.`
-      ),
+      p(`Бренд для полезных и бесполезных ${link('Electronics', 'электронных девайсов')}, сделанных мною.`),
       figure(picture('zxItU4H', 'PHTS NP-01'), a('https://tsaryk.com/NP-01', phts('NP-01'))),
       figure(picture('MovLiPL', 'PHTS CLK-01'), a('https://tsaryk.com/CLK-01', phts('CLK-01'))),
       figure(picture('BXikwKy', 'PHTS VU-01'), a('https://tsaryk.com/VU-01', phts('VU-01'))),
@@ -635,10 +591,7 @@ export const ru: TranslatedStrings = {
       figure(picture('BzSJRpf', 'PHTS BB-01s'), phts('BB-01s')),
       figure(picture('cpv9dk4', 'PHTS FL-01'), phts('FL-01')),
       figure(picture('c3EMslv', 'PHTS RC-02'), a('https://github.com/phts/RC', phts('RC-02'))),
-      figure(
-        picture('gHbamMF', 'PHTS TREE-1'),
-        a('https://oshwlab.com/phts/tree-1', phts('TREE-1'))
-      ),
+      figure(picture('gHbamMF', 'PHTS TREE-1'), a('https://oshwlab.com/phts/tree-1', phts('TREE-1'))),
     ],
   },
   'Pilip Tsaryk': {
@@ -719,9 +672,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
   },
   React: {
     name: 'Реакт',
-    description: p(
-      `В данный момент специализируюсь именно ${a('https://reactjs.org/', 'на этой библиотеке')}.`
-    ),
+    description: p(`В данный момент специализируюсь именно ${a('https://reactjs.org/', 'на этой библиотеке')}.`),
   },
   Revolut: {
     name: 'Револют',
@@ -881,10 +832,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
         Мы успешно репетировали, сочиняли песни, выступали, и всё складывалось хорошо. До того
         момента, как я не уехал в ${link('Krako\u0301w', 'Краков')}.
       </p>
-      ${figure(
-        picture('V5Pazkk', 'Ultramarined'),
-        'Последнее выступление Ultramarined в 2015 году'
-      )}
+      ${figure(picture('V5Pazkk', 'Ultramarined'), 'Последнее выступление Ultramarined в 2015 году')}
       <p>
         Больше информации о группе доступно на
         ${a('http://phts.github.io/ultramarined.by/', 'зеркале официального сайта')}.
@@ -914,17 +862,11 @@ ${link('Krako\u0301w', 'Кракове')}.`),
         <li>${a('https://ru.wikipedia.org/wiki/Majesty:_The_Fantasy_Kingdom_Sim', 'Majesty')}</li>
         <li>${a('https://ru.wikipedia.org/wiki/Mafia:_The_City_of_Lost_Heaven', 'Mafia')}</li>
         <li>${a('https://ru.wikipedia.org/wiki/Grand_Theft_Auto_(серия_игр)', 'GTA')}</li>
-        <li>${a(
-          'https://ru.wikipedia.org/wiki/Knights_and_Merchants:_The_Shattered_Kingdom',
-          'Война и Мир'
-        )}</li>
+        <li>${a('https://ru.wikipedia.org/wiki/Knights_and_Merchants:_The_Shattered_Kingdom', 'Война и Мир')}</li>
         <li>${a('https://ru.wikipedia.org/wiki/Portal', 'Portal')}</li>
         <li>${a('https://ru.wikipedia.org/wiki/Anno_1701', 'Anno 1701')}
           / ${a('https://ru.wikipedia.org/wiki/Anno_1404', '1404')}</li>
-        <li>${a(
-          'https://ru.wikipedia.org/wiki/Космические_рейнджеры',
-          'Космические рэйнджеры'
-        )}</li>
+        <li>${a('https://ru.wikipedia.org/wiki/Космические_рейнджеры', 'Космические рэйнджеры')}</li>
         <li>${a('https://ru.wikipedia.org/wiki/The_Talos_Principle', 'The Talos Principle')}</li>
       </ul>
       <p>А также некоторые игры на ${link('ZX Spectrum')}.</p>
@@ -933,10 +875,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
   Vinyl: {
     name: 'Винил',
     description: `
-      ${figure(
-        picture('Mkb7mO9', 'Винил'),
-        link('Hi-Fi', 'Audio Technica AT-LP120-USB + Yamaha A-S501')
-      )}
+      ${figure(picture('Mkb7mO9', 'Винил'), link('Hi-Fi', 'Audio Technica AT-LP120-USB + Yamaha A-S501'))}
       <p>
         Просто нравится.
       </p>
@@ -954,18 +893,12 @@ ${link('Krako\u0301w', 'Кракове')}.`),
         была, скорее всего, <code>LOAD "" &crarr;</code> &mdash; для загрузки игры с кассеты.
       </p>
       <p>
-        Любимые игрушки: ${a(
-          'https://spectrumcomputing.co.uk/index.php?cat=96&id=2323',
-          'Highway Encounter'
-        )},
+        Любимые игрушки: ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=2323', 'Highway Encounter')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=461', 'Battle Ships')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=1686', 'Exolon')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=5448', 'Tujad')},
         ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=639', 'Boulder Dash')},
-        ${a(
-          'https://spectrumcomputing.co.uk/index.php?cat=96&id=4784',
-          'Spy Hunter'
-        )} и многие другие.
+        ${a('https://spectrumcomputing.co.uk/index.php?cat=96&id=4784', 'Spy Hunter')} и многие другие.
       </p>
     `,
   },

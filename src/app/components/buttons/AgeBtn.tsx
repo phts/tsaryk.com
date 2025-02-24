@@ -27,13 +27,7 @@ function text(ageStore: AgeStore, data: AgeItemData): string {
       ${padWithZero(seconds)} ${data.sec}`
 }
 
-const AgeBtn: React.FunctionComponent<BtnProps> = ({
-  flexBasis,
-  flexible,
-  buttonType,
-  fontSize,
-  data,
-}) => {
+const AgeBtn: React.FunctionComponent<BtnProps> = ({flexBasis, flexible, buttonType, fontSize, data}) => {
   const {ageStore} = useStores()
   return (
     <GenericLi flexBasis={flexBasis} flexible={flexible}>
