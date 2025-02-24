@@ -9,6 +9,7 @@
     "build:prod:relative": "BUILD_RELATIVE=true npm run build:prod",
     "clean": "rimraf ./dist",
     "deploy:prod": "node ./scripts/deploy-prod.js",
+    "deploy:prod:local": "export $(grep -v '^#' .env | xargs) && npm run deploy:prod",
     "fix": "npm run eslint -- --fix",
     "format": "prettier --write '**/*.{html,md,json}' && npm run lint:es -- --fix",
     "lint": "run-p lint:*",

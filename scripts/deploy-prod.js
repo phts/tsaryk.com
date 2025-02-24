@@ -29,9 +29,15 @@ function printResult(result) {
         '-o',
         'LogLevel=ERROR',
         DIST_FILES,
-        `${SSH_USER}@${SSH_HOST}:${SSH_PATH}`,
+        `${SSH_USER}@${SSH_HOST}:${SSH_PATH.replace('C:/Program Files/Git', '')}`,
       ],
-      ['ssh', '-o', 'LogLevel=ERROR', `${SSH_USER}@${SSH_HOST}`, SSH_SCRIPT],
+      [
+        'ssh',
+        '-o',
+        'LogLevel=ERROR',
+        `${SSH_USER}@${SSH_HOST}`,
+        SSH_SCRIPT.replace('C:/Program Files/Git', ''),
+      ],
     ]
     for (const args of commands) {
       const command = shellescape(args)
