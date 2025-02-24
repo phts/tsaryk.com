@@ -30,17 +30,17 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.6.2",
+    "@emailjs/browser": "^3.12.1",
     "browser-locale": "^1.0.3",
-    "date-fns": "^2.28.0",
+    "date-fns": "^2.30.0",
     "mobx": "^5.15.7",
     "mobx-react": "^6.3.1",
     "rambdax": "^3.7.0",
     "ramda": "~0.28.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-router-dom": "^5.3.3",
-    "styled-components": "^5.3.5"
+    "react-router-dom": "^5.3.4",
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@phts/eslint-config": "^2.1.1",
