@@ -844,8 +844,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards8Imgs}
             />
             <PlayingCard
-              href="https://s13.ru/archives/karty-3"
-              title="ВКЛ"
+              href="https://oz.by/boardgames/more101057990.html"
+              title="ВКЛ. Часть 1"
               x={606}
               y={0}
               width={93}
@@ -880,8 +880,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards8Imgs}
             />
             <PlayingCard
-              href="https://s13.ru/archives/oz-14"
-              title="ВКЛ 2"
+              href="https://oz.by/boardgames/more101102548.html"
+              title="ВКЛ. Часть 2"
               x={983}
               y={0}
               width={94}
@@ -941,6 +941,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               x={399}
               y={0}
               width={105}
+              height={147}
+              imgs={playingCards9Imgs}
+            />
+            <PlayingCard
+              href="https://wearmedicine.com/p/karty-do-gry-z-grafikami-z-kolekcji-zodiak-1026784"
+              title="Karty do gry z grafikami z kolekcji Zodiak"
+              x={504}
+              y={0}
+              width={98}
               height={147}
               imgs={playingCards9Imgs}
             />
