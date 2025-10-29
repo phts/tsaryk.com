@@ -26,8 +26,6 @@ function printResult(result) {
         '-O',
         '-r',
         '-o',
-        'StrictHostKeyChecking=no',
-        '-o',
         'LogLevel=ERROR',
         DIST_FILES,
         `${SSH_USER}@${SSH_HOST}:${SSH_PATH.replace('C:/Program Files/Git', '')}`,
