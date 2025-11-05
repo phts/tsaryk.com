@@ -510,6 +510,7 @@ export const en: TranslatedStrings = {
   PHTS: {
     description: [
       p(`Brand for useful and useless ${link('Electronics', 'electronic devices')} made by me.`),
+      figure(picture('Xa2Gf23', 'PHTS LVL-1'), a('https://tsaryk.com/LVL-1', phts('LVL-1'))),
       figure(picture('zxItU4H', 'PHTS NP-01'), a('https://tsaryk.com/NP-01', phts('NP-01'))),
       figure(picture('MovLiPL', 'PHTS CLK-01'), a('https://tsaryk.com/CLK-01', phts('CLK-01'))),
       figure(picture('BXikwKy', 'PHTS VU-01'), a('https://tsaryk.com/VU-01', phts('VU-01'))),
