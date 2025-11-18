@@ -56,7 +56,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
             <PlayingCard title="Царик Филипп №2" x={106} y={0} width={101} height={145} imgs={playingCards1Imgs} />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/otherm/opernye-teatralnye-reprint-1974g-/"
+              href="https://dama-pik.com.ua/cards/otherm/opernye-teatralnye-reprint-1974g-/"
               title="Оперные (репринт)"
               x={207}
               y={0}
@@ -65,7 +65,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/french-suit/classic-470/"
+              href="https://dama-pik.com.ua/cards/french-suit/classic-470/"
               title="Karty do gry №490"
               x={307}
               y={0}
@@ -77,7 +77,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             <PlayingCard title="Nude playing cards" x={506} y={0} width={101} height={146} imgs={playingCards1Imgs} />
             <PlayingCard title="Lattjo" x={610} y={0} width={94} height={146} imgs={playingCards1Imgs} />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-667.html"
+              href="https://dama-pik.com.ua/cards/russian-motifs/belyy-palekh/"
               title="Белый палех"
               x={705}
               y={0}
@@ -86,7 +86,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-154.html"
+              href="https://dama-pik.com.ua/cards/other/gospozha-udacha/"
               title="Госпожа удача"
               x={800}
               y={0}
@@ -95,7 +95,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-701.html"
+              href="https://dama-pik.com.ua/cards/classic/nevskie/"
               title="Невские"
               x={900}
               y={0}
@@ -103,17 +103,9 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={150}
               imgs={playingCards1Imgs}
             />
+            <PlayingCard title="Атласные" x={994} y={0} width={95} height={150} imgs={playingCards1Imgs} />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-133.html"
-              title="Атласные"
-              x={994}
-              y={0}
-              width={95}
-              height={150}
-              imgs={playingCards1Imgs}
-            />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-152.html"
+              href="https://dama-pik.com.ua/cards/army-and-police/komandirskie/"
               title="Командирские"
               x={1090}
               y={0}
@@ -123,7 +115,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
 
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/russian-motifs/derzhava/"
+              href="https://dama-pik.com.ua/cards/russian-motifs/derzhava/"
               title="Derzhava"
               x={0}
               y={143}
@@ -140,7 +132,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-637.html"
+              href="https://dama-pik.com.ua/cards/french-suit/jacobs-bible-cards/"
               title="Jacob's Bible Cards"
               x={198}
               y={143}
@@ -148,17 +140,9 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={141}
               imgs={playingCards1Imgs}
             />
+            <PlayingCard title="100 гадоў БНР" x={303} y={147} width={105} height={146} imgs={playingCards1Imgs} />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-1607.html"
-              title="100 гадоў БНР"
-              x={303}
-              y={147}
-              width={105}
-              height={146}
-              imgs={playingCards1Imgs}
-            />
-            <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/otherm/abraxas/"
+              href="https://dama-pik.com.ua/cards/otherm/abraxas/"
               title="Abraxas"
               x={408}
               y={145}
@@ -185,7 +169,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/international-style/royal-dollar/"
+              href="https://dama-pik.com.ua/cards/international-style/royal-dollar/"
               title="Playing cards"
               x={697}
               y={149}
@@ -203,7 +187,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-151.html"
+              href="https://dama-pik.com.ua/cards/fortune-telling/derzhavnye/"
               title="Державные"
               x={898}
               y={149}
@@ -212,7 +196,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-693.html"
+              href="https://dama-pik.com.ua/cards/french-suit/vremena-goda+1/"
               title="Времена года"
               x={993}
               y={150}
@@ -231,7 +215,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
 
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/classic/salon-karte-66/"
+              href="https://dama-pik.com.ua/cards/classic/salon-karte-66/"
               title="Salon-Karte №66"
               x={1}
               y={287}
@@ -240,7 +224,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/computer-games/pixel-art/"
+              href="https://dama-pik.com.ua/cards/computer-games/pixel-art/"
               title="Pixel Art"
               x={97}
               y={287}
@@ -260,7 +244,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
             <PlayingCard title="Portugal" x={398} y={291} width={101} height={144} imgs={playingCards1Imgs} />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-1341.html"
+              href="https://www.wopc.co.uk/germany/rosina-wachtmeister-playing-cards"
               title="Rosina Watchmeister"
               x={499}
               y={289}
@@ -269,7 +253,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-1119.html"
+              href="https://dama-pik.com.ua/cards/policy/ptn-pnkh-vesela-politika/"
               title="Весела політика"
               x={594}
               y={291}
@@ -278,7 +262,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/mythology-and-fantasy/greek-mythology+2/"
+              href="https://dama-pik.com.ua/cards/mythology-and-fantasy/greek-mythology+2/"
               title="Greek mythology"
               x={700}
               y={291}
@@ -287,7 +271,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/russian-motifs/atlasnye2/"
+              href="https://dama-pik.com.ua/cards/russian-motifs/atlasnye2/"
               title="Атласные"
               x={802}
               y={292}
@@ -314,7 +298,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-445.html"
+              href="https://dama-pik.com.ua/cards/french-suit/suvenirnye-/"
               title="Исторические"
               x={1089}
               y={294}
@@ -343,8 +327,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards4Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-272.html"
-              title="Московский сувенир"
+              href="https://dama-pik.com.ua/cards/russian-motifs/moskovskiy-suvenir-reprint/"
+              title="Московский сувенир (репринт)"
               x={201}
               y={0}
               width={89}
@@ -353,7 +337,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
             <PlayingCard title="Spider-Man" x={290} y={0} width={93} height={144} imgs={playingCards4Imgs} />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/french-suit/vsya-vlast/"
+              href="https://dama-pik.com.ua/cards/french-suit/vsya-vlast/"
               title="Вся власть"
               x={382}
               y={0}
@@ -362,7 +346,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards4Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-282.html"
+              href="https://dama-pik.com.ua/cards/personality/partiya-/"
               title="Партия"
               x={479}
               y={0}
@@ -371,7 +355,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards4Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-153.html"
+              href="https://dama-pik.com.ua/cards/otherm/knyazheskie/"
               title="Княжеские"
               x={571}
               y={0}
@@ -407,7 +391,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards4Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-692.html"
+              href="https://dama-pik.com.ua/cards/french-suit/palekh/"
               title="Палех"
               x={1064}
               y={0}
@@ -420,8 +404,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             <PlayingCard title="Xuebao No. 2000" x={0} y={0} width={93} height={144} imgs={playingCards5Imgs} />
             <PlayingCard title="Wanshengda 9706" x={93} y={0} width={94} height={144} imgs={playingCards5Imgs} />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-148.html"
-              title="Времена года"
+              title="Времена года (китайский репринт)"
               x={188}
               y={0}
               width={93}
@@ -447,7 +430,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
             <PlayingCard title="Playing cards" x={472} y={0} width={104} height={145} imgs={playingCards5Imgs} />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-690.html"
+              href="https://dama-pik.com.ua/cards/russian-motifs/suvenirnye-slavyanskie/"
               title="Славянские"
               x={576}
               y={0}
@@ -456,7 +439,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards5Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-155.html"
+              href="https://dama-pik.com.ua/cards/othercity/diana/"
               title="Диана"
               x={672}
               y={0}
@@ -464,7 +447,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={149}
               imgs={playingCards5Imgs}
             />
-            <PlayingCard title="Русский стиль" x={767} y={0} width={95} height={148} imgs={playingCards5Imgs} />
+            <PlayingCard
+              href="https://dama-pik.com.ua/cards/russian-motifs/pasyansnye-russkiy-stil5/"
+              title="Русский стиль"
+              x={767}
+              y={0}
+              width={95}
+              height={148}
+              imgs={playingCards5Imgs}
+            />
             <PlayingCard title="Playing cards" x={863} y={0} width={93} height={143} imgs={playingCards5Imgs} />
             <PlayingCard
               title="Карти за игра: 55 чудесни изгледа от България"
@@ -475,7 +466,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards5Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/international-style/international/"
+              href="https://dama-pik.com.ua/cards/international-style/international/"
               title="International"
               x={1051}
               y={0}
@@ -494,24 +485,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={149}
               imgs={playingCards6Imgs}
             />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-700.html"
-              title="Майа"
-              x={94}
-              y={0}
-              width={96}
-              height={150}
-              imgs={playingCards6Imgs}
-            />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-737.html"
-              title="Рейнские"
-              x={190}
-              y={0}
-              width={106}
-              height={156}
-              imgs={playingCards6Imgs}
-            />
+            <PlayingCard title="Майа" x={94} y={0} width={96} height={150} imgs={playingCards6Imgs} />
+            <PlayingCard title="Рейнские" x={190} y={0} width={106} height={156} imgs={playingCards6Imgs} />
             <PlayingCard title="Dubai" x={296} y={0} width={95} height={146} imgs={playingCards6Imgs} />
             <PlayingCard
               href="https://wearmedicine.com/p/medicine-karty-do-gry-11788"
@@ -523,8 +498,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards6Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-732.html"
-              title="Karty do gry № 410"
+              title="Karty do Gry No.410"
+              href="https://www.wopc.co.uk/poland/gaber"
               x={487}
               y={0}
               width={96}
@@ -533,7 +508,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
             <PlayingCard title="Playing cards 777" x={583} y={0} width={96} height={146} imgs={playingCards6Imgs} />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/otherm/brosmino-deck/"
+              href="https://dama-pik.com.ua/cards/otherm/brosmino-deck/"
               title="Bicycle: Brosmind"
               x={679}
               y={0}
@@ -542,7 +517,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards6Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/personality/jagellonskie/"
+              href="https://dama-pik.com.ua/cards/personality/jagellonskie/"
               title="Jagiellońskie"
               x={783}
               y={0}
@@ -551,7 +526,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards6Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/mythology-and-fantasy/nizshie-dukhi-vostochnoslavyanskoy-mifologii-var-3/"
+              href="https://dama-pik.com.ua/cards/mythology-and-fantasy/nizshie-dukhi-vostochnoslavyanskoy-mifologii-var-3/"
               title="Низшие духи восточнославянской мифологии"
               x={879}
               y={0}
@@ -560,7 +535,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards6Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/advertising/science-fiction-1659/"
+              href="https://dama-pik.com.ua/cards/advertising/science-fiction-1659/"
               title="Sience-Fiction"
               x={972}
               y={0}
@@ -569,7 +544,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards6Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/classic/black-russian-1670/"
+              href="https://dama-pik.com.ua/cards/classic/black-russian-1670/"
               title="Black Russian"
               x={1077}
               y={0}
@@ -590,7 +565,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards7Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/french-suit/luxury/"
+              href="https://dama-pik.com.ua/cards/french-suit/luxury/"
               title="Luxury"
               x={189}
               y={0}
@@ -607,7 +582,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards7Imgs}
             />
             <PlayingCard
-              href="http://dama-pik.com.ua/cards/classic/el-al-airlines/"
+              href="https://dama-pik.com.ua/cards/classic/el-al-airlines/"
               title="EL AL Air Lines"
               x={384}
               y={0}
@@ -616,7 +591,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards7Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/drawings/romikartya-3/"
+              href="https://dama-pik.com.ua/cards/drawings/romikartya-3/"
               title="Romikartya 3"
               x={481}
               y={0}
@@ -626,7 +601,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
             <PlayingCard title="Zamki w Polsce" x={575} y={0} width={91} height={142} imgs={playingCards7Imgs} />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/ethnography/polska-sztuka-ludowa/"
+              href="https://dama-pik.com.ua/cards/ethnography/polska-sztuka-ludowa/"
               title="Polska Sztuka Ludowa"
               x={666}
               y={0}
@@ -635,7 +610,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards7Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-1618.html"
+              href="https://dama-pik.com.ua/cards/flora/grzyby-polski/"
               title="Grzyby Polski"
               x={759}
               y={0}
@@ -644,7 +619,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards7Imgs}
             />
             <PlayingCard
-              href="http://dama-pik.com.ua/cards/mythology-and-fantasy/marry-christmas/"
+              href="https://dama-pik.com.ua/cards/mythology-and-fantasy/marry-christmas/"
               title="Merry Christmas Playing Cards"
               x={854}
               y={0}
@@ -653,7 +628,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards7Imgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-397.html"
+              href="https://dama-pik.com.ua/cards/football/warka/"
               title="Warka"
               x={950}
               y={0}
@@ -662,7 +637,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards7Imgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/french-suit/rois-de-france/"
+              href="https://dama-pik.com.ua/cards/french-suit/rois-de-france/"
               title="Rois de France"
               x={1047}
               y={0}
@@ -674,7 +649,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             {/* row #8 */}
             <PlayingCard title="Roma" x={0} y={0} width={94} height={147} imgs={playingCards8Imgs} />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/music/pink-floyd-i/"
+              href="https://dama-pik.com.ua/cards/music/pink-floyd-i/"
               title="Pink Floyd"
               x={95}
               y={0}
@@ -834,7 +809,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             {/* unusual */}
             <PlayingCard title="Pokemon" x={588} y={0} width={58} height={91} imgs={playingCardsXImgs} />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-694.html"
+              href="https://dama-pik.com.ua/cards/french-suit/pasyansnye-suvenirnye/"
               title="Рококо"
               x={578}
               y={201}
@@ -843,7 +818,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCardsXImgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/russian-motifs/igralnye-karty-vysshiy-sort-russkiy-stil/"
+              href="https://dama-pik.com.ua/cards/russian-motifs/igralnye-karty-vysshiy-sort-russkiy-stil/"
               title="Русский стиль"
               x={494}
               y={201}
@@ -852,7 +827,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCardsXImgs}
             />
             <PlayingCard
-              href="http://www.ukrcards.com.ua/product-137.html"
+              href="https://dama-pik.com.ua/cards/french-suit/lubochnye/"
               title="Лубочные"
               x={410}
               y={201}
@@ -861,7 +836,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCardsXImgs}
             />
             <PlayingCard
-              href="http://www.dama-pik.com.ua/cards/humor/gra-wstepna/"
+              href="https://dama-pik.com.ua/cards/humor/gra-wstepna/"
               title="Gra wstępna"
               x={206}
               y={174}
@@ -871,15 +846,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
             <PlayingCard title="Playing cards" x={208} y={0} width={150} height={171} imgs={playingCardsXImgs} />
             <PlayingCard title="Царик Филипп №1" x={359} y={1} width={119} height={169} imgs={playingCardsXImgs} />
-            <PlayingCard
-              href="http://www.ukrcards.com.ua/product-1503.html"
-              title="Schafkopf Tarock"
-              x={318}
-              y={171}
-              width={92}
-              height={167}
-              imgs={playingCardsXImgs}
-            />
+            <PlayingCard title="Schafkopf Tarock" x={318} y={171} width={92} height={167} imgs={playingCardsXImgs} />
             <PlayingCard title="Tarot De Luxe" x={0} y={312} width={102} height={183} imgs={playingCardsXImgs} />
             <PlayingCard
               href="http://nacekomie.ru/hachette/enciklopediya-taro-ashet-kollekciya.html"
