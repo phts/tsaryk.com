@@ -487,7 +487,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
             <PlayingCard title="Майа" x={94} y={0} width={96} height={150} imgs={playingCards6Imgs} />
             <PlayingCard title="Рейнские" x={190} y={0} width={106} height={156} imgs={playingCards6Imgs} />
-            <PlayingCard title="Dubai" x={296} y={0} width={95} height={146} imgs={playingCards6Imgs} />
+            <PlayingCard
+              title="Dubai"
+              href="https://dama-pik.com.ua/cards/othercity/dubai+II/"
+              x={296}
+              y={0}
+              width={95}
+              height={146}
+              imgs={playingCards6Imgs}
+            />
             <PlayingCard
               href="https://wearmedicine.com/p/medicine-karty-do-gry-11788"
               title="Kartу do gry Medicine"
@@ -686,7 +694,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards8Imgs}
             />
             <PlayingCard
-              href="https://oz.by/boardgames/more101057990.html"
+              href="https://kubikgames.by/ru/igralnyya-karty-vkl/"
               title="ВКЛ. Часть 1"
               x={606}
               y={0}
@@ -721,15 +729,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={147}
               imgs={playingCards8Imgs}
             />
-            <PlayingCard
-              href="https://oz.by/boardgames/more101102548.html"
-              title="ВКЛ. Часть 2"
-              x={983}
-              y={0}
-              width={94}
-              height={147}
-              imgs={playingCards8Imgs}
-            />
+            <PlayingCard title="ВКЛ. Часть 2" x={983} y={0} width={94} height={147} imgs={playingCards8Imgs} />
             <PlayingCard
               href="https://www.sklep.mleczko.pl/pl/p/Karty-Gra-w-Pana/1612"
               title="Gra w Pana"
