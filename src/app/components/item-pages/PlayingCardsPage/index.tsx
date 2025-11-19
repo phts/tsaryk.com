@@ -848,6 +848,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             <PlayingCard title="Царик Филипп №1" x={359} y={1} width={119} height={169} imgs={playingCardsXImgs} />
             <PlayingCard title="Schafkopf Tarock" x={318} y={171} width={92} height={167} imgs={playingCardsXImgs} />
             <PlayingCard title="Tarot De Luxe" x={0} y={312} width={102} height={183} imgs={playingCardsXImgs} />
+            <PlayingCard title="Китайские из Temu" x={103} y={312} width={63} height={198} imgs={playingCardsXImgs} />
             <PlayingCard
               href="http://nacekomie.ru/hachette/enciklopediya-taro-ashet-kollekciya.html"
               title="Универсальное таро"
