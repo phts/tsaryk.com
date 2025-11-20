@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 interface RectangleProps {
-  imgs: {images: Array<{path: string; width: number}>}
+  imgs: string
   title: string
   height: number
   width: number
@@ -17,24 +17,12 @@ type LinkProps = RectangleProps & {
 type Props = Partial<LinkProps> & RectangleProps
 
 const PlayingCardAsRect = styled.div<RectangleProps>`
-  @media (max-width: 720px) {
-    background-image: url(${(props) => `${props.imgs.images[props.imgs.images.length - 1].path}`});
-    background-position-x: ${(props) =>
-      -((props.x * props.imgs.images[props.imgs.images.length - 1].width) / props.imgs.images[0].width)}px;
-    background-position-y: ${(props) =>
-      -((props.y * props.imgs.images[props.imgs.images.length - 1].width) / props.imgs.images[0].width)}px;
-    height: ${(props) =>
-      (props.height * props.imgs.images[props.imgs.images.length - 1].width) / props.imgs.images[0].width}px;
-    width: ${(props) =>
-      (props.width * props.imgs.images[props.imgs.images.length - 1].width) / props.imgs.images[0].width}px;
-  }
-  @media (min-width: 720px) {
-    background-image: url(${(props) => `${props.imgs.images[0].path}`});
-    background-position-x: ${(props) => -props.x}px;
-    background-position-y: ${(props) => -props.y}px;
-    height: ${(props) => props.height}px;
-    width: ${(props) => props.width}px;
-  }
+  background-image: url(${(props) => props.imgs});
+  background-position-x: ${(props) => -props.x}px;
+  background-position-y: ${(props) => -props.y}px;
+  background-size: 1187px;
+  height: ${(props) => props.height}px;
+  width: ${(props) => props.width}px;
   border-radius: 0.5em;
 `
 
