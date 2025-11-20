@@ -46,7 +46,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
         <figure>
           <Container>
             <PlayingCard
-              href="https://playingarts.com/ru/special?utm_source=tema&utm_medium=banner&utm_campaign=300x300"
+              href="https://playingarts.com/special"
               title="Playing Arts: Special Edition"
               x={1}
               y={0}
@@ -74,7 +74,14 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard title="Greek cats" x={404} y={0} width={101} height={146} imgs={playingCards1Imgs} />
-            <PlayingCard title="Nude playing cards" x={506} y={0} width={101} height={146} imgs={playingCards1Imgs} />
+            <PlayingCard
+              title="Sweet heart - Nude playing cards"
+              x={506}
+              y={0}
+              width={101}
+              height={146}
+              imgs={playingCards1Imgs}
+            />
             <PlayingCard title="Lattjo" x={610} y={0} width={94} height={146} imgs={playingCards1Imgs} />
             <PlayingCard
               href="https://dama-pik.com.ua/cards/russian-motifs/belyy-palekh/"
@@ -124,7 +131,8 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              title="Playing Cards Dollar"
+              title="One Hundred Dollars"
+              href="https://dama-pik.com.ua/cards/standard/one-hundred-dollars/"
               x={105}
               y={145}
               width={93}
@@ -150,17 +158,9 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={146}
               imgs={playingCards1Imgs}
             />
+            <PlayingCard title="Hidden Part" x={504} y={147} width={89} height={140} imgs={playingCards1Imgs} />
             <PlayingCard
-              href="https://www.behance.net/gallery/16822663/Hidden-part"
-              title="Hidden Part"
-              x={504}
-              y={147}
-              width={89}
-              height={140}
-              imgs={playingCards1Imgs}
-            />
-            <PlayingCard
-              href="https://www.artiphany.com/products/kitten-club"
+              href="https://www.wopc.co.uk/usa/inky-dinky/kitten-club"
               title="Kitten Club Playing Cards"
               x={593}
               y={147}
@@ -178,7 +178,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="https://www.artiphany.com/products/mermaid-playing-cards"
+              href="https://www.wopc.co.uk/usa/inky-dinky/mermaid-queen"
               title="Mermaid Queen Playing Cards"
               x={791}
               y={148}
@@ -205,7 +205,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="http://www.a.trionfi.eu/WWPCM/decks06/d04208/d04208.htm"
+              href="https://dama-pik.com.ua/cards/french-suit/karty-do-gry-/"
               title="Skat"
               x={1092}
               y={149}
@@ -485,8 +485,24 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={149}
               imgs={playingCards6Imgs}
             />
-            <PlayingCard title="Майа" x={94} y={0} width={96} height={150} imgs={playingCards6Imgs} />
-            <PlayingCard title="Рейнские" x={190} y={0} width={106} height={156} imgs={playingCards6Imgs} />
+            <PlayingCard
+              href="https://www.wopc.co.uk/russia/maya"
+              title="Майа"
+              x={94}
+              y={0}
+              width={96}
+              height={150}
+              imgs={playingCards6Imgs}
+            />
+            <PlayingCard
+              href="https://www.wopc.co.uk/poland/rhineland-pattern-by-kzwp"
+              title="Рейнские"
+              x={190}
+              y={0}
+              width={106}
+              height={156}
+              imgs={playingCards6Imgs}
+            />
             <PlayingCard
               title="Dubai"
               href="https://dama-pik.com.ua/cards/othercity/dubai+II/"
@@ -496,15 +512,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={146}
               imgs={playingCards6Imgs}
             />
-            <PlayingCard
-              href="https://wearmedicine.com/p/medicine-karty-do-gry-11788"
-              title="Kartу do gry Medicine"
-              x={391}
-              y={0}
-              width={96}
-              height={150}
-              imgs={playingCards6Imgs}
-            />
+            <PlayingCard title="Kartу do gry Medicine" x={391} y={0} width={96} height={150} imgs={playingCards6Imgs} />
             <PlayingCard
               title="Karty do Gry No.410"
               href="https://www.wopc.co.uk/poland/gaber"
@@ -563,15 +571,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
 
             {/* row #7 */}
             <PlayingCard title="Thingvellir" x={0} y={0} width={94} height={147} imgs={playingCards7Imgs} />
-            <PlayingCard
-              href="https://wearmedicine.com/p/medicine-karty-do-gry-16905"
-              title="Kartу do gry Medicine"
-              x={94}
-              y={0}
-              width={96}
-              height={148}
-              imgs={playingCards7Imgs}
-            />
+            <PlayingCard title="Kartу do gry Medicine" x={94} y={0} width={96} height={148} imgs={playingCards7Imgs} />
             <PlayingCard
               href="https://dama-pik.com.ua/cards/french-suit/luxury/"
               title="Luxury"
@@ -607,7 +607,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={147}
               imgs={playingCards7Imgs}
             />
-            <PlayingCard title="Zamki w Polsce" x={575} y={0} width={91} height={142} imgs={playingCards7Imgs} />
+            <PlayingCard
+              href="https://dama-pik.com.ua/cards/poland/zamki-w-polsce/"
+              title="Zamki w Polsce"
+              x={575}
+              y={0}
+              width={91}
+              height={142}
+              imgs={playingCards7Imgs}
+            />
             <PlayingCard
               href="https://dama-pik.com.ua/cards/ethnography/polska-sztuka-ludowa/"
               title="Polska Sztuka Ludowa"
@@ -665,7 +673,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={147}
               imgs={playingCards8Imgs}
             />
-            <PlayingCard title="Królewskie" x={197} y={0} width={95} height={147} imgs={playingCards8Imgs} />
+            <PlayingCard
+              href="https://www.wopc.co.uk/poland/kzwp-kr%C3%B3lewskie"
+              title="Królewskie"
+              x={197}
+              y={0}
+              width={95}
+              height={147}
+              imgs={playingCards8Imgs}
+            />
             <PlayingCard
               href="https://www.kickstarter.com/projects/sunishchabba/bosch-playing-cards-0"
               title="Bosch"
@@ -721,7 +737,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards8Imgs}
             />
             <PlayingCard
-              href="https://flyingtiger.com/products/playing-cards-3033003"
+              href="https://www.wopc.co.uk/denmark/flying-tiger"
               title="Playing cards"
               x={889}
               y={0}
@@ -741,26 +757,10 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
 
             {/* row #9 */}
+            <PlayingCard title="Medicine" x={0} y={0} width={98} height={149} imgs={playingCards9Imgs} />
+            <PlayingCard title="Kamasutra Comic II" x={99} y={0} width={101} height={149} imgs={playingCards9Imgs} />
             <PlayingCard
-              href="https://wearmedicine.com/p/karty-do-gry-z-grafikami-kolor-multicolor-1020329"
-              title="Medicine"
-              x={0}
-              y={0}
-              width={98}
-              height={149}
-              imgs={playingCards9Imgs}
-            />
-            <PlayingCard
-              href="https://shop.ootb.de/en/love/erotic-items-/playing-cards-kamasutra-comic-ii-61-2748"
-              title="Kamasutra Comic II"
-              x={99}
-              y={0}
-              width={101}
-              height={149}
-              imgs={playingCards9Imgs}
-            />
-            <PlayingCard
-              href="https://www.piatnik.com/en/games/playing-cards/design-and-gift/picasso"
+              href="https://dama-pik.com.ua/cards/international-style/picasso-2235/"
               title="Picasso"
               x={200}
               y={0}
@@ -787,7 +787,6 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards9Imgs}
             />
             <PlayingCard
-              href="https://wearmedicine.com/p/karty-do-gry-z-grafikami-z-kolekcji-zodiak-1026784"
               title="Karty do gry z grafikami z kolekcji Zodiak"
               x={504}
               y={0}
@@ -804,7 +803,17 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={147}
               imgs={playingCards9Imgs}
             />
-            <PlayingCard title="Darłówko i okolice" x={698} y={0} width={98} height={147} imgs={playingCards9Imgs} />
+            <PlayingCard title="Darłówko i okolice" x={698} y={0} width={96} height={149} imgs={playingCards9Imgs} />
+            <PlayingCard title="Nice" x={795} y={0} width={95} height={147} imgs={playingCards9Imgs} />
+            <PlayingCard
+              href="https://dama-pik.com.ua/cards/classic/kasztelanskie/"
+              title="Mexico 86 (Kasztelanskie)"
+              x={890}
+              y={0}
+              width={96}
+              height={147}
+              imgs={playingCards9Imgs}
+            />
 
             {/* unusual */}
             <PlayingCard title="Pokemon" x={588} y={0} width={58} height={91} imgs={playingCardsXImgs} />
@@ -846,7 +855,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
             <PlayingCard title="Playing cards" x={208} y={0} width={150} height={171} imgs={playingCardsXImgs} />
             <PlayingCard title="Царик Филипп №1" x={359} y={1} width={119} height={169} imgs={playingCardsXImgs} />
-            <PlayingCard title="Schafkopf Tarock" x={318} y={171} width={92} height={167} imgs={playingCardsXImgs} />
+            <PlayingCard
+              href="https://www.wopc.co.uk/germany/ass/bavarian-single-ended"
+              title="Schafkopf Tarock"
+              x={318}
+              y={171}
+              width={92}
+              height={167}
+              imgs={playingCardsXImgs}
+            />
             <PlayingCard title="Tarot De Luxe" x={0} y={312} width={102} height={183} imgs={playingCardsXImgs} />
             <PlayingCard title="Китайские из Temu" x={103} y={312} width={63} height={198} imgs={playingCardsXImgs} />
             <PlayingCard
