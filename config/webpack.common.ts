@@ -138,23 +138,12 @@ const config: Configuration = {
       },
       {
         test: /\.png$/,
-        include: heroes3AssetsDir,
+        include: [heroes3AssetsDir, playingCardsAssetsDir],
         exclude: /node_modules/,
         loader: 'file-loader',
         options: {
           name: '[name].[contenthash:4].[ext]',
           outputPath: outputImgPath,
-        },
-      },
-      {
-        test: /\.png$/,
-        include: playingCardsAssetsDir,
-        exclude: /node_modules/,
-        loader: 'responsive-loader',
-        options: {
-          name: '[name]-[width].[contenthash:4].[ext]',
-          outputPath: outputImgPath,
-          sizes: [1200, 1000],
         },
       },
       {
