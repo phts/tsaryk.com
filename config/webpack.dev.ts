@@ -1,9 +1,18 @@
-import webpack from 'webpack'
+import * as WebpackDevServer from 'webpack-dev-server'
 import merge from 'webpack-merge'
 import common from './webpack.common'
+
+declare module 'webpack' {
+  interface Configuration {
+    devServer?: WebpackDevServer.Configuration
+  }
+}
 
 export default merge(common, {
   mode: 'development',
   devtool: 'cheap-module-source-map',
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  devServer: {
+    hot: true,
+    liveReload: false,
+  },
 })
