@@ -16,13 +16,15 @@ type LinkProps = RectangleProps & {
 
 type Props = Partial<LinkProps> & RectangleProps
 
+const RATIO = 0.1387
+
 const PlayingCardAsRect = styled.div<RectangleProps>`
   background-image: url(${(props) => props.imgs});
-  background-position-x: ${(props) => -props.x}px;
-  background-position-y: ${(props) => -props.y}px;
+  background-position-x: ${(props) => -props.x * RATIO}px;
+  background-position-y: ${(props) => -props.y * RATIO}px;
   background-size: 1187px;
-  height: ${(props) => props.height}px;
-  width: ${(props) => props.width}px;
+  height: ${(props) => props.height * RATIO}px;
+  width: ${(props) => props.width * RATIO}px;
   border-radius: 0.5em;
 `
 
