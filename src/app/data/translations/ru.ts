@@ -229,10 +229,6 @@ export const ru: TranslatedStrings = {
       <p>Захожу туда очень редко.</p>
     `,
   },
-  Family: {
-    name: 'Семья',
-    description: picture('2GcRB9u', 'Царики'),
-  },
   Feedback: {
     name: 'Обратная связь',
     data: {
@@ -466,7 +462,7 @@ export const ru: TranslatedStrings = {
   Kraków: {
     name: 'Краков',
     description: p(
-      `Живём тут с ${link('Family', 'семьёй')} около ${abbr(
+      `Живём тут с семьёй около ${abbr(
         String(new Date().getFullYear() - 2015),
         `${new Date().getFullYear()} минус 2015`
       )} лет.`
@@ -803,7 +799,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
     name: 'Путешествия',
     description: `
       <p>
-        Я люблю путешествовать со своей ${link('Family', 'семьёй')}. ${link('Škoda', 'На машине')},
+        Я люблю путешествовать со своей семьёй. ${link('Škoda', 'На машине')},
         на поезде, самолётом, как угодно.
       </p>
       <p>Вот, список стран, в которых мы уже побывали:</p>

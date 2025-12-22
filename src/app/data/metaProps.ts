@@ -108,9 +108,6 @@ export const metaPropsMap: MetaPropsMap = {
   GitHub: {
     size: ItemSize.L,
   },
-  Family: {
-    size: ItemSize.XL,
-  },
   JavaScript: {
     size: ItemSize.XL,
   },

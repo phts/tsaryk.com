@@ -20,7 +20,6 @@ const CATEGORY_MAP: {[index in CatigoryName]: KnownName[]} = {
     'Age',
     'Belarus',
     'Facebook',
-    'Family',
     'Kraków',
     'LinkedIn',
     'Novopolotsk',

@@ -194,7 +194,6 @@ export const en: TranslatedStrings = {
       <p>Being here very very rarely.</p>
     `,
   },
-  Family: {},
   Feedback: {
     data: {
       sayHello: 'Say hello...',
@@ -399,7 +398,7 @@ export const en: TranslatedStrings = {
   },
   Kraków: {
     description: p(
-      `Living here with ${link('Family', 'my family')} for around ${abbr(
+      `Living here with my family for around ${abbr(
         String(new Date().getFullYear() - 2015),
         `${new Date().getFullYear()} minus 2015`
       )} years.`
@@ -632,7 +631,7 @@ Collecting those which I really like.',
   Traveling: {
     description: `
       <p>
-        I like traveling with my ${link('Family', 'family')}. ${link('Škoda', 'By car')},
+        I like traveling with my family. ${link('Škoda', 'By car')},
         by train, by plane, by anything.
       </p>
       <p>There are countries which we have already visited:</p>
