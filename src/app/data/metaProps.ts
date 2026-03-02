@@ -105,6 +105,9 @@ export const metaPropsMap: MetaPropsMap = {
   Electronics: {
     size: ItemSize.L,
   },
+  'Filip Tsaryk': {
+    size: ItemSize.L,
+  },
   GitHub: {
     size: ItemSize.L,
   },

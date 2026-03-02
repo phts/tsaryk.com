@@ -25,6 +25,7 @@ export enum Names {
   Epam,
   Facebook,
   Feedback,
+  'Filip Tsaryk',
   Firefox,
   foobar2000,
   GitHub,

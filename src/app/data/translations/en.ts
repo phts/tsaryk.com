@@ -521,11 +521,11 @@ export const en: TranslatedStrings = {
       figure(picture('gHbamMF', 'PHTS TREE-1'), a('https://oshwlab.com/phts/tree-1', phts('TREE-1'))),
     ],
   },
+  'Filip Tsaryk': {
+    description: p('My legal name.'),
+  },
   'Pilip Tsaryk': {
-    description: `
-      <p>My legal name.</p>
-      <p>This is how it is written in my passport.</p>
-    `,
+    description: p('Transcripted from Byelorussian language.'),
   },
   'Playing cards': {
     data: {

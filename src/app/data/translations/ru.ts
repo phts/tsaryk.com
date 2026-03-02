@@ -209,6 +209,10 @@ export const ru: TranslatedStrings = {
       sayHello: 'Скажите «привет»...',
     },
   },
+  'Filip Tsaryk': {
+    name: 'Филипп Царик',
+    description: p('Моё официальное имя.'),
+  },
   Firefox: {
     name: 'Файерфокс',
     description: `
@@ -559,7 +563,7 @@ export const ru: TranslatedStrings = {
     `,
   },
   'Phil Tsaryk': {
-    name: 'Филипп Царик',
+    name: 'Фил Царик',
     description: `
       <p>
         Меня зовут Филипп Царик. Родился 3 декабря 1987 года в городе
@@ -593,7 +597,7 @@ export const ru: TranslatedStrings = {
   },
   'Pilip Tsaryk': {
     name: 'Пiлiп Царык',
-    description: p('Афіцыйна маё імя пішацца менавіта так.'),
+    description: p('Маё имя па-беларуску.'),
   },
   'Playing cards': {
     name: 'Игральные карты',
