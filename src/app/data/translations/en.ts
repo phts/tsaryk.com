@@ -9,7 +9,7 @@ export const en: TranslatedStrings = {
   },
   RU: {},
   '©': {
-    name: '© Phil Tsaryk, 2025',
+    name: '© Phil Tsaryk, 2026',
     description: `
       <p>This site was created and being supported by ${link('Phil Tsaryk', 'me')} in free time.</p>
       <p>Main technologies:</p>
