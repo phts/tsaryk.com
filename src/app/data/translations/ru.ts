@@ -73,32 +73,6 @@ export const ru: TranslatedStrings = {
     name: 'Бильярд',
     description: p('Играю в &#x1F3B1; в большинстве случаев.'),
   },
-  BitBucket: {
-    name: 'БитБакет',
-    description: `
-      <p>
-        Использую как для приватных проектов, так и для неактуальных, которым нечего делать на
-        ${link('GitHub', 'Гитхабе')}. БитБакет позволяет группировать репозитории по проектам, что
-        очень помогает отсортировать актуальные репозитории от устаревших.
-      </p>
-      <p>На данный момент в публичный доступ выложены:</p>
-      <ul>
-        <li>
-          ${a('https://bitbucket.org/account/user/phts-home/projects/JAV', 'First Java Apps')}
-          &mdash; первые программы, написанные на Джаве, когда её начал изучать.
-        </li>
-        <li>
-          ${a('https://bitbucket.org/account/user/phts-home/projects/OLD', 'Old Delphi Apps')}
-          &mdash; программы, написанные на Delphi примерно в 2004&ndash;2006 годах.
-        </li>
-        <li>
-          ${a('https://bitbucket.org/account/user/phts-home/projects/PSU', 'University Projects')}
-          &mdash; программы, которые были написаны в период обучения в
-          ${link('PSU', 'университете')}.
-        </li>
-      </ul>
-    `,
-  },
   'Board games': {
     name: 'Настольные игры',
     description: `
@@ -274,6 +248,32 @@ export const ru: TranslatedStrings = {
         ${a('https://en.wikipedia.org/wiki/William_Hill_(bookmaker)', 'William Hill')}.
       </p>
       <p>Отличная продуктовая компания, отличные проекты, отличные люди.</p>
+    `,
+  },
+  GitLab: {
+    name: 'ГитЛаб',
+    description: `
+      <p>
+        Использую как для приватных проектов, так и для неактуальных, которым нечего делать на
+        ${link('GitHub', 'Гитхабе')}. ГитЛаб позволяет группировать репозитории, что
+        очень помогает отсортировать актуальные репозитории от устаревших.
+      </p>
+      <p>На данный момент в публичный доступ выложены:</p>
+      <ul>
+        <li>
+          ${a('https://gitlab.com/phts-home/first-java-apps', 'First Java Apps')}
+          &mdash; первые программы, написанные на Джаве, когда её начал изучать.
+        </li>
+        <li>
+          ${a('https://gitlab.com/phts-home/old-delphi-apps', 'Old Delphi Apps')}
+          &mdash; программы, написанные на Delphi примерно в 2004&ndash;2006 годах.
+        </li>
+        <li>
+          ${a('https://gitlab.com/phts-home/psu', 'University Projects')}
+          &mdash; программы, которые были написаны в период обучения в
+          ${link('PSU', 'университете')}.
+        </li>
+      </ul>
     `,
   },
   Habr: {
@@ -645,7 +645,7 @@ ${link('Krako\u0301w', 'Кракове')}.`),
         ${a(
           'https://bitbucket.org/account/user/phts-home/projects/PSU',
           'Некоторые из них я выложил'
-        )} на ${link('BitBucket', 'Битбакет')}.
+        )} на ${link('GitLab', 'ГитЛаб')}.
       </p>
       <p>
         Также во времена университета у меня был ${a('http://philip-s.narod.ru/', 'свой сайт')},

@@ -51,30 +51,6 @@ export const en: TranslatedStrings = {
   Billiard: {
     description: p('Playing &#x1F3B1; in most cases.'),
   },
-  BitBucket: {
-    description: `
-      <p>
-        Using it for private projects as well as for old non-actual ones which should not be on
-        ${link('GitHub')}. BitBucket has nice feature to group repos by projects that helps to keep
-        actual projects and non-actual ones separatelly.
-      </p>
-      <p>Currently there are a few public projects:</p>
-      <ul>
-        <li>
-          ${a('https://bitbucket.org/account/user/phts-home/projects/JAV', 'First Java Apps')}
-          &mdash; my first apps written on Java when started to leart it.
-        </li>
-        <li>
-          ${a('https://bitbucket.org/account/user/phts-home/projects/OLD', 'Old Delphi Apps')}
-          &mdash; programs written on Delphi in 2004&ndash;2006 years.
-        </li>
-        <li>
-          ${a('https://bitbucket.org/account/user/phts-home/projects/PSU', 'University Projects')}
-          &mdash; programswhich were written by me during studying in ${link('PSU', 'University')}.
-        </li>
-      </ul>
-    `,
-  },
   'Board games': {
     description: `
       <p>I like playing board games especially strategic.</p>
@@ -225,6 +201,30 @@ export const en: TranslatedStrings = {
   GitHub: {
     description: p(`${a('https://github.com/phts', 'There are')} my useful and useless projects
       which are accessible for everyone.`),
+  },
+  GitLab: {
+    description: `
+      <p>
+        Using it for private projects as well as for old non-actual ones which are not suitable for
+        ${link('GitHub')}. GitLab has nice feature to group repos that helps keeping
+        actual and non-actual projects separately.
+      </p>
+      <p>Currently publicly available:</p>
+      <ul>
+        <li>
+          ${a('https://gitlab.com/phts-home/first-java-apps', 'First Java Apps')}
+          &mdash; my first apps written on Java when started to learn it.
+        </li>
+        <li>
+          ${a('https://gitlab.com/phts-home/old-delphi-apps', 'Old Delphi Apps')}
+          &mdash; programs written on Delphi in 2004&ndash;2006 years.
+        </li>
+        <li>
+          ${a('https://gitlab.com/phts-home/psu', 'University Projects')}
+          &mdash; programs which were written by me during studying in the ${link('PSU', 'University')}.
+        </li>
+      </ul>
+    `,
   },
   'Grand Parade': {
     description: `

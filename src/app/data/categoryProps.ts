@@ -75,12 +75,12 @@ const CATEGORY_MAP: {[index in CatigoryName]: KnownName[]} = {
     '©',
   ],
   Work: [
-    'BitBucket',
     'Curriculum vitae',
     'Debian',
     'Epam',
     'Firefox',
     'GitHub',
+    'GitLab',
     'Grand Parade',
     'Habr',
     'JavaScript',
