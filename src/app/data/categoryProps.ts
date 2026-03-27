@@ -13,9 +13,9 @@ export const DEFAULT_CATEGORY_PROPS: CategoryProps = {
   category: 'About',
 }
 
-type CatigoryName = 'About' | 'Contacts' | 'Hobby' | 'Meta' | 'Work'
+type CategoryName = 'About' | 'Contacts' | 'Hobby' | 'Meta' | 'Work'
 
-const CATEGORY_MAP: {[index in CatigoryName]: KnownName[]} = {
+const CATEGORY_MAP: {[index in CategoryName]: KnownName[]} = {
   About: [
     'Age',
     'Belarus',
