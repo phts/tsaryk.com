@@ -17,6 +17,7 @@ import playingCards6Imgs from './playing-cards-row6.png'
 import playingCards7Imgs from './playing-cards-row7.png'
 import playingCards8Imgs from './playing-cards-row8.png'
 import playingCards9Imgs from './playing-cards-row9.png'
+import playingCards10Imgs from './playing-cards-row10.png'
 import playingCardsXImgs from './playing-cards-unusual.png'
 
 interface Data {
@@ -835,6 +836,37 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={1042}
               imgs={playingCards9Imgs}
             />
+            <PlayingCard
+              href="https://www.piatnik.pl/1300"
+              title="Piatnic Classic No. 1300"
+              x={7109}
+              y={0}
+              width={692}
+              height={1063}
+              imgs={playingCards9Imgs}
+            />
+            <PlayingCard
+              href="https://neroshop.ru/product/meowy-scythes/"
+              title="Meowy Scythes"
+              x={7801}
+              y={0}
+              width={757}
+              height={1049}
+              imgs={playingCards9Imgs}
+            />
+
+            {/* row #10 */}
+            <PlayingCard title="Tsaryk Family" x={0} y={0} width={707} height={1006} imgs={playingCards10Imgs} />
+            <PlayingCard
+              title="Casino İskambil Kart Destesi"
+              href="https://www.flyingtiger.com.tr/en/products/casino-i%CC%87skambil-kart-destesi"
+              x={707}
+              y={0}
+              width={689}
+              height={1056}
+              imgs={playingCards10Imgs}
+            />
+            <PlayingCard title="Karty Wyborcze" x={1395} y={0} width={692} height={1056} imgs={playingCards10Imgs} />
 
             {/* unusual */}
             <PlayingCard title="Pokemon" x={4239} y={0} width={418} height={656} imgs={playingCardsXImgs} />
