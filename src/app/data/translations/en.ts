@@ -178,8 +178,8 @@ export const en: TranslatedStrings = {
   Firefox: {
     description: `
       <p>
-        Using Firefox only. I don't like Chrome from its very beggining due to impossibility to
-        customize it for my needs.
+        Using Firefox only. I don't like Chrome from its very beginning due to impossibility to
+        customize it for my needs, and, the most important, due to imposing its monopoly.
       </p>
       <p>
         ${a(
