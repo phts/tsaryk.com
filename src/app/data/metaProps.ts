@@ -123,6 +123,9 @@ export const metaPropsMap: MetaPropsMap = {
   'Phil Tsaryk': {
     size: ItemSize.XXL,
   },
+  PHTS: {
+    size: ItemSize.L,
+  },
   'Playing cards': {
     size: ItemSize.L,
   },
