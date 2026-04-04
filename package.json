@@ -48,7 +48,7 @@
     "@types/history": "^4.7.11",
     "@types/html-webpack-plugin": "^3.2.9",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.19.17",
+    "@types/node": "^24.12.2",
     "@types/ramda": "~0.26.44",
     "@types/react": "^16.14.62",
     "@types/react-dom": "^16.9.25",
