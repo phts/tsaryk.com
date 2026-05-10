@@ -498,10 +498,7 @@ export const ru: TranslatedStrings = {
         <li>Anathema</li>
         <li>${link('Last.fm', 'и многих других...')}</li>
       </ul>
-      <p>На чём?: ${link('Discogs', 'винил, компакт-кассетах, CD')}, ${link(
-        'Tidal',
-        'Тайдл <s>Спотифай</s>'
-      )} и ${link('foobar2000', 'фубар2000')}.</p>
+      <p>На чём?: ${link('Discogs', 'винил, компакт-кассетах, CD')}, Спотифай и ${link('foobar2000', 'фубар2000')}.</p>
       <h3>Играю</h3>
       <p>...на ${link('Drums', 'барабанах')}.<p>
       <p>Участвовал в группах:<p>
@@ -789,10 +786,6 @@ ${link('Krako\u0301w', 'Кракове')}.`),
   Telegram: {
     name: 'Телеграм',
     description: p(`Моё имя в Телеграме: ${a('https://t.me/p_h_t_s', '@p_h_t_s')}`),
-  },
-  Tidal: {
-    name: 'Тайдл',
-    description: p('Больше нравится Тайдл, чем Спотифай.'),
   },
   Title: {},
   'The Netherlands': {

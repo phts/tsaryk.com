@@ -426,10 +426,7 @@ export const en: TranslatedStrings = {
         <li>Anathema</li>
         <li>${link('Last.fm', 'many more...')}</li>
       </ul>
-      <p>On: ${link('Discogs', 'vinyl, compact cassettes, CD')}, ${link(
-        'Tidal',
-        'Tidal <s>Spotify</s>'
-      )} and ${link('foobar2000')}.</p>
+      <p>On: ${link('Discogs', 'vinyl, compact cassettes, CD')}, Spotify and ${link('foobar2000')}.</p>
       <p>To:<p>
       <h3>Playing</h3>
       <p>...${link('Drums', 'drums')}.<p>
@@ -620,9 +617,6 @@ Collecting those which I really like.',
   },
   Telegram: {
     description: p(`My username in Telegram: ${a('https://t.me/p_h_t_s', '@p_h_t_s')}`),
-  },
-  Tidal: {
-    description: p('I prefer Tidal to Spotify.'),
   },
   Title: {},
   'The Netherlands': {

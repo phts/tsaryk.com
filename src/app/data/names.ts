@@ -63,7 +63,6 @@ export enum Names {
   'Stack Overflow',
   'Sublime Text',
   Telegram,
-  Tidal,
   'The Netherlands',
   Traveling,
   Ultramarined,

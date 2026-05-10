@@ -52,7 +52,6 @@ const CATEGORY_MAP: {[index in CategoryName]: KnownName[]} = {
     'Škoda',
     'Space Resonance',
     'The Netherlands',
-    'Tidal',
     'Traveling',
     'Ultramarined',
     'Video games',
