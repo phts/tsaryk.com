@@ -464,7 +464,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={1067}
               imgs={playingCards5Imgs}
             />
-            <PlayingCard title="Playing cards" x={6222} y={0} width={667} height={1031} imgs={playingCards5Imgs} />
+            <PlayingCard title="Budapest" x={6222} y={0} width={667} height={1031} imgs={playingCards5Imgs} />
             <PlayingCard
               title="Карти за игра: 55 чудесни изгледа от България"
               x={6892}
@@ -867,6 +867,33 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards10Imgs}
             />
             <PlayingCard title="Karty Wyborcze" x={1395} y={0} width={692} height={1056} imgs={playingCards10Imgs} />
+            <PlayingCard
+              title="Kamasutra"
+              href="https://www.budgetland.nl/de/produkte/479918-speelkaarten-kamasutra-54-kaarten#beschreibung"
+              x={2084}
+              y={0}
+              width={674}
+              height={1042}
+              imgs={playingCards10Imgs}
+            />
+            <PlayingCard
+              title="Ritz. Karty 2 talie"
+              href="https://www.piatnik.pl/1197?pid=64"
+              x={2758}
+              y={0}
+              width={692}
+              height={1067}
+              imgs={playingCards10Imgs}
+            />
+            <PlayingCard
+              title="The Birth of Motorization 1885-1985"
+              href="https://www.wopc.co.uk/poland/auto"
+              x={3450}
+              y={0}
+              width={696}
+              height={1053}
+              imgs={playingCards10Imgs}
+            />
 
             {/* unusual */}
             <PlayingCard title="Pokemon" x={4239} y={0} width={418} height={656} imgs={playingCardsXImgs} />
