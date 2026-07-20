@@ -894,6 +894,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={1053}
               imgs={playingCards10Imgs}
             />
+            <PlayingCard
+              title="Żubrówka"
+              href="https://blog.goldensubmarine.com/puszcza-pelna-wyjatkowych-gatunkow/"
+              x={4146}
+              y={0}
+              width={680}
+              height={1050}
+              imgs={playingCards10Imgs}
+            />
 
             {/* unusual */}
             <PlayingCard title="Pokemon" x={4239} y={0} width={418} height={656} imgs={playingCardsXImgs} />
