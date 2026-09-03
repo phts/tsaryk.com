@@ -594,7 +594,7 @@ export const ru: TranslatedStrings = {
   },
   'Pilip Tsaryk': {
     name: 'Пiлiп Царык',
-    description: p('Маё имя па-беларуску.'),
+    description: p('Маё імя па-беларуску.'),
   },
   'Playing cards': {
     name: 'Игральные карты',
