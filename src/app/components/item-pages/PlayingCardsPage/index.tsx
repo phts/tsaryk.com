@@ -903,6 +903,27 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={1050}
               imgs={playingCards10Imgs}
             />
+            <PlayingCard
+              title="Servicebolaget Pedanten"
+              href="https://www.wopc.co.uk/sweden/standard-swedish-pattern"
+              x={4813}
+              y={0}
+              width={692}
+              height={1060}
+              imgs={playingCards10Imgs}
+            />
+            <PlayingCard
+              title="Caixa Geral de Depositos"
+              href="https://www.wopc.co.uk/france/genoese-pattern"
+              x={5501}
+              y={0}
+              width={692}
+              height={1053}
+              imgs={playingCards10Imgs}
+            />
+            <PlayingCard title="Birds" x={6193} y={0} width={692} height={1056} imgs={playingCards10Imgs} />
+            <PlayingCard title="Croatia" x={6885} y={0} width={671} height={1042} imgs={playingCards10Imgs} />
+            <PlayingCard title="Croatia" x={7556} y={0} width={681} height={1045} imgs={playingCards10Imgs} />
 
             {/* unusual */}
             <PlayingCard title="Pokemon" x={4239} y={0} width={418} height={656} imgs={playingCardsXImgs} />
