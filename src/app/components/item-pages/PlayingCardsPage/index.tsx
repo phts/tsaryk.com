@@ -974,6 +974,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={1204}
               imgs={playingCardsXImgs}
             />
+            <PlayingCard
+              href="https://www.kisskissbankbank.com/en/projects/la-sainte-sature"
+              title="Le jeu de la Sainte Sature"
+              x={1196}
+              y={2412}
+              width={773}
+              height={1243}
+              imgs={playingCardsXImgs}
+            />
             <PlayingCard title="Tarot De Luxe" x={0} y={2249} width={725} height={1319} imgs={playingCardsXImgs} />
             <PlayingCard
               title="Китайские из Temu"
