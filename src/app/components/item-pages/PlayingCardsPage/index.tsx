@@ -18,6 +18,7 @@ import playingCards7Imgs from './playing-cards-row7.png'
 import playingCards8Imgs from './playing-cards-row8.png'
 import playingCards9Imgs from './playing-cards-row9.png'
 import playingCards10Imgs from './playing-cards-row10.png'
+import playingCards11Imgs from './playing-cards-row11.png'
 import playingCardsXImgs from './playing-cards-unusual.png'
 
 interface Data {
@@ -925,6 +926,17 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             <PlayingCard title="Croatia" x={6885} y={0} width={671} height={1042} imgs={playingCards10Imgs} />
             <PlayingCard title="Croatia" x={7556} y={0} width={681} height={1045} imgs={playingCards10Imgs} />
 
+            {/* row #11 */}
+            <PlayingCard
+              title="Paris pattern"
+              href="https://www.wopc.co.uk/france/paris-pattern"
+              x={0}
+              y={2}
+              width={662}
+              height={1001}
+              imgs={playingCards11Imgs}
+            />
+
             {/* unusual */}
             <PlayingCard title="Pokemon" x={4239} y={0} width={418} height={656} imgs={playingCardsXImgs} />
             <PlayingCard
@@ -960,7 +972,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               x={1485}
               y={1254}
               width={800}
-              height={1175}
+              height={1160}
               imgs={playingCardsXImgs}
             />
             <PlayingCard title="Playing cards" x={1499} y={0} width={1081} height={1232} imgs={playingCardsXImgs} />
