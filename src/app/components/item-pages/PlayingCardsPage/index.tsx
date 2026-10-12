@@ -77,6 +77,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
             <PlayingCard title="Greek cats" x={2912} y={0} width={715} height={1045} imgs={playingCards1Imgs} />
             <PlayingCard
+              href="http://a.trionfi.eu/WWPCM/decks04/d03890/d03890.htm"
               title="Sweet heart - Nude playing cards"
               x={3648}
               y={0}
@@ -337,7 +338,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={1023}
               imgs={playingCards4Imgs}
             />
-            <PlayingCard title="Spider-Man" x={2095} y={0} width={655} height={1040} imgs={playingCards4Imgs} />
+            <PlayingCard
+              href="http://a.trionfi.eu/WWPCM/decks07/d05833/d05833.htm"
+              title="Spider-Man"
+              x={2095}
+              y={0}
+              width={655}
+              height={1040}
+              imgs={playingCards4Imgs}
+            />
             <PlayingCard
               href="https://dama-pik.com.ua/cards/french-suit/vsya-vlast/"
               title="Вся власть"
@@ -605,6 +614,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards7Imgs}
             />
             <PlayingCard
+              href="http://a.trionfi.eu/WWPCM/decks07/d05459/d05459.htm"
               title="Muzeum Powstania Warszawskiego"
               x={2098}
               y={0}
@@ -867,7 +877,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={1056}
               imgs={playingCards10Imgs}
             />
-            <PlayingCard title="Karty Wyborcze" x={1395} y={0} width={692} height={1056} imgs={playingCards10Imgs} />
+            <PlayingCard
+              title="Karty Wyborcze"
+              href="http://a.trionfi.eu/WWPCM/decks04/d03736/d03736.htm"
+              x={1395}
+              y={0}
+              width={692}
+              height={1056}
+              imgs={playingCards10Imgs}
+            />
             <PlayingCard
               title="Kamasutra"
               href="https://www.budgetland.nl/de/produkte/479918-speelkaarten-kamasutra-54-kaarten#beschreibung"
@@ -923,7 +941,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards10Imgs}
             />
             <PlayingCard title="Birds" x={6193} y={0} width={692} height={1056} imgs={playingCards10Imgs} />
-            <PlayingCard title="Croatia" x={6885} y={0} width={671} height={1042} imgs={playingCards10Imgs} />
+            <PlayingCard
+              title="Croatia"
+              href="http://a.trionfi.eu/WWPCM/decks20/d18067/d18067.htm"
+              x={6885}
+              y={0}
+              width={671}
+              height={1042}
+              imgs={playingCards10Imgs}
+            />
             <PlayingCard title="Croatia" x={7556} y={0} width={681} height={1045} imgs={playingCards10Imgs} />
 
             {/* row #11 */}
@@ -938,7 +964,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
 
             {/* unusual */}
-            <PlayingCard title="Pokemon" x={4239} y={0} width={418} height={656} imgs={playingCardsXImgs} />
+            <PlayingCard
+              href="http://a.trionfi.eu/WWPCM/decks02/d00435/d00435.htm"
+              title="Pokemon"
+              x={4239}
+              y={0}
+              width={418}
+              height={656}
+              imgs={playingCardsXImgs}
+            />
             <PlayingCard
               href="https://dama-pik.com.ua/cards/french-suit/pasyansnye-suvenirnye/"
               title="Рококо"
@@ -995,7 +1029,15 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={1243}
               imgs={playingCardsXImgs}
             />
-            <PlayingCard title="Tarot De Luxe" x={0} y={2249} width={725} height={1319} imgs={playingCardsXImgs} />
+            <PlayingCard
+              href="http://a.trionfi.eu/WWPCM/decks/d00113/d00113.htm"
+              title="Tarot De Luxe"
+              x={0}
+              y={2249}
+              width={725}
+              height={1319}
+              imgs={playingCardsXImgs}
+            />
             <PlayingCard
               title="Китайские из Temu"
               x={730}
