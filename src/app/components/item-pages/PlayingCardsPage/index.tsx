@@ -962,6 +962,16 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               height={1001}
               imgs={playingCards11Imgs}
             />
+            <PlayingCard
+              title="Rommé 64"
+              href="https://www.wopc.co.uk/germany/ass/north-german-pattern"
+              x={657}
+              y={0}
+              width={684}
+              height={1045}
+              imgs={playingCards11Imgs}
+            />
+            <PlayingCard title="Ancient Egypt" x={1341} y={0} width={750} height={1044} imgs={playingCards11Imgs} />
 
             {/* unusual */}
             <PlayingCard
