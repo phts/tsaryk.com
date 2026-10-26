@@ -642,6 +642,7 @@ Collecting those which I really like.',
       </ul>
     `,
   },
+  Turbo: {},
   Ultramarined: {
     data: {
       ultrimarine: 'Ultramarine me!',

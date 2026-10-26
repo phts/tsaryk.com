@@ -65,6 +65,7 @@ export enum Names {
   Telegram,
   'The Netherlands',
   Traveling,
+  Turbo,
   Ultramarined,
   'Video games',
   Vinyl,

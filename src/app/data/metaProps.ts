@@ -138,4 +138,7 @@ export const metaPropsMap: MetaPropsMap = {
   Traveling: {
     size: ItemSize.L,
   },
+  Turbo: {
+    size: ItemSize.L,
+  },
 }
