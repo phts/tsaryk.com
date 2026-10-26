@@ -484,7 +484,7 @@ export const ru: TranslatedStrings = {
     name: 'Музыка',
     description: `
       <p>Одна из важнейших частей моей жизни.</p>
-      <h3>Слушаю</h3>
+      <h3>Слушаю...</h3>
       <p>Что?:<p>
       <ul>
         <li>Pink Floyd</li>
@@ -499,7 +499,7 @@ export const ru: TranslatedStrings = {
         <li>${link('Last.fm', 'и многих других...')}</li>
       </ul>
       <p>На чём?: ${link('Discogs', 'винил, компакт-кассетах, CD')}, Спотифай и ${link('foobar2000', 'фубар2000')}.</p>
-      <h3>Играю</h3>
+      <h3>Играю...</h3>
       <p>...на ${link('Drums', 'барабанах')}.<p>
       <p>Участвовал в группах:<p>
       <ul>
@@ -511,13 +511,10 @@ export const ru: TranslatedStrings = {
         )}</li>
         <li>${link('Ultramarined')}</li>
       </ul>
-      <h3>Хожу на концерты</h3>
+      <h3>Хожу на концерты...</h3>
       <p>Из своего маст-хэв списка уже побывал:</p>
       ${figure(picture('FykwSDm', 'Deep Purple в Минске, 2011 г.'), 'Deep Purple в Минске, 2011 г.')}
-      ${figure(
-        picture('qIIb0bR', 'God is an Astronaut в Санкт-Петербурге, 2012 г.'),
-        'God is an Astronaut в Санкт-Петербурге, 2012 г.'
-      )}
+      ${figure(video('u7pTTZv'), 'God is an Astronaut в Санкт-Петербурге, 2012 г.')}
       ${figure(
         picture('dPNRWdG', 'Australian Pink Floyd Show в Минске, 2013 г.'),
         'Australian Pink Floyd Show в Минске, 2013 г.'
@@ -531,14 +528,16 @@ export const ru: TranslatedStrings = {
       ${figure(picture('mROYG5y', 'Nightwish в Кракове, 2018 г.'), 'Nightwish в Кракове, 2018 г.')}
       ${figure(picture('KhtC73G', 'RPWL в Варшаве, 2019 г.'), 'RPWL в Варшаве, 2019 г.')}
       ${figure(picture('x7kkpYK', 'Pink в Варшаве, 2019 г.'), 'Pink в Варшаве, 2019 г.')}
-      ${figure(picture('hhNGIKB', 'Tool в Кракове, 2022'), 'Tool в Кракове, 2022')}
+      ${figure(picture('hhNGIKB', 'Tool в Кракове, 2022 г.'), 'Tool в Кракове, 2022 г.')}
       ${figure(
-        picture('BvGdVhY', 'Evanescence и Within Temptation в Гливице, 2022'),
-        '<s>Evanescence и</s> Within Temptation в Гливице, 2022'
+        picture('BvGdVhY', 'Evanescence и Within Temptation в Гливице, 2022 г.'),
+        '<s>Evanescence и</s> Within Temptation в Гливице, 2022 г.'
       )}
-      ${figure(video('33U5RWo'), 'Evanescence в Варшаве, 2023')}
-      ${figure(video('PiKX3P1'), 'Noize MC в Варшаве, 2024')}
-      ${figure(video('rL2zOtG'), 'Монеточка в Варшаве, 2024')}
+      ${figure(video('33U5RWo'), 'Evanescence в Варшаве, 2023 г.')}
+      ${figure(video('PiKX3P1'), 'Noize MC в Варшаве, 2024 г.')}
+      ${figure(video('rL2zOtG'), 'Монеточка в Варшаве, 2024 г.')}
+      ${figure(video('NH3eagx'), 'Luatic Soul в Кракове, 2025 г.')}
+      ${figure(video('FWiF6Kl'), 'Heroes Orchestra в Кракове, 2026 г.')}
       <p>Осталось:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>

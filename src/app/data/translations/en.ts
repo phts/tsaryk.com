@@ -413,7 +413,8 @@ export const en: TranslatedStrings = {
   Music: {
     description: `
       <p>One of most important part of my life.</p>
-      <h3>Listening</h3>
+      <h3>Listening...</h3>
+      <p>To:<p>
       <ul>
         <li>Pink Floyd</li>
         <li>Lunatic Soul</li>
@@ -427,8 +428,7 @@ export const en: TranslatedStrings = {
         <li>${link('Last.fm', 'many more...')}</li>
       </ul>
       <p>On: ${link('Discogs', 'vinyl, compact cassettes, CD')}, Spotify and ${link('foobar2000')}.</p>
-      <p>To:<p>
-      <h3>Playing</h3>
+      <h3>Playing...</h3>
       <p>...${link('Drums', 'drums')}.<p>
       <p>Used to play in bands:<p>
       <ul>
@@ -440,13 +440,10 @@ export const en: TranslatedStrings = {
         )}</li>
         <li>${link('Ultramarined')}</li>
       </ul>
-      <h3>Going to concerts</h3>
+      <h3>Going to concerts...</h3>
       <p>From my must-have list already visited:</p>
       ${figure(picture('FykwSDm', 'Deep Purple in Minsk, 2011'), 'Deep Purple in Minsk, 2011')}
-      ${figure(
-        picture('qIIb0bR', 'God is an Astronaut in Saint Petersburg, 2012'),
-        'God is an Astronaut in Saint Petersburg, 2012'
-      )}
+      ${figure(video('u7pTTZv'), 'God is an Astronaut in Saint Petersburg, 2012')}
       ${figure(
         picture('dPNRWdG', 'Australian Pink Floyd Show in Minsk, 2013'),
         'Australian Pink Floyd Show in Minsk, 2013'
@@ -468,6 +465,8 @@ export const en: TranslatedStrings = {
       ${figure(video('33U5RWo'), 'Evanescence in Warsaw, 2023')}
       ${figure(video('PiKX3P1'), 'Noize MC in Warsaw, 2024')}
       ${figure(video('rL2zOtG'), 'Монеточка in Warsaw, 2024')}
+      ${figure(video('NH3eagx'), 'Luatic Soul in Kraków, 2025')}
+      ${figure(video('FWiF6Kl'), 'Heroes Orchestra in Kraków, 2026')}
       <p>Todo:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow or Ritchie Blackmore's Night")}</li>
