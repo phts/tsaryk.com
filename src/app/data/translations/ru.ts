@@ -62,7 +62,7 @@ export const ru: TranslatedStrings = {
   },
   'bash.org': {
     name: 'Башорг',
-    description: p(`Когда-то давно случайно ${a('http://bash.im/quote/393345', 'попал')} на
+    description: p(`Когда-то давно случайно ${a('https://башорг.рф/quote/393345', 'попал')} на
       bash.org.`),
   },
   Belarus: {
