@@ -125,7 +125,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
 
             <PlayingCard
-              href="https://dama-pik.com.ua/cards/russian-motifs/derzhava/"
+              href="https://russcards.com/seriya-igralnyh-kart-derzhava"
               title="Derzhava"
               x={0}
               y={1031}
@@ -143,7 +143,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards1Imgs}
             />
             <PlayingCard
-              href="https://dama-pik.com.ua/cards/french-suit/jacobs-bible-cards/"
+              href="https://www.wopc.co.uk/israel/jacobs-bible-cards"
               title="Jacob's Bible Cards"
               x={1432}
               y={1048}
@@ -549,7 +549,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             />
             <PlayingCard title="Playing cards 777" x={4203} y={0} width={692} height={1052} imgs={playingCards6Imgs} />
             <PlayingCard
-              href="https://dama-pik.com.ua/cards/otherm/brosmino-deck/"
+              href="https://www.behance.net/gallery/13748037/Brosmind-Playing-Cards-for-Bicycle"
               title="Bicycle: Brosmind"
               x={4895}
               y={0}
@@ -558,7 +558,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards6Imgs}
             />
             <PlayingCard
-              href="https://dama-pik.com.ua/cards/personality/jagellonskie/"
+              href="https://www.wopc.co.uk/poland/jagiellons"
               title="Jagiellońskie"
               x={5645}
               y={0}
@@ -623,7 +623,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards7Imgs}
             />
             <PlayingCard
-              href="https://dama-pik.com.ua/cards/classic/el-al-airlines/"
+              href="https://designreviewed.com/artefacts/el-al-israel-airlines-playing-cards-1960s-designed-by-jean-david/"
               title="EL AL Air Lines"
               x={2768}
               y={0}
@@ -632,7 +632,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards7Imgs}
             />
             <PlayingCard
-              href="https://dama-pik.com.ua/cards/drawings/romikartya-3/"
+              href="https://www.wopc.co.uk/hungary/artex/romi-kartya"
               title="Romikartya 3"
               x={3467}
               y={0}
@@ -659,7 +659,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards7Imgs}
             />
             <PlayingCard
-              href="https://dama-pik.com.ua/cards/flora/grzyby-polski/"
+              href="https://mlodygiercownik.pl/2017/06/14/recenzja-talii-kart-klasycznych-grzyby-polski/"
               title="Grzyby Polski"
               x={5472}
               y={0}
@@ -839,7 +839,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             <PlayingCard title="Darłówko i okolice" x={5025} y={0} width={699} height={1070} imgs={playingCards9Imgs} />
             <PlayingCard title="Nice" x={5724} y={0} width={688} height={1042} imgs={playingCards9Imgs} />
             <PlayingCard
-              href="https://dama-pik.com.ua/cards/classic/kasztelanskie/"
+              href="https://www.wopc.co.uk/poland/kasztelanskie"
               title="Mexico 86 (Kasztelanskie)"
               x={6414}
               y={0}
