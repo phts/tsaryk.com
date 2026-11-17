@@ -536,8 +536,10 @@ export const ru: TranslatedStrings = {
       ${figure(video('33U5RWo'), 'Evanescence в Варшаве, 2023 г.')}
       ${figure(video('PiKX3P1'), 'Noize MC в Варшаве, 2024 г.')}
       ${figure(video('rL2zOtG'), 'Монеточка в Варшаве, 2024 г.')}
-      ${figure(video('NH3eagx'), 'Luatic Soul в Кракове, 2025 г.')}
+      ${figure(video('xw6dIH7'), 'Кассиопея в Кракове, 2025')}
+      ${figure(video('NH3eagx'), 'Lunatic Soul в Кракове, 2025 г.')}
       ${figure(video('FWiF6Kl'), 'Heroes Orchestra в Кракове, 2026 г.')}
+      ${figure(video('m6qSIrk'), 'Papa Roach в Катовице, 2026')}
       <p>Осталось:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>

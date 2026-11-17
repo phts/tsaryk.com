@@ -465,8 +465,10 @@ export const en: TranslatedStrings = {
       ${figure(video('33U5RWo'), 'Evanescence in Warsaw, 2023')}
       ${figure(video('PiKX3P1'), 'Noize MC in Warsaw, 2024')}
       ${figure(video('rL2zOtG'), 'Монеточка in Warsaw, 2024')}
-      ${figure(video('NH3eagx'), 'Luatic Soul in Kraków, 2025')}
+      ${figure(video('xw6dIH7'), 'Кассиопея in Kraków, 2025')}
+      ${figure(video('NH3eagx'), 'Lunatic Soul in Kraków, 2025')}
       ${figure(video('FWiF6Kl'), 'Heroes Orchestra in Kraków, 2026')}
+      ${figure(video('m6qSIrk'), 'Papa Roach in Katowice, 2026')}
       <p>Todo:</p>
       <ul>
       <li>${link('Ritchie Blackmore', "Rainbow or Ritchie Blackmore's Night")}</li>
