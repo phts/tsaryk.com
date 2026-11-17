@@ -2,7 +2,10 @@ import React from 'react'
 import styled, {css} from 'styled-components'
 
 const phtsCss = css`
-  font-family: Microgramma, sans-serif;
+  font-family:
+    Microgramma D Extended,
+    sans-serif;
+  font-weight: bold;
   letter-spacing: 0.05rem;
 `
 
