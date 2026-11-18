@@ -815,6 +815,13 @@ ${link('Krako\u0301w', 'Кракове')}.`),
       </ul>
     `,
   },
+  Turbo: {
+    name: 'Турбо',
+    description: [
+      p(`Моя коллекция на ${a('https://turbowrappers.com/wrappers?id=558&cat=1&type=wrappers', 'turbowrappers')}.`),
+      p(img('https://turbowrappers.com/login-image', 'Случайный вкладыш Turbo')),
+    ],
+  },
   Ultramarined: {
     name: 'Ультрамаринд',
     description: `

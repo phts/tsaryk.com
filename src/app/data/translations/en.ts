@@ -1,4 +1,4 @@
-import {a, mailto, link, p, tel, youtube, figure, phts, abbr} from 'helpers/html'
+import {a, mailto, link, p, tel, youtube, figure, phts, abbr, img} from 'helpers/html'
 import {picture, video} from 'helpers/imgur'
 import {EMAIL, LASTFM_URL, LINKEDIN_URL} from 'config'
 import {TranslatedStrings} from './index'
@@ -643,6 +643,14 @@ Collecting those which I really like.',
         <li>&#127482;&#127462; Ukraine</li>
       </ul>
     `,
+  },
+  Turbo: {
+    description: [
+      p(
+        `My collection is listed on ${a('https://turbowrappers.com/wrappers?id=558&cat=1&type=wrappers', 'turbowrappers')}.`
+      ),
+      p(img('https://turbowrappers.com/login-image', 'Random wrapper Turbo')),
+    ],
   },
   Ultramarined: {
     data: {
