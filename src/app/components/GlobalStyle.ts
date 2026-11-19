@@ -1,11 +1,13 @@
 import {createGlobalStyle} from 'styled-components'
 import {media} from 'helpers/css'
-import MicrogrammaBoldFontPath from '../../static/fonts/Microgramma-Bold.otf'
+import MicrogrammaBoldFontPath from '../../static/fonts/Microgramma_D_Extended_Bold.ttf'
 
 export default createGlobalStyle`
   @font-face {
-    font-family: Microgramma;
-    src: url("${MicrogrammaBoldFontPath}");
+    font-family: Microgramma D Extended Bold;
+    src:
+      local("Microgramma D Extended Bold"),
+      url("${MicrogrammaBoldFontPath}");
   }
 
   html {

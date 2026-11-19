@@ -3,9 +3,8 @@ import styled, {css} from 'styled-components'
 
 const phtsCss = css`
   font-family:
-    Microgramma D Extended,
+    Microgramma D Extended Bold,
     sans-serif;
-  font-weight: bold;
   letter-spacing: 0.05rem;
 `
 

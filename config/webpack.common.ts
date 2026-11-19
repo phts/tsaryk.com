@@ -147,7 +147,7 @@ const config: Configuration = {
         },
       },
       {
-        test: /\.otf$/,
+        test: /\.ttf$/,
         exclude: /node_modules/,
         loader: 'file-loader',
         options: {

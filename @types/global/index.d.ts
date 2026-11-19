@@ -3,7 +3,7 @@ declare module '*.png' {
   export default png
 }
 
-declare module '*.otf' {
+declare module '*.ttf' {
   const png: string
   export default png
 }
