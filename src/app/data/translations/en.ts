@@ -95,9 +95,6 @@ export const en: TranslatedStrings = {
       </p>
     `,
   },
-  Debian: {
-    description: p('Working in Debian.'),
-  },
   Discogs: {
     description: p(
       `My ${a('https://www.discogs.com/user/phts/collection', 'collection')} and my ${a(

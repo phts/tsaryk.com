@@ -17,7 +17,6 @@ export enum Names {
   Colors,
   Contacts,
   'Curriculum vitae',
-  Debian,
   Discogs,
   Drums,
   Electronics,

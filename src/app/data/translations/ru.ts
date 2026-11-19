@@ -121,10 +121,6 @@ export const ru: TranslatedStrings = {
       </p>
     `,
   },
-  Debian: {
-    name: 'Дебиан',
-    description: p('Работаю на Debian.'),
-  },
   Discogs: {
     name: 'Дискогс',
     description: p(

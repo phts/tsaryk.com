@@ -77,7 +77,6 @@ const CATEGORY_MAP: {[index in CategoryName]: KnownName[]} = {
   ],
   Work: [
     'Curriculum vitae',
-    'Debian',
     'Epam',
     'Firefox',
     'GitHub',
