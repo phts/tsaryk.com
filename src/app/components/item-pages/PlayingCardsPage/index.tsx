@@ -35,6 +35,10 @@ const Container = styled.div`
   margin-bottom: 1em;
 `
 
+const Figure = styled.figure`
+  max-width: 100% !important;
+`
+
 const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, item, onClose}) => {
   const {i18nStore} = useStores()
   return (
@@ -45,7 +49,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
       <Content className={className}>
         <p>{(item.data as Data).p2}</p>
         <p>{(item.data as Data).p1}</p>
-        <figure>
+        <Figure>
           <Container>
             <PlayingCard
               href="https://playingarts.com/special"
@@ -1068,7 +1072,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
             <PlayingCard title="Playing cards" x={0} y={0} width={1485} height={2242} imgs={playingCardsXImgs} />
           </Container>
           <figcaption>{(item.data as Data).imgTitle}</figcaption>
-        </figure>
+        </Figure>
       </Content>
       <Footer>
         <ActionButton onClick={onClose}>{i18nStore.labels.close}</ActionButton>

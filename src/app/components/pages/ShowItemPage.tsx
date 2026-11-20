@@ -80,7 +80,7 @@ export default withRouter(styled(ShowItemPage)`
 
   figure {
     margin: 1rem auto;
-    max-width: 1200px;
+    max-width: 750px;
   }
 
   figcaption {
