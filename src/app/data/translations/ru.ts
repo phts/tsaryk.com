@@ -202,7 +202,7 @@ export const ru: TranslatedStrings = {
   Feedback: {
     name: 'Обратная связь',
     data: {
-      sayHello: 'Скажите «привет»...',
+      placeholder: 'Привет.....',
     },
   },
   'Filip Tsaryk': {

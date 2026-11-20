@@ -6,7 +6,7 @@ import GenericBtn from './generic/GenericBtn'
 import GenericLi from './generic/GenericLi'
 
 interface FeedbackItemData {
-  sayHello: string
+  placeholder: string
 }
 
 const FeedbackBtn: React.FunctionComponent<BtnProps> = (props) => {
@@ -23,7 +23,7 @@ const FeedbackBtn: React.FunctionComponent<BtnProps> = (props) => {
   return (
     <GenericLi flexBasis={props.flexBasis} flexible={props.flexible}>
       {isOpen ? (
-        <FeedbackForm onFinished={onFinished} placeholder={(props.data as FeedbackItemData).sayHello} />
+        <FeedbackForm onFinished={onFinished} placeholder={(props.data as FeedbackItemData).placeholder} />
       ) : (
         <GenericBtn buttonType={props.buttonType} fontSize={props.fontSize} onClick={onClick}>
           {props.text}

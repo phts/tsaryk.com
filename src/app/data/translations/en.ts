@@ -169,7 +169,7 @@ export const en: TranslatedStrings = {
   },
   Feedback: {
     data: {
-      sayHello: 'Say hello...',
+      placeholder: 'Hi there.....',
     },
   },
   Firefox: {
