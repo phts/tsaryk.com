@@ -47,7 +47,6 @@ export enum Names {
   'Pilip Tsaryk',
   'Playing cards',
   Poland,
-  'Promo codes',
   PSU,
   Random,
   React,
