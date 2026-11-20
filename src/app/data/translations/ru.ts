@@ -577,6 +577,7 @@ export const ru: TranslatedStrings = {
   PHTS: {
     description: [
       p(`Бренд для полезных и бесполезных ${link('Electronics', 'электронных девайсов')}, сделанных мною.`),
+      figure(picture('OPgegcB', 'PHTS S-70'), a('https://tsaryk.com/S-70', phts('S-70'))),
       figure(picture('Xa2Gf23', 'PHTS LVL-1'), a('https://tsaryk.com/LVL-1', phts('LVL-1'))),
       figure(picture('zxItU4H', 'PHTS NP-01'), a('https://tsaryk.com/NP-01', phts('NP-01'))),
       figure(picture('MovLiPL', 'PHTS CLK-01'), a('https://tsaryk.com/CLK-01', phts('CLK-01'))),
