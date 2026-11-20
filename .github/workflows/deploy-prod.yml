@@ -1,6 +1,7 @@
 name: Test and deploy (prod)
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
