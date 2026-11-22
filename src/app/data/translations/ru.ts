@@ -536,11 +536,7 @@ export const ru: TranslatedStrings = {
       ${figure(video('NH3eagx'), 'Lunatic Soul в Кракове, 2025 г.')}
       ${figure(video('FWiF6Kl'), 'Heroes Orchestra в Кракове, 2026 г.')}
       ${figure(video('m6qSIrk'), 'Papa Roach в Катовице, 2026')}
-      <p>Осталось:</p>
-      <ul>
-      <li>${link('Ritchie Blackmore', "Rainbow или Ritchie Blackmore's Night")}</li>
-      <li>The Gathering</li>
-      </ul>
+      ${figure(video('jWYuGBe'), 'Anneke van Giersbergen & Band + Lesoir в Кракове, 2026')}
     `,
   },
   Novopolotsk: {
