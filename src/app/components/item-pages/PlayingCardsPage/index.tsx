@@ -976,6 +976,7 @@ const PlayingCardsPage: React.FunctionComponent<ItemPageProps> = ({className, it
               imgs={playingCards11Imgs}
             />
             <PlayingCard title="Ancient Egypt" x={1341} y={0} width={750} height={1044} imgs={playingCards11Imgs} />
+            <PlayingCard title="Plastic cards" x={2091} y={0} width={674} height={1036} imgs={playingCards11Imgs} />
 
             {/* unusual */}
             <PlayingCard
